@@ -49,6 +49,7 @@ plugins:
       glob:
         - "Readwise/"
         - "Ignore/"
+        - "assets/"
         - "*.tmp"
         - "*.pdf"
         - "*.gz"
