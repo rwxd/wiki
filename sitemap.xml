@@ -11,11 +11,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/20%20rules%20of%20formulating%20knowledge/</loc>
-         <lastmod>2021-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Control%20Plane/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -31,17 +26,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Management%20Plane/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Management-Plane/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/NSX-T%20Architecture/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/NSX-T-Architecture/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/NSX-T%20Profiles/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/NSX-T-Profiles/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -51,17 +46,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Single%20Tier%20Routing/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Single-Tier-Routing/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Transport%20Zones/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Transport-Zones/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Two%20Tier%20Routing/</loc>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Two-Tier-Routing/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -132,6 +127,11 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-as-Code/Helm/</loc>
+         <lastmod>2021-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Misc/20%20rules%20of%20formulating%20knowledge/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
