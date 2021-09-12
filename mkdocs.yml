@@ -41,6 +41,10 @@ theme:
 
 copyright: "Copyright &copy; 2020-2021 rwxd"
 
+plugins:
+  - same-dir
+  - roamlinks
+
 markdown_extensions:
   - pymdownx.highlight:
       linenums: true
@@ -54,6 +58,7 @@ markdown_extensions:
   - plantuml_markdown:
       base_dir: src/plantuml/
       format: svg
+
 extra:
   social:
     - icon: fontawesome/brands/github
