@@ -1,12 +1,13 @@
 # Introduction
 
 The wiki is built with MkDocs and GitHub Pages.
+It supports inline PlantUML diagrams.
 
-It is inspired by [wiki.nikitavoloboev.xyz](https://wiki.nikitavoloboev.xyz/) & [The Blue Book](https://lyz-code.github.io/blue-book/).
+Inspired by [wiki.nikitavoloboev.xyz](https://wiki.nikitavoloboev.xyz/) & [The Blue Book](https://lyz-code.github.io/blue-book/).
 
 ## Workflow
 
-For editing the pages I currently use [Obsidian](https://obsidian.md/).
+For editing the wiki I currently use [Obsidian](https://obsidian.md/). After commit & push the new page will be created and published trough GitHub Actions. An detailed explanation how that works can you find [here](blog-gh-pages-mkdocs.md).
 
 ## Using the wiki
 
