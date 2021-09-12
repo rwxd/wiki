@@ -56,4 +56,4 @@ tasks:
     cmds:
       - task: lint
       - mkdir -p {{.SITE_DIR}}
-      - podman run --rm -v {{.SITE_DIR}}:/src/blog/site {{.CONTAINER_NAME}} sh -c "mkdocs build"
+      - podman run --rm -v {{.SITE_DIR}}:/src/site {{.CONTAINER_NAME}} sh -c "mkdocs build"
