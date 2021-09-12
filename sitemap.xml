@@ -311,6 +311,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Tools/Anki/Anki-Plugins/</loc>
+         <lastmod>2021-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/bfg-repo-cleaner/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
