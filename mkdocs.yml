@@ -49,6 +49,8 @@ plugins:
       glob:
         - "Readwise/"
         - "Ignore/"
+        - ".trash/"
+        - ".obsidian/"
         - "assets/"
         - "*.tmp"
         - "*.pdf"
