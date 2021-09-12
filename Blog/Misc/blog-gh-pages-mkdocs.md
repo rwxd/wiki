@@ -10,7 +10,7 @@ component actions as "GitHub Actions"
 artifact html as "HTML files"
 node pages as "GitHub Pages"
 
-User -right-> GitHub: push markdown files
+User -right-> GitHub: push Markdown files
 GitHub -right-> actions: starts workflow
 actions -down-> html: renders
 pages -right-> html: serve files
