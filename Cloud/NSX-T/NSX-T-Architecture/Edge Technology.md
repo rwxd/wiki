@@ -42,7 +42,7 @@ Dependent upon the requirements for your network design, the Edge cluster could 
 - Only one Tier-0 gateway per Edge node; multiple Tier-1 gateways can be hosted per Edge node.
     - Tier-0 gateway supports a maximum of eight equal cost paths which means there is a maximum of eight Edge nodes for ECMP.
 
-[[Single Tier Routing]] [[Two Tier Routing]]
+[[Single-Tier-Routing]] [[Two-Tier-Routing]]
 
 ## Edge Bridge
 
