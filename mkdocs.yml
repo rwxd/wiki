@@ -1,3 +1,60 @@
 site_name: Wiki
+site_description: my wiki
+site_author: rwxd
+site_url: https://wiki.rwxd.eu
+dev_addr: 0.0.0.0:8000
 
-docs_dir: ./
+repo_name: "wiki"
+repo_url: "https://github.com/rwxd/wiki"
+
+docs_dir: "./"
+edit_uri: "edit/source/docs/content/"
+
+# https://squidfunk.github.io/mkdocs-material/
+theme:
+  name: "material"
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  icon:
+    logo: material/code-braces-box
+  favicon: assets/page/favicon-32x32.png
+  language: en
+  include_sidebar: true
+  features:
+    - content.code.annotate
+  feature:
+    tabs: false
+  i18n:
+    prev: "Previous"
+    next: "Next"
+
+copyright: "Copyright &copy; 2020-2021 rwxd"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - toc:
+      permalink: "⚑"
+  - plantuml_markdown:
+      base_dir: src/plantuml/
+      format: svg
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rwxd

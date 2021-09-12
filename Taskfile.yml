@@ -3,7 +3,7 @@
 version: "3"
 
 vars:
-  CONTAINER_NAME: blog.rwxd.eu
+  CONTAINER_NAME: wiki.rwxd.eu
   CURRENT_DIR:
     sh: pwd
   SITE_DIR: "{{.CURRENT_DIR}}/docs/site"
@@ -22,7 +22,7 @@ tasks:
     silent: true
 
   image:
-    desc: builds container image with name blog.rwxd.eu
+    desc: builds container image with name wiki.rwxd.eu
     cmds:
       - podman build -t {{.CONTAINER_NAME}} -f ./Containerfile
     silent: true
