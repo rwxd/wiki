@@ -43,6 +43,7 @@ theme:
 copyright: "Copyright &copy; 2020-2021 rwxd"
 
 plugins:
+  - search
   - same-dir
   - roamlinks
   - exclude:
