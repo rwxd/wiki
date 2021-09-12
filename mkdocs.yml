@@ -47,11 +47,11 @@ plugins:
   - roamlinks
   - exclude:
       glob:
-        - "Readwise/"
-        - "Ignore/"
-        - ".trash/"
-        - ".obsidian/"
-        - "assets/"
+        - "Readwise/*"
+        - "Ignore/*"
+        - ".trash/*"
+        - ".obsidian/*"
+        - "assets/*"
         - "*.tmp"
         - "*.pdf"
         - "*.gz"
