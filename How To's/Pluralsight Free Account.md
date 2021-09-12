@@ -1,8 +1,6 @@
 # Pluralsight Free Account
 
-Created: July 7, 2021 10:42 PM
-
-# Create a new Pluralsight Account with a one month demo trough Visual Studio Dev Essentials
+Create a new Pluralsight Account with a one month demo trough Visual Studio Dev Essentials
 
 1. Create a new Microsoft account with a live e-mail
 [https://visualstudio.microsoft.com/de/dev-essentials/](https://visualstudio.microsoft.com/de/dev-essentials/)

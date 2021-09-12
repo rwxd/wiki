@@ -51,7 +51,7 @@ plugins:
         - "Ignore/*"
         - ".trash/*"
         - ".obsidian/*"
-        - "assets/*"
+        # - "assets/*"
         - "*.tmp"
         - "*.pdf"
         - "*.gz"
