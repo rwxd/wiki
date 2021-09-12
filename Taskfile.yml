@@ -6,7 +6,7 @@ vars:
   CONTAINER_NAME: wiki.rwxd.eu
   CURRENT_DIR:
     sh: pwd
-  SITE_DIR: "{{.CURRENT_DIR}}/docs/site"
+  SITE_DIR: "{{.CURRENT_DIR}}/site"
 
 tasks:
   default:
