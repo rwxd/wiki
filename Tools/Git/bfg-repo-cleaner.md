@@ -1,6 +1,8 @@
-# Clean Git Repos with BFG
+# Clean Git repositories with BFG
 
-Delete a filename and push changes
+With [BFG](https://rtyley.github.io/bfg-repo-cleaner/) large or troublesome files can be removed from a Git Repository
+
+Delete a file in a Git repository and force push changes.
 
 ```bash
 bfg --delete-files file.md
