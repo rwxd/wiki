@@ -1,5 +1,5 @@
-site_name: Wiki
-site_description: my wiki
+site_name: Knowledge base
+site_description: Knowledge base with Markdown, MkDocs & GitHub Pages
 site_author: rwxd
 site_url: https://wiki.rwxd.eu
 dev_addr: 0.0.0.0:8000
@@ -27,7 +27,8 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
   icon:
-    logo: material/code-braces-box
+    # logo: material/code-braces-box
+    logo: material/bookshelf
   favicon: assets/page/favicon-32x32.png
   language: en
   include_sidebar: true
@@ -44,6 +45,15 @@ copyright: "Copyright &copy; 2020-2021 rwxd"
 plugins:
   - same-dir
   - roamlinks
+  - exclude:
+      glob:
+        - "Readwise/"
+        - "Ignore/"
+        - "*.tmp"
+        - "*.pdf"
+        - "*.gz"
+      regex:
+        - '.*\.(tmp|bin|tar)$'
 
 markdown_extensions:
   - pymdownx.highlight:

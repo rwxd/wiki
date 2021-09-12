@@ -4,3 +4,5 @@ pre-commit
 pygments
 plantuml-markdown
 mkdocs-same-dir
+mkdocs-roamlinks-plugin
+mkdocs-exclude
