@@ -11,10 +11,3 @@ The CCP employs cluster of VMs called CCP nodes. The cluster provides redundancy
 ## LCP (Local Control Plane)
 
 The LCP is found on the transport nodes which use the LCP to connect and communicate with the CCP. The programming for the forwarding entries occurs here.
-
-```plantuml
-node test1
-node test2
-
-test1 -> test2
-```
