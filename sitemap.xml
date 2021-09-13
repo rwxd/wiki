@@ -26,6 +26,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Control-Plane/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Data-Plane/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Management-Plane/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/Control%20Plane/</loc>
          <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
