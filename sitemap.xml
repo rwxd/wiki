@@ -381,7 +381,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Tools/Anki/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Tools/Bitwarden/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Tools/HashiCorp-Vault/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Tools/KeepassXC/</loc>
          <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -402,11 +417,6 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/mermaid/</loc>
-         <lastmod>2021-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Tools/Anki/Anki-Plugins/</loc>
          <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
