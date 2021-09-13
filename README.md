@@ -7,7 +7,11 @@ Inspired by [wiki.nikitavoloboev.xyz](https://wiki.nikitavoloboev.xyz/) & [The B
 
 ## Workflow
 
-For editing the wiki I currently use [Obsidian](https://obsidian.md/). After commit & push the new page will be created and published trough GitHub Actions. An detailed explanation how that works can you find [here](blog-gh-pages-mkdocs.md).
+For editing the wiki I currently use [Obsidian](https://obsidian.md/). I'm also experimenting with [Dendron](https://www.dendron.so/) as a alternative to Obsidian.
+
+After commit & push the new page will be build trough GitHub Actions. Currently I'm not sure to use GitHub Pages or Cloudflare Pages to serve the static website files.
+
+
 
 ## Using the wiki
 
