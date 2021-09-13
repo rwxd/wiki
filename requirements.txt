@@ -6,3 +6,4 @@ plantuml-markdown
 mkdocs-same-dir
 mkdocs-roamlinks-plugin
 mkdocs-exclude
+mkdocs-awesome-pages-plugin
