@@ -9,3 +9,4 @@ KeePassXC has the functionality to store SSH keys and inject the keys into the S
 ## Links
 - [Getting started](https://keepassxc.org/docs/KeePassXC_GettingStarted.html)
 - [Using KeePassXC to manage SSH keys](https://ferrario.me/using-keepassxc-to-manage-ssh-keys/)
+- [Authentication](https://www.billdietrich.me/Authentication.html?expandall=1)
