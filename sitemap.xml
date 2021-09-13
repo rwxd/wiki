@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Research-Papers/</loc>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/blog-gh-pages-mkdocs/</loc>
          <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
@@ -372,11 +377,6 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Rust/Memory%20Management/</loc>
-         <lastmod>2021-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Research-Papers/research-papers.md/</loc>
          <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
