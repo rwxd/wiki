@@ -1,5 +1,7 @@
 # 20 rules of formulating knowledge
 
+[Effective learning: Twenty rules of formulating knowledge](https://www.supermemo.com/en/archives1990-2015/articles/20rules)
+
 ## 1. Do not learn if you don't understand
 
 ## 2. Learn before you memorize
