@@ -1,5 +1,5 @@
-site_name: Knowledge base
-site_description: Knowledge base with Markdown, MkDocs & GitHub Pages
+site_name: Digital garden
+site_description: Digital garden
 site_author: rwxd
 site_url: https://wiki.rwxd.eu
 dev_addr: 0.0.0.0:8000
