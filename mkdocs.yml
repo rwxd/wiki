@@ -43,7 +43,7 @@ theme:
     text: Inter
     code: Fira Code
 
-copyright: "Copyright &copy; 2020-2021 rwxd"
+copyright: "Copyright &copy; 2021 rwxd"
 
 plugins:
   - search
