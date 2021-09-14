@@ -9,8 +9,7 @@ Inspired by [wiki.nikitavoloboev.xyz](https://wiki.nikitavoloboev.xyz/) & [The B
 
 For editing the wiki I currently use [Obsidian](https://obsidian.md/). I'm also experimenting with [Dendron](https://www.dendron.so/) and [Foam](https://github.com/foambubble/foam) as a alternative.
 
-After commit & push the new page will be build trough GitHub Actions. Currently I'm not sure to use GitHub Pages or Cloudflare Pages to serve the static website files.
-
+After commit & push the new page will be build trough GitHub Actions. Currently I'm using GitHub Pages to serve the website files, but I'm also experimenting with Cloudflare Pages.
 
 
 ## Using the wiki
