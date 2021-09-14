@@ -62,7 +62,7 @@ plugins:
       regex:
         - '.*\.(tmp|bin|tar)$'
   - awesome-pages:
-      collapse_single_pages: true
+      collapse_single_pages: false
 
 markdown_extensions:
   - pymdownx.highlight:
