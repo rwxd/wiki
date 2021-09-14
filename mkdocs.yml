@@ -69,7 +69,8 @@ markdown_extensions:
       linenums: true
       linenums_style: pymdownx-inline
   - pymdownx.superfences
-  - pymdownx.inlinehilite
+  - pymdownx.inlinehilite:
+      guess_lang: true
   - pymdownx.keys
   - pymdownx.snippets
   - toc:
