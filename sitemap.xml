@@ -301,6 +301,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/CLI/watch/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Networking/Bridge%20Interface/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
