@@ -26,11 +26,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Books/books.md/</loc>
-         <lastmod>2021-09-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/Edge%20Technology/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
@@ -167,6 +162,11 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Economy/Investing/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Governance/Politics/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -331,11 +331,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Politics/Resources/</loc>
-         <lastmod>2021-09-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Programming/general/stack/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
@@ -402,6 +397,16 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Rust/Memory%20Management/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Reading/books/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Reading/magazines/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
