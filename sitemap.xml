@@ -341,6 +341,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/YAML/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Formatting/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
