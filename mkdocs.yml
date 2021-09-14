@@ -41,7 +41,7 @@ theme:
     next: "Next"
   font:
     text: Inter
-    code: Source Code Pro
+    code: Fira Code
 
 copyright: "Copyright &copy; 2020-2021 rwxd"
 
