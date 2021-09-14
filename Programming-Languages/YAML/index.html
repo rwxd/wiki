@@ -3099,43 +3099,49 @@
                 
                 <h1 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">⚑</a></h1>
 <p>YAML is commonly used for configuration files and in applications where data is being stored or transmitted.</p>
+<p>Filenames can end with <code>.yaml</code> or <code>.yml</code>.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚑</a></h2>
 <h3 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is a string</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nt">key</span><span class="p">:</span> <span class="s">&quot;this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">string&quot;</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nt">key</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-<span class="linenos" data-linenos=" 6 "></span>  <span class="no">this is a multi-line</span>
-<span class="linenos" data-linenos=" 7 "></span>  <span class="no">string with line breaks</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="nt">key</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
-<span class="linenos" data-linenos="10 "></span>  <span class="no">this a multi-line </span>
-<span class="linenos" data-linenos="11 "></span>  <span class="no">string withouth line breaks</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nn">---</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is a string</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">key</span><span class="p">:</span> <span class="s">&quot;this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">string&quot;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nt">key</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="no">this is a multi-line</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="no">string with line breaks</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="nt">key</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="no">this a multi-line </span>
+<span class="linenos" data-linenos="12 "></span>  <span class="no">string withouth line breaks</span>
 </code></pre></div>
 <h3 id="integers-and-floats">Integers and floats<a class="headerlink" href="#integers-and-floats" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">integer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">595</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="nt">float</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12.2</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nn">---</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">integer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">595</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">float</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12.2</span>
 </code></pre></div>
 <h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">list1</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="s">&quot;two&quot;</span><span class="p p-Indicator">,</span> <span class="nv">3</span><span class="p p-Indicator">]</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="nt">list2</span><span class="p">:</span>
-<span class="linenos" data-linenos="4 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="linenos" data-linenos="5 "></span>  <span class="p p-Indicator">-</span> <span class="s">&quot;two&quot;</span>
-<span class="linenos" data-linenos="6 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nn">---</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">list1</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="s">&quot;two&quot;</span><span class="p p-Indicator">,</span> <span class="nv">3</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nt">list2</span><span class="p">:</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="linenos" data-linenos="6 "></span>  <span class="p p-Indicator">-</span> <span class="s">&quot;two&quot;</span>
+<span class="linenos" data-linenos="7 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">my_obj</span><span class="p">:</span>
-<span class="linenos" data-linenos="2 "></span>  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Object</span>
-<span class="linenos" data-linenos="3 "></span>  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a object</span>
-<span class="linenos" data-linenos="4 "></span>  <span class="nt">childs</span><span class="p">:</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="p p-Indicator">-</span> <span class="nt">test_obj</span><span class="p">:</span>
-<span class="linenos" data-linenos="6 "></span>        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test Object</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nn">---</span>
+<span class="linenos" data-linenos="2 "></span><span class="nt">my_obj</span><span class="p">:</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Object</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a object</span>
+<span class="linenos" data-linenos="5 "></span>  <span class="nt">childs</span><span class="p">:</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="p p-Indicator">-</span> <span class="nt">test_obj</span><span class="p">:</span>
+<span class="linenos" data-linenos="7 "></span>        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test Object</span>
 </code></pre></div>
 <h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># this is a comment</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nn">---</span>
+<span class="linenos" data-linenos="2 "></span><span class="c1"># this is a comment</span>
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">⚑</a></h2>
 <ul>
