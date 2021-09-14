@@ -58,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -85,7 +85,7 @@
     <a href="../../.." title="Digital garden" class="md-header__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
@@ -121,7 +121,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
@@ -204,7 +204,7 @@
     <a href="../../.." title="Digital garden" class="md-nav__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     Digital garden
@@ -2970,7 +2970,7 @@
                   </a>
                 
                 
-                <h1 id="what-is-two-tier-routing">What is Two Tier Routing?<a class="headerlink" href="#what-is-two-tier-routing" title="Permanent link">⚑</a></h1>
+                <h1 id="what-is-two-tier-routing">What is Two Tier Routing?<a class="headerlink" href="#what-is-two-tier-routing" title="Permanent link">𐇲</a></h1>
 <p>With two-tier routing, you will find both T0 and T1 gateways (virtual routers). The T0 gateway is common referred to as the ‘provider’ and the T1 would be the ‘tenant’. This design enables provider admins and tenant admins total control over their services and policies because they operate separately from one another.</p>
 <p>The T0 gateway handles all northbound traffic and can connect with one or more physical routers and/or L3 switches. Southbound T0 traffic traverses something called a ‘RouterLink interface’ which established between the T0 and T1 gateways. The T1 gateway has northbound connectivity to the T0 gateway through this interface and then southbound interface(s) are called ‘downlinks’ which are from the T1 gateway to one or more L2 segments. T1 routers cannot connect directly to the physical underlying infrastructure, only T0 routers can provide connectivity to the physical network commonly referred to as the underlay.</p>
 <p>The concepts of distributed routers (DR) and service routers (SR) are no different than with single-tier routing. One area that is different in this topology compared to single-tier is the use of the RouterLink Interface (Linked Port) which is used to connect T0 and T1 gateways. A peer connection is established using the 100.64.0.0/16 reserved address space (RFC 6598). It will appear in the configuration as a /31 subnet which you may see during the step-by-step exercise when establishing the connectivity between T0 and T1.</p>

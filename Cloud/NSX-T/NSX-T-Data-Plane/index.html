@@ -58,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -85,7 +85,7 @@
     <a href="../../.." title="Digital garden" class="md-header__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
@@ -121,7 +121,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
@@ -204,7 +204,7 @@
     <a href="../../.." title="Digital garden" class="md-nav__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     Digital garden
@@ -3203,35 +3203,35 @@
                   </a>
                 
                 
-                <h1 id="nsx-t-data-plane">NSX-T Data Plane<a class="headerlink" href="#nsx-t-data-plane" title="Permanent link">⚑</a></h1>
+                <h1 id="nsx-t-data-plane">NSX-T Data Plane<a class="headerlink" href="#nsx-t-data-plane" title="Permanent link">𐇲</a></h1>
 <p>The data plane is where all stateless forwarding takes place based on tables created by the control plane. Packet level stats are found here as well as topology information which is then reported from the data plane up to the control plane.</p>
 <p>In the data plane are the NSX-T transport nodes which are hosts running the LCP daemons and forwarding engines.</p>
-<h2 id="n-vds-nsx-virtual-distributed-switch">N-VDS (NSX Virtual Distributed Switch)<a class="headerlink" href="#n-vds-nsx-virtual-distributed-switch" title="Permanent link">⚑</a></h2>
+<h2 id="n-vds-nsx-virtual-distributed-switch">N-VDS (NSX Virtual Distributed Switch)<a class="headerlink" href="#n-vds-nsx-virtual-distributed-switch" title="Permanent link">𐇲</a></h2>
 <p>N-VDS is a basic software-defined switch platform that is completely hypervisor independent. It is responsible for forwarding network traffic between the components on the transport node (virtual machines) or between the internal components and the underlying physical network.</p>
 <p>The N-VDS is required when implementing an overlay in NSX-T and can therefore co-exist with a VDS (Virtual Distributed Switch)</p>
 <p>The N-VDS must have at least one or more physical network interfaces (aka pNIC). The N-VDS cannot share a pNIC with another N-VDS. So when you assign a pNIC to a N-VDS it stays with that N-VDS. Several N-VDS can co-exist provided each N-VDS is using it's own set of pNIC(s).</p>
-<h3 id="uplinks-pnics">Uplinks &amp; pNICs<a class="headerlink" href="#uplinks-pnics" title="Permanent link">⚑</a></h3>
+<h3 id="uplinks-pnics">Uplinks &amp; pNICs<a class="headerlink" href="#uplinks-pnics" title="Permanent link">𐇲</a></h3>
 <p>A pNIC is the actual physical network port on a transport node and an uplink is used in software on the N-VDS to define how the pNIC will be used.</p>
-<h4 id="uplink-profiles">Uplink Profiles<a class="headerlink" href="#uplink-profiles" title="Permanent link">⚑</a></h4>
+<h4 id="uplink-profiles">Uplink Profiles<a class="headerlink" href="#uplink-profiles" title="Permanent link">𐇲</a></h4>
 <p>Uplink Profiles are used as a "template" to define how an N-VDS will connect to the physical network and ensures the profile is applied consistently across multiple transport nodes (ESXi or KVM hypervisors).
 <img alt="Pasted image 20210722224252.png" src="../attachements/Pasted%20image%2020210722224252.png" /></p>
-<h2 id="teaming-policy">Teaming Policy<a class="headerlink" href="#teaming-policy" title="Permanent link">⚑</a></h2>
+<h2 id="teaming-policy">Teaming Policy<a class="headerlink" href="#teaming-policy" title="Permanent link">𐇲</a></h2>
 <p>The teaming policy defines how the NSX virtual switch uses its uplinks for redundancy and traffic load balancing. It only defines how the NSX virtual switch balances traffic across its uplinks.</p>
 <p><img alt="Pasted image 20210726161506.png" src="../attachements/Pasted%20image%2020210726161506.png" /></p>
-<h3 id="failover-order">Failover Order<a class="headerlink" href="#failover-order" title="Permanent link">⚑</a></h3>
+<h3 id="failover-order">Failover Order<a class="headerlink" href="#failover-order" title="Permanent link">𐇲</a></h3>
 <p>An active uplink is specified along with an optional list of standby uplinks. Should the active uplink fail, the next available uplink in the standby list takes its place immediately.</p>
-<h3 id="load-balanced-source-port-load-balance-source-mac-address">Load Balanced Source Port / Load Balance Source Mac Address<a class="headerlink" href="#load-balanced-source-port-load-balance-source-mac-address" title="Permanent link">⚑</a></h3>
+<h3 id="load-balanced-source-port-load-balance-source-mac-address">Load Balanced Source Port / Load Balance Source Mac Address<a class="headerlink" href="#load-balanced-source-port-load-balance-source-mac-address" title="Permanent link">𐇲</a></h3>
 <p>Traffic is distributed across a specified list of active uplinks.</p>
-<h4 id="load-balanced-source-port">Load Balanced Source Port<a class="headerlink" href="#load-balanced-source-port" title="Permanent link">⚑</a></h4>
+<h4 id="load-balanced-source-port">Load Balanced Source Port<a class="headerlink" href="#load-balanced-source-port" title="Permanent link">𐇲</a></h4>
 <p>The "Load Balanced Source Port" policy maps a virtual interface to an uplink of the host. Traffic sent by this virtual interface will leave the host thorough this uplink only, and traffic destined to this virtual interface will necessarily enter the host via this uplink.</p>
-<h4 id="load-balanced-source-mac-address">Load Balanced Source MAC Address<a class="headerlink" href="#load-balanced-source-mac-address" title="Permanent link">⚑</a></h4>
+<h4 id="load-balanced-source-mac-address">Load Balanced Source MAC Address<a class="headerlink" href="#load-balanced-source-mac-address" title="Permanent link">𐇲</a></h4>
 <p>The “Load Balanced Source Mac Address” goes a little bit further in term of granularity for virtual interfaces that can source traffic from different mac addresses: two frames sent by the same virtual interface could be pinned to different host uplinks based on their source mac address.</p>
-<h2 id="edge-nodes">Edge Nodes<a class="headerlink" href="#edge-nodes" title="Permanent link">⚑</a></h2>
+<h2 id="edge-nodes">Edge Nodes<a class="headerlink" href="#edge-nodes" title="Permanent link">𐇲</a></h2>
 <p>Edge Nodes are "service appliances" which are dedicated to running network services that are not dispersed to the hypervisors (ESXi or KVM). They represent a pool of capacity and can be grouped in one cluster or across several clusters.</p>
-<h2 id="hypervisor-transport-nodes">Hypervisor Transport Nodes<a class="headerlink" href="#hypervisor-transport-nodes" title="Permanent link">⚑</a></h2>
+<h2 id="hypervisor-transport-nodes">Hypervisor Transport Nodes<a class="headerlink" href="#hypervisor-transport-nodes" title="Permanent link">𐇲</a></h2>
 <p>Hypervisor Transport Nodes are simply hypervisors (ESXi or KVM) that have been 
 prepared and configured to run on NSX-T.</p>
-<h2 id="l2-bridge">L2 Bridge<a class="headerlink" href="#l2-bridge" title="Permanent link">⚑</a></h2>
+<h2 id="l2-bridge">L2 Bridge<a class="headerlink" href="#l2-bridge" title="Permanent link">𐇲</a></h2>
 <p>L2 Bridge is a virtual appliance that is used to bridge traffic between an NSX-T overlay and a traditional VLAN backed physical network. This bridge is deployed through a cluster of two ESXi hosts dedicated for bridging purposes (active/standby on a per-VLAN basis).</p>
                 
               

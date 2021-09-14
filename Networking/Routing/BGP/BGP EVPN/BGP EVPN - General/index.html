@@ -58,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <script>function __prefix(e){return new URL("../../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -85,7 +85,7 @@
     <a href="../../../../.." title="Digital garden" class="md-header__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
@@ -121,7 +121,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
@@ -204,7 +204,7 @@
     <a href="../../../../.." title="Digital garden" class="md-nav__button md-logo" aria-label="Digital garden" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
 
     </a>
     Digital garden
@@ -3087,19 +3087,19 @@
                   </a>
                 
                 
-                <h1 id="bgp-evpn">BGP EVPN<a class="headerlink" href="#bgp-evpn" title="Permanent link">⚑</a></h1>
-<h2 id="what-is-bgp-evpn">What is BGP EVPN?<a class="headerlink" href="#what-is-bgp-evpn" title="Permanent link">⚑</a></h2>
+                <h1 id="bgp-evpn">BGP EVPN<a class="headerlink" href="#bgp-evpn" title="Permanent link">𐇲</a></h1>
+<h2 id="what-is-bgp-evpn">What is BGP EVPN?<a class="headerlink" href="#what-is-bgp-evpn" title="Permanent link">𐇲</a></h2>
 <p>EVPN is a solution that provides the control plane for network virtualization. In the simplest of terms, EVPN is a technology that connects L2 network segments separated by an L3 network. EVPN accomplishes this by building the L2 network as a virtual Layer 2 network overlay over the Layer 3 network. It uses BGP as its control protocol, and in the data center it uses VXLAN for packet encapsulation.</p>
 <p>It relies on multi-protocol BGP (MP-BGP) to exchange information and is based on BGP-MPLS IP VPNs (<a href="https://tools.ietf.org/html/rfc4364">RFC 4364</a>). The MP-BGP extensions can carry reachability information (NLRI) for multiple protocols (IPv4, IPv6, L3VPN and in our case EVPN). EVPN is a special family to advertise MAC addresses and the remote equipments they are attached to.</p>
 <p>It enables not only bridging between end systems in the same layer 2 segment but also routing between different segments (subnets). There is also inherent support for multi-tenancy. EVPN is often referred to as the means of implementing <em>controller-less VXLAN</em>.</p>
 <p>There are two kinds of reachability information a VTEP sends through BGP EVPN:
 1.  the VNIs they have interest in (type 3 routes), and
 2.  for each VNI, the local MAC addresses (type 2 routes).</p>
-<h2 id="bgp-constructs-to-support-virtual-network-routes">BGP Constructs to Support Virtual Network Routes<a class="headerlink" href="#bgp-constructs-to-support-virtual-network-routes" title="Permanent link">⚑</a></h2>
+<h2 id="bgp-constructs-to-support-virtual-network-routes">BGP Constructs to Support Virtual Network Routes<a class="headerlink" href="#bgp-constructs-to-support-virtual-network-routes" title="Permanent link">𐇲</a></h2>
 <p>BGP added a few constructs to support advertising virtual network routes. These first arose in the context of MPLS L3VPNs in service provider networks. The first issue is what AFI/SAFI to use. EVPN uses the AFI/SAFI of l2vpn/evpn. This is because EVPN is considered to be a kind of an L2 VPN. Next, BGP must handle the model allowing addresses to be duplicated across virtual networks.</p>
 <p>Every BGP implementation I know of maintains two kinds of routing tables: a global one and one per virtual network. BGP runs the best-path algorithm on the global table to pick a single path to advertise for each prefix to its peers. Because the RD is unique to each originator, all copies of a route will be advertised to a neighbor. </p>
 <p>To install routes into a virtual network’s routing table, BGP first uses the import RT clause to select specific candidate routes from the global table to import into this virtual network. Then, it runs the best-path algorithm again on the imported candidate routes, but this time within the context of the virtual network’s routing table. If the same address is advertised with multiple RTs, the best-path algorithm selects the best one. Multiple RTs can be imported into a single virtual network routing table.</p>
-<h3 id="route-distinguisher">Route Distinguisher<a class="headerlink" href="#route-distinguisher" title="Permanent link">⚑</a></h3>
+<h3 id="route-distinguisher">Route Distinguisher<a class="headerlink" href="#route-distinguisher" title="Permanent link">𐇲</a></h3>
 <p>Format of RD for use with EVPN
 <img alt="Pasted image 20210725000046.png" src="../attachements/Pasted%20image%2020210725000046.png" /></p>
 <p>If you’re wondering how the Virtual Network Instance (VNI) is three bytes long but can be encoded in a two-byte space in the RD, this is not an issue, because it is  assumed that no VTEP will, in practice, host more than 64,000 VNIs.</p>
@@ -3107,7 +3107,7 @@
 <p>Because the router’s loopback IP address is part of the RD, two nodes with the same virtual network will end up having different RDs. This solves the problem of distinguishing sources with the same IP address.</p>
 <p>The RD is encoded as part of the NLRI in the MP_REACH_NLRI and
 MP_UNREACH_NLRI attributes.</p>
-<h3 id="route-target">Route Target<a class="headerlink" href="#route-target" title="Permanent link">⚑</a></h3>
+<h3 id="route-target">Route Target<a class="headerlink" href="#route-target" title="Permanent link">𐇲</a></h3>
 <p>RT is an additional path attribute added to virtual network NLRIs. A BGP speaker advertising virtual networks and their addresses uses a specific RT called the export RT. A BGP speaker receiving and using the advertisement uses this RT to decide which local virtual network to add the routes to. This is called the import RT.</p>
 <p>Format of RT for use with EVPN-VXLAN:
 <img alt="Pasted image 20210725000601.png" src="../attachements/Pasted%20image%2020210725000601.png" /></p>
@@ -3116,7 +3116,7 @@ MP_UNREACH_NLRI attributes.</p>
 <p><code class="highlight">Type</code> A three-bit field indicating the encapsulation used in EVPN. For VXLAN, it is 1, and for VLAN, it is 0.</p>
 <p><code class="highlight">Domain-ID (D-ID)</code> Four bits that are typically zero. In certain cases, if there is an overlap in the VXLAN numbering space, this field is used to qualify the administrative domain to which the VNI belongs.</p>
 <p><code class="highlight">Service ID</code> Three bytes containing the virtual network identifier. For VXLAN, it is the 3-byte VNI; for VLAN it is 12 bits (the lower 12 bits of the 3-byte field).</p>
-<h3 id="route-types">Route Types<a class="headerlink" href="#route-types" title="Permanent link">⚑</a></h3>
+<h3 id="route-types">Route Types<a class="headerlink" href="#route-types" title="Permanent link">𐇲</a></h3>
 <p><img alt="EVPN Route Types" src="../EVPN%20Route%20Types/" /></p>
 <p><img alt="EVPN and Bridging" src="../EVPN%20Bridging/EVPN%20and%20Bridging/" /></p>
 <p><img alt="ARP ND Suppresion" src="../ARP%20ND%20Suppresion/" /></p>
