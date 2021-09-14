@@ -9,6 +9,7 @@ Filenames can end with `.yaml` or `.yml`.
 ### Strings
 
 ```yaml
+---
 key: this is a string
 
 key: "this is also a string"
@@ -25,7 +26,7 @@ key: >
 ### Integers and floats
 
 ```yaml
-
+---
 integer: 595
 
 float: 12.2
@@ -35,7 +36,7 @@ float: 12.2
 ### Lists
 
 ```yaml
-
+---
 list1: [1, "two", 3]
 
 list2:
@@ -48,7 +49,7 @@ list2:
 ### Objects
 
 ```yaml
-
+---
 my_obj:
   title: My Object
   description: This is a object
@@ -61,6 +62,7 @@ my_obj:
 ### Comments
 
 ```yaml
+---
 # this is a comment
 ```
 
