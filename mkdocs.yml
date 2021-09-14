@@ -15,20 +15,20 @@ theme:
   name: "material"
   palette:
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: teal
+      accent: teal
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: teal
+      accent: teal
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
   icon:
     # logo: material/code-braces-box
-    logo: material/bookshelf
+    logo: material/pine-tree
   favicon: assets/page/favicon-32x32.png
   language: en
   include_sidebar: true
@@ -74,7 +74,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets
   - toc:
-      permalink: "⚑"
+      permalink: "𐇲"
   - plantuml_markdown:
       base_dir: src/plantuml/
       format: svg
