@@ -39,6 +39,9 @@ theme:
   i18n:
     prev: "Previous"
     next: "Next"
+  font:
+    text: Oswald
+    code: Roboto Mono
 
 copyright: "Copyright &copy; 2020-2021 rwxd"
 
