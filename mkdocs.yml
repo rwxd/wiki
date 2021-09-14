@@ -41,7 +41,7 @@ theme:
     next: "Next"
   font:
     text: Oswald
-    code: Roboto Mono
+    code: Source Code Pro
 
 copyright: "Copyright &copy; 2020-2021 rwxd"
 
