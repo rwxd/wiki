@@ -326,11 +326,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Other/highlight-workflow/</loc>
-         <lastmod>2021-09-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Programming/general/stack/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
@@ -401,6 +396,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Reading/Readwise/</loc>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Reading/books/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
@@ -432,11 +432,6 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/MkDocs/</loc>
-         <lastmod>2021-09-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Tools/Readwise/</loc>
          <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
