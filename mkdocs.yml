@@ -40,7 +40,7 @@ theme:
     prev: "Previous"
     next: "Next"
   font:
-    text: Sora
+    text: Inter
     code: Source Code Pro
 
 copyright: "Copyright &copy; 2020-2021 rwxd"
