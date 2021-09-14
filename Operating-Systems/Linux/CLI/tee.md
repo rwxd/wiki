@@ -1,5 +1,7 @@
 # Tee
 
+With tee you it is possible to read from standard input and write to standard output and files (or commands).
+
 ## Usage
 
 Log into file and stdout:  
