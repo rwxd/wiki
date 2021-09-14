@@ -2954,17 +2954,17 @@
                 
                   <h1>Excluding</h1>
                 
-                <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>services:
-<span class="linenos" data-linenos=" 2 "></span>  whoami:
-<span class="linenos" data-linenos=" 3 "></span>    image: &quot;traefik/whoami&quot;
-<span class="linenos" data-linenos=" 4 "></span>    container_name: &quot;whoami-test&quot;
-<span class="linenos" data-linenos=" 5 "></span>    labels:
-<span class="linenos" data-linenos=" 6 "></span>      - &quot;traefik.enable=true&quot;
-<span class="linenos" data-linenos=" 7 "></span>      - &quot;traefik.http.routers.whoami-test.rule=Host(`whoami-test.fritz.box`)&quot;
-<span class="linenos" data-linenos=" 8 "></span>      - &quot;traefik.http.routers.whoami-test.entrypoints=http&quot;
-<span class="linenos" data-linenos=" 9 "></span>      - &quot;traefik.http.routers.whoami-test.middlewares=intern_whitelist&quot;
-<span class="linenos" data-linenos="10 "></span>      - &quot;traefik.http.middlewares.intern_whitelist.ipwhitelist.sourcerange=192.168.2.0/23&quot;
-<span class="linenos" data-linenos="11 "></span>      - &quot;traefik.http.middlewares.intern_whitelist.ipwhitelist.ipstrategy.excludedips=192.168.2.1, 192.168.2.124&quot;
+                <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">services</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="n">whoami</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">image</span><span class="o">:</span> <span class="s2">&quot;traefik/whoami&quot;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">container_name</span><span class="o">:</span> <span class="s2">&quot;whoami-test&quot;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="n">labels</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 6 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.enable=true&quot;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.http.routers.whoami-test.rule=Host(`whoami-test.fritz.box`)&quot;</span>
+<span class="linenos" data-linenos=" 8 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.http.routers.whoami-test.entrypoints=http&quot;</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.http.routers.whoami-test.middlewares=intern_whitelist&quot;</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.http.middlewares.intern_whitelist.ipwhitelist.sourcerange=192.168.2.0/23&quot;</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="o">-</span> <span class="s2">&quot;traefik.http.middlewares.intern_whitelist.ipwhitelist.ipstrategy.excludedips=192.168.2.1, 192.168.2.124&quot;</span>
 </code></pre></div>
                 
               

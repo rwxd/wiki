@@ -3375,9 +3375,9 @@
 <span class="linenos" data-linenos="4 "></span> <span class="na">bridge-vids 100 101 102 103</span>
 <span class="linenos" data-linenos="5 "></span> <span class="na">bridge-pvid 1</span>
 </code></pre></div>
-<p><code>bridge-vlan-aware yes</code> The VLAN-aware mode in Cumulus Linux implements a configuration model with one single instance of Spanning Tree. Each physical bridge member port is configured with the list of allowed VLANs as well as its port VLAN ID. This significantly reduces the configuration size, and eliminates the large overhead of managing the port/VLAN instances as subinterfaces.</p>
-<p><code>ifreload -a</code> to reload interface configuration</p>
-<p><code>bridge-pvid 1</code> sets the native VLAN. The Primary VLAN Identifier (PVID) of the bridge defaults to 1. You do not have to specify <code>bridge-pvid</code> for a bridge or a port. However, even though this does not affect the configuration, it helps other users for readability</p>
+<p><code class="highlight">bridge-vlan-aware yes</code> The VLAN-aware mode in Cumulus Linux implements a configuration model with one single instance of Spanning Tree. Each physical bridge member port is configured with the list of allowed VLANs as well as its port VLAN ID. This significantly reduces the configuration size, and eliminates the large overhead of managing the port/VLAN instances as subinterfaces.</p>
+<p><code class="highlight"><span class="n">ifreload</span> <span class="o">-</span><span class="n">a</span></code> to reload interface configuration</p>
+<p><code class="highlight">bridge-pvid 1</code> sets the native VLAN. The Primary VLAN Identifier (PVID) of the bridge defaults to 1. You do not have to specify <code class="highlight">bridge-pvid</code> for a bridge or a port. However, even though this does not affect the configuration, it helps other users for readability</p>
 <p>By default, the bridge port inherits the bridge VIDs, however, you can configure a port to override the bridge VIDs.</p>
 <h2 id="svis">SVIs<a class="headerlink" href="#svis" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="na">auto vlan103</span>
@@ -3391,9 +3391,9 @@
 <span class="linenos" data-linenos=" 9 "></span> <span class="na">vlan-raw-device bridge</span>
 <span class="linenos" data-linenos="10 "></span> <span class="na">vrf xal-001</span>
 </code></pre></div>
-<p><code>address</code> is the unique IP address of the leaf on the specified VNI.</p>
-<p><code>address-virtual</code> is shared across all the leaves that carry this VNI. Servers are configured to use this IP address as the default gateway address to allow a server to be attached to any rack and not have to change its default gateway configuration.</p>
-<p><code>vxlan-raw-device bridge</code> Linux allows the presence of multiple 802.1Q bridges on the same device. An in interface is assigned to only of of the bridges and so there is no ambiguity on the link about the use of a VLAN.</p>
+<p><code class="highlight">address</code> is the unique IP address of the leaf on the specified VNI.</p>
+<p><code class="highlight">address-virtual</code> is shared across all the leaves that carry this VNI. Servers are configured to use this IP address as the default gateway address to allow a server to be attached to any rack and not have to change its default gateway configuration.</p>
+<p><code class="highlight">vxlan-raw-device bridge</code> Linux allows the presence of multiple 802.1Q bridges on the same device. An in interface is assigned to only of of the bridges and so there is no ambiguity on the link about the use of a VLAN.</p>
 <h2 id="vxlan-interfaces">VXLAN Interfaces<a class="headerlink" href="#vxlan-interfaces" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="na">auto vni10100</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="na">iface vni10100</span>
@@ -3406,12 +3406,12 @@
 <span class="linenos" data-linenos=" 9 "></span> <span class="na">vxlan-id 10100</span>
 <span class="linenos" data-linenos="10 "></span> <span class="na">vxlan-local-tunnelip 10.136.128.3</span>
 </code></pre></div>
-<p><code>iface vni10100</code> Each VXLAN VNI is represented by a device in the Linux kernel</p>
-<p><code>bridge-access</code> maps the VNI to a local VLAN ID</p>
-<p><code>bridge-learning off</code> We don't want to enable learning of remote MAC address because we have EVPN. So we disable learning on the VNIs.</p>
-<p><code>mstpctl-bpduguard yes</code> You can configure <em>BPDU guard</em> to protect the spanning tree topology from unauthorized switches affecting the forwarding path. For example, if you add a new switch to an access port off a leaf switch and this new switch is configured with a low priority, it might become the new root switch and affect the forwarding path for the entire layer 2 topology.</p>
-<p><code>mstpctl-portbpdufilter yes</code> You can enable <code>bpdufilter</code> on a switch port, which filters BPDUs in both directions. This disables STP on the port as no BPDUs are transiting.</p>
-<p><code>vxlan-local-tunnelip 10.136.128.3</code> This specifies the local source IP address to be used when CLAG isn't operational. When CLAG is operational, the address specified in point 2 is used as the tunnel source IP address.</p>
+<p><code class="highlight">iface vni10100</code> Each VXLAN VNI is represented by a device in the Linux kernel</p>
+<p><code class="highlight">bridge-access</code> maps the VNI to a local VLAN ID</p>
+<p><code class="highlight">bridge-learning off</code> We don't want to enable learning of remote MAC address because we have EVPN. So we disable learning on the VNIs.</p>
+<p><code class="highlight">mstpctl-bpduguard yes</code> You can configure <em>BPDU guard</em> to protect the spanning tree topology from unauthorized switches affecting the forwarding path. For example, if you add a new switch to an access port off a leaf switch and this new switch is configured with a low priority, it might become the new root switch and affect the forwarding path for the entire layer 2 topology.</p>
+<p><code class="highlight">mstpctl-portbpdufilter yes</code> You can enable <code class="highlight">bpdufilter</code> on a switch port, which filters BPDUs in both directions. This disables STP on the port as no BPDUs are transiting.</p>
+<p><code class="highlight">vxlan-local-tunnelip 10.136.128.3</code> This specifies the local source IP address to be used when CLAG isn't operational. When CLAG is operational, the address specified in point 2 is used as the tunnel source IP address.</p>
 <h2 id="vrfs">VRFs<a class="headerlink" href="#vrfs" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="na">auto xal-001</span>
 <span class="linenos" data-linenos="2 "></span><span class="na">iface xal-001</span>
@@ -3421,7 +3421,7 @@
 <span class="linenos" data-linenos="6 "></span><span class="na">iface xal-002</span>
 <span class="linenos" data-linenos="7 "></span> <span class="na">vrf-table auto</span>
 </code></pre></div>
-<p><code>vrf-table auto</code> table id is automatically assigned</p>
+<p><code class="highlight">vrf-table auto</code> table id is automatically assigned</p>
 <h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">⚑</a></h2>
 <h3 id="bgp">BGP<a class="headerlink" href="#bgp" title="Permanent link">⚑</a></h3>
 <h4 id="overlay-and-underlay">Overlay and underlay<a class="headerlink" href="#overlay-and-underlay" title="Permanent link">⚑</a></h4>
@@ -3472,14 +3472,14 @@ designers added router advertisement (RA). RA is one of the messages used in IPv
 </li>
 </ol>
 <p><img alt="Pasted image 20210724145412.png" src="../attachements/Pasted%20image%2020210724145412.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>interface {{ swp.name }}
-<span class="linenos" data-linenos="2 "></span> ipv6 nd ra-interval 5
-<span class="linenos" data-linenos="3 "></span> no ipv6 nd suppress-ra
-<span class="linenos" data-linenos="4 "></span>!
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">interface </span><span class="cp">{{</span> <span class="nv">swp.name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="linenos" data-linenos="2 "></span><span class="x"> ipv6 nd ra-interval 5</span>
+<span class="linenos" data-linenos="3 "></span><span class="x"> no ipv6 nd suppress-ra</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">!</span>
 <span class="linenos" data-linenos="5 "></span>
-<span class="linenos" data-linenos="6 "></span>router bgp 65011
-<span class="linenos" data-linenos="7 "></span>    bgp router-id 10.0.0.11
-<span class="linenos" data-linenos="8 "></span>    neighbor ISL capability extended-nexthop
+<span class="linenos" data-linenos="6 "></span><span class="x">router bgp 65011</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">    bgp router-id 10.0.0.11</span>
+<span class="linenos" data-linenos="8 "></span><span class="x">    neighbor ISL capability extended-nexthop</span>
 </code></pre></div>
 <p>When you specify neighbor swp1 interface..., FRR assumes that you’re using unnumbered BGP, enables RA automatically on that interface, and advertises the capability in the BGP peering session over that interface. </p>
 <h4 id="frr-configuration">FRR Configuration<a class="headerlink" href="#frr-configuration" title="Permanent link">⚑</a></h4>
@@ -3511,7 +3511,7 @@ designers added router advertisement (RA). RA is one of the messages used in IPv
 <span class="linenos" data-linenos="26 "></span>   <span class="na">exit-address-family</span>
 <span class="linenos" data-linenos="27 "></span><span class="na">!</span>
 </code></pre></div>
-<p><code>address-family l2vpn evpn</code> activates EVPN</p>
+<p><code class="highlight">address-family l2vpn evpn</code> activates EVPN</p>
 <h5 id="peer-group">Peer Group<a class="headerlink" href="#peer-group" title="Permanent link">⚑</a></h5>
 <p>To simplify repetition when configuring multiple neighbors, most routing suites support a form of templating called peer group. The user creates a peer group with a name and then proceeds to configure the desired attributes for neighbor connection (such as remote-as, connection timers, and the use of BFD). In the next step, the operator assigns each real neighbor to the created peer group, thus avoiding the need to type the same boring stuff over and over again.</p>
 <h5 id="routing-policy">Routing policy<a class="headerlink" href="#routing-policy" title="Permanent link">⚑</a></h5>
@@ -3519,29 +3519,29 @@ designers added router advertisement (RA). RA is one of the messages used in IPv
 <p>A routing policy consists of a sequence of if-then-else statements, with matches and actions to be taken on a successful match.</p>
 <h5 id="route-maps">Route Maps<a class="headerlink" href="#route-maps" title="Permanent link">⚑</a></h5>
 <p>Route maps are a common way to implement routing policies.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>{# default route maps and prefix lists#}
-<span class="linenos" data-linenos=" 2 "></span>{{&#39;&#39;}}
-<span class="linenos" data-linenos=" 3 "></span>ip prefix-list pl_DEFAULT_ONLY_4 seq 10 permit 0.0.0.0/0
-<span class="linenos" data-linenos=" 4 "></span>ip prefix-list pl_DEFAULT_ONLY_4 seq 20 deny any
-<span class="linenos" data-linenos=" 5 "></span>!
-<span class="linenos" data-linenos=" 6 "></span>ipv6 prefix-list pl_DEFAULT_ONLY_6 seq 10 permit ::/0
-<span class="linenos" data-linenos=" 7 "></span>ipv6 prefix-list pl_DEFAULT_ONLY_6 seq 20 deny any
-<span class="linenos" data-linenos=" 8 "></span>!
-<span class="linenos" data-linenos=" 9 "></span>route-map rm_DEFAULT_ONLY_4 permit 10
-<span class="linenos" data-linenos="10 "></span> match ip address prefix-list pl_DEFAULT_ONLY_4
-<span class="linenos" data-linenos="11 "></span>!
-<span class="linenos" data-linenos="12 "></span>route-map rm_DEFAULT_ONLY_4 deny 20
-<span class="linenos" data-linenos="13 "></span>!
-<span class="linenos" data-linenos="14 "></span>route-map rm_DEFAULT_ONLY_6 permit 10
-<span class="linenos" data-linenos="15 "></span> match ipv6 address prefix-list pl_DEFAULT_ONLY_6
-<span class="linenos" data-linenos="16 "></span>!
-<span class="linenos" data-linenos="17 "></span>route-map rm_DEFAULT_ONLY_6 deny 20
-<span class="linenos" data-linenos="18 "></span>!
-<span class="linenos" data-linenos="19 "></span>route-map rm_LOOPBACK_ONLY permit 10
-<span class="linenos" data-linenos="20 "></span> match interface lo
-<span class="linenos" data-linenos="21 "></span>!
-<span class="linenos" data-linenos="22 "></span>route-map rm_LOOPBACK_ONLY deny 20
-<span class="linenos" data-linenos="23 "></span>!
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c">{# default route maps and prefix lists#}</span><span class="x"></span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cp">{{</span><span class="s1">&#39;&#39;</span><span class="cp">}}</span><span class="x"></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">ip prefix-list pl_DEFAULT_ONLY_4 seq 10 permit 0.0.0.0/0</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">ip prefix-list pl_DEFAULT_ONLY_4 seq 20 deny any</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">!</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">ipv6 prefix-list pl_DEFAULT_ONLY_6 seq 10 permit ::/0</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">ipv6 prefix-list pl_DEFAULT_ONLY_6 seq 20 deny any</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">!</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">route-map rm_DEFAULT_ONLY_4 permit 10</span>
+<span class="linenos" data-linenos="10 "></span><span class="x"> match ip address prefix-list pl_DEFAULT_ONLY_4</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">!</span>
+<span class="linenos" data-linenos="12 "></span><span class="x">route-map rm_DEFAULT_ONLY_4 deny 20</span>
+<span class="linenos" data-linenos="13 "></span><span class="x">!</span>
+<span class="linenos" data-linenos="14 "></span><span class="x">route-map rm_DEFAULT_ONLY_6 permit 10</span>
+<span class="linenos" data-linenos="15 "></span><span class="x"> match ipv6 address prefix-list pl_DEFAULT_ONLY_6</span>
+<span class="linenos" data-linenos="16 "></span><span class="x">!</span>
+<span class="linenos" data-linenos="17 "></span><span class="x">route-map rm_DEFAULT_ONLY_6 deny 20</span>
+<span class="linenos" data-linenos="18 "></span><span class="x">!</span>
+<span class="linenos" data-linenos="19 "></span><span class="x">route-map rm_LOOPBACK_ONLY permit 10</span>
+<span class="linenos" data-linenos="20 "></span><span class="x"> match interface lo</span>
+<span class="linenos" data-linenos="21 "></span><span class="x">!</span>
+<span class="linenos" data-linenos="22 "></span><span class="x">route-map rm_LOOPBACK_ONLY deny 20</span>
+<span class="linenos" data-linenos="23 "></span><span class="x">!</span>
 </code></pre></div>
 <h2 id="firewalling">Firewalling<a class="headerlink" href="#firewalling" title="Permanent link">⚑</a></h2>
 <p>The border leaves have interfaces to a firewall. One connection belongs to the green VRF and the other to the black VRF.</p>

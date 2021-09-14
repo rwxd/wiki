@@ -2954,31 +2954,31 @@
                 
                   <h1>External Services</h1>
                 
-                <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>http:
-<span class="linenos" data-linenos=" 2 "></span>  routers:
-<span class="linenos" data-linenos=" 3 "></span>    intern: {}
-<span class="linenos" data-linenos=" 4 "></span>      entryPoints:
-<span class="linenos" data-linenos=" 5 "></span>        - &quot;http&quot;
-<span class="linenos" data-linenos=" 6 "></span>        - &quot;https&quot;
-<span class="linenos" data-linenos=" 7 "></span>      rule: &quot;Host(`HostRegexp(`fritz.box`, `{subdomain:[a-z]+}.fritz.box`, ...)`)&quot;
-<span class="linenos" data-linenos=" 8 "></span>    pihole:
-<span class="linenos" data-linenos=" 9 "></span>      entryPoints:
-<span class="linenos" data-linenos="10 "></span>        - &quot;http&quot;
-<span class="linenos" data-linenos="11 "></span>        - &quot;https&quot;
-<span class="linenos" data-linenos="12 "></span>      rule: &quot;Host(`pihole.fritz.box`)&quot;
-<span class="linenos" data-linenos="13 "></span>      service: pihole
-<span class="linenos" data-linenos="14 "></span>      middlewares:
-<span class="linenos" data-linenos="15 "></span>        - addprefix-pihole
-<span class="linenos" data-linenos="16 "></span>  services:
-<span class="linenos" data-linenos="17 "></span>    pihole:
-<span class="linenos" data-linenos="18 "></span>      loadBalancer:
-<span class="linenos" data-linenos="19 "></span>        servers:
-<span class="linenos" data-linenos="20 "></span>          - url: &quot;http://192.168.2.19:80&quot;
-<span class="linenos" data-linenos="21 "></span>        passHostHeader: true
-<span class="linenos" data-linenos="22 "></span>  middlewares:
-<span class="linenos" data-linenos="23 "></span>    addprefix-pihole:
-<span class="linenos" data-linenos="24 "></span>      addPrefix:
-<span class="linenos" data-linenos="25 "></span>        prefix: &quot;/admin&quot;
+                <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">http</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="n">routers</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">intern</span><span class="p">:</span> <span class="p">{}</span>
+<span class="linenos" data-linenos=" 4 "></span>      <span class="n">entryPoints</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="o">-</span> <span class="s2">&quot;http&quot;</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="o">-</span> <span class="s2">&quot;https&quot;</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="n">rule</span><span class="p">:</span> <span class="s2">&quot;Host(`HostRegexp(`fritz.box`, `{subdomain:[a-z]+}.fritz.box`, ...)`)&quot;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="n">pihole</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="n">entryPoints</span><span class="p">:</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="o">-</span> <span class="s2">&quot;http&quot;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="o">-</span> <span class="s2">&quot;https&quot;</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="n">rule</span><span class="p">:</span> <span class="s2">&quot;Host(`pihole.fritz.box`)&quot;</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="n">service</span><span class="p">:</span> <span class="n">pihole</span>
+<span class="linenos" data-linenos="14 "></span>      <span class="n">middlewares</span><span class="p">:</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="o">-</span> <span class="n">addprefix</span><span class="o">-</span><span class="n">pihole</span>
+<span class="linenos" data-linenos="16 "></span>  <span class="n">services</span><span class="p">:</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="n">pihole</span><span class="p">:</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="n">loadBalancer</span><span class="p">:</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="n">servers</span><span class="p">:</span>
+<span class="linenos" data-linenos="20 "></span>          <span class="o">-</span> <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;http://192.168.2.19:80&quot;</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="n">passHostHeader</span><span class="p">:</span> <span class="bp">true</span>
+<span class="linenos" data-linenos="22 "></span>  <span class="n">middlewares</span><span class="p">:</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="n">addprefix</span><span class="o">-</span><span class="n">pihole</span><span class="p">:</span>
+<span class="linenos" data-linenos="24 "></span>      <span class="n">addPrefix</span><span class="p">:</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;/admin&quot;</span>
 </code></pre></div>
                 
               

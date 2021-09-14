@@ -3111,11 +3111,11 @@ MP_UNREACH_NLRI attributes.</p>
 <p>RT is an additional path attribute added to virtual network NLRIs. A BGP speaker advertising virtual networks and their addresses uses a specific RT called the export RT. A BGP speaker receiving and using the advertisement uses this RT to decide which local virtual network to add the routes to. This is called the import RT.</p>
 <p>Format of RT for use with EVPN-VXLAN:
 <img alt="Pasted image 20210725000601.png" src="../attachements/Pasted%20image%2020210725000601.png" /></p>
-<p><code>ASN</code> The two-byte ASN of the BGP speaker advertising the address.</p>
-<p><code>A</code> A bit indicating whether the RT is autoderived or manually configured.</p>
-<p><code>Type</code> A three-bit field indicating the encapsulation used in EVPN. For VXLAN, it is 1, and for VLAN, it is 0.</p>
-<p><code>Domain-ID (D-ID)</code> Four bits that are typically zero. In certain cases, if there is an overlap in the VXLAN numbering space, this field is used to qualify the administrative domain to which the VNI belongs.</p>
-<p><code>Service ID</code> Three bytes containing the virtual network identifier. For VXLAN, it is the 3-byte VNI; for VLAN it is 12 bits (the lower 12 bits of the 3-byte field).</p>
+<p><code class="highlight">ASN</code> The two-byte ASN of the BGP speaker advertising the address.</p>
+<p><code class="highlight">A</code> A bit indicating whether the RT is autoderived or manually configured.</p>
+<p><code class="highlight">Type</code> A three-bit field indicating the encapsulation used in EVPN. For VXLAN, it is 1, and for VLAN, it is 0.</p>
+<p><code class="highlight">Domain-ID (D-ID)</code> Four bits that are typically zero. In certain cases, if there is an overlap in the VXLAN numbering space, this field is used to qualify the administrative domain to which the VNI belongs.</p>
+<p><code class="highlight">Service ID</code> Three bytes containing the virtual network identifier. For VXLAN, it is the 3-byte VNI; for VLAN it is 12 bits (the lower 12 bits of the 3-byte field).</p>
 <h3 id="route-types">Route Types<a class="headerlink" href="#route-types" title="Permanent link">⚑</a></h3>
 <p><img alt="EVPN Route Types" src="../EVPN%20Route%20Types/" /></p>
 <p><img alt="EVPN and Bridging" src="../EVPN%20Bridging/EVPN%20and%20Bridging/" /></p>

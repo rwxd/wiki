@@ -3189,18 +3189,18 @@
 <span class="linenos" data-linenos="45 "></span>    <span class="err">vla</span><span class="kc">n</span><span class="mi">-</span><span class="err">raw</span><span class="mi">-</span><span class="err">device</span><span class="mi">-</span><span class="err">bridge</span>
 <span class="linenos" data-linenos="46 "></span>    <span class="err">vr</span><span class="kc">f</span> <span class="err">evp</span><span class="kc">n</span><span class="mi">-</span><span class="err">vr</span><span class="kc">f</span>
 </code></pre></div>
-<p><code>clagd-vxlan-anycast-ip 10.0.0.112</code> configures the Cumulus-specific MLAG implementation, CLAG, by defining the shared VXLAN source tunnel's IP address. This is required because of the dual-attached servers.</p>
-<p><code>vxlan-local-tunnelip 10.0.0.11</code> specifies the local source tunnel IP address to be used when CLAG isn't operational. When CLAG is operational, the address specified with <code>clagd-vxlan-anycast-ip</code> is used as the tunnel source IP address.</p>
-<p><code>iface vni 13</code> each VXLAN VNI is represented by a device in the Linux kernel.</p>
-<p><code>mtu 9164</code> VXLAN tunnel interfaces recommend using jumbo frames, so we set the MTU of the interface to 9164</p>
-<p><code>bridge-access</code> maps the VNI to a local VLAN ID</p>
-<p><code>bridge-learning off</code> because we don't want to enable learning of remote MAC addresses because we have EVPN. So we disable learning on the VNIs</p>
-<p><code>iface vlan13</code> this defines the SVI for the VNIs - these are the VNIs for which the node supports routing</p>
-<p><code>address 172.16.1.11/24</code> the unique IP address of this leaf on the specified VNI</p>
-<p><code>address-virtual 44:39:39:ff:00:13 172.168.1.1/24</code> this is the secondary gateway IP address for the VNI. The address is shared across all the leaves that carry this VNI. Servers are configured to use this IP address as the default gateway address to allow a server to be attached to any rack and not have to change its default gateway configuration</p>
-<p><code>vlan-raw-device-bridge</code> Linux allows the presence of multiple 802.1Q bridges on the same device. An interface is assigned to only one of the bridges and so there is no ambiguity on the link about the use of a VLAN.</p>
-<p><code>iface vxlan4001</code> this is the L3 VNI used in symmetric routing</p>
-<p><code>iface vlan4001</code> this is merely the local instantiation of the L3 VNI</p>
+<p><code class="highlight">clagd-vxlan-anycast-ip 10.0.0.112</code> configures the Cumulus-specific MLAG implementation, CLAG, by defining the shared VXLAN source tunnel's IP address. This is required because of the dual-attached servers.</p>
+<p><code class="highlight">vxlan-local-tunnelip 10.0.0.11</code> specifies the local source tunnel IP address to be used when CLAG isn't operational. When CLAG is operational, the address specified with <code class="highlight">clagd-vxlan-anycast-ip</code> is used as the tunnel source IP address.</p>
+<p><code class="highlight">iface vni 13</code> each VXLAN VNI is represented by a device in the Linux kernel.</p>
+<p><code class="highlight">mtu 9164</code> VXLAN tunnel interfaces recommend using jumbo frames, so we set the MTU of the interface to 9164</p>
+<p><code class="highlight">bridge-access</code> maps the VNI to a local VLAN ID</p>
+<p><code class="highlight">bridge-learning off</code> because we don't want to enable learning of remote MAC addresses because we have EVPN. So we disable learning on the VNIs</p>
+<p><code class="highlight">iface vlan13</code> this defines the SVI for the VNIs - these are the VNIs for which the node supports routing</p>
+<p><code class="highlight">address 172.16.1.11/24</code> the unique IP address of this leaf on the specified VNI</p>
+<p><code class="highlight">address-virtual 44:39:39:ff:00:13 172.168.1.1/24</code> this is the secondary gateway IP address for the VNI. The address is shared across all the leaves that carry this VNI. Servers are configured to use this IP address as the default gateway address to allow a server to be attached to any rack and not have to change its default gateway configuration</p>
+<p><code class="highlight">vlan-raw-device-bridge</code> Linux allows the presence of multiple 802.1Q bridges on the same device. An interface is assigned to only one of the bridges and so there is no ambiguity on the link about the use of a VLAN.</p>
+<p><code class="highlight">iface vxlan4001</code> this is the L3 VNI used in symmetric routing</p>
+<p><code class="highlight">iface vlan4001</code> this is merely the local instantiation of the L3 VNI</p>
 <h3 id="exit01">exit01<a class="headerlink" href="#exit01" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>interface lo
 <span class="linenos" data-linenos=" 2 "></span>    ip address 10.0.0.101/32
@@ -3247,116 +3247,116 @@
 <span class="linenos" data-linenos="21 "></span>route-map LOOPBACKS permit 10
 <span class="linenos" data-linenos="22 "></span>    match interface lo
 </code></pre></div>
-<p><code>address-family l2vpn evpn</code> activates the l2vpn evpn address family to signal to its peers that it can process EVPN routes. This is not an indication that the spine is participating in the overlay. Required on all nodes that exchange EVPN information.</p>
+<p><code class="highlight">address-family l2vpn evpn</code> activates the l2vpn evpn address family to signal to its peers that it can process EVPN routes. This is not an indication that the spine is participating in the overlay. Required on all nodes that exchange EVPN information.</p>
 <h3 id="leaf01_1">leaf01<a class="headerlink" href="#leaf01_1" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>interface lo
-<span class="linenos" data-linenos=" 2 "></span>    ip address 10.0.0.11/32
-<span class="linenos" data-linenos=" 3 "></span>!
-<span class="linenos" data-linenos=" 4 "></span>! This VRF definition is needed only for symmetric EVPN routing
-<span class="linenos" data-linenos=" 5 "></span>vrf evpn-vrf
-<span class="linenos" data-linenos=" 6 "></span>    vni 104001
-<span class="linenos" data-linenos=" 7 "></span>!
-<span class="linenos" data-linenos=" 8 "></span>router bgp 65011
-<span class="linenos" data-linenos=" 9 "></span>    bgp router-id 10.0.0.11
-<span class="linenos" data-linenos="10 "></span>    bgp bestpath as-path multipath-relax
-<span class="linenos" data-linenos="11 "></span>    neighbor fabric peer-group
-<span class="linenos" data-linenos="12 "></span>    neighbor fabric remote-as external
-<span class="linenos" data-linenos="13 "></span>    neighbor swp1 interface peer-group fabric
-<span class="linenos" data-linenos="14 "></span>    neighbor swp2 interface peer-group fabric
-<span class="linenos" data-linenos="15 "></span>    address-family ipv4 unicast
-<span class="linenos" data-linenos="16 "></span>        neighbor fabric activate
-<span class="linenos" data-linenos="17 "></span>        redistribute connected route-map LOOPBACKS
-<span class="linenos" data-linenos="18 "></span>    !
-<span class="linenos" data-linenos="19 "></span>    address-family l2vpn evpn
-<span class="linenos" data-linenos="20 "></span>        neighbor fabric activate
-<span class="linenos" data-linenos="21 "></span>        advertise-all-vni
-<span class="linenos" data-linenos="22 "></span>    advertise-svi-ip
-<span class="linenos" data-linenos="23 "></span>    !
-<span class="linenos" data-linenos="24 "></span>!
-<span class="linenos" data-linenos="25 "></span>route-map LOOPBACKS permit 10
-<span class="linenos" data-linenos="26 "></span>    match interface lo
-<span class="linenos" data-linenos="27 "></span>!
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nv">interface</span> <span class="nv">lo</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nv">ip</span> <span class="nv">address</span> <span class="mi">10</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">11</span><span class="o">/</span><span class="mi">32</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="o">!</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="o">!</span> <span class="nv">This</span> <span class="nv">VRF</span> <span class="nv">definition</span> <span class="nv">is</span> <span class="nv">needed</span> <span class="nv">only</span> <span class="k">for</span> <span class="nv">symmetric</span> <span class="nv">EVPN</span> <span class="nv">routing</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nv">vrf</span> <span class="nv">evpn</span><span class="o">-</span><span class="nv">vrf</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nv">vni</span> <span class="mi">104001</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="o">!</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nv">router</span> <span class="nv">bgp</span> <span class="mi">65011</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nv">bgp</span> <span class="nv">router</span><span class="o">-</span><span class="nv">id</span> <span class="mi">10</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">11</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nv">bgp</span> <span class="nv">bestpath</span> <span class="nv">as</span><span class="o">-</span><span class="nv">path</span> <span class="nv">multipath</span><span class="o">-</span><span class="nv">relax</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">remote</span><span class="o">-</span><span class="nv">as</span> <span class="nv">external</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nv">neighbor</span> <span class="nv">swp1</span> <span class="nv">interface</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span> <span class="nv">fabric</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nv">neighbor</span> <span class="nv">swp2</span> <span class="nv">interface</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span> <span class="nv">fabric</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nv">address</span><span class="o">-</span><span class="nv">family</span> <span class="nv">ipv4</span> <span class="nv">unicast</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">activate</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="nv">redistribute</span> <span class="nv">connected</span> <span class="nv">route</span><span class="o">-</span><span class="nv">map</span> <span class="nv">LOOPBACKS</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nv">address</span><span class="o">-</span><span class="nv">family</span> <span class="nv">l2vpn</span> <span class="nv">evpn</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">activate</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="nv">advertise</span><span class="o">-</span><span class="nv">all</span><span class="o">-</span><span class="nv">vni</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nv">advertise</span><span class="o">-</span><span class="nv">svi</span><span class="o">-</span><span class="nv">ip</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="24 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="25 "></span><span class="nv">route</span><span class="o">-</span><span class="nv">map</span> <span class="nv">LOOPBACKS</span> <span class="nv">permit</span> <span class="mi">10</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="nv">match</span> <span class="nv">interface</span> <span class="nv">lo</span>
+<span class="linenos" data-linenos="27 "></span><span class="o">!</span>
 </code></pre></div>
-<p><code>vrf evpn-vrf</code> this VRF definition is what distinguishes symmetric routing configuration from asymmetric routing in the configuration. This definition specifies the L3 VNI used by a VRF. Think of this mapping as the equivalent of the VLAN-VNI mapping.</p>
-<p><code>advertise-all-vni</code> enables advertisement of EVPN information, specifically RT-2 and RT-3 routes. This is present only on leaves (border or normal).</p>
-<p><code>advertise-svi-ip</code> needed for individual leaves to run <code>ping, traceroute</code> from the leaves on the evpn-vrf.</p>
+<p><code class="highlight">vrf evpn-vrf</code> this VRF definition is what distinguishes symmetric routing configuration from asymmetric routing in the configuration. This definition specifies the L3 VNI used by a VRF. Think of this mapping as the equivalent of the VLAN-VNI mapping.</p>
+<p><code class="highlight">advertise-all-vni</code> enables advertisement of EVPN information, specifically RT-2 and RT-3 routes. This is present only on leaves (border or normal).</p>
+<p><code class="highlight">advertise-svi-ip</code> needed for individual leaves to run <code class="highlight">ping, traceroute</code> from the leaves on the evpn-vrf.</p>
 <h3 id="exit01_1">exit01<a class="headerlink" href="#exit01_1" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>router bgp 65201
-<span class="linenos" data-linenos=" 2 "></span>    bgp router-id 10.0.0.101
-<span class="linenos" data-linenos=" 3 "></span>    bgp bestpath as-path multipath-relax
-<span class="linenos" data-linenos=" 4 "></span>    neighbor fabric peer-group
-<span class="linenos" data-linenos=" 5 "></span>    neighbor fabric remote-as external
-<span class="linenos" data-linenos=" 6 "></span>    ! These two are peering with the spine
-<span class="linenos" data-linenos=" 7 "></span>    neighbor swp1 interface peer-group fabric
-<span class="linenos" data-linenos=" 8 "></span>    neighbor swp2 interface peer-group fabric
-<span class="linenos" data-linenos=" 9 "></span>    ! This is peering with the firewall to announce the underlay
-<span class="linenos" data-linenos="10 "></span>    ! routes to the edge router (via the firewall) and receive the
-<span class="linenos" data-linenos="11 "></span>    ! default route from the edge router (also via the firewall)
-<span class="linenos" data-linenos="12 "></span>    neighbor swp4.2 interface remote-as external
-<span class="linenos" data-linenos="13 "></span>    address-family ipv4 unicast
-<span class="linenos" data-linenos="14 "></span>        neighbor fabric activate
-<span class="linenos" data-linenos="15 "></span>    neighbor swp4.2 activate
-<span class="linenos" data-linenos="16 "></span>        neighbor swp4.2 allowas-in 1
-<span class="linenos" data-linenos="17 "></span>        redistribute connected route-map LOOPBACKS
-<span class="linenos" data-linenos="18 "></span>    !
-<span class="linenos" data-linenos="19 "></span>    address-family l2vpn evpn
-<span class="linenos" data-linenos="20 "></span>        neighbor fabric activate
-<span class="linenos" data-linenos="21 "></span>        advertise-all-vni
-<span class="linenos" data-linenos="22 "></span>    !
-<span class="linenos" data-linenos="23 "></span>!
-<span class="linenos" data-linenos="24 "></span>route-map LOOPBACKS permit 10
-<span class="linenos" data-linenos="25 "></span>    match interface lo
-<span class="linenos" data-linenos="26 "></span>!
-<span class="linenos" data-linenos="27 "></span>! evpn vrf peering to announce default route to internal net
-<span class="linenos" data-linenos="28 "></span>!
-<span class="linenos" data-linenos="29 "></span>router bgp 65201 vrf evpn-vrf
-<span class="linenos" data-linenos="30 "></span>    bgp router-id 10.0.0.101
-<span class="linenos" data-linenos="31 "></span>    neighbor swp4.3 interface remote-as external
-<span class="linenos" data-linenos="32 "></span>    address-family ipv4 unicast
-<span class="linenos" data-linenos="33 "></span>        neighbor swp4.3 activate
-<span class="linenos" data-linenos="34 "></span>        ! The following two network statements are for
-<span class="linenos" data-linenos="35 "></span>        ! distributing the summarized route to the firewall
-<span class="linenos" data-linenos="36 "></span>        aggregate-address 172.16.1.0/24 summary-only
-<span class="linenos" data-linenos="37 "></span>        aggregate-address 172.16.2.0/24 summary-only
-<span class="linenos" data-linenos="38 "></span>        neighbor swp4.3 allowas-in 1
-<span class="linenos" data-linenos="39 "></span>        exit-address-family
-<span class="linenos" data-linenos="40 "></span>    !
-<span class="linenos" data-linenos="41 "></span>    ! This config ensures we advertise the default route
-<span class="linenos" data-linenos="42 "></span>    ! as a type 5 route in EVPN in the main BGP instance.
-<span class="linenos" data-linenos="43 "></span>    ! The firewall peering is to get the default route
-<span class="linenos" data-linenos="44 "></span>    ! in the evpn-vrf from the internet-vrf. Firewall
-<span class="linenos" data-linenos="45 "></span>    ! does not peer for l2vpn/evpn.
-<span class="linenos" data-linenos="46 "></span>    !
-<span class="linenos" data-linenos="47 "></span>    address-family l2vpn evpn
-<span class="linenos" data-linenos="48 "></span>        advertise ipv4 unicast
-<span class="linenos" data-linenos="49 "></span>!
-<span class="linenos" data-linenos="50 "></span>! internet vrf peering to retrieve the default route from the
-<span class="linenos" data-linenos="51 "></span>! internet facing router and give it to the firewall.
-<span class="linenos" data-linenos="52 "></span>!
-<span class="linenos" data-linenos="53 "></span>router bgp 65201 vrf internet-vrf
-<span class="linenos" data-linenos="54 "></span>    bgp router-id 10.0.0.101
-<span class="linenos" data-linenos="55 "></span>    bgp bestpath as-path multipath-relax
-<span class="linenos" data-linenos="56 "></span>    neighbor internet peer-group
-<span class="linenos" data-linenos="57 "></span>    neighbor internet remote-as external
-<span class="linenos" data-linenos="58 "></span>    neighbor swp4.4 interface peer-group internet
-<span class="linenos" data-linenos="59 "></span>    neighbor swp3 interface peer-group internet
-<span class="linenos" data-linenos="60 "></span>    address-family ipv4 unicast
-<span class="linenos" data-linenos="61 "></span>        neighbor internet activate
-<span class="linenos" data-linenos="62 "></span>        neighbor swp4.4 allowas-in 1
-<span class="linenos" data-linenos="63 "></span>    neighbor swp3 remove-private-AS
-<span class="linenos" data-linenos="64 "></span>        redistribute connected route-map INTERNET
-<span class="linenos" data-linenos="65 "></span>    !
-<span class="linenos" data-linenos="66 "></span>!
-<span class="linenos" data-linenos="67 "></span>route-map INTERNET permit 10
-<span class="linenos" data-linenos="68 "></span>    match interface internet-vrf
-<span class="linenos" data-linenos="69 "></span>!
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">router</span> <span class="n">bgp</span> <span class="mh">65201</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="n">bgp</span> <span class="n">router</span><span class="o">-</span><span class="n">id</span> <span class="mf">10.0.0.101</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">bgp</span> <span class="n">bestpath</span> <span class="n">as</span><span class="o">-</span><span class="n">path</span> <span class="n">multipath</span><span class="o">-</span><span class="n">relax</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">neighbor</span> <span class="n">fabric</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="n">neighbor</span> <span class="n">fabric</span> <span class="n">remote</span><span class="o">-</span><span class="n">as</span> <span class="n">external</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="o">!</span> <span class="n">These</span> <span class="n">two</span> <span class="n">are</span> <span class="n">peering</span> <span class="n">with</span> <span class="n">the</span> <span class="n">spine</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="n">neighbor</span> <span class="n">swp1</span> <span class="n">interface</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span> <span class="n">fabric</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="n">neighbor</span> <span class="n">swp2</span> <span class="n">interface</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span> <span class="n">fabric</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="o">!</span> <span class="n">This</span> <span class="n">is</span> <span class="n">peering</span> <span class="n">with</span> <span class="n">the</span> <span class="n">firewall</span> <span class="n">to</span> <span class="n">announce</span> <span class="n">the</span> <span class="n">underlay</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="o">!</span> <span class="n">routes</span> <span class="n">to</span> <span class="n">the</span> <span class="k">edge</span> <span class="n">router</span> <span class="p">(</span><span class="n">via</span> <span class="n">the</span> <span class="n">firewall</span><span class="p">)</span> <span class="k">and</span> <span class="n">receive</span> <span class="n">the</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="o">!</span> <span class="k">default</span> <span class="n">route</span> <span class="n">from</span> <span class="n">the</span> <span class="k">edge</span> <span class="n">router</span> <span class="p">(</span><span class="n">also</span> <span class="n">via</span> <span class="n">the</span> <span class="n">firewall</span><span class="p">)</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.2</span> <span class="n">interface</span> <span class="n">remote</span><span class="o">-</span><span class="n">as</span> <span class="n">external</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">family</span> <span class="n">ipv4</span> <span class="n">unicast</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="n">neighbor</span> <span class="n">fabric</span> <span class="n">activate</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.2</span> <span class="n">activate</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.2</span> <span class="n">allowas</span><span class="o">-</span><span class="n">in</span> <span class="mh">1</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="n">redistribute</span> <span class="n">connected</span> <span class="n">route</span><span class="o">-</span><span class="n">map</span> <span class="n">LOOPBACKS</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">family</span> <span class="n">l2vpn</span> <span class="n">evpn</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="n">neighbor</span> <span class="n">fabric</span> <span class="n">activate</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="n">advertise</span><span class="o">-</span><span class="n">all</span><span class="o">-</span><span class="n">vni</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="23 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="24 "></span><span class="n">route</span><span class="o">-</span><span class="n">map</span> <span class="n">LOOPBACKS</span> <span class="n">permit</span> <span class="mh">10</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="n">match</span> <span class="n">interface</span> <span class="n">lo</span>
+<span class="linenos" data-linenos="26 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="27 "></span><span class="o">!</span> <span class="n">evpn</span> <span class="n">vrf</span> <span class="n">peering</span> <span class="n">to</span> <span class="n">announce</span> <span class="k">default</span> <span class="n">route</span> <span class="n">to</span> <span class="n">internal</span> <span class="n">net</span>
+<span class="linenos" data-linenos="28 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="29 "></span><span class="n">router</span> <span class="n">bgp</span> <span class="mh">65201</span> <span class="n">vrf</span> <span class="n">evpn</span><span class="o">-</span><span class="n">vrf</span>
+<span class="linenos" data-linenos="30 "></span>    <span class="n">bgp</span> <span class="n">router</span><span class="o">-</span><span class="n">id</span> <span class="mf">10.0.0.101</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.3</span> <span class="n">interface</span> <span class="n">remote</span><span class="o">-</span><span class="n">as</span> <span class="n">external</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">family</span> <span class="n">ipv4</span> <span class="n">unicast</span>
+<span class="linenos" data-linenos="33 "></span>        <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.3</span> <span class="n">activate</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="o">!</span> <span class="n">The</span> <span class="n">following</span> <span class="n">two</span> <span class="n">network</span> <span class="n">statements</span> <span class="n">are</span> <span class="k">for</span>
+<span class="linenos" data-linenos="35 "></span>        <span class="o">!</span> <span class="n">distributing</span> <span class="n">the</span> <span class="n">summarized</span> <span class="n">route</span> <span class="n">to</span> <span class="n">the</span> <span class="n">firewall</span>
+<span class="linenos" data-linenos="36 "></span>        <span class="n">aggregate</span><span class="o">-</span><span class="n">address</span> <span class="mf">172.16.1.0</span><span class="o">/</span><span class="mh">24</span> <span class="n">summary</span><span class="o">-</span><span class="n">only</span>
+<span class="linenos" data-linenos="37 "></span>        <span class="n">aggregate</span><span class="o">-</span><span class="n">address</span> <span class="mf">172.16.2.0</span><span class="o">/</span><span class="mh">24</span> <span class="n">summary</span><span class="o">-</span><span class="n">only</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.3</span> <span class="n">allowas</span><span class="o">-</span><span class="n">in</span> <span class="mh">1</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="n">exit</span><span class="o">-</span><span class="n">address</span><span class="o">-</span><span class="n">family</span>
+<span class="linenos" data-linenos="40 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="41 "></span>    <span class="o">!</span> <span class="n">This</span> <span class="n">config</span> <span class="n">ensures</span> <span class="n">we</span> <span class="n">advertise</span> <span class="n">the</span> <span class="k">default</span> <span class="n">route</span>
+<span class="linenos" data-linenos="42 "></span>    <span class="o">!</span> <span class="n">as</span> <span class="n">a</span> <span class="k">type</span> <span class="mh">5</span> <span class="n">route</span> <span class="n">in</span> <span class="n">EVPN</span> <span class="n">in</span> <span class="n">the</span> <span class="n">main</span> <span class="n">BGP</span> <span class="n">instance</span><span class="p">.</span>
+<span class="linenos" data-linenos="43 "></span>    <span class="o">!</span> <span class="n">The</span> <span class="n">firewall</span> <span class="n">peering</span> <span class="n">is</span> <span class="n">to</span> <span class="n">get</span> <span class="n">the</span> <span class="k">default</span> <span class="n">route</span>
+<span class="linenos" data-linenos="44 "></span>    <span class="o">!</span> <span class="n">in</span> <span class="n">the</span> <span class="n">evpn</span><span class="o">-</span><span class="n">vrf</span> <span class="n">from</span> <span class="n">the</span> <span class="n">internet</span><span class="o">-</span><span class="n">vrf</span><span class="p">.</span> <span class="n">Firewall</span>
+<span class="linenos" data-linenos="45 "></span>    <span class="o">!</span> <span class="n">does</span> <span class="k">not</span> <span class="n">peer</span> <span class="k">for</span> <span class="n">l2vpn</span><span class="o">/</span><span class="n">evpn</span><span class="p">.</span>
+<span class="linenos" data-linenos="46 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="47 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">family</span> <span class="n">l2vpn</span> <span class="n">evpn</span>
+<span class="linenos" data-linenos="48 "></span>        <span class="n">advertise</span> <span class="n">ipv4</span> <span class="n">unicast</span>
+<span class="linenos" data-linenos="49 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="50 "></span><span class="o">!</span> <span class="n">internet</span> <span class="n">vrf</span> <span class="n">peering</span> <span class="n">to</span> <span class="n">retrieve</span> <span class="n">the</span> <span class="k">default</span> <span class="n">route</span> <span class="n">from</span> <span class="n">the</span>
+<span class="linenos" data-linenos="51 "></span><span class="o">!</span> <span class="n">internet</span> <span class="n">facing</span> <span class="n">router</span> <span class="k">and</span> <span class="n">give</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span> <span class="n">firewall</span><span class="p">.</span>
+<span class="linenos" data-linenos="52 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="53 "></span><span class="n">router</span> <span class="n">bgp</span> <span class="mh">65201</span> <span class="n">vrf</span> <span class="n">internet</span><span class="o">-</span><span class="n">vrf</span>
+<span class="linenos" data-linenos="54 "></span>    <span class="n">bgp</span> <span class="n">router</span><span class="o">-</span><span class="n">id</span> <span class="mf">10.0.0.101</span>
+<span class="linenos" data-linenos="55 "></span>    <span class="n">bgp</span> <span class="n">bestpath</span> <span class="n">as</span><span class="o">-</span><span class="n">path</span> <span class="n">multipath</span><span class="o">-</span><span class="n">relax</span>
+<span class="linenos" data-linenos="56 "></span>    <span class="n">neighbor</span> <span class="n">internet</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span>
+<span class="linenos" data-linenos="57 "></span>    <span class="n">neighbor</span> <span class="n">internet</span> <span class="n">remote</span><span class="o">-</span><span class="n">as</span> <span class="n">external</span>
+<span class="linenos" data-linenos="58 "></span>    <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.4</span> <span class="n">interface</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span> <span class="n">internet</span>
+<span class="linenos" data-linenos="59 "></span>    <span class="n">neighbor</span> <span class="n">swp3</span> <span class="n">interface</span> <span class="n">peer</span><span class="o">-</span><span class="n">group</span> <span class="n">internet</span>
+<span class="linenos" data-linenos="60 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">family</span> <span class="n">ipv4</span> <span class="n">unicast</span>
+<span class="linenos" data-linenos="61 "></span>        <span class="n">neighbor</span> <span class="n">internet</span> <span class="n">activate</span>
+<span class="linenos" data-linenos="62 "></span>        <span class="n">neighbor</span> <span class="n">swp4</span><span class="mf">.4</span> <span class="n">allowas</span><span class="o">-</span><span class="n">in</span> <span class="mh">1</span>
+<span class="linenos" data-linenos="63 "></span>    <span class="n">neighbor</span> <span class="n">swp3</span> <span class="n">remove</span><span class="o">-</span><span class="n">private</span><span class="o">-</span><span class="n">AS</span>
+<span class="linenos" data-linenos="64 "></span>        <span class="n">redistribute</span> <span class="n">connected</span> <span class="n">route</span><span class="o">-</span><span class="n">map</span> <span class="n">INTERNET</span>
+<span class="linenos" data-linenos="65 "></span>    <span class="o">!</span>
+<span class="linenos" data-linenos="66 "></span><span class="o">!</span>
+<span class="linenos" data-linenos="67 "></span><span class="n">route</span><span class="o">-</span><span class="n">map</span> <span class="n">INTERNET</span> <span class="n">permit</span> <span class="mh">10</span>
+<span class="linenos" data-linenos="68 "></span>    <span class="n">match</span> <span class="n">interface</span> <span class="n">internet</span><span class="o">-</span><span class="n">vrf</span>
+<span class="linenos" data-linenos="69 "></span><span class="o">!</span>
 </code></pre></div>
-<p><code>router bgp 65201</code> this section deals with the underlay and the receiving of EVPN routes from the rest of the leaves. It also peers with the firewall to ensure that the underlay gets the default route.</p>
-<p><code>router bgp 65201 vrf evpn-vrf</code> this VRF configuration on the exit leaf is required to advertise the default route in the evpn-vrf VRF.</p>
-<p><code>aggregate-address 172.16.1.0/24 summary-only</code> instructs BGP to announce only the summarized route and do so only if there's at least one route in that subnet.</p>
-<p><code>address-family l2vpn evpn</code> advertises the default route as an RT-5 EVPN route. No activate statement is required, because there are no neighbors with whom EVPN routes are to be exchanged in this VRF. The RT-5 route is announced in the underlay BGP session.</p>
-<p><code>router bgp 65201 vrf internet-vrf</code> VRF configuration to interface with the edge route in the internet-vrf for connectivity to the outside world. The internet-vrf has no EVPN configuration, so there is no need to define an L3 VNI for the internet-vrf.</p>
-<p><code>neighbor swp3 remove-private-AS</code> strips off all private ASNs before advertising the routes to the edge router.</p>
+<p><code class="highlight">router bgp 65201</code> this section deals with the underlay and the receiving of EVPN routes from the rest of the leaves. It also peers with the firewall to ensure that the underlay gets the default route.</p>
+<p><code class="highlight">router bgp 65201 vrf evpn-vrf</code> this VRF configuration on the exit leaf is required to advertise the default route in the evpn-vrf VRF.</p>
+<p><code class="highlight"><span class="n">aggregate</span><span class="o">-</span><span class="n">address</span> <span class="mf">172.16.1.0</span><span class="o">/</span><span class="mh">24</span> <span class="n">summary</span><span class="o">-</span><span class="n">only</span></code> instructs BGP to announce only the summarized route and do so only if there's at least one route in that subnet.</p>
+<p><code class="highlight">address-family l2vpn evpn</code> advertises the default route as an RT-5 EVPN route. No activate statement is required, because there are no neighbors with whom EVPN routes are to be exchanged in this VRF. The RT-5 route is announced in the underlay BGP session.</p>
+<p><code class="highlight">router bgp 65201 vrf internet-vrf</code> VRF configuration to interface with the edge route in the internet-vrf for connectivity to the outside world. The internet-vrf has no EVPN configuration, so there is no need to define an L3 VNI for the internet-vrf.</p>
+<p><code class="highlight">neighbor swp3 remove-private-AS</code> strips off all private ASNs before advertising the routes to the edge router.</p>
 <p>When VXLAN is the virtual network overlay, BGP doesn't require any per-VRF peering, because the VNI in the packet encodes this information.</p>
 <h2 id="vxlan-setup">VXLAN Setup<a class="headerlink" href="#vxlan-setup" title="Permanent link">⚑</a></h2>
 <p>Each VXLAN is locally configured using a bridge for local virtual interfaces, like illustrated in the below schema. The bridge is taking care of the local MAC addresses (notably, using source-address learning) and the VXLAN interface takes care of the remote MAC addresses (received with BGP EVPN).</p>
@@ -3364,44 +3364,44 @@
 <p>VXLANs can be provisioned with the following script. Source-address learning is disabled as we will rely solely on BGP EVPN to synchronize FDBs between the hypervisors.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>for vni in 100 200; do
 <span class="linenos" data-linenos=" 2 "></span>    # Create VXLAN interface
-<span class="linenos" data-linenos=" 3 "></span>    ip link add vxlan${vni} type vxlan
-<span class="linenos" data-linenos=" 4 "></span>        id ${vni} \
+<span class="linenos" data-linenos=" 3 "></span>    ip link add vxlan<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span> type vxlan
+<span class="linenos" data-linenos=" 4 "></span>        id <span class="cp">${</span><span class="n">vni</span><span class="cp">}</span> \
 <span class="linenos" data-linenos=" 5 "></span>        dstport 4789 \
 <span class="linenos" data-linenos=" 6 "></span>        local 203.0.113.2 \
 <span class="linenos" data-linenos=" 7 "></span>        nolearning
 <span class="linenos" data-linenos=" 8 "></span>    # Create companion bridge
-<span class="linenos" data-linenos=" 9 "></span>    brctl addbr br${vni}
-<span class="linenos" data-linenos="10 "></span>    brctl addif br${vni} vxlan${vni}
-<span class="linenos" data-linenos="11 "></span>    brctl stp br${vni} off
-<span class="linenos" data-linenos="12 "></span>    ip link set up dev br${vni}
-<span class="linenos" data-linenos="13 "></span>    ip link set up dev vxlan${vni}
+<span class="linenos" data-linenos=" 9 "></span>    brctl addbr br<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span>
+<span class="linenos" data-linenos="10 "></span>    brctl addif br<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span> vxlan<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span>
+<span class="linenos" data-linenos="11 "></span>    brctl stp br<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span> off
+<span class="linenos" data-linenos="12 "></span>    ip link set up dev br<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span>
+<span class="linenos" data-linenos="13 "></span>    ip link set up dev vxlan<span class="cp">${</span><span class="n">vni</span><span class="cp">}</span>
 <span class="linenos" data-linenos="14 "></span>done
 <span class="linenos" data-linenos="15 "></span># Attach each VM to the appropriate segment
 <span class="linenos" data-linenos="16 "></span>brctl addif br100 vnet10
 <span class="linenos" data-linenos="17 "></span>brctl addif br100 vnet11
 <span class="linenos" data-linenos="18 "></span>brctl addif br200 vnet12
 </code></pre></div>
-<p>The configuration of <em>FRR</em> is similar to the one used for a route reflector, except we use the <code>advertise-all-vni</code> directive to publish all local VNIs.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>router bgp 65000
-<span class="linenos" data-linenos=" 2 "></span>  bgp router-id 203.0.113.2
-<span class="linenos" data-linenos=" 3 "></span>  no bgp default ipv4-unicast
-<span class="linenos" data-linenos=" 4 "></span>  neighbor fabric peer-group
-<span class="linenos" data-linenos=" 5 "></span>  neighbor fabric remote-as 65000
-<span class="linenos" data-linenos=" 6 "></span>  neighbor fabric capability extended-nexthop
-<span class="linenos" data-linenos=" 7 "></span> ! BGP sessions with route reflectors
-<span class="linenos" data-linenos=" 8 "></span>  neighbor 203.0.113.253 peer-group fabric
-<span class="linenos" data-linenos=" 9 "></span>  neighbor 203.0.113.254 peer-group fabric
-<span class="linenos" data-linenos="10 "></span> !
-<span class="linenos" data-linenos="11 "></span>  address-family l2vpn evpn
-<span class="linenos" data-linenos="12 "></span>   neighbor fabric activate
-<span class="linenos" data-linenos="13 "></span>   advertise-all-vni
-<span class="linenos" data-linenos="14 "></span> exit-address-family !
-<span class="linenos" data-linenos="15 "></span>!
+<p>The configuration of <em>FRR</em> is similar to the one used for a route reflector, except we use the <code class="highlight">advertise-all-vni</code> directive to publish all local VNIs.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nv">router</span> <span class="nv">bgp</span> <span class="mi">65000</span>
+<span class="linenos" data-linenos=" 2 "></span>  <span class="nv">bgp</span> <span class="nv">router</span><span class="o">-</span><span class="nv">id</span> <span class="mi">203</span>.<span class="mi">0</span>.<span class="mi">113</span>.<span class="mi">2</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="nv">no</span> <span class="nv">bgp</span> <span class="nv">default</span> <span class="nv">ipv4</span><span class="o">-</span><span class="nv">unicast</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">remote</span><span class="o">-</span><span class="nv">as</span> <span class="mi">65000</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">capability</span> <span class="nv">extended</span><span class="o">-</span><span class="nv">nexthop</span>
+<span class="linenos" data-linenos=" 7 "></span> <span class="o">!</span> <span class="nv">BGP</span> <span class="nv">sessions</span> <span class="nv">with</span> <span class="nv">route</span> <span class="nv">reflectors</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="nv">neighbor</span> <span class="mi">203</span>.<span class="mi">0</span>.<span class="mi">113</span>.<span class="mi">253</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span> <span class="nv">fabric</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="nv">neighbor</span> <span class="mi">203</span>.<span class="mi">0</span>.<span class="mi">113</span>.<span class="mi">254</span> <span class="nv">peer</span><span class="o">-</span><span class="nv">group</span> <span class="nv">fabric</span>
+<span class="linenos" data-linenos="10 "></span> <span class="o">!</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="nv">address</span><span class="o">-</span><span class="nv">family</span> <span class="nv">l2vpn</span> <span class="nv">evpn</span>
+<span class="linenos" data-linenos="12 "></span>   <span class="nv">neighbor</span> <span class="nv">fabric</span> <span class="nv">activate</span>
+<span class="linenos" data-linenos="13 "></span>   <span class="nv">advertise</span><span class="o">-</span><span class="nv">all</span><span class="o">-</span><span class="nv">vni</span>
+<span class="linenos" data-linenos="14 "></span> <span class="k">exit</span><span class="o">-</span><span class="nv">address</span><span class="o">-</span><span class="nv">family</span> <span class="o">!</span>
+<span class="linenos" data-linenos="15 "></span><span class="o">!</span>
 </code></pre></div>
 <p>FRR should also be able to retrieve information about the local MAC addresses. Each VTEP has to establish a BGP session with the route reflectors.</p>
 <h1 id="bgp-evpn-ethernet-virtual-private-network">BGP EVPN (Ethernet Virtual Private Network)<a class="headerlink" href="#bgp-evpn-ethernet-virtual-private-network" title="Permanent link">⚑</a></h1>
 <h3 id="route-reflector-setup-using-frr">Route reflector setup using FRR<a class="headerlink" href="#route-reflector-setup-using-frr" title="Permanent link">⚑</a></h3>
-<p>The configuration is pretty simple. We suppose the configured route reflector has <code>203.0.113.254</code> configured as a loopback IP.
+<p>The configuration is pretty simple. We suppose the configured route reflector has <code class="highlight"><span class="mf">203.0.113.254</span></code> configured as a loopback IP.
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="err">rou</span><span class="kc">ter</span> <span class="err">bgp</span> <span class="mi">65000</span>
 <span class="linenos" data-linenos=" 2 "></span>  <span class="err">bgp</span> <span class="err">rou</span><span class="kc">ter</span><span class="mi">-</span><span class="err">id</span> <span class="mf">203.0.113.254</span>
 <span class="linenos" data-linenos=" 3 "></span>  <span class="err">bgp</span> <span class="err">clus</span><span class="kc">ter</span><span class="mi">-</span><span class="err">id</span> <span class="mf">203.0.113.254</span>
@@ -3420,7 +3420,7 @@
 <span class="linenos" data-linenos="16 "></span> <span class="err">!</span>
 <span class="linenos" data-linenos="17 "></span><span class="err">!</span>
 </code></pre></div></p>
-<p>A peer group <code>fabric</code> is defined and we leverage the dynamic neighbor feature of FRR: we don’t have to explicitly define each neighbor. Any client from <code>203.0.113.0/24</code> and presenting itself as part of AS 65000 can connect. All sent EVPN routes will be accepted and reflected to the other clients.</p>
+<p>A peer group <code class="highlight">fabric</code> is defined and we leverage the dynamic neighbor feature of FRR: we don’t have to explicitly define each neighbor. Any client from <code class="highlight"><span class="mf">203.0.113.0</span><span class="o">/</span><span class="mf">24</span></code> and presenting itself as part of AS 65000 can connect. All sent EVPN routes will be accepted and reflected to the other clients.</p>
 <h3 id="using-junos">Using Junos<a class="headerlink" href="#using-junos" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="err">i</span><span class="kc">nterfa</span><span class="err">ces</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="err">lo</span><span class="mi">0</span> <span class="p">{</span>

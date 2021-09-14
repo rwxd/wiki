@@ -3041,18 +3041,18 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
 </code></pre></div>
 <h2 id="config">config<a class="headerlink" href="#config" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>apiVersion: v1
-<span class="linenos" data-linenos=" 2 "></span>kind: ConfigMap
-<span class="linenos" data-linenos=" 3 "></span>metadata:
-<span class="linenos" data-linenos=" 4 "></span>  namespace: metallb-system
-<span class="linenos" data-linenos=" 5 "></span>  name: config
-<span class="linenos" data-linenos=" 6 "></span>data:
-<span class="linenos" data-linenos=" 7 "></span>  config: |
-<span class="linenos" data-linenos=" 8 "></span>    address-pools:
-<span class="linenos" data-linenos=" 9 "></span>    - name: default
-<span class="linenos" data-linenos="10 "></span>      protocol: layer2
-<span class="linenos" data-linenos="11 "></span>      addresses:
-<span class="linenos" data-linenos="12 "></span>      - 192.168.3.200-192.168.3.250
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">apiVersion</span><span class="o">:</span> <span class="n">v1</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="n">kind</span><span class="o">:</span> <span class="n">ConfigMap</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="n">metadata</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="kd">namespace</span><span class="o">:</span> <span class="n">metallb</span><span class="o">-</span><span class="n">system</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="n">name</span><span class="o">:</span> <span class="n">config</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="n">data</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="n">config</span><span class="o">:</span> <span class="o">|</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="n">address</span><span class="o">-</span><span class="n">pools</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="k">default</span>
+<span class="linenos" data-linenos="10 "></span>      <span class="n">protocol</span><span class="o">:</span> <span class="n">layer2</span>
+<span class="linenos" data-linenos="11 "></span>      <span class="n">addresses</span><span class="o">:</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="o">-</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">3.200</span><span class="o">-</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">3.250</span>
 </code></pre></div>
                 
               
