@@ -2,6 +2,8 @@
 
 YAML is commonly used for configuration files and in applications where data is being stored or transmitted.
 
+Filenames can end with `.yaml` or `.yml`.
+
 ## Usage
 
 ### Strings
