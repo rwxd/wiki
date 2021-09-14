@@ -2225,12 +2225,12 @@
                 
                 <h1 id="tee">Tee<a class="headerlink" href="#tee" title="Permanent link">⚑</a></h1>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚑</a></h2>
-<p>Log into file and stdout:
+<p>Log into file and stdout:<br />
 <code>foo | tee output.file</code></p>
-<p>Append to a file:
+<p>Append to a file:<br />
 <code>foo | tee -a output.file</code></p>
-<p>Include stderr:
-<code>foo 2&gt;&amp;1 | tee output.file</code></p>
+<p>Include stderr:<br />
+<code>foo 2&gt;&amp;1 | tee output.file</code>  </p>
 <p><code>2&gt;&amp;1</code> redirects channel 2 (stderr/standard error) into channel 1 (stdout/standard output), such that both is written as stdout</p>
                 
               
