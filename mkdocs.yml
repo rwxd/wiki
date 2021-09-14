@@ -61,8 +61,8 @@ plugins:
         - "*.gz"
       regex:
         - '.*\.(tmp|bin|tar)$'
-  - awesome-pages:
-      collapse_single_pages: false
+  # - awesome-pages:
+  #     collapse_single_pages: false
 
 markdown_extensions:
   - pymdownx.highlight:
