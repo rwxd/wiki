@@ -2,452 +2,457 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.rwxd.eu/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Podcasts/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Research-Papers/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/blog-gh-pages-mkdocs/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/pluralsight_trial/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Books/books.md/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/Edge%20Technology/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Architecture/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Control-Plane/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Data-Plane/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Management-Plane/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/NSX-T-Profiles/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/Single-Tier-Routing/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/Transport-Zones/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Cloud/NSX-T/Two-Tier-Routing/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Formatters/Black/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Type-Checkers/MyPy/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Docker/docker%20commands/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/install/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-as-Code/Ansible/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-as-Code/Helm/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Economy/Investing/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Cumulus/Cumulus%20Fabric%20with%20VXLAN%20EVPN%20%26%20BGP/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Cumulus/NVIDIA%20AIR/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/EVE-NG/KVM%20Setup/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/FRR/Deploy%20VXLAN%20%26%20EVPN/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/General/NETCONF/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/General/OSI-Layers/OSI%20Layer-1/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/General/OSI-Layers/OSI%20Layer-2/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/General/OSI-Layers/OSI%20Layer-3/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/JunOS/Juniper%20Device%20Architecture/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20-%20General/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Best-Path%20Computation/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Communities/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Messages/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Multiple%20Protocol%20Support/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Path%20Attributes/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20Route%20Reflector/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/eBGP/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/iBGP/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20EVPN/ARP%20ND%20Suppresion/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20EVPN/BGP%20EVPN%20-%20General/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20EVPN/EVPN%20Route%20Types/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20EVPN/Route%20Advertisements/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Routing/BGP/BGP%20EVPN/EVPN%20Bridging/EVPN%20and%20Bridging/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Virtualization/Network%20Virtualization/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Virtualization/VXLAN/VXLAN%20-%20General/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/CLI/tee/</loc>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Networking/Bridge%20Interface/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/PulseAudio/Volume/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Other/20%20rules%20of%20formulating%20knowledge/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Other/digital-gardening/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Politics/Resources/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming/general/stack/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Bash/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Formatting/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Third-Party%20Tools%20or%20Libraries/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/VirtualENVs/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/typing-in-python/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/FastAPI/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/Pathlib/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Testing/PyTest/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/pytest/fixtures/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Rust/Memory%20Management/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Anki/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Bitwarden/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/HashiCorp-Vault/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/KeepassXC/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/MkDocs/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Readwise/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Task/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/mermaid/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/bfg-repo-cleaner/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/git/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/PlantUML/PlantUML%20Themes/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/VS-Code/Plugins/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Vim/Comment%20out%20code/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Vim/copy%20all/</loc>
-         <lastmod>2021-09-13</lastmod>
+         <lastmod>2021-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
