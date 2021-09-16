@@ -161,6 +161,71 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Bash/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/JSON/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/YAML/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Formatting/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Third-Party%20Tools%20or%20Libraries/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/VirtualENVs/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/typing-in-python/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/FastAPI/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/Pathlib/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Testing/PyTest/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Python/pytest/fixtures/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Programming-Languages/Rust/Memory%20Management/</loc>
+         <lastmod>2021-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Reading/Readwise/</loc>
          <lastmod>2021-09-16</lastmod>
          <changefreq>daily</changefreq>
@@ -237,71 +302,6 @@
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Vim/copy%20all/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Bash/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/JSON/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/YAML/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Go/Formatting/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Go/Third-Party%20Tools%20or%20Libraries/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/Python/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/VirtualENVs/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/typing-in-python/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/Python-Libraries/FastAPI/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/Python-Libraries/Pathlib/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/Python-Testing/PyTest/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Python/pytest/fixtures/</loc>
-         <lastmod>2021-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/programming-languages/Rust/Memory%20Management/</loc>
          <lastmod>2021-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
