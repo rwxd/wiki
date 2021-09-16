@@ -1,3 +1,4 @@
+# Comment out code with VIM
 1. select the first character of your block
 2. press **crtl + v** (rectangular visual selectionn mode)
 3. type **j** for each line you want to be commented
