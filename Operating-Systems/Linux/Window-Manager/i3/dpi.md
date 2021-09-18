@@ -1,4 +1,4 @@
-# Change i3 DPI
+# Change i3 DPI / scaling
 
 put the following configuration into `~/.Xresources`  
 ```
