@@ -2369,12 +2369,9 @@
                 
                 
                 <h1 id="wallpaper-in-i3">Wallpaper in i3<a class="headerlink" href="#wallpaper-in-i3" title="Permanent link">⚑</a></h1>
-<p>nitrogen can be used to define a wallpaper.</p>
+<p>[[https://wiki.archlinux.org/title/feh|feh]] can be used to define a wallpaper.</p>
 <p>define the following in the i3 config file<br />
-<code class="highlight"><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">nitrogen</span> <span class="o">--</span><span class="nv">set</span><span class="o">-</span><span class="nv">auto</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">wallpaper</span>.<span class="nv">jpg</span></code></p>
-<p>multiple monitors can be used with the following<br />
-<code class="highlight"><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">nitrogen</span> <span class="o">--</span><span class="nv">set</span><span class="o">-</span><span class="nv">auto</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">wallpaper</span>.<span class="nv">jpg</span> <span class="o">--</span><span class="nv">head</span><span class="o">=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nv">nitrogen</span> <span class="o">--</span><span class="nv">set</span><span class="o">-</span><span class="nv">auto</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">wallpaper</span>.<span class="nv">jpg</span> <span class="o">--</span><span class="nv">head</span><span class="o">=</span><span class="mi">1</span></code></p>
-<p>with the <code class="highlight"><span class="o">--</span><span class="k">random</span></code> parameter, a random wallpaper will be chosen from a directory</p>
+<code class="highlight"><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">feh</span> <span class="o">--</span><span class="nv">bg</span><span class="o">-</span><span class="nv">scale</span> <span class="o">--</span><span class="k">random</span> <span class="o">~/</span><span class="nv">wallpaper</span><span class="o">/</span></code></p>
                 
               
               
