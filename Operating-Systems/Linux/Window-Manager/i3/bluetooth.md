@@ -1,6 +1,6 @@
 # Bluetooth with i3
 
-Install [[https://wiki.archlinux.org/title/Blueman|blueman]]
+Install [blueman](https://wiki.archlinux.org/title/Blueman)
 
 launch the graphical settings with `blueman-manager`
 
