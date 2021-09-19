@@ -311,6 +311,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Tools/spicetify/</loc>
+         <lastmod>2021-09-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/bfg-repo-cleaner/</loc>
          <lastmod>2021-09-19</lastmod>
          <changefreq>daily</changefreq>
