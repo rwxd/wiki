@@ -11,3 +11,6 @@ Generate a new role
 
 Init in existing role  
 `molecule init scenario`
+
+List drivers  
+`molecule drivers`
