@@ -451,8 +451,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-5" class="md-nav__link">
-    Level 4 -&gt; 5
+  <a href="#level-3-4" class="md-nav__link">
+    Level 3 -&gt; 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-5-6" class="md-nav__link">
+    Level 5 -&gt; 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-6-7" class="md-nav__link">
+    Level 6 -&gt; 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-7-8" class="md-nav__link">
+    Level 7 -&gt; 8
   </a>
   
 </li>
@@ -2430,8 +2451,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-5" class="md-nav__link">
-    Level 4 -&gt; 5
+  <a href="#level-3-4" class="md-nav__link">
+    Level 3 -&gt; 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-5-6" class="md-nav__link">
+    Level 5 -&gt; 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-6-7" class="md-nav__link">
+    Level 6 -&gt; 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-7-8" class="md-nav__link">
+    Level 7 -&gt; 8
   </a>
   
 </li>
@@ -2470,7 +2512,23 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit2@bandit:~$ cat ./spaces<span class="se">\ </span><span class="k">in</span><span class="se">\ </span>this<span class="se">\ </span>filename
 <span class="linenos" data-linenos="2 "></span>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 </code></pre></div>
-<h2 id="level-4-5">Level 4 -&gt; 5<a class="headerlink" href="#level-4-5" title="Permanent link">🪴</a></h2>
+<h2 id="level-3-4">Level 3 -&gt; 4<a class="headerlink" href="#level-3-4" title="Permanent link">🪴</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit3@bandit:~$ cat inhere/.hidden
+<span class="linenos" data-linenos="2 "></span>pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+</code></pre></div>
+<h2 id="level-5-6">Level 5 -&gt; 6<a class="headerlink" href="#level-5-6" title="Permanent link">🪴</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit4@bandit:~$ find inhere/ -type f <span class="p">|</span> xargs file <span class="p">|</span> grep tex
+<span class="linenos" data-linenos="2 "></span>inhere/-file07: ASCII text
+<span class="linenos" data-linenos="3 "></span>bandit4@bandit:~$ cat inhere/-file07
+<span class="linenos" data-linenos="4 "></span>koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+</code></pre></div>
+<h2 id="level-6-7">Level 6 -&gt; 7<a class="headerlink" href="#level-6-7" title="Permanent link">🪴</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit5@bandit:~$ find inhere/ -type f -size 1033c ! -executable <span class="p">|</span> xargs file <span class="p">|</span> grep tex
+<span class="linenos" data-linenos="2 "></span>inhere/maybehere07/.file2: ASCII text, with very long lines
+<span class="linenos" data-linenos="3 "></span>bandit5@bandit:~$ cat inhere/maybehere07/.file2
+<span class="linenos" data-linenos="4 "></span>DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+</code></pre></div>
+<h2 id="level-7-8">Level 7 -&gt; 8<a class="headerlink" href="#level-7-8" title="Permanent link">🪴</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>
 </code></pre></div>
                 
