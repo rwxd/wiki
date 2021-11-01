@@ -29,7 +29,32 @@ bandit2@bandit:~$ cat ./spaces\ in\ this\ filename
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ```
 
-## Level 4 -> 5
+## Level 3 -> 4
+
+```bash
+bandit3@bandit:~$ cat inhere/.hidden
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+```
+
+## Level 5 -> 6
+
+```bash
+bandit4@bandit:~$ find inhere/ -type f | xargs file | grep tex
+inhere/-file07: ASCII text
+bandit4@bandit:~$ cat inhere/-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+```
+
+## Level 6 -> 7
+
+```bash
+bandit5@bandit:~$ find inhere/ -type f -size 1033c ! -executable | xargs file | grep tex
+inhere/maybehere07/.file2: ASCII text, with very long lines
+bandit5@bandit:~$ cat inhere/maybehere07/.file2
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+```
+
+## Level 7 -> 8
 
 ```bash
 
