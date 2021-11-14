@@ -74,7 +74,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets
   - toc:
-      permalink: "🪴"
+      permalink: "🏴"
   - plantuml_markdown:
       base_dir: src/plantuml/
       format: svg
