@@ -10,9 +10,9 @@ Set the Windows environment variable `DISPLAY="127.0.0.1:1.0"`
 
 Connect through SSH with the `-Y` argument. 
 
-Linux script to check working connection
+Linux script to check working connection.
 
-```shell
+```bash
 #!/usr/bin/env bash
 
 if ! timeout 3s xset q &>/dev/null; then
