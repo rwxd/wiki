@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/</loc>
+         <lastmod>2021-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Formatters/Black/</loc>
          <lastmod>2021-11-18</lastmod>
          <changefreq>daily</changefreq>
