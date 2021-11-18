@@ -1,4 +1,4 @@
-#  Wait for a Connection after e. g. a reboot
+#  Wait for a connection after e. g. a reboot
 
 ```yaml
 - name: Wait for port 22
