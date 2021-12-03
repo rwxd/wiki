@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/misc/Create%20a%20User%20for%20a%20external%20client/</loc>
+         <lastmod>2021-12-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/</loc>
          <lastmod>2021-12-03</lastmod>
          <changefreq>daily</changefreq>
