@@ -126,11 +126,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-as-Code/Helm/</loc>
-         <lastmod>2021-12-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Networking/Cumulus%20Linux/about-cumulus-linux/</loc>
          <lastmod>2021-12-03</lastmod>
          <changefreq>daily</changefreq>

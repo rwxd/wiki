@@ -20,7 +20,7 @@
     
     
       
-        <title>delete all pods from - Digital Garden</title>
+        <title>delete all pods from a namespace or a different query - Digital Garden</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-all-pods-from" class="md-skip">
+        <a href="#delete-all-pods-from-a-namespace-or-a-different-query" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              delete all pods from
+              delete all pods from a namespace or a different query
             
           </span>
         </div>
@@ -988,7 +988,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        delete all pods from
+        delete all pods from a namespace or a different query
       </a>
       
     </li>
@@ -1111,45 +1111,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      <label class="md-nav__link" for="__nav_5_3">
-        Infrastructure as Code
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Infrastructure as Code" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Infrastructure as Code
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../Infrastructure-as-Code/Helm/" class="md-nav__link">
-        Helm
-      </a>
     </li>
   
 
@@ -2409,8 +2370,9 @@
                   </a>
                 
                 
-                <h1 id="delete-all-pods-from">delete all pods from<a class="headerlink" href="#delete-all-pods-from" title="Permanent link">⚑</a></h1>
-<p><code class="highlight">`kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod</code></p>
+                <h1 id="delete-all-pods-from-a-namespace-or-a-different-query">delete all pods from a namespace or a different query<a class="headerlink" href="#delete-all-pods-from-a-namespace-or-a-different-query" title="Permanent link">⚑</a></h1>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+</code></pre></div>
                 
               
               
