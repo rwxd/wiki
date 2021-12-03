@@ -20,7 +20,7 @@
     
     
       
-        <title>delete pods - Digital Garden</title>
+        <title>delete all pods from - Digital Garden</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-pods" class="md-skip">
+        <a href="#delete-all-pods-from" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              delete pods
+              delete all pods from
             
           </span>
         </div>
@@ -988,7 +988,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        delete pods
+        delete all pods from
       </a>
       
     </li>
@@ -2409,9 +2409,8 @@
                   </a>
                 
                 
-                <h1 id="delete-pods">delete pods<a class="headerlink" href="#delete-pods" title="Permanent link">⚑</a></h1>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
-</code></pre></div>
+                <h1 id="delete-all-pods-from">delete all pods from<a class="headerlink" href="#delete-all-pods-from" title="Permanent link">⚑</a></h1>
+<p><code class="highlight">`kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod</code></p>
                 
               
               
