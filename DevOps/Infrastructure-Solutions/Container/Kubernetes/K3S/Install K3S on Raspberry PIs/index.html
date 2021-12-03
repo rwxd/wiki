@@ -2373,9 +2373,14 @@
                 <h1 id="manager">Manager<a class="headerlink" href="#manager" title="Permanent link">⚑</a></h1>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl -sfL https://get.k3s.io <span class="p">|</span> sh -s - --write-kubeconfig-mode <span class="m">644</span>
 </code></pre></div>
-<p>Get the worker node command from the output.</p>
-<h1 id="worker">Worker<a class="headerlink" href="#worker" title="Permanent link">⚑</a></h1>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl -sfL https://get.k3s.io | K3S_URL=https://manager01.fritz.box:6443 K3S_TOKEN=&quot;&quot; sh -
+<p>Get a token for the worker nodes</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo cat /var/lib/rancher/k3s/server/token
+</code></pre></div>
+<h1 id="worker-node">Worker Node<a class="headerlink" href="#worker-node" title="Permanent link">⚑</a></h1>
+<p>Set the K3S Token</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">export</span> <span class="nv">K3S_TOKEN</span><span class="o">=</span>blablabla
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl -sfL https://get.k3s.io | K3S_URL=https://manager01.fritz.box:6443 K3S_TOKEN=$K3S_TOKEN sh -
 </code></pre></div>
                 
               
