@@ -2434,8 +2434,8 @@
                 
                 <h1 id="install-argo-cd">Install Argo CD<a class="headerlink" href="#install-argo-cd" title="Permanent link">⚑</a></h1>
 <p><a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">Getting Started Guide</a></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl create namespace argocd
-<span class="linenos" data-linenos="2 "></span>kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl create namespace argocd 
+<span class="linenos" data-linenos="2 "></span>kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 </code></pre></div>
 <p><a href="https://argo-cd.readthedocs.io/en/stable/cli_installation/">Download Argo CD CLI</a></p>
 <p>Create a load balancer to use the API Server</p>
