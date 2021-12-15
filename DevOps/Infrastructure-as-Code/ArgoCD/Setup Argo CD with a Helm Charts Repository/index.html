@@ -2441,6 +2441,9 @@
 <p>Create a load balancer to use the API Server</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl patch svc argocd-server -n argocd -p <span class="s1">&#39;{&quot;spec&quot;: {&quot;type&quot;: &quot;LoadBalancer&quot;}}&#39;</span>
 </code></pre></div>
+<p>Get the initial admin secrets
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl -n argocd get secret argocd-initial-admin-secret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span> <span class="p">|</span> base64 -d
+</code></pre></div></p>
                 
               
               
