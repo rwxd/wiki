@@ -9,6 +9,11 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 [Download Argo CD CLI](https://argo-cd.readthedocs.io/en/stable/cli_installation/)
 
+Create a load balancer to use the API Server
+
+```bash
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+```
 
 
 
