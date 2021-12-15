@@ -2438,6 +2438,9 @@
 <span class="linenos" data-linenos="2 "></span>kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml
 </code></pre></div>
 <p><a href="https://argo-cd.readthedocs.io/en/stable/cli_installation/">Download Argo CD CLI</a></p>
+<p>Create a load balancer to use the API Server</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl patch svc argocd-server -n argocd -p <span class="s1">&#39;{&quot;spec&quot;: {&quot;type&quot;: &quot;LoadBalancer&quot;}}&#39;</span>
+</code></pre></div>
                 
               
               
