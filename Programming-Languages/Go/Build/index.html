@@ -2535,37 +2535,37 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nv">GOOS</span><span class="o">=</span>windows <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -v
 </code></pre></div>
 <h2 id="helpful-makefile">Helpful Makefile<a class="headerlink" href="#helpful-makefile" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nv">PROJECT_NAME</span> <span class="o">:=</span> <span class="s2">&quot;test-project&quot;</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="nv">PKG</span> <span class="o">:=</span> <span class="s2">&quot;github.com/rwxd/</span><span class="k">$(</span>PROJECT_NAME<span class="k">)</span><span class="s2">&quot;</span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nv">PKG_LIST</span> <span class="o">:=</span> <span class="k">$(</span>shell go list <span class="si">${</span><span class="nv">PKG</span><span class="si">}</span>/...<span class="k">)</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="nv">GO_FILES</span> <span class="o">:=</span> <span class="k">$(</span>shell find . -name <span class="s1">&#39;*.go&#39;</span> <span class="p">|</span> grep -v _test.go<span class="k">)</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>PROJECT_NAME :<span class="o">=</span> <span class="s2">&quot;test-project&quot;</span>
+<span class="linenos" data-linenos=" 2 "></span>PKG :<span class="o">=</span> <span class="s2">&quot;github.com/rwxd/</span><span class="k">$(</span>PROJECT_NAME<span class="k">)</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 3 "></span>PKG_LIST :<span class="o">=</span> <span class="k">$(</span>shell go list <span class="si">${</span><span class="nv">PKG</span><span class="si">}</span>/...<span class="k">)</span>
+<span class="linenos" data-linenos=" 4 "></span>GO_FILES :<span class="o">=</span> <span class="k">$(</span>shell find . -name <span class="s1">&#39;*.go&#39;</span> <span class="p">|</span> grep -v _test.go<span class="k">)</span>
 <span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="nf">help</span><span class="o">:</span>
+<span class="linenos" data-linenos=" 6 "></span>help:
 <span class="linenos" data-linenos=" 7 "></span>    @grep -E <span class="s1">&#39;^[a-zA-Z_-]+:.*?## .*$$&#39;</span> <span class="k">$(</span>MAKEFILE_LIST<span class="k">)</span> <span class="p">|</span> sort <span class="p">|</span> awk <span class="s1">&#39;BEGIN {FS = &quot;:.*?## &quot;}; {printf &quot;\033[36m%-30s\033[0m %s\n&quot;, $$1, $$2}&#39;</span>
 <span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="nf">all</span><span class="o">:</span> <span class="n">build</span>
+<span class="linenos" data-linenos=" 9 "></span>all: build
 <span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="nf">test</span><span class="o">:</span> <span class="c">## Test go code</span>
+<span class="linenos" data-linenos="11 "></span>test: <span class="c1">## Test go code</span>
 <span class="linenos" data-linenos="12 "></span>    @go <span class="nb">test</span> -race ./...
 <span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span><span class="nf">dep</span><span class="o">:</span> <span class="c">## Get the dependencies</span>
+<span class="linenos" data-linenos="14 "></span>dep: <span class="c1">## Get the dependencies</span>
 <span class="linenos" data-linenos="15 "></span>    @go get -v -d ./...
 <span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="nf">setup</span><span class="o">:</span> <span class="c">## Install required things</span>
+<span class="linenos" data-linenos="17 "></span>setup: <span class="c1">## Install required things</span>
 <span class="linenos" data-linenos="18 "></span>    python3 -m pip install -r requirements-dev.txt
 <span class="linenos" data-linenos="19 "></span>    pre-commit install
 <span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="nf">build</span><span class="o">:</span> <span class="n">dep</span> <span class="n">build</span>-<span class="n">linux</span> <span class="n">build</span>-<span class="n">windows</span> <span class="c">## Build for all platforms</span>
+<span class="linenos" data-linenos="21 "></span>build: dep build-linux build-windows <span class="c1">## Build for all platforms</span>
 <span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="nf">build-linux</span><span class="o">:</span> <span class="n">dep</span> <span class="c">## Build for linux</span>
+<span class="linenos" data-linenos="23 "></span>build-linux: dep <span class="c1">## Build for linux</span>
 <span class="linenos" data-linenos="24 "></span>    @mkdir -p build/
 <span class="linenos" data-linenos="25 "></span>    @GOOS<span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o build/ -v <span class="k">$(</span>PKG<span class="k">)</span>
 <span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span><span class="nf">build-windows</span><span class="o">:</span> <span class="n">dep</span> <span class="c">## Build for windows</span>
+<span class="linenos" data-linenos="27 "></span>build-windows: dep <span class="c1">## Build for windows</span>
 <span class="linenos" data-linenos="28 "></span>    @mkdir -p build/
 <span class="linenos" data-linenos="29 "></span>    @GOOS<span class="o">=</span>windows <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -v -o build/ <span class="k">$(</span>PKG<span class="k">)</span>
 <span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span><span class="nf">clean</span><span class="o">:</span> <span class="c">## Remove previous build</span>
+<span class="linenos" data-linenos="31 "></span>clean: <span class="c1">## Remove previous build</span>
 <span class="linenos" data-linenos="32 "></span>    @rm -rf build/
 </code></pre></div>
                 
