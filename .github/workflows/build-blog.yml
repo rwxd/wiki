@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Install task
         run: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
       - name: build stuff
