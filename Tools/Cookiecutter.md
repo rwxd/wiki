@@ -1,6 +1,6 @@
 # Cookiecutter Templates for Projects
 
-Use [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/) templating for files
+Use [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/) templating in boilerplates for new projects.
 
 ## Usage
 
@@ -8,4 +8,3 @@ Use [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/) templating for files
 python3 -m pip install cookiecutter
 cookiecutter gh:rwxd/cookiecutter-gh-project
 ```
-
