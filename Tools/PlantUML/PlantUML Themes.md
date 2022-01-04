@@ -4,7 +4,7 @@ An overview of all available themes can be seen in the [Theme Gallery](https://b
 
 ## Usage
 Set a theme
-```
+```plantuml
 @startuml
 !theme spacelab
 a -> b

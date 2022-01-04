@@ -12,7 +12,7 @@ GOOS=windows GOARCH=amd64 go build -v
 
 ## Helpful Makefile
 
-```makefile
+```bash
 PROJECT_NAME := "test-project"
 PKG := "github.com/rwxd/$(PROJECT_NAME)"
 PKG_LIST := $(shell go list ${PKG}/...)

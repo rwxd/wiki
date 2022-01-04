@@ -8,3 +8,4 @@ Use [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/) templating in boilerpl
 python3 -m pip install cookiecutter
 cookiecutter gh:rwxd/cookiecutter-gh-project
 ```
+
