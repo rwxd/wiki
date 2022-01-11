@@ -16,7 +16,7 @@ jobs:
       - name: build stuff
         run: ./bin/task build -v
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.9
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           BRANCH: pages
           FOLDER: ./site
