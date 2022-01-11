@@ -2,357 +2,357 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.rwxd.eu/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Research-Papers/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/blog-gh-pages-mkdocs/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/pluralsight_trial/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/CTFs/overthewire/bandit/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Ansible/ansible-runner/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Ansible/molecule/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Formatters/Black/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Type-Checkers/MyPy/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Docker/docker%20commands/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Docker/docker-ipv6/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Cumulus%20Linux/about-cumulus-linux/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Virtualization/network-virtualization/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Networking/Virtualization/VXLAN/vxlan-general/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/X-Forwarding/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/CLI/tee/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/CLI/watch/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Networking/Bridge%20Interface/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/PulseAudio/Volume/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Window-Manager/i3/bluetooth/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Window-Manager/i3/dpi/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Operating-Systems/Linux/Window-Manager/i3/volume/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Other/20%20rules%20of%20formulating%20knowledge/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Other/DuckDNS%20update%20or%20set%20IP%20script/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Other/digital-gardening/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming/general/stack/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Bash/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/JSON/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/YAML/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Build/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Formatting/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Go/Third-Party%20Tools%20or%20Libraries/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/typing-in-python/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/venvs/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/FastAPI/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/Pathlib/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Python/Python-Libraries/PyTest/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Programming-Languages/Rust/Memory%20Management/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Anki/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Bitwarden/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Cookiecutter/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/HashiCorp-Vault/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/KeepassXC/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/MkDocs/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Task/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/cht.sh/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/mermaid/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/spicetify/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/bfg-repo-cleaner/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/git/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Git/GitLab/access-tokens/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/PlantUML/PlantUML%20Themes/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/VS-Code/Plugins/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Vim/Comment%20out%20code/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.rwxd.eu/Tools/Vim/copy%20all/</loc>
-         <lastmod>2022-01-05</lastmod>
+         <lastmod>2022-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

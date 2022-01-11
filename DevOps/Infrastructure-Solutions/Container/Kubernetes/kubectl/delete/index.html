@@ -2870,7 +2870,7 @@
 
 
 <h1 id="delete-all-pods-from-a-namespace-or-a-different-query">delete all pods from a namespace or a different query<a class="headerlink" href="#delete-all-pods-from-a-namespace-or-a-different-query" title="Permanent link">⚑</a></h1>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get pods -n default | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod -n default
 </code></pre></div>
 
               
