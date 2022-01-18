@@ -1181,16 +1181,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    deploy
+  <a href="#create-a-serviceaccount-for-gitlab" class="md-nav__link">
+    Create a ServiceAccount for GitLab
   </a>
   
-    <nav class="md-nav" aria-label="deploy">
+    <nav class="md-nav" aria-label="Create a ServiceAccount for GitLab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-local" class="md-nav__link">
-    test local
+  <a href="#get-the-created-token" class="md-nav__link">
+    Get the created token
   </a>
   
 </li>
@@ -2952,16 +2952,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    deploy
+  <a href="#create-a-serviceaccount-for-gitlab" class="md-nav__link">
+    Create a ServiceAccount for GitLab
   </a>
   
-    <nav class="md-nav" aria-label="deploy">
+    <nav class="md-nav" aria-label="Create a ServiceAccount for GitLab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-local" class="md-nav__link">
-    test local
+  <a href="#get-the-created-token" class="md-nav__link">
+    Get the created token
   </a>
   
 </li>
@@ -2989,7 +2989,7 @@
 
 
 <h1 id="serviceaccounts">ServiceAccounts<a class="headerlink" href="#serviceaccounts" title="Permanent link">⚑</a></h1>
-<h2 id="deploy">deploy<a class="headerlink" href="#deploy" title="Permanent link">⚑</a></h2>
+<h2 id="create-a-serviceaccount-for-gitlab">Create a ServiceAccount for GitLab<a class="headerlink" href="#create-a-serviceaccount-for-gitlab" title="Permanent link">⚑</a></h2>
 <p>gitlab-service-account.yml
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>---
 <span class="linenos" data-linenos=" 2 "></span>apiVersion: v1
@@ -3011,9 +3011,8 @@
 <span class="linenos" data-linenos="18 "></span>    name: gitlab-service-account
 <span class="linenos" data-linenos="19 "></span>    namespace: default
 </code></pre></div></p>
-<h3 id="test-local">test local<a class="headerlink" href="#test-local" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get secrets <span class="p">|</span> grep gitlab-service-account
-<span class="linenos" data-linenos="2 "></span>kubectl describe secret gitlab-service-account-token-....
+<h3 id="get-the-created-token">Get the created token<a class="headerlink" href="#get-the-created-token" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get secrets gitlab-service-account-token-6v6s8 -o json <span class="p">|</span> jq <span class="s2">&quot;.data.token&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nb">export</span> <span class="nv">K8S_SERVER</span><span class="o">=</span><span class="s2">&quot;https://10.24.70.26:6443&quot;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nb">export</span> <span class="nv">K8S_CLUSTER</span><span class="o">=</span><span class="s2">&quot;gitlab-test&quot;</span>
