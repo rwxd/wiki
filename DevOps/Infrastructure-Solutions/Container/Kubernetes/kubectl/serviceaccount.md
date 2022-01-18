@@ -25,7 +25,7 @@ subjects:
 
 ### Get the created token
 ```bash
-kubectl get secrets gitlab-service-account-token-6v6s8 -o json | jq ".data.token"
+kubectl describe secret gitlab-service-account-token-
 ```
 
 ```bash
