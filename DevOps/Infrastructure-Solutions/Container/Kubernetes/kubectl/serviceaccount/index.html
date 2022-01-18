@@ -2069,12 +2069,59 @@
       
       
         <label class="md-nav__link" for="__nav_9_1">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../Programming/Design%20Patterns/Builder%20Pattern/" class="md-nav__link">
+        Builder Pattern
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
           General
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="General" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_1">
+        <label class="md-nav__title" for="__nav_9_2">
           <span class="md-nav__icon md-icon"></span>
           General
         </label>
@@ -2945,27 +2992,24 @@
 <h2 id="deploy">deploy<a class="headerlink" href="#deploy" title="Permanent link">⚑</a></h2>
 <p>gitlab-service-account.yml
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>---
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span>apiVersion: v1
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>kind: ServiceAccount
-<span class="linenos" data-linenos=" 6 "></span>metadata:
-<span class="linenos" data-linenos=" 7 "></span>  name: gitlab-service-account
-<span class="linenos" data-linenos=" 8 "></span>---
-<span class="linenos" data-linenos=" 9 "></span>
-<span class="linenos" data-linenos="10 "></span>apiVersion: rbac.authorization.k8s.io/v1beta1
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>kind: ClusterRoleBinding
-<span class="linenos" data-linenos="13 "></span>metadata:
-<span class="linenos" data-linenos="14 "></span>  name: gitlab-service-account-role-binding
-<span class="linenos" data-linenos="15 "></span>roleRef:
-<span class="linenos" data-linenos="16 "></span>  apiGroup: rbac.authorization.k8s.io
-<span class="linenos" data-linenos="17 "></span>  kind: ClusterRole
-<span class="linenos" data-linenos="18 "></span>  name: cluster-admin
-<span class="linenos" data-linenos="19 "></span>subjects:
-<span class="linenos" data-linenos="20 "></span>  - kind: ServiceAccount
-<span class="linenos" data-linenos="21 "></span>    name: gitlab-service-account
-<span class="linenos" data-linenos="22 "></span>    namespace: default
+<span class="linenos" data-linenos=" 2 "></span>apiVersion: v1
+<span class="linenos" data-linenos=" 3 "></span>kind: ServiceAccount
+<span class="linenos" data-linenos=" 4 "></span>metadata:
+<span class="linenos" data-linenos=" 5 "></span>  name: gitlab-service-account
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>---
+<span class="linenos" data-linenos=" 8 "></span>apiVersion: rbac.authorization.k8s.io/v1beta1
+<span class="linenos" data-linenos=" 9 "></span>kind: ClusterRoleBinding
+<span class="linenos" data-linenos="10 "></span>metadata:
+<span class="linenos" data-linenos="11 "></span>  name: gitlab-service-account-role-binding
+<span class="linenos" data-linenos="12 "></span>roleRef:
+<span class="linenos" data-linenos="13 "></span>  apiGroup: rbac.authorization.k8s.io
+<span class="linenos" data-linenos="14 "></span>  kind: ClusterRole
+<span class="linenos" data-linenos="15 "></span>  name: cluster-admin
+<span class="linenos" data-linenos="16 "></span>subjects:
+<span class="linenos" data-linenos="17 "></span>  - kind: ServiceAccount
+<span class="linenos" data-linenos="18 "></span>    name: gitlab-service-account
+<span class="linenos" data-linenos="19 "></span>    namespace: default
 </code></pre></div></p>
 <h3 id="test-local">test local<a class="headerlink" href="#test-local" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get secrets <span class="p">|</span> grep gitlab-service-account
