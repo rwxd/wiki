@@ -3012,7 +3012,7 @@
 <span class="linenos" data-linenos="19 "></span>    namespace: default
 </code></pre></div></p>
 <h3 id="get-the-created-token">Get the created token<a class="headerlink" href="#get-the-created-token" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl get secrets gitlab-service-account-token-6v6s8 -o json <span class="p">|</span> jq <span class="s2">&quot;.data.token&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl describe secret gitlab-service-account-token-
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">export</span> <span class="nv">K8S_SERVER</span><span class="o">=</span><span class="s2">&quot;https://10.24.1.1:6443&quot;</span>
 <span class="linenos" data-linenos="2 "></span><span class="nb">export</span> <span class="nv">K8S_CLUSTER</span><span class="o">=</span><span class="s2">&quot;gitlab-test&quot;</span>
