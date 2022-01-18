@@ -2914,8 +2914,9 @@
 <p>With <a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG</a> large or troublesome files can be removed from a Git Repository</p>
 <p>Delete a file in a Git repository and force push changes.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bfg --delete-files file.md
-<span class="linenos" data-linenos="2 "></span>git add .
-<span class="linenos" data-linenos="3 "></span>git push --force
+<span class="linenos" data-linenos="2 "></span>git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
+<span class="linenos" data-linenos="3 "></span>git add .
+<span class="linenos" data-linenos="4 "></span>git push --force
 </code></pre></div>
 
               
