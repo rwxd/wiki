@@ -1,6 +1,5 @@
 # ServiceAccounts
-
-## deploy
+## Create a ServiceAccount for GitLab
 gitlab-service-account.yml
 ```yml
 ---
@@ -24,10 +23,9 @@ subjects:
     namespace: default
 ```
 
-### test local
+### Get the created token
 ```bash
-kubectl get secrets | grep gitlab-service-account
-kubectl describe secret gitlab-service-account-token-....
+kubectl get secrets gitlab-service-account-token-6v6s8 -o json | jq ".data.token"
 ```
 
 ```bash
