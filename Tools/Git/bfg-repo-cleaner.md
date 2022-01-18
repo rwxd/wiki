@@ -6,6 +6,7 @@ Delete a file in a Git repository and force push changes.
 
 ```bash
 bfg --delete-files file.md
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
 git add .
 git push --force
 ```
