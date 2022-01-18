@@ -4,16 +4,13 @@
 gitlab-service-account.yml
 ```yml
 ---
-
 apiVersion: v1
-
 kind: ServiceAccount
 metadata:
   name: gitlab-service-account
+
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1beta1
-
 kind: ClusterRoleBinding
 metadata:
   name: gitlab-service-account-role-binding
