@@ -1181,11 +1181,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-serviceaccount-for-gitlab" class="md-nav__link">
-    Create a ServiceAccount for GitLab
+  <a href="#create-a-serviceaccount" class="md-nav__link">
+    Create a ServiceAccount
   </a>
   
-    <nav class="md-nav" aria-label="Create a ServiceAccount for GitLab">
+    <nav class="md-nav" aria-label="Create a ServiceAccount">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2331,6 +2331,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
+        Profiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
         Typing in Python
       </a>
@@ -2362,18 +2376,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5_3" type="checkbox" id="__nav_10_5_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5_4" type="checkbox" id="__nav_10_5_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_5_3">
+        <label class="md-nav__link" for="__nav_10_5_4">
           Python Libraries
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python Libraries" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_5_3">
+        <label class="md-nav__title" for="__nav_10_5_4">
           <span class="md-nav__icon md-icon"></span>
           Python Libraries
         </label>
@@ -2952,11 +2966,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-serviceaccount-for-gitlab" class="md-nav__link">
-    Create a ServiceAccount for GitLab
+  <a href="#create-a-serviceaccount" class="md-nav__link">
+    Create a ServiceAccount
   </a>
   
-    <nav class="md-nav" aria-label="Create a ServiceAccount for GitLab">
+    <nav class="md-nav" aria-label="Create a ServiceAccount">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2989,8 +3003,8 @@
 
 
 <h1 id="serviceaccounts">ServiceAccounts<a class="headerlink" href="#serviceaccounts" title="Permanent link">⚑</a></h1>
-<h2 id="create-a-serviceaccount-for-gitlab">Create a ServiceAccount for GitLab<a class="headerlink" href="#create-a-serviceaccount-for-gitlab" title="Permanent link">⚑</a></h2>
-<p>gitlab-service-account.yml
+<h2 id="create-a-serviceaccount">Create a ServiceAccount<a class="headerlink" href="#create-a-serviceaccount" title="Permanent link">⚑</a></h2>
+<p>gitlab-service-account.yml with ClusterRoleBinding
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>---
 <span class="linenos" data-linenos=" 2 "></span>apiVersion: v1
 <span class="linenos" data-linenos=" 3 "></span>kind: ServiceAccount
@@ -3011,8 +3025,46 @@
 <span class="linenos" data-linenos="18 "></span>    name: gitlab-service-account
 <span class="linenos" data-linenos="19 "></span>    namespace: default
 </code></pre></div></p>
+<p>gitlab-service-account.yml with RoleBinding
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>---
+<span class="linenos" data-linenos=" 2 "></span>apiVersion: v1
+<span class="linenos" data-linenos=" 3 "></span>kind: ServiceAccount
+<span class="linenos" data-linenos=" 4 "></span>metadata:
+<span class="linenos" data-linenos=" 5 "></span>  name: gitlab-service-account
+<span class="linenos" data-linenos=" 6 "></span>  namespace: &lt;KUBE_NAMESPACE&gt;
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>---
+<span class="linenos" data-linenos=" 9 "></span>kind: Role
+<span class="linenos" data-linenos="10 "></span>apiVersion: rbac.authorization.k8s.io/v1beta1
+<span class="linenos" data-linenos="11 "></span>metadata:
+<span class="linenos" data-linenos="12 "></span>  name: cicd-role
+<span class="linenos" data-linenos="13 "></span>  namespace: &lt;KUBE_NAMESPACE&gt;
+<span class="linenos" data-linenos="14 "></span>rules:
+<span class="linenos" data-linenos="15 "></span>- apiGroups:
+<span class="linenos" data-linenos="16 "></span>  - &quot;&quot;
+<span class="linenos" data-linenos="17 "></span>  - apps
+<span class="linenos" data-linenos="18 "></span>  - extensions
+<span class="linenos" data-linenos="19 "></span>  resources:
+<span class="linenos" data-linenos="20 "></span>  - &#39;*&#39;
+<span class="linenos" data-linenos="21 "></span>  verbs:
+<span class="linenos" data-linenos="22 "></span>  - &#39;*&#39;
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span>---
+<span class="linenos" data-linenos="25 "></span>kind: RoleBinding
+<span class="linenos" data-linenos="26 "></span>apiVersion: rbac.authorization.k8s.io/v1beta1
+<span class="linenos" data-linenos="27 "></span>metadata:
+<span class="linenos" data-linenos="28 "></span>  name: cicd-role
+<span class="linenos" data-linenos="29 "></span>  namespace: &lt;KUBE_NAMESPACE&gt;
+<span class="linenos" data-linenos="30 "></span>subjects:
+<span class="linenos" data-linenos="31 "></span>  - kind: ServiceAccount
+<span class="linenos" data-linenos="32 "></span>    name: gitlab-service-account
+<span class="linenos" data-linenos="33 "></span>roleRef:
+<span class="linenos" data-linenos="34 "></span>  kind: Role
+<span class="linenos" data-linenos="35 "></span>  name: cicd-role
+<span class="linenos" data-linenos="36 "></span>  apiGroup: rbac.authorization.k8s.io
+</code></pre></div></p>
 <h3 id="get-the-created-token">Get the created token<a class="headerlink" href="#get-the-created-token" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl describe secret gitlab-service-account-token-
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl -n &lt;KUBE_NAMESPACE&gt; describe secret gitlab-service-account-token-
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">export</span> <span class="nv">K8S_SERVER</span><span class="o">=</span><span class="s2">&quot;https://10.24.1.1:6443&quot;</span>
 <span class="linenos" data-linenos="2 "></span><span class="nb">export</span> <span class="nv">K8S_CLUSTER</span><span class="o">=</span><span class="s2">&quot;gitlab-test&quot;</span>

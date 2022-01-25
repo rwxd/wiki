@@ -12,21 +12,21 @@
         <meta name="author" content="rwxd">
       
       
-        <link rel="canonical" href="https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/">
+        <link rel="canonical" href="https://wiki.rwxd.eu/Programming-Languages/Python/Performance%20Analysis/">
       
-      <link rel="icon" href="../../../../../../assets/page/favicon-32x32.png">
+      <link rel="icon" href="../../../assets/page/favicon-32x32.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
-        <title>Test CronJob - Digital Garden</title>
+        <title>Profiler - Digital Garden</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cd566b2a.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -40,7 +40,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#test-cronjob" class="md-skip">
+        <a href="#profiler" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Digital Garden" class="md-header__button md-logo" aria-label="Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Digital Garden" class="md-header__button md-logo" aria-label="Digital Garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test CronJob
+              Profiler
             
           </span>
         </div>
@@ -202,7 +202,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Digital Garden" class="md-nav__button md-logo" aria-label="Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Digital Garden" class="md-nav__button md-logo" aria-label="Digital Garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4z"/></svg>
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Research-Papers/" class="md-nav__link">
+      <a href="../../../Research-Papers/" class="md-nav__link">
         Research Papers
       </a>
     </li>
@@ -315,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
+      <a href="../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
         How to create a blog with GitHub Pages and MkDocs
       </a>
     </li>
@@ -329,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
+      <a href="../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
         Pluralsight demo / trial
       </a>
     </li>
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CTFs/overthewire/bandit/" class="md-nav__link">
+      <a href="../../../CTFs/overthewire/bandit/" class="md-nav__link">
         Bandit
       </a>
     </li>
@@ -437,14 +437,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -519,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
         ansible-runner
       </a>
     </li>
@@ -533,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/molecule/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/molecule/" class="md-nav__link">
         Ansible Molecule
       </a>
     </li>
@@ -573,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
         Wait for a connection after e. g. a reboot
       </a>
     </li>
@@ -627,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Formatters/Black/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Formatters/Black/" class="md-nav__link">
         Black
       </a>
     </li>
@@ -674,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
         Script to clear GitLab CI/CD Artifacts
       </a>
     </li>
@@ -721,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
         MyPy
       </a>
     </li>
@@ -747,14 +745,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       
       
@@ -775,14 +771,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" >
       
       
       
@@ -831,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/docker%20commands/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker%20commands/" class="md-nav__link">
         Docker commands
       </a>
     </li>
@@ -845,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/docker-ipv6/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-ipv6/" class="md-nav__link">
         Docker with IPv6
       </a>
     </li>
@@ -864,14 +858,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_2" type="checkbox" id="__nav_5_2_1_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_2" type="checkbox" id="__nav_5_2_1_2" >
       
       
       
@@ -920,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
         Manager
       </a>
     </li>
@@ -934,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../K3S/raspberry/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/" class="md-nav__link">
         Raspberry
       </a>
     </li>
@@ -981,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Networking/kube-vip/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/" class="md-nav__link">
         Kube-VIP
       </a>
     </li>
@@ -995,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Networking/metallb/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/" class="md-nav__link">
         MetalLB
       </a>
     </li>
@@ -1042,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
         Kubectl vSphere
       </a>
     </li>
@@ -1061,14 +1053,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_2_4" type="checkbox" id="__nav_5_2_1_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_2_4" type="checkbox" id="__nav_5_2_1_2_4" >
       
       
       
@@ -1089,21 +1079,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/" class="md-nav__link">
         Test CronJob
       </a>
-      
     </li>
   
 
@@ -1115,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../busybox/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/" class="md-nav__link">
         Busybox
       </a>
     </li>
@@ -1129,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../delete/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/" class="md-nav__link">
         delete all pods from a namespace or a different query
       </a>
     </li>
@@ -1143,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../label/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/" class="md-nav__link">
         nodes
       </a>
     </li>
@@ -1157,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../serviceaccount/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/" class="md-nav__link">
         ServiceAccounts
       </a>
     </li>
@@ -1237,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../additional/Traefik/Excluding/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/" class="md-nav__link">
         Excluding
       </a>
     </li>
@@ -1251,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../additional/Traefik/External%20Services/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/" class="md-nav__link">
         External Services
       </a>
     </li>
@@ -1345,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
         Install Argo CD
       </a>
     </li>
@@ -1433,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
+      <a href="../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
         About Cumulus Linux
       </a>
     </li>
@@ -1480,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
         Network Virtualization
       </a>
     </li>
@@ -1520,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
         VXLAN General
       </a>
     </li>
@@ -1608,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/X-Forwarding/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/X-Forwarding/" class="md-nav__link">
         X-Forwarding with Windows
       </a>
     </li>
@@ -1648,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/tee/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/tee/" class="md-nav__link">
         Tee
       </a>
     </li>
@@ -1662,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/watch/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/watch/" class="md-nav__link">
         watch
       </a>
     </li>
@@ -1709,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Networking/Bridge%20Interface/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Networking/Bridge%20Interface/" class="md-nav__link">
         Create a bridge interface
       </a>
     </li>
@@ -1756,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/PulseAudio/Volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/PulseAudio/Volume/" class="md-nav__link">
         Volume
       </a>
     </li>
@@ -1829,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/bluetooth/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/bluetooth/" class="md-nav__link">
         Bluetooth with i3
       </a>
     </li>
@@ -1843,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/dpi/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/dpi/" class="md-nav__link">
         Change i3 DPI / scaling
       </a>
     </li>
@@ -1857,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
         Wallpaper in i3
       </a>
     </li>
@@ -1871,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/volume/" class="md-nav__link">
         Volume Control in i3
       </a>
     </li>
@@ -1940,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
+      <a href="../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
         20 rules of formulating knowledge
       </a>
     </li>
@@ -1954,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
+      <a href="../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
         DuckDNS update or set IP script
       </a>
     </li>
@@ -1968,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/digital-gardening/" class="md-nav__link">
+      <a href="../../../Other/digital-gardening/" class="md-nav__link">
         Digital Gardening
       </a>
     </li>
@@ -2042,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming/Design%20Patterns/Builder%20Pattern/" class="md-nav__link">
+      <a href="../../../Programming/Design%20Patterns/Builder%20Pattern/" class="md-nav__link">
         Builder Pattern
       </a>
     </li>
@@ -2089,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming/general/stack/" class="md-nav__link">
+      <a href="../../../Programming/general/stack/" class="md-nav__link">
         What is a stack?
       </a>
     </li>
@@ -2116,12 +2096,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
       
       
       
@@ -2144,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Bash/" class="md-nav__link">
+      <a href="../../Bash/" class="md-nav__link">
         Bash
       </a>
     </li>
@@ -2158,7 +2140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/JSON/" class="md-nav__link">
+      <a href="../../JSON/" class="md-nav__link">
         JSON
       </a>
     </li>
@@ -2172,7 +2154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/YAML/" class="md-nav__link">
+      <a href="../../YAML/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -2212,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Build/" class="md-nav__link">
+      <a href="../../Go/Build/" class="md-nav__link">
         Build go binaries
       </a>
     </li>
@@ -2226,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
+      <a href="../../Go/Formatting/" class="md-nav__link">
         Formatting in Go
       </a>
     </li>
@@ -2240,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Third-Party%20Tools%20or%20Libraries/" class="md-nav__link">
+      <a href="../../Go/Third-Party%20Tools%20or%20Libraries/" class="md-nav__link">
         Third-Party Tools or Libraries
       </a>
     </li>
@@ -2259,12 +2241,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" checked>
       
       
       
@@ -2285,11 +2269,65 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Profiler
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Profiler
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualisation" class="md-nav__link">
+    Visualisation
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gprof2dot-dot-diagram" class="md-nav__link">
+    gprof2dot (Dot Diagram)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2301,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
+      <a href="../typing-in-python/" class="md-nav__link">
         Typing in Python
       </a>
     </li>
@@ -2315,7 +2353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/venvs/" class="md-nav__link">
+      <a href="../venvs/" class="md-nav__link">
         Python Virtual Environments
       </a>
     </li>
@@ -2355,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
+      <a href="../Python-Libraries/FastAPI/" class="md-nav__link">
         FastAPI
       </a>
     </li>
@@ -2369,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
+      <a href="../Python-Libraries/Pathlib/" class="md-nav__link">
         Pathlib
       </a>
     </li>
@@ -2383,7 +2421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
+      <a href="../Python-Libraries/PyTest/" class="md-nav__link">
         PyTest
       </a>
     </li>
@@ -2437,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
+      <a href="../../Rust/Memory%20Management/" class="md-nav__link">
         Heat
       </a>
     </li>
@@ -2492,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Anki/" class="md-nav__link">
+      <a href="../../../Tools/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -2506,7 +2544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Bitwarden/" class="md-nav__link">
+      <a href="../../../Tools/Bitwarden/" class="md-nav__link">
         Bitwarden
       </a>
     </li>
@@ -2520,7 +2558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Cookiecutter/" class="md-nav__link">
+      <a href="../../../Tools/Cookiecutter/" class="md-nav__link">
         Cookiecutter Templates for Projects
       </a>
     </li>
@@ -2534,7 +2572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/HashiCorp-Vault/" class="md-nav__link">
+      <a href="../../../Tools/HashiCorp-Vault/" class="md-nav__link">
         HashiCorp Vault
       </a>
     </li>
@@ -2548,7 +2586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/KeepassXC/" class="md-nav__link">
+      <a href="../../../Tools/KeepassXC/" class="md-nav__link">
         KeePassXC
       </a>
     </li>
@@ -2562,7 +2600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/MkDocs/" class="md-nav__link">
+      <a href="../../../Tools/MkDocs/" class="md-nav__link">
         MkDocs
       </a>
     </li>
@@ -2576,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Task/" class="md-nav__link">
+      <a href="../../../Tools/Task/" class="md-nav__link">
         Task
       </a>
     </li>
@@ -2590,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/cht.sh/" class="md-nav__link">
+      <a href="../../../Tools/cht.sh/" class="md-nav__link">
         cht.sh
       </a>
     </li>
@@ -2604,7 +2642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/mermaid/" class="md-nav__link">
+      <a href="../../../Tools/mermaid/" class="md-nav__link">
         Mermaid
       </a>
     </li>
@@ -2618,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/spicetify/" class="md-nav__link">
+      <a href="../../../Tools/spicetify/" class="md-nav__link">
         Change Spotify Theme with spicetify-cli
       </a>
     </li>
@@ -2658,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
+      <a href="../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
         Clean Git repositories with BFG
       </a>
     </li>
@@ -2672,7 +2710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/git/" class="md-nav__link">
+      <a href="../../../Tools/Git/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -2712,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
+      <a href="../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
         GitLab Access Tokens
       </a>
     </li>
@@ -2766,7 +2804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
+      <a href="../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
         PlantUML Themes
       </a>
     </li>
@@ -2813,7 +2851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/VS-Code/Plugins/" class="md-nav__link">
+      <a href="../../../Tools/VS-Code/Plugins/" class="md-nav__link">
         VS Code Plugins
       </a>
     </li>
@@ -2860,7 +2898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
+      <a href="../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
         Comment out code with VIM
       </a>
     </li>
@@ -2874,7 +2912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Vim/copy%20all/" class="md-nav__link">
+      <a href="../../../Tools/Vim/copy%20all/" class="md-nav__link">
         Copy all
       </a>
     </li>
@@ -2915,6 +2953,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualisation" class="md-nav__link">
+    Visualisation
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gprof2dot-dot-diagram" class="md-nav__link">
+    gprof2dot (Dot Diagram)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2925,13 +2991,21 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/rwxd/wiki/edit/source/docs/content/DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/rwxd/wiki/edit/source/docs/content/Programming-Languages/Python/Performance Analysis.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="test-cronjob">Test CronJob<a class="headerlink" href="#test-cronjob" title="Permanent link">⚑</a></h1>
-<p><code class="highlight">kubectl create job --from=cronjob/cc-net-esa-wlc-flexconnect-check test-job-1</code></p>
+<h1 id="profiler">Profiler<a class="headerlink" href="#profiler" title="Permanent link">⚑</a></h1>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> python3 -m cProfile -o log.pstats -m my_module
+</code></pre></div>
+<h2 id="visualisation">Visualisation<a class="headerlink" href="#visualisation" title="Permanent link">⚑</a></h2>
+<h3 id="gprof2dot-dot-diagram">gprof2dot (Dot Diagram)<a class="headerlink" href="#gprof2dot-dot-diagram" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo pacman -S graphviz
+<span class="linenos" data-linenos="2 "></span>pip3 install gprof2dot
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>gprof2dot -f pstats log.pstats <span class="p">|</span> dot -Tsvg -o log.svg
+</code></pre></div>
 
               
             </article>
@@ -2945,7 +3019,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kubectl vSphere" rel="prev">
+        <a href="../../Go/Third-Party%20Tools%20or%20Libraries/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Third-Party Tools or Libraries" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2954,20 +3028,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Kubectl vSphere
+              Third-Party Tools or Libraries
             </div>
           </div>
         </a>
       
       
         
-        <a href="../busybox/" class="md-footer__link md-footer__link--next" aria-label="Next: Busybox" rel="next">
+        <a href="../typing-in-python/" class="md-footer__link md-footer__link--next" aria-label="Next: Typing in Python" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Busybox
+              Typing in Python
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3014,10 +3088,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1514a9a0.min.js"></script>
       
     
   </body>
