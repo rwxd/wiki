@@ -1,6 +1,6 @@
 # ServiceAccounts
-## Create a ServiceAccount for GitLab
-gitlab-service-account.yml
+## Create a ServiceAccount
+gitlab-service-account.yml with ClusterRoleBinding
 ```yml
 ---
 apiVersion: v1
@@ -23,9 +23,49 @@ subjects:
     namespace: default
 ```
 
+gitlab-service-account.yml with RoleBinding
+```yml
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gitlab-service-account
+  namespace: <KUBE_NAMESPACE>
+
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: cicd-role
+  namespace: <KUBE_NAMESPACE>
+rules:
+- apiGroups:
+  - ""
+  - apps
+  - extensions
+  resources:
+  - '*'
+  verbs:
+  - '*'
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: cicd-role
+  namespace: <KUBE_NAMESPACE>
+subjects:
+  - kind: ServiceAccount
+    name: gitlab-service-account
+roleRef:
+  kind: Role
+  name: cicd-role
+  apiGroup: rbac.authorization.k8s.io
+```
+
 ### Get the created token
 ```bash
-kubectl describe secret gitlab-service-account-token-
+kubectl -n <KUBE_NAMESPACE> describe secret gitlab-service-account-token-
 ```
 
 ```bash
