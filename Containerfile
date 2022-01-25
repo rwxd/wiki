@@ -35,7 +35,7 @@ RUN : \
 
 # download newest plantuml
 # RUN find / -name "plantuml.jar"
-RUN wget https://deac-riga.dl.sourceforge.net/project/plantuml/plantuml.jar -O /usr/share/plantuml/plantuml.jar -q
+RUN wget https://deac-ams.dl.sourceforge.net/project/plantuml/plantuml.jar -O /usr/share/plantuml/plantuml.jar -q
 RUN du -sh /usr/share/plantuml/*
 
 
