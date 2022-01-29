@@ -1,5 +1,5 @@
-site_name: Digital Garden
-site_description: Digital Garden
+site_name: Wiki
+site_description: Wiki
 site_author: rwxd
 site_url: https://wiki.rwxd.eu
 dev_addr: 0.0.0.0:8000
