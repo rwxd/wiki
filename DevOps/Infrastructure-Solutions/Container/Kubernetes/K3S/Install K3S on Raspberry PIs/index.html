@@ -2965,6 +2965,18 @@
 <span class="linenos" data-linenos="19 "></span><span class="s">    name: home-computer</span>
 <span class="linenos" data-linenos="20 "></span><span class="s">    namespace: default</span>
 <span class="linenos" data-linenos="21 "></span><span class="s">EOF</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>kubectl describe secret home-computer-token
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="nb">export</span> <span class="nv">K8S_SERVER</span><span class="o">=</span><span class="s2">&quot;https://10.24.1.1:6443&quot;</span>
+<span class="linenos" data-linenos="26 "></span><span class="nb">export</span> <span class="nv">K8S_CLUSTER</span><span class="o">=</span><span class="s2">&quot;gitlab-test&quot;</span>
+<span class="linenos" data-linenos="27 "></span><span class="nb">export</span> <span class="nv">K8S_USER</span><span class="o">=</span><span class="s2">&quot;gitlab-service-account&quot;</span>
+<span class="linenos" data-linenos="28 "></span><span class="nb">export</span> <span class="nv">K8S_USER_TOKEN</span><span class="o">=</span><span class="s2">&quot;&quot;</span> 
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>kubectl config set-cluster <span class="nv">$K8S_CLUSTER</span> --server<span class="o">=</span><span class="nv">$K8S_SERVER</span> --insecure-skip-tls-verify<span class="o">=</span><span class="nb">true</span>
+<span class="linenos" data-linenos="31 "></span>kubectl config set-credentials <span class="nv">$K8S_USER</span> --token<span class="o">=</span><span class="nv">$K8S_USER_TOKEN</span>
+<span class="linenos" data-linenos="32 "></span>kubectl config set-context <span class="nv">$K8S_CLUSTER</span> --cluster<span class="o">=</span><span class="nv">$K8S_CLUSTER</span> --user<span class="o">=</span><span class="nv">$K8S_USER</span>
+<span class="linenos" data-linenos="33 "></span>kubectl config use-context <span class="nv">$K8S_CLUSTER</span>
 </code></pre></div>
 
               
