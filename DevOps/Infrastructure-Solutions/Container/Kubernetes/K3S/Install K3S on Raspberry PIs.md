@@ -37,7 +37,7 @@ metadata:
 EOF
 
 kubectl -n default apply -f - <<EOF
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: v1
 kind: ClusterRoleBinding
 metadata:
   name: gitlab-service-account-role-binding
