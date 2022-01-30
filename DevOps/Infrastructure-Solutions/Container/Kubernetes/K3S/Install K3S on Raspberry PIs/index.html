@@ -2943,6 +2943,29 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl -sfL https://get.k3s.io | K3S_URL=https://manager01.fritz.box:6443 K3S_TOKEN=$K3S_TOKEN sh -
 </code></pre></div>
 <p><a href="https://docs.d2iq.com/dkp/kommander/2.0/clusters/attach-cluster/generate-kubeconfig/">Generate kubeconfig</a></p>
+<h1 id="create-a-service-account-for-kubectl">Create a Service Account for kubectl<a class="headerlink" href="#create-a-service-account-for-kubectl" title="Permanent link">⚑</a></h1>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>kubectl -n default apply -f - <span class="s">&lt;&lt;EOF</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="s">apiVersion: v1</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="s">kind: ServiceAccount</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="s">metadata:</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="s">  name: home-computer</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="s">EOF</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>kubectl -n default apply -f - <span class="s">&lt;&lt;EOF</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="s">apiVersion: rbac.authorization.k8s.io/v1beta1</span>
+<span class="linenos" data-linenos="10 "></span><span class="s">kind: ClusterRoleBinding</span>
+<span class="linenos" data-linenos="11 "></span><span class="s">metadata:</span>
+<span class="linenos" data-linenos="12 "></span><span class="s">  name: gitlab-service-account-role-binding</span>
+<span class="linenos" data-linenos="13 "></span><span class="s">roleRef:</span>
+<span class="linenos" data-linenos="14 "></span><span class="s">  apiGroup: rbac.authorization.k8s.io</span>
+<span class="linenos" data-linenos="15 "></span><span class="s">  kind: ClusterRole</span>
+<span class="linenos" data-linenos="16 "></span><span class="s">  name: cluster-admin</span>
+<span class="linenos" data-linenos="17 "></span><span class="s">subjects:</span>
+<span class="linenos" data-linenos="18 "></span><span class="s">  - kind: ServiceAccount</span>
+<span class="linenos" data-linenos="19 "></span><span class="s">    name: home-computer</span>
+<span class="linenos" data-linenos="20 "></span><span class="s">    namespace: default</span>
+<span class="linenos" data-linenos="21 "></span><span class="s">EOF</span>
+</code></pre></div>
 
               
             </article>
