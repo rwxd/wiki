@@ -1,8 +1,14 @@
 
 # Manager
 
+## With Traefik
 ```bash
 curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+```
+
+## Without Traefik
+```bash
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik" sh -s - --write-kubeconfig-mode 644
 ```
 
 Get a token for the worker nodes
