@@ -211,21 +211,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Programming/IDEs/NeoVIM/Ansible/</loc>
-         <lastmod>2022-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Programming/IDEs/NeoVIM/General/</loc>
-         <lastmod>2022-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Programming/IDEs/NeoVIM/Python/</loc>
-         <lastmod>2022-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/Programming/general/stack/</loc>
          <lastmod>2022-02-24</lastmod>
          <changefreq>daily</changefreq>
@@ -361,7 +346,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Tools/NeoVIM/Ansible/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Tools/NeoVIM/General/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Tools/NeoVIM/Python/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Tools/PlantUML/PlantUML%20Themes/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.rwxd.eu/Tools/Tmux/Window%20Management/</loc>
          <lastmod>2022-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
