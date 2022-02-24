@@ -361,6 +361,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Tools/NeoVIM/Go/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Tools/NeoVIM/Python/</loc>
          <lastmod>2022-02-24</lastmod>
          <changefreq>daily</changefreq>
