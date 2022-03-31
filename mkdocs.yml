@@ -43,7 +43,7 @@ theme:
     text: Inter
     code: Fira Code
 
-copyright: "Copyright &copy; 2021 rwxd"
+copyright: "Copyright &copy; 2022 rwxd"
 
 plugins:
   - search
@@ -78,8 +78,15 @@ markdown_extensions:
   - plantuml_markdown:
       base_dir: src/plantuml/
       format: svg
+  - pymdownx.arithmatex:
+      generic: true
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/rwxd
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
