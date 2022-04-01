@@ -3,7 +3,7 @@
 version: "3"
 
 vars:
-  CONTAINER: docker pull ghcr.io/rwxd/wiki-container:main
+  CONTAINER: ghcr.io/rwxd/wiki-container:main
   CURRENT_DIR:
     sh: pwd
   SITE_DIR: "{{.CURRENT_DIR}}/site"
@@ -26,12 +26,12 @@ tasks:
   lint:
     desc: Lint markdown
     cmds:
-      - podman run --rm {{.CONTAINER}} sh -c "markdownlint --config ../.markdownlint.json docs/"
+      - docker run --rm -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} sh -c "markdownlint --config .markdownlint.json docs/"
 
   build:
     desc: Build blog pages
     cmds:
       - task: lint
       - mkdir -p {{.SITE_DIR}}
-      - podman run --rm -v {{.SITE_DIR}}:/src/site {{.CONTAINER}} sh -c "mkdocs build"
+      - docker run --rm -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} sh -c "mkdocs build"
       - ls -la
