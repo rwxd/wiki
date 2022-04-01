@@ -8,5 +8,3 @@ Inspired by [wiki.nikitavoloboev.xyz](https://wiki.nikitavoloboev.xyz/) & [The B
 ## Using the wiki
 
 You can quickly search the contents of this wiki above or you can explore the tree view to the left.
-
-test
