@@ -3,7 +3,7 @@
 version: "3"
 
 vars:
-  CONTAINER_NAME: wiki.rwxd.eu
+  CONTAINER: docker pull ghcr.io/rwxd/wiki-container:main
   CURRENT_DIR:
     sh: pwd
   SITE_DIR: "{{.CURRENT_DIR}}/site"
@@ -14,47 +14,24 @@ tasks:
       - task -l
     silent: true
 
-  setup:
-    desc: Setup requirements
-    cmds:
-      - python3 -m pip install -r requirements.txt -q
-      - pre-commit install
-    silent: true
-
-  image:
-    desc: builds container image with name wiki.rwxd.eu
-    cmds:
-      - podman build -t {{.CONTAINER_NAME}} -f ./Containerfile
-    silent: true
-
   serve:
     desc: Serve blog with a container
     vars:
       PORT: 8000
       MOUNT: "{{.CURRENT_DIR}}/src"
     cmds:
-      - task: image
-      - podman run --rm -p {{.PORT}}:8000 -v ./:/src {{.CONTAINER_NAME}} mkdocs serve
-    silent: true
-
-  serve-local:
-    desc: Serve blog local
-    dir: ./blog
-    cmds:
-      - mkdocs serve
+      - podman run --rm -p {{.PORT}}:8000 -v ./:/src {{.CONTAINER}} mkdocs serve
     silent: true
 
   lint:
     desc: Lint markdown
     cmds:
-      - task: image
-      # - podman run --rm {{.CONTAINER_NAME}} sh -c "mdl -s ../.markdownlint.rb docs/"
-      - podman run --rm {{.CONTAINER_NAME}} sh -c "markdownlint --config ../.markdownlint.json docs/"
+      - podman run --rm {{.CONTAINER}} sh -c "markdownlint --config ../.markdownlint.json docs/"
 
   build:
     desc: Build blog pages
     cmds:
       - task: lint
       - mkdir -p {{.SITE_DIR}}
-      - podman run --rm -v {{.SITE_DIR}}:/src/site {{.CONTAINER_NAME}} sh -c "mkdocs build"
+      - podman run --rm -v {{.SITE_DIR}}:/src/site {{.CONTAINER}} sh -c "mkdocs build"
       - ls -la
