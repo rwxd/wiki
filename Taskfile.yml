@@ -23,15 +23,15 @@ tasks:
       - podman run --rm -p {{.PORT}}:8000 -v ./:/src {{.CONTAINER}} mkdocs serve
     silent: true
 
-  lint:
-    desc: Lint markdown
-    cmds:
-      - docker run --rm -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} sh -c "markdownlint --config .markdownlint.json docs/"
+  # lint:
+  #   desc: Lint markdown
+  #   cmds:
+  #     - docker run --rm -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} sh -c "markdownlint --config .markdownlint.json docs/"
 
   build:
     desc: Build blog pages
     cmds:
-      - task: lint
+      # - task: lint
       - mkdir -p {{.SITE_DIR}}
       - docker run --rm -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} sh -c "mkdocs build"
       - ls -la
