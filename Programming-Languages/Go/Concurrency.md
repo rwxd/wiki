@@ -1,4 +1,9 @@
-# Mutex
+# Concurrency in Go
+
+## Mutex
+
+Safely access data across multiple goroutines
+
 ```go
 func doIOOnFile(path string, mu *mutex){
 	mu.Lock()
@@ -6,4 +11,3 @@ func doIOOnFile(path string, mu *mutex){
 	// I/O stuff
 }
 ```
-
