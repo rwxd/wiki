@@ -19,7 +19,7 @@
     
     
       
-        <title>Mutex - Wiki</title>
+        <title>Concurrency in Go - Wiki</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mutex" class="md-skip">
+        <a href="#concurrency-in-go" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mutex
+              Concurrency in Go
             
           </span>
         </div>
@@ -2286,9 +2286,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Concurrency in Go
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Mutex
+        Concurrency in Go
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mutex" class="md-nav__link">
+    Mutex
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3070,6 +3101,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mutex" class="md-nav__link">
+    Mutex
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3086,7 +3132,9 @@
 
 
 
-<h1 id="mutex">Mutex<a class="headerlink" href="#mutex" title="Permanent link">⚑</a></h1>
+<h1 id="concurrency-in-go">Concurrency in Go<a class="headerlink" href="#concurrency-in-go" title="Permanent link">⚑</a></h1>
+<h2 id="mutex">Mutex<a class="headerlink" href="#mutex" title="Permanent link">⚑</a></h2>
+<p>Safely access data across multiple goroutines</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">func</span><span class="w"> </span><span class="nx">doIOOnFile</span><span class="p">(</span><span class="nx">path</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">mu</span><span class="w"> </span><span class="o">*</span><span class="nx">mutex</span><span class="p">){</span><span class="w"></span>
 <span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Lock</span><span class="p">()</span><span class="w"></span>
 <span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Unlock</span><span class="p">()</span><span class="w"></span>
