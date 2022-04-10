@@ -102,7 +102,8 @@ IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ## Level 11 -> 12
 
 ```bash
-bandit11@bandit:~$ rotate=13
-bandit11@bandit:~$ alpha=abcdefghijklmnopqrstuvwxyz
-
+bandit11@bandit:~$ cat data.txt | tr "a-zA-Z" "n-za-mN-ZA-M"
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 ```
+
+## Level 12 ->
