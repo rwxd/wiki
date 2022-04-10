@@ -78,5 +78,25 @@ bandit8@bandit:~$ sort data.txt | uniq -c | grep "1\s"
 ## Level 9 -> 10
 
 ```bash
-
+bandit9@bandit:~$ strings data.txt | grep -E "=+"
+========== the*2i"4
+=:G e
+========== password
+<I=zsGi
+Z)========== is
+A=|t&E
+Zdb=
+c^ LAh=3G
+*SF=s
+&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+S=A.H&^
 ```
+
+## Level 10 -> 11
+
+```bash
+bandit10@bandit:~$ cat data.txt | base64 -d | sed "s/The\spassword\sis\s\(.*\)/\1/g"
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+```
+
+## Level 11 ->
