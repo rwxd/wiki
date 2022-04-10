@@ -36,7 +36,7 @@ bandit3@bandit:~$ cat inhere/.hidden
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 
-## Level 5 -> 6
+## Level 4 -> 5
 
 ```bash
 bandit4@bandit:~$ find inhere/ -type f | xargs file | grep tex
@@ -45,17 +45,23 @@ bandit4@bandit:~$ cat inhere/-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-## Level 6 -> 7
+## Level 5 -> 6
 
 ```bash
-bandit5@bandit:~$ find inhere/ -type f -size 1033c ! -executable | xargs file | grep tex
+bandit5@bandit:~$ find inhere/ -type f -size 1033c ! -executable | xargs file | grep text 
 inhere/maybehere07/.file2: ASCII text, with very long lines
 bandit5@bandit:~$ cat inhere/maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 ```
 
+## Level 6 -> 7
+
+```bash
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+```
+
 ## Level 7 -> 8
 
 ```bash
-
 ```
