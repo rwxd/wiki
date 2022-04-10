@@ -64,4 +64,12 @@ HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 ## Level 7 -> 8
 
 ```bash
+bandit7@bandit:~$ cat data.txt | grep "millionth" | sed "s/millionth\s*//g"
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+```
+
+## Level 8 -> 9
+
+```bash
+
 ```
