@@ -99,4 +99,10 @@ bandit10@bandit:~$ cat data.txt | base64 -d | sed "s/The\spassword\sis\s\(.*\)/\
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
-## Level 11 ->
+## Level 11 -> 12
+
+```bash
+bandit11@bandit:~$ rotate=13
+bandit11@bandit:~$ alpha=abcdefghijklmnopqrstuvwxyz
+
+```
