@@ -71,5 +71,12 @@ cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 ## Level 8 -> 9
 
 ```bash
+bandit8@bandit:~$ sort data.txt | uniq -c | grep "1\s"
+      1 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+```
+
+## Level 9 -> 10
+
+```bash
 
 ```
