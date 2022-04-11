@@ -3382,6 +3382,12 @@
 <span class="linenos" data-linenos="2 "></span>The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 </code></pre></div>
 <h2 id="level-12-13">Level 12 -&gt; 13<a class="headerlink" href="#level-12-13" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit12@bandit:~$ mkdir -p /tmp/abcdef <span class="o">&amp;&amp;</span> <span class="nb">cd</span> !$
+<span class="linenos" data-linenos="2 "></span>bandit12@bandit:/tmp/abcdef$ xxd -r ~/data.txt data.txt
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span>bandit12@bandit:/tmp/abcdef$ file data.txt
+<span class="linenos" data-linenos="5 "></span>data.txt: gzip compressed data, was <span class="s2">&quot;data2.bin&quot;</span>, last modified: Thu May  <span class="m">7</span> <span class="m">18</span>:14:30 <span class="m">2020</span>, max compression, from Unix
+</code></pre></div>
 
               
             </article>
