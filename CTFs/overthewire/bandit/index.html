@@ -3437,6 +3437,13 @@
 <span class="linenos" data-linenos="39 "></span>The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 </code></pre></div>
 <h2 id="level-13-14">Level 13 -&gt; 14<a class="headerlink" href="#level-13-14" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit13@bandit:~$ <span class="nb">eval</span> <span class="k">$(</span>ssh-agent<span class="k">)</span>
+<span class="linenos" data-linenos="2 "></span>Agent pid <span class="m">20358</span>
+<span class="linenos" data-linenos="3 "></span>bandit13@bandit:~$ ssh-add sshkey.private
+<span class="linenos" data-linenos="4 "></span>Identity added: sshkey.private <span class="o">(</span>sshkey.private<span class="o">)</span>
+<span class="linenos" data-linenos="5 "></span>bandit13@bandit:~$ ssh bandit14@localhost
+</code></pre></div>
+<p>Level 14 -&gt; 15</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>
 </code></pre></div>
 
