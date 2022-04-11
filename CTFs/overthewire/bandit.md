@@ -173,7 +173,7 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```bash
 bandit15@bandit:~$ man openssl s_client
 bandit15@bandit:~$ openssl s_client -connect localhost:30001
-bandit15@bandit:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect localhost:30001a -ign_eof
+bandit15@bandit:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect localhost:30001 -ign_eof
 ---
 Correct!
 cluFn7wTiGryunymYOu4RcffSxQluehd
@@ -195,4 +195,6 @@ PORT      STATE SERVICE     VERSION
 31790/tcp open  ssl/unknown
 31960/tcp open  echo
 
+bandit16@bandit:~$ echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client --connect localhost:31790 -ign_eof
 ```
+
