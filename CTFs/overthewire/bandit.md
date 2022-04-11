@@ -114,6 +114,28 @@ bandit12@bandit:/tmp/abcdef$ xxd -r ~/data.txt data.txt
 
 bandit12@bandit:/tmp/abcdef$ file data.txt
 data.txt: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+bandit12@bandit:/tmp/abcdef$ mv data.txt data.gz
+bandit12@bandit:/tmp/abcdef$ gzip -d data.gz
 
+bandit12@bandit:/tmp/abcdef$ file data
+data: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/abcdef$ mv data data.bz2
+bandit12@bandit:/tmp/abcdef$ bzip2 -d data.bz2
 
+bandit12@bandit:/tmp/abcdef$ file data
+data: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+bandit12@bandit:/tmp/abcdef$ mv data data.gz
+
+bandit12@bandit:/tmp/abcdef$ gzip -d data.gz
+bandit12@bandit:/tmp/abcdef$ file data
+data: POSIX tar archive (GNU)
+
+bandit12@bandit:/tmp/abcdef$ mv data data.tar
+bandit12@bandit:/tmp/abcdef$ tar xvf data.tar
+data5.bin
+
+bandit12@bandit:/tmp/abcdef$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/abcdef$ tar xvf data6.bin
+data8.bin
 ```
