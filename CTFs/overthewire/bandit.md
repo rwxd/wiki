@@ -153,5 +153,15 @@ The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 ## Level 13 -> 14
 
 ```bash
+bandit13@bandit:~$ eval $(ssh-agent)
+Agent pid 20358
+bandit13@bandit:~$ ssh-add sshkey.private
+Identity added: sshkey.private (sshkey.private)
+bandit13@bandit:~$ ssh bandit14@localhost
+```
+
+Level 14 -> 15
+
+```bash
 
 ```
