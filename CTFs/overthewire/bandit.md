@@ -160,7 +160,15 @@ Identity added: sshkey.private (sshkey.private)
 bandit13@bandit:~$ ssh bandit14@localhost
 ```
 
-Level 14 -> 15
+## Level 14 -> 15
+
+```bash
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14 | netcat localhost 30000
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+```
+
+## Level 15 -> 16
 
 ```bash
 
