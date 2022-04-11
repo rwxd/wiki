@@ -3493,7 +3493,7 @@
 <h2 id="level-15-16">Level 15 -&gt; 16<a class="headerlink" href="#level-15-16" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit15@bandit:~$ man openssl s_client
 <span class="linenos" data-linenos="2 "></span>bandit15@bandit:~$ openssl s_client -connect localhost:30001
-<span class="linenos" data-linenos="3 "></span>bandit15@bandit:~$ <span class="nb">echo</span> <span class="s2">&quot;BfMYroe26WYalil77FoDi9qh59eK5xNr&quot;</span> <span class="p">|</span> openssl s_client -connect localhost:30001a -ign_eof
+<span class="linenos" data-linenos="3 "></span>bandit15@bandit:~$ <span class="nb">echo</span> <span class="s2">&quot;BfMYroe26WYalil77FoDi9qh59eK5xNr&quot;</span> <span class="p">|</span> openssl s_client -connect localhost:30001 -ign_eof
 <span class="linenos" data-linenos="4 "></span>---
 <span class="linenos" data-linenos="5 "></span>Correct!
 <span class="linenos" data-linenos="6 "></span>cluFn7wTiGryunymYOu4RcffSxQluehd
@@ -3511,6 +3511,8 @@
 <span class="linenos" data-linenos="10 "></span><span class="m">31691</span>/tcp open  <span class="nb">echo</span>
 <span class="linenos" data-linenos="11 "></span><span class="m">31790</span>/tcp open  ssl/unknown
 <span class="linenos" data-linenos="12 "></span><span class="m">31960</span>/tcp open  <span class="nb">echo</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>bandit16@bandit:~$ <span class="nb">echo</span> <span class="s2">&quot;cluFn7wTiGryunymYOu4RcffSxQluehd&quot;</span> <span class="p">|</span> openssl s_client --connect localhost:31790 -ign_eof
 </code></pre></div>
 
               
