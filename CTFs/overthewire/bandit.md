@@ -182,5 +182,17 @@ cluFn7wTiGryunymYOu4RcffSxQluehd
 ## Level 16 -> 17
 
 ```bash
+bandit16@bandit:~$ nmap -sV -p 31000-32000 localhost
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2022-04-11 21:16 CEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00024s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE     VERSION
+31046/tcp open  echo
+31518/tcp open  ssl/echo
+31691/tcp open  echo
+31790/tcp open  ssl/unknown
+31960/tcp open  echo
 
 ```
