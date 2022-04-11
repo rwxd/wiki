@@ -107,3 +107,13 @@ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 ```
 
 ## Level 12 -> 13
+
+```bash
+bandit12@bandit:~$ mkdir -p /tmp/abcdef && cd !$
+bandit12@bandit:/tmp/abcdef$ xxd -r ~/data.txt data.txt
+
+bandit12@bandit:/tmp/abcdef$ file data.txt
+data.txt: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+
+
+```
