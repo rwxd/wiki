@@ -138,4 +138,20 @@ bandit12@bandit:/tmp/abcdef$ file data5.bin
 data5.bin: POSIX tar archive (GNU)
 bandit12@bandit:/tmp/abcdef$ tar xvf data6.bin
 data8.bin
+
+bandit12@bandit:/tmp/abcdef$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+bandit12@bandit:/tmp/abcdef$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/abcdef$ gzip -d data8.gz
+
+bandit12@bandit:/tmp/abcdef$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/abcdef$ cat data8
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+```
+
+## Level 13 -> 14
+
+```bash
+
 ```
