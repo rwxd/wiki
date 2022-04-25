@@ -1,6 +1,9 @@
 # ServiceAccounts
+
 ## Create a ServiceAccount
+
 gitlab-service-account.yml with ClusterRoleBinding
+
 ```yml
 ---
 apiVersion: v1
@@ -24,6 +27,7 @@ subjects:
 ```
 
 gitlab-service-account.yml with RoleBinding
+
 ```yml
 ---
 apiVersion: v1
@@ -64,6 +68,7 @@ roleRef:
 ```
 
 ### Get the created token
+
 ```bash
 kubectl -n <KUBE_NAMESPACE> describe secret gitlab-service-account-token-
 ```
