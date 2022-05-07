@@ -20,7 +20,8 @@ tasks:
       PORT: 8000
       MOUNT: "{{.CURRENT_DIR}}/src"
     cmds:
-      - docker run --rm -p {{.PORT}}:8000 -v {{.CURRENT_DIR}}:/src {{.CONTAINER}} mkdocs serve
+      - podman run --rm -p {{.PORT}}:8000 -v ./:/src {{.CONTAINER}} mkdocs serve
+    silent: true
 
   # lint:
   #   desc: Lint markdown
