@@ -14,31 +14,18 @@ edit_uri: "edit/source/docs/content/"
 theme:
   name: "material"
   palette:
-    - scheme: slate
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-    - scheme: default
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-  icon:
-    # logo: material/code-braces-box
-    logo: material/pine-tree
+    scheme: slate
+    primary: black
+    accent: white
+  # icon:
+  #   logo: material/code-braces-box
   favicon: assets/page/favicon-32x32.png
   language: en
   include_sidebar: true
   features:
     - content.code.annotate
-  feature:
-    tabs: false
-  i18n:
-    prev: "Previous"
-    next: "Next"
+    - navigation.tracking
+    - navigation.top
   font:
     text: Inter
     code: Fira Code
