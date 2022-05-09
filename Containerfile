@@ -39,4 +39,8 @@ RUN wget https://deac-ams.dl.sourceforge.net/project/plantuml/plantuml.jar -O /u
 RUN du -sh /usr/share/plantuml/*
 
 
+
 COPY . .
+
+# Changing permissions
+chmod 

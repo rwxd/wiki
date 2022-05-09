@@ -8,9 +8,12 @@
 View the website local with: `mkdocs serve`.
 
 Build the website with: `mkdocs build`.
+
 The default export directory is `./site`.
 
 ## Plugins
 
 
 ## Links
+
+- [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
