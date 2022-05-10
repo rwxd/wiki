@@ -19,7 +19,7 @@
     
     
       
-        <title>Metallb - Wiki</title>
+        <title>MetalLB - Wiki</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install" class="md-skip">
+        <a href="#metallb" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Metallb
+              MetalLB
             
           </span>
         </div>
@@ -989,14 +989,16 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Metallb
+          MetalLB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Metallb
+        MetalLB
       </a>
       
         
@@ -1004,6 +1006,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1013,8 +1017,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
+  <a href="#install-with-kubectl" class="md-nav__link">
+    Install with kubectl
   </a>
   
 </li>
@@ -1022,6 +1026,13 @@
         <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-terraform" class="md-nav__link">
+    Install with Terraform
   </a>
   
 </li>
@@ -3168,6 +3179,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3176,8 +3189,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
+  <a href="#install-with-kubectl" class="md-nav__link">
+    Install with kubectl
   </a>
   
 </li>
@@ -3185,6 +3198,13 @@
         <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-terraform" class="md-nav__link">
+    Install with Terraform
   </a>
   
 </li>
@@ -3207,9 +3227,8 @@
 
 
 
-  <h1>Metallb</h1>
-
-<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">⚑</a></h2>
+<h1 id="metallb">MetalLB<a class="headerlink" href="#metallb" title="Permanent link">⚑</a></h1>
+<h2 id="install-with-kubectl">Install with kubectl<a class="headerlink" href="#install-with-kubectl" title="Permanent link">⚑</a></h2>
 <p>https://metallb.universe.tf/installation/</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
 </code></pre></div>
@@ -3226,6 +3245,40 @@
 <span class="linenos" data-linenos="10 "></span><span class="w">      </span><span class="n">protocol</span><span class="o">:</span><span class="w"> </span><span class="n">layer2</span><span class="w"></span>
 <span class="linenos" data-linenos="11 "></span><span class="w">      </span><span class="n">addresses</span><span class="o">:</span><span class="w"></span>
 <span class="linenos" data-linenos="12 "></span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="mf">192.168</span><span class="o">.</span><span class="mf">3.200</span><span class="o">-</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">3.250</span><span class="w"></span>
+</code></pre></div>
+<h2 id="install-with-terraform">Install with Terraform<a class="headerlink" href="#install-with-terraform" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_namespace&quot;</span><span class="w"> </span><span class="nv">&quot;metallb&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">  </span><span class="nb">metadata</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;metallb&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="p">}</span><span class="w"></span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;helm_release&quot;</span><span class="w"> </span><span class="nv">&quot;metallb&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">  </span><span class="na">name</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;metallb&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">  </span><span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://metallb.github.io/metallb&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span><span class="na">chart</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;metallb&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="11 "></span><span class="w">  </span><span class="na">namespace</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;metallb&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">  </span><span class="na">depends_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">kubernetes_namespace.metallb</span><span class="p">]</span><span class="w"></span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;configInline.address-pools[0].name&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="na">type</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;configInline.address-pools[0].protocol&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;layer2&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="na">type</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="25 "></span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;configInline.address-pools[0].addresses[0]&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="29 "></span><span class="w">    </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;192.168.3.200-192.168.3.250&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="na">type</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos" data-linenos="32 "></span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
               
