@@ -3211,7 +3211,7 @@
 
 <h1 id="pulseaudio-volume-stuff">PulseAudio Volume Stuff<a class="headerlink" href="#pulseaudio-volume-stuff" title="Permanent link">⚑</a></h1>
 <h2 id="find-devices">Find devices<a class="headerlink" href="#find-devices" title="Permanent link">⚑</a></h2>
-<p><code class="highlight">$(pacmd list-sinks &amp;&amp; pacmd list-sinks &amp;&amp; pacmd list-sources) | grep &quot;name:&quot;</code></p>
+<p><code class="highlight">t=$(pacmd list-sinks &amp;&amp; pacmd list-sinks &amp;&amp; pacmd list-sources) &amp;&amp; echo $t | grep &quot;name:&quot;</code></p>
 <h2 id="raise-microphone-volume-with-pacmd">Raise microphone volume with pacmd<a class="headerlink" href="#raise-microphone-volume-with-pacmd" title="Permanent link">⚑</a></h2>
 <p><code class="highlight">pacmd set-source-volume alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo 0x25000</code></p>
 
