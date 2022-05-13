@@ -38,3 +38,7 @@ With `git-crypt status` we can see that our file will be encrypted on push to ou
 ## Locking
 
 With `git-crypt lock` and `git-crypt unlock` the repository can be unlocked at will.
+
+## Adding additional users with gpg keys
+
+`git-crypt add-gpg-user KEYID`
