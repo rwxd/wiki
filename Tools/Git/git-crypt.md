@@ -14,7 +14,7 @@ Create a `.gitattributes` file
 touch .gitattributes
 ```
 
-The `.gitattatributes` file contains line with the following form:
+The `.gitattatributes` file contains lines in the following form:
 
 ```bash
 [file pattern] attr1=value1 attr2=value2
