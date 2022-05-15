@@ -1,2 +1,7 @@
 # Test CronJob
-`kubectl create job --from=cronjob/cc-net-esa-wlc-flexconnect-check test-job-1`
+
+`kubectl create job --from=cronjob/<name> <new-pod-name>`
+
+## Example
+
+`kubectl create job --from=cronjob/check-job test-job-1`
