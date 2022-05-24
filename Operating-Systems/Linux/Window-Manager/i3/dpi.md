@@ -1,11 +1,12 @@
 # Change i3 DPI / scaling
 
-put the following configuration into `~/.Xresources`  
+put the following configuration into `~/.Xresources`
+
 ```
 Xft.dpi: 150
 ```
 
-load settings  
+load settings
 ```
 xrdb -merge ~/.Xresources
 exec i3

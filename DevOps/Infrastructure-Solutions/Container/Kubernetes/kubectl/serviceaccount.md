@@ -77,7 +77,7 @@ kubectl -n <KUBE_NAMESPACE> describe secret gitlab-service-account-token-
 export K8S_SERVER="https://10.24.1.1:6443"
 export K8S_CLUSTER="gitlab-test"
 export K8S_USER="gitlab-service-account"
-export K8S_USER_TOKEN="" 
+export K8S_USER_TOKEN=""
 
 kubectl config set-cluster $K8S_CLUSTER --server=$K8S_SERVER --insecure-skip-tls-verify=true
 kubectl config set-credentials $K8S_USER --token=$K8S_USER_TOKEN
