@@ -1,6 +1,6 @@
 # Read books
 
-## Full tech
+## Heavy tech
 
 ## Misc
 
