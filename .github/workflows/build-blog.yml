@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install task
-        run: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+
       - name: build stuff
-        run: ./bin/task build -v
+        run: make build
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
