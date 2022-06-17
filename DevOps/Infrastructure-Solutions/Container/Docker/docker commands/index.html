@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Docker/docker%20commands/">
       
       <link rel="icon" href="../../../../../assets/page/favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.4">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
@@ -68,6 +68,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#docker-commands" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -883,10 +888,63 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker commands
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Docker commands
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remove-things" class="md-nav__link">
+    Remove things
+  </a>
+  
+    <nav class="md-nav" aria-label="Remove things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-containers" class="md-nav__link">
+    All Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-images" class="md-nav__link">
+    All Images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3282,6 +3340,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remove-things" class="md-nav__link">
+    Remove things
+  </a>
+  
+    <nav class="md-nav" aria-label="Remove things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-containers" class="md-nav__link">
+    All Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-images" class="md-nav__link">
+    All Images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3299,9 +3394,14 @@
 
 
 
-  <h1>Docker commands</h1>
-
-
+<h1 id="docker-commands">Docker commands<a class="headerlink" href="#docker-commands" title="Permanent link">⚑</a></h1>
+<h2 id="remove-things">Remove things<a class="headerlink" href="#remove-things" title="Permanent link">⚑</a></h2>
+<h3 id="all-containers">All Containers<a class="headerlink" href="#all-containers" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker rm -rf <span class="k">$(</span>docker ps -aq<span class="k">)</span>
+</code></pre></div>
+<h3 id="all-images">All Images<a class="headerlink" href="#all-images" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker rmi <span class="k">$(</span>docker images -q<span class="k">)</span>
+</code></pre></div>
 
               
             </article>
@@ -3389,7 +3489,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f758a944.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.a877e258.min.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
       
