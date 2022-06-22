@@ -19,7 +19,7 @@
     
     
       
-        <title>Show window class names - Wiki</title>
+        <title>Show window names - Wiki</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#show-window-class-names" class="md-skip">
+        <a href="#show-window-names" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Show window class names
+              Show window names
             
           </span>
         </div>
@@ -1976,12 +1976,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Show window class names
+          Show window names
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Show window class names
+        Show window names
       </a>
       
         
@@ -3366,13 +3366,14 @@
 
 
 
-<h1 id="show-window-class-names">Show window class names<a class="headerlink" href="#show-window-class-names" title="Permanent link">⚑</a></h1>
-<p>Run the following command, after that click on a window to see it class name</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xprop <span class="p">|</span> grep -i <span class="s2">&quot;class&quot;</span>
+<h1 id="show-window-names">Show window names<a class="headerlink" href="#show-window-names" title="Permanent link">⚑</a></h1>
+<p>Run the following command, after that click on a window to see its name</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xprop <span class="p">|</span> grep <span class="s2">&quot;NAME&quot;</span>
 </code></pre></div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>❯ xprop <span class="p">|</span> grep -i <span class="s2">&quot;class&quot;</span>
-<span class="linenos" data-linenos="2 "></span>WM_CLASS<span class="o">(</span>STRING<span class="o">)</span> <span class="o">=</span> <span class="s2">&quot;todoist&quot;</span>, <span class="s2">&quot;Todoist&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>❯ xprop <span class="p">|</span> grep <span class="s2">&quot;NAME&quot;</span>
+<span class="linenos" data-linenos="2 "></span>WM_NAME<span class="o">(</span>STRING<span class="o">)</span> <span class="o">=</span> <span class="s2">&quot;Spotify&quot;</span>
+<span class="linenos" data-linenos="3 "></span>_NET_WM_NAME<span class="o">(</span>UTF8_STRING<span class="o">)</span> <span class="o">=</span> <span class="s2">&quot;Spotify&quot;</span>
 </code></pre></div>
 
               
