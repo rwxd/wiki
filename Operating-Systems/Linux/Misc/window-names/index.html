@@ -1975,9 +1975,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Show window class names
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Show window class names
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3304,6 +3335,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3323,6 +3369,10 @@
 <h1 id="show-window-class-names">Show window class names<a class="headerlink" href="#show-window-class-names" title="Permanent link">⚑</a></h1>
 <p>Run the following command, after that click on a window to see it class name</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xprop <span class="p">|</span> grep -i <span class="s2">&quot;class&quot;</span>
+</code></pre></div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>❯ xprop <span class="p">|</span> grep -i <span class="s2">&quot;class&quot;</span>
+<span class="linenos" data-linenos="2 "></span>WM_CLASS<span class="o">(</span>STRING<span class="o">)</span> <span class="o">=</span> <span class="s2">&quot;todoist&quot;</span>, <span class="s2">&quot;Todoist&quot;</span>
 </code></pre></div>
 
               
