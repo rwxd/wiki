@@ -1,14 +1,15 @@
-# Show window class names
+# Show window names
 
-Run the following command, after that click on a window to see it class name
+Run the following command, after that click on a window to see its name
 
 ```bash
-xprop | grep -i "class"
+xprop | grep "NAME"
 ```
 
 ## Example
 
 ```bash
-❯ xprop | grep -i "class"
-WM_CLASS(STRING) = "todoist", "Todoist"
+❯ xprop | grep "NAME"
+WM_NAME(STRING) = "Spotify"
+_NET_WM_NAME(UTF8_STRING) = "Spotify"
 ```
