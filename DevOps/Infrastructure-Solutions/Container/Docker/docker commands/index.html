@@ -3411,7 +3411,7 @@
 <h1 id="docker-commands">Docker commands<a class="headerlink" href="#docker-commands" title="Permanent link">⚑</a></h1>
 <h2 id="remove-things">Remove things<a class="headerlink" href="#remove-things" title="Permanent link">⚑</a></h2>
 <h3 id="all-containers">All Containers<a class="headerlink" href="#all-containers" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker rm -rf <span class="k">$(</span>docker ps -aq<span class="k">)</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker rm -f <span class="k">$(</span>docker ps -aq<span class="k">)</span>
 </code></pre></div>
 <h3 id="all-images">All Images<a class="headerlink" href="#all-images" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker rmi <span class="k">$(</span>docker images -q<span class="k">)</span>
