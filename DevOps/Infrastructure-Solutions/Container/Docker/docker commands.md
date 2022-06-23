@@ -5,7 +5,7 @@
 ### All Containers
 
 ```bash
-docker rm -rf $(docker ps -aq)
+docker rm -f $(docker ps -aq)
 ```
 
 ### All Images
