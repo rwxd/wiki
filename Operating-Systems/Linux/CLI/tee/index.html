@@ -3522,14 +3522,11 @@
 
 
 <h1 id="tee">Tee<a class="headerlink" href="#tee" title="Permanent link">⚑</a></h1>
-<p>With tee it is possible to read from standard input and write to standard output and files (or commands).</p>
+<p>With <code class="highlight">tee</code> it is possible to read from standard input and write to standard output and files (or commands) at the same time.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚑</a></h2>
-<p>Log into file and stdout:<br />
-<code class="highlight">foo | tee output.file</code></p>
-<p>Append to a file:<br />
-<code class="highlight">foo | tee -a output.file</code></p>
-<p>Include stderr:<br />
-<code class="highlight">foo 2&gt;&amp;1 | tee output.file</code>  </p>
+<p>Log into file and stdout: <code class="highlight">foo | tee output.file</code></p>
+<p>Append to a file: <code class="highlight">foo | tee -a output.file</code></p>
+<p>Include stderr: <code class="highlight">foo 2&gt;&amp;1 | tee output.file</code></p>
 <p><code class="highlight"><span class="mf">2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="mf">1</span><span class="w"></span></code> redirects channel 2 (stderr/standard error) into channel 1 (stdout/standard output), such that both is written as stdout</p>
 
               
