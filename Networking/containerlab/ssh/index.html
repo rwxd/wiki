@@ -3521,7 +3521,10 @@
 
 <h1 id="ssh-into-containerlab-devices">SSH into Containerlab devices<a class="headerlink" href="#ssh-into-containerlab-devices" title="Permanent link">⚑</a></h1>
 <h2 id="ssh-config">SSH Config<a class="headerlink" href="#ssh-config" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>
+<p><code class="highlight">$HOME/.ssh/config</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>host clab-*
+<span class="linenos" data-linenos="2 "></span>    StrictHostKeyChecking no
+<span class="linenos" data-linenos="3 "></span>    UserKnownHostsFile /dev/null
 </code></pre></div>
 
               
