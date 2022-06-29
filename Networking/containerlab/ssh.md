@@ -2,6 +2,10 @@
 
 ## SSH Config
 
-```bash
+`$HOME/.ssh/config`
 
+```bash
+host clab-*
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
 ```
