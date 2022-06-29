@@ -3552,6 +3552,9 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo ps -e -o <span class="nb">command</span> <span class="p">|</span> grep nfcapd
 </code></pre></div>
 <h2 id="edit-configuration">Edit configuration<a class="headerlink" href="#edit-configuration" title="Permanent link">⚑</a></h2>
+<p>Find the nfsen configuration first</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo find / -type f -name <span class="s2">&quot;nfsen.conf&quot;</span>
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>vim /opt/etc/nfsen.conf
 </code></pre></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">⚑</a></h2>
