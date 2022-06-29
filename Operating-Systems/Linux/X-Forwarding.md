@@ -8,9 +8,11 @@ Start `XLaunch` with enabled clipboard and monitor 1
 
 Set the Windows environment variable `DISPLAY="127.0.0.1:1.0"`
 
-Connect through SSH with the `-Y` argument.
+Connect through SSH with the `-Y` option.
 
-Linux script to check working connection.
+## Check if it works
+
+Linux script to check working connection:
 
 ```bash
 #!/usr/bin/env bash
