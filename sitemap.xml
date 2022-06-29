@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Networking/Misc/nfsen/</loc>
+         <lastmod>2022-06-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Networking/NSX-T/NSX-T%20Links/</loc>
          <lastmod>2022-06-29</lastmod>
          <changefreq>daily</changefreq>
