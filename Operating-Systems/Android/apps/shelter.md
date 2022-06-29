@@ -5,4 +5,4 @@
 
 ## Links
 
-- [F-Droid](https://f-droid.org/packages/net.typeblog.shelter/)
+- [F-Droid Package](https://f-droid.org/packages/net.typeblog.shelter/)
