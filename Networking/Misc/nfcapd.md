@@ -8,6 +8,12 @@ sudo ps -e -o command | grep nfcapd
 
 ## Edit configuration
 
+Find the nfsen configuration first
+
+```bash
+sudo find / -type f -name "nfsen.conf"
+```
+
 ```bash
 vim /opt/etc/nfsen.conf
 ```
