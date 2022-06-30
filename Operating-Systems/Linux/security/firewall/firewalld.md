@@ -1,4 +1,4 @@
-# FirewallD
+# firewalld
 
 ## Zones
 
