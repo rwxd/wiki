@@ -3792,7 +3792,7 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run -v <span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">&quot;</span>:/path ghcr.io/zricethezav/gitleaks:v8.8.12 detect -f json -r <span class="s2">&quot;/path/report-secrets.json&quot;</span> --source<span class="o">=</span><span class="s2">&quot;/path&quot;</span>
 </code></pre></div>
 <p>Extract unique secrets to <code class="highlight">extracted-secrets</code></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cat report-secrets.json <span class="p">|</span> jq -n -r <span class="s1">&#39;inputs[].Secret&#39;</span> <span class="p">|</span> uniq -u &gt; extracted-secrets
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cat report-secrets.json <span class="p">|</span> jq -n -r <span class="s1">&#39;inputs[].Secret&#39;</span> <span class="p">|</span> sort -u &gt; extracted-secrets
 </code></pre></div>
 <h2 id="clear-secrets-from-repository">Clear secrets from repository<a class="headerlink" href="#clear-secrets-from-repository" title="Permanent link">⚑</a></h2>
 <p>Use (bfg)[../bfg-repo-cleaner.md]</p>
