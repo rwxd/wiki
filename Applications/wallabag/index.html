@@ -326,8 +326,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#initialize-the-database" class="md-nav__link">
+    Initialize the database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-new-user" class="md-nav__link">
     Create a new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-user-super-admin" class="md-nav__link">
+    Make a user super admin
   </a>
   
 </li>
@@ -3416,22 +3430,36 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Tools/Git/gitleak/" class="md-nav__link">
+        Gitleak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_12_4" type="checkbox" id="__nav_13_12_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_12_5" type="checkbox" id="__nav_13_12_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_13_12_4">
+        <label class="md-nav__link" for="__nav_13_12_5">
           GitLab
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="GitLab" data-md-level="3">
-        <label class="md-nav__title" for="__nav_13_12_4">
+        <label class="md-nav__title" for="__nav_13_12_5">
           <span class="md-nav__icon md-icon"></span>
           GitLab
         </label>
@@ -3761,8 +3789,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#initialize-the-database" class="md-nav__link">
+    Initialize the database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-new-user" class="md-nav__link">
     Create a new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-user-super-admin" class="md-nav__link">
+    Make a user super admin
   </a>
   
 </li>
@@ -3792,8 +3834,14 @@
 <h2 id="get-help-for-a-command">Get help for a command<a class="headerlink" href="#get-help-for-a-command" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it &lt;containerName&gt; /var/www/wallabag/bin/console <span class="nb">help</span> &lt;command&gt; --env<span class="o">=</span>prod
 </code></pre></div>
+<h2 id="initialize-the-database">Initialize the database<a class="headerlink" href="#initialize-the-database" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console wallabag:install --env<span class="o">=</span>prod --no-interaction
+</code></pre></div>
 <h2 id="create-a-new-user">Create a new user<a class="headerlink" href="#create-a-new-user" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:create --env<span class="o">=</span>prod
+</code></pre></div>
+<h2 id="make-a-user-super-admin">Make a user super admin<a class="headerlink" href="#make-a-user-super-admin" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:promote &lt;user&gt; --super --env<span class="o">=</span>prod
 </code></pre></div>
 
               

@@ -3331,9 +3331,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Clean Git repositories with BFG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Clean Git repositories with BFG
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrest" class="md-nav__link">
+    Secrest
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3373,22 +3411,36 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../gitleak/" class="md-nav__link">
+        Gitleak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_12_4" type="checkbox" id="__nav_13_12_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_12_5" type="checkbox" id="__nav_13_12_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_13_12_4">
+        <label class="md-nav__link" for="__nav_13_12_5">
           GitLab
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="GitLab" data-md-level="3">
-        <label class="md-nav__title" for="__nav_13_12_4">
+        <label class="md-nav__title" for="__nav_13_12_5">
           <span class="md-nav__icon md-icon"></span>
           GitLab
         </label>
@@ -3697,6 +3749,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrest" class="md-nav__link">
+    Secrest
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3715,11 +3789,24 @@
 
 <h1 id="clean-git-repositories-with-bfg">Clean Git repositories with BFG<a class="headerlink" href="#clean-git-repositories-with-bfg" title="Permanent link">⚑</a></h1>
 <p>With <a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG</a> large or troublesome files can be removed from a Git Repository</p>
-<p>Delete a file in a Git repository and force push changes.</p>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">⚑</a></h2>
+<p>Delete a file in a Git repository and force push the new commit history.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bfg --delete-files file.md
 <span class="linenos" data-linenos="2 "></span>git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
-<span class="linenos" data-linenos="3 "></span>git add .
-<span class="linenos" data-linenos="4 "></span>git push --force
+<span class="linenos" data-linenos="3 "></span>git push --force
+</code></pre></div>
+<h2 id="secrest">Secrest<a class="headerlink" href="#secrest" title="Permanent link">⚑</a></h2>
+<p>A file with a list of secrets can be used to remove all occurrences in the git repository</p>
+<p><code class="highlight">leaked-passwords.txt</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>PASSWORD1                       <span class="c1"># Replace literal string &#39;PASSWORD1&#39; with &#39;***REMOVED***&#39; (default)</span>
+<span class="linenos" data-linenos="2 "></span><span class="nv">PASSWORD2</span><span class="o">==</span>&gt;examplePass         <span class="c1"># replace with &#39;examplePass&#39; instead</span>
+<span class="linenos" data-linenos="3 "></span><span class="nv">PASSWORD3</span><span class="o">==</span>&gt;                    <span class="c1"># replace with the empty string</span>
+<span class="linenos" data-linenos="4 "></span>regex:password<span class="o">=</span><span class="se">\w</span>+<span class="o">==</span>&gt;password<span class="o">=</span>  <span class="c1"># Replace, using a regex</span>
+<span class="linenos" data-linenos="5 "></span>regex:<span class="se">\r</span><span class="o">(</span><span class="se">\n</span><span class="o">)==</span>&gt;<span class="nv">$1</span>               <span class="c1"># Replace Windows newlines with Unix newlines</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bfg --replace-text leaked-passwords.txt
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
 </code></pre></div>
 
               
