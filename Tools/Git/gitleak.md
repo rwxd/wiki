@@ -9,7 +9,7 @@ docker run -v "$PWD":/path ghcr.io/zricethezav/gitleaks:v8.8.12 detect -f json -
 Extract unique secrets to `extracted-secrets`
 
 ```bash
-cat report-secrets.json | jq -n -r 'inputs[].Secret' | uniq -u > extracted-secrets
+cat report-secrets.json | jq -n -r 'inputs[].Secret' | sort -u > extracted-secrets
 ```
 
 ## Clear secrets from repository
