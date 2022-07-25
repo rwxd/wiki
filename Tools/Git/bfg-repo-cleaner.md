@@ -2,6 +2,8 @@
 
 With [BFG](https://rtyley.github.io/bfg-repo-cleaner/) large or troublesome files can be removed from a Git Repository
 
+The Git repo should be cloned with `--mirror`
+
 ## Files
 
 Delete a file in a Git repository and force push the new commit history.
