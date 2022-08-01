@@ -319,6 +319,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-commands" class="md-nav__link">
+    List commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-help-for-a-command" class="md-nav__link">
     Get help for a command
   </a>
@@ -333,6 +340,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-new-user" class="md-nav__link">
     Create a new user
   </a>
@@ -342,6 +356,13 @@
         <li class="md-nav__item">
   <a href="#make-a-user-super-admin" class="md-nav__link">
     Make a user super admin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demote-and-deactivate-the-initial-wallabag-user" class="md-nav__link">
+    Demote and deactivate the initial wallabag user
   </a>
   
 </li>
@@ -3862,6 +3883,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-commands" class="md-nav__link">
+    List commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-help-for-a-command" class="md-nav__link">
     Get help for a command
   </a>
@@ -3876,6 +3904,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-new-user" class="md-nav__link">
     Create a new user
   </a>
@@ -3885,6 +3920,13 @@
         <li class="md-nav__item">
   <a href="#make-a-user-super-admin" class="md-nav__link">
     Make a user super admin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demote-and-deactivate-the-initial-wallabag-user" class="md-nav__link">
+    Demote and deactivate the initial wallabag user
   </a>
   
 </li>
@@ -3911,17 +3953,27 @@
 <h2 id="run-a-console-command-in-the-container">Run a console command in the container<a class="headerlink" href="#run-a-console-command-in-the-container" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it &lt;containerName&gt; /var/www/wallabag/bin/console &lt;command&gt; --env<span class="o">=</span>prod
 </code></pre></div>
+<h2 id="list-commands">List commands<a class="headerlink" href="#list-commands" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console list --env<span class="o">=</span>prod
+</code></pre></div>
 <h2 id="get-help-for-a-command">Get help for a command<a class="headerlink" href="#get-help-for-a-command" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it &lt;containerName&gt; /var/www/wallabag/bin/console <span class="nb">help</span> &lt;command&gt; --env<span class="o">=</span>prod
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console <span class="nb">help</span> &lt;command&gt; --env<span class="o">=</span>prod
 </code></pre></div>
 <h2 id="initialize-the-database">Initialize the database<a class="headerlink" href="#initialize-the-database" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console wallabag:install --env<span class="o">=</span>prod --no-interaction
+</code></pre></div>
+<h2 id="list-users">List users<a class="headerlink" href="#list-users" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console wallabag:user:list --env<span class="o">=</span>prod
 </code></pre></div>
 <h2 id="create-a-new-user">Create a new user<a class="headerlink" href="#create-a-new-user" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:create --env<span class="o">=</span>prod
 </code></pre></div>
 <h2 id="make-a-user-super-admin">Make a user super admin<a class="headerlink" href="#make-a-user-super-admin" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:promote &lt;user&gt; --super --env<span class="o">=</span>prod
+</code></pre></div>
+<h2 id="demote-and-deactivate-the-initial-wallabag-user">Demote and deactivate the initial wallabag user<a class="headerlink" href="#demote-and-deactivate-the-initial-wallabag-user" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:demote wallabag --super --env<span class="o">=</span>prod
+<span class="linenos" data-linenos="2 "></span>docker <span class="nb">exec</span> -it wallabag /var/www/wallabag/bin/console fos:user:deactivate wallabag --env<span class="o">=</span>prod
 </code></pre></div>
 
               
