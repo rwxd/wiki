@@ -27,3 +27,9 @@ docker rm -f $(docker ps -aq)
 ```bash
 docker rmi $(docker images -q)
 ```
+
+### Start docker daemon in debug mode
+
+```bash
+sudo dockerd --debug
+```
