@@ -2275,6 +2275,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../CLI/ssh/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../CLI/tee/" class="md-nav__link">
         Tee
       </a>
@@ -3859,9 +3873,10 @@
 
 
 <h1 id="wallpaper-in-i3">Wallpaper in i3<a class="headerlink" href="#wallpaper-in-i3" title="Permanent link">⚑</a></h1>
-<p><a href="https://wiki.archlinux.org/title/feh">feh</a> can be used to define a wallpaper.</p>
-<p>define the following in the i3 config file<br />
-<code class="highlight"><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">feh</span> <span class="o">--</span><span class="nv">bg</span><span class="o">-</span><span class="nv">scale</span> <span class="o">--</span><span class="k">random</span> <span class="o">~/</span><span class="nv">wallpaper</span><span class="o">/</span></code></p>
+<p><a href="https://wiki.archlinux.org/title/feh">feh</a> can be used to display a wallpaper.</p>
+<p>Define the following in the i3 config file to use a random wallpaper from the path <code class="highlight">~/wallpaper/</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">exec</span> --no-startup-id feh --bg-scale --random ~/wallpaper/
+</code></pre></div>
 
               
             </article>
