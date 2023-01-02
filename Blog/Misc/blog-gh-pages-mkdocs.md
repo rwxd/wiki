@@ -1,6 +1,5 @@
 # How to create a blog with GitHub Pages and MkDocs
 
-<div align="center">
 
 ```plantuml
 !theme amiga
@@ -17,7 +16,6 @@ pages -right-> html: serve files
 User -down-> pages: visits website
 ```
 
-</div>
 
 ## Dockerfile
 
