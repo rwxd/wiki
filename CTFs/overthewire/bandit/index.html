@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://wiki.rwxd.eu/CTFs/overthewire/bandit/">
       
+      
+        <link rel="prev" href="../../../Books/reading-list/">
+      
+      
+        <link rel="next" href="../../../DevOps/Continuous-Integration/Ansible/ansible-runner/">
+      
       <link rel="icon" href="../../../assets/page/favicon-32x32.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
@@ -23,13 +29,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f79797b0.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
+
     
     
     
@@ -42,10 +48,11 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -113,7 +120,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
@@ -121,7 +127,6 @@
             </label>
           
         
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -148,7 +153,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -172,7 +177,7 @@
         <a href="https://github.com/rwxd/wiki" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     wiki
@@ -217,7 +222,7 @@
       <a href="https://github.com/rwxd/wiki" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     wiki
@@ -4259,64 +4264,65 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/rwxd/wiki/edit/source/docs/content/CTFs/overthewire/bandit.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+  
 
 
 
 <h1 id="bandit">Bandit<a class="headerlink" href="#bandit" title="Permanent link">⚑</a></h1>
 <p><a href="https://overthewire.org/wargames/bandit/">Bandit</a></p>
 <h2 id="level-0">Level 0<a class="headerlink" href="#level-0" title="Permanent link">⚑</a></h2>
-<p>just login <code class="highlight"><span class="n">ssh</span><span class="w"> </span><span class="n">bandit0</span><span class="nv">@bandit</span><span class="p">.</span><span class="n">labs</span><span class="p">.</span><span class="n">overthewire</span><span class="p">.</span><span class="n">org</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="mi">2220</span><span class="w"></span></code> and password <code class="highlight">bandit0</code></p>
+<p>just login <code class="highlight"><span class="n">ssh</span><span class="w"> </span><span class="n">bandit0</span><span class="nv">@bandit</span><span class="p">.</span><span class="n">labs</span><span class="p">.</span><span class="n">overthewire</span><span class="p">.</span><span class="n">org</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="mi">2220</span></code> and password <code class="highlight">bandit0</code></p>
 <h2 id="level-0-1">Level 0 -&gt; 1<a class="headerlink" href="#level-0-1" title="Permanent link">⚑</a></h2>
 <p>Password for level 2 is in the <code class="highlight">~/readme</code> file.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit0@bandit:~$ cat readme
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit0@bandit:~$<span class="w"> </span>cat<span class="w"> </span>readme
 <span class="linenos" data-linenos="2 "></span>boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 </code></pre></div>
 <h2 id="level-1-2">Level 1 -&gt; 2<a class="headerlink" href="#level-1-2" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit1@bandit:~$ cat <span class="s2">&quot;./-&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit1@bandit:~$<span class="w"> </span>cat<span class="w"> </span><span class="s2">&quot;./-&quot;</span>
 <span class="linenos" data-linenos="2 "></span>CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 </code></pre></div>
 <h2 id="level-2-3">Level 2 -&gt; 3<a class="headerlink" href="#level-2-3" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit2@bandit:~$ cat ./spaces<span class="se">\ </span><span class="k">in</span><span class="se">\ </span>this<span class="se">\ </span>filename
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit2@bandit:~$<span class="w"> </span>cat<span class="w"> </span>./spaces<span class="se">\ </span><span class="k">in</span><span class="se">\ </span>this<span class="se">\ </span>filename
 <span class="linenos" data-linenos="2 "></span>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 </code></pre></div>
 <h2 id="level-3-4">Level 3 -&gt; 4<a class="headerlink" href="#level-3-4" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit3@bandit:~$ cat inhere/.hidden
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit3@bandit:~$<span class="w"> </span>cat<span class="w"> </span>inhere/.hidden
 <span class="linenos" data-linenos="2 "></span>pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 </code></pre></div>
 <h2 id="level-4-5">Level 4 -&gt; 5<a class="headerlink" href="#level-4-5" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit4@bandit:~$ find inhere/ -type f <span class="p">|</span> xargs file <span class="p">|</span> grep tex
-<span class="linenos" data-linenos="2 "></span>inhere/-file07: ASCII text
-<span class="linenos" data-linenos="3 "></span>bandit4@bandit:~$ cat inhere/-file07
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit4@bandit:~$<span class="w"> </span>find<span class="w"> </span>inhere/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>file<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>tex
+<span class="linenos" data-linenos="2 "></span>inhere/-file07:<span class="w"> </span>ASCII<span class="w"> </span>text
+<span class="linenos" data-linenos="3 "></span>bandit4@bandit:~$<span class="w"> </span>cat<span class="w"> </span>inhere/-file07
 <span class="linenos" data-linenos="4 "></span>koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 </code></pre></div>
 <h2 id="level-5-6">Level 5 -&gt; 6<a class="headerlink" href="#level-5-6" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit5@bandit:~$ find inhere/ -type f -size 1033c ! -executable <span class="p">|</span> xargs file <span class="p">|</span> grep text 
-<span class="linenos" data-linenos="2 "></span>inhere/maybehere07/.file2: ASCII text, with very long lines
-<span class="linenos" data-linenos="3 "></span>bandit5@bandit:~$ cat inhere/maybehere07/.file2
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit5@bandit:~$<span class="w"> </span>find<span class="w"> </span>inhere/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>1033c<span class="w"> </span>!<span class="w"> </span>-executable<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>file<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>text<span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span>inhere/maybehere07/.file2:<span class="w"> </span>ASCII<span class="w"> </span>text,<span class="w"> </span>with<span class="w"> </span>very<span class="w"> </span>long<span class="w"> </span>lines
+<span class="linenos" data-linenos="3 "></span>bandit5@bandit:~$<span class="w"> </span>cat<span class="w"> </span>inhere/maybehere07/.file2
 <span class="linenos" data-linenos="4 "></span>DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 </code></pre></div>
 <h2 id="level-6-7">Level 6 -&gt; 7<a class="headerlink" href="#level-6-7" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c <span class="m">2</span>&gt;/dev/null <span class="p">|</span> xargs cat
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit6@bandit:~$<span class="w"> </span>find<span class="w"> </span>/<span class="w"> </span>-user<span class="w"> </span>bandit7<span class="w"> </span>-group<span class="w"> </span>bandit6<span class="w"> </span>-size<span class="w"> </span>33c<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>cat
 <span class="linenos" data-linenos="2 "></span>HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 </code></pre></div>
 <h2 id="level-7-8">Level 7 -&gt; 8<a class="headerlink" href="#level-7-8" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit7@bandit:~$ cat data.txt <span class="p">|</span> grep <span class="s2">&quot;millionth&quot;</span> <span class="p">|</span> sed <span class="s2">&quot;s/millionth\s*//g&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit7@bandit:~$<span class="w"> </span>cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;millionth&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s2">&quot;s/millionth\s*//g&quot;</span>
 <span class="linenos" data-linenos="2 "></span>cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 </code></pre></div>
 <h2 id="level-8-9">Level 8 -&gt; 9<a class="headerlink" href="#level-8-9" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit8@bandit:~$ sort data.txt <span class="p">|</span> uniq -c <span class="p">|</span> grep <span class="s2">&quot;1\s&quot;</span>
-<span class="linenos" data-linenos="2 "></span>      <span class="m">1</span> UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit8@bandit:~$<span class="w"> </span>sort<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;1\s&quot;</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">      </span><span class="m">1</span><span class="w"> </span>UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 </code></pre></div>
 <h2 id="level-9-10">Level 9 -&gt; 10<a class="headerlink" href="#level-9-10" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit9@bandit:~$ strings data.txt <span class="p">|</span> grep -E <span class="s2">&quot;=+&quot;</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="o">==========</span> the*2i<span class="s2">&quot;4</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit9@bandit:~$<span class="w"> </span>strings<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;=+&quot;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="o">==========</span><span class="w"> </span>the*2i<span class="s2">&quot;4</span>
 <span class="linenos" data-linenos=" 3 "></span><span class="s2">=:G e</span>
 <span class="linenos" data-linenos=" 4 "></span><span class="s2">========== password</span>
 <span class="linenos" data-linenos=" 5 "></span><span class="s2">&lt;I=zsGi</span>
@@ -4329,136 +4335,105 @@
 <span class="linenos" data-linenos="12 "></span><span class="s2">S=A.H&amp;^</span>
 </code></pre></div>
 <h2 id="level-10-11">Level 10 -&gt; 11<a class="headerlink" href="#level-10-11" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit10@bandit:~$ cat data.txt <span class="p">|</span> base64 -d <span class="p">|</span> sed <span class="s2">&quot;s/The\spassword\sis\s\(.*\)/\1/g&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit10@bandit:~$<span class="w"> </span>cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s2">&quot;s/The\spassword\sis\s\(.*\)/\1/g&quot;</span>
 <span class="linenos" data-linenos="2 "></span>IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 </code></pre></div>
 <h2 id="level-11-12">Level 11 -&gt; 12<a class="headerlink" href="#level-11-12" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit11@bandit:~$ cat data.txt <span class="p">|</span> tr <span class="s2">&quot;a-zA-Z&quot;</span> <span class="s2">&quot;n-za-mN-ZA-M&quot;</span>
-<span class="linenos" data-linenos="2 "></span>The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit11@bandit:~$<span class="w"> </span>cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s2">&quot;a-zA-Z&quot;</span><span class="w"> </span><span class="s2">&quot;n-za-mN-ZA-M&quot;</span>
+<span class="linenos" data-linenos="2 "></span>The<span class="w"> </span>password<span class="w"> </span>is<span class="w"> </span>5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 </code></pre></div>
 <h2 id="level-12-13">Level 12 -&gt; 13<a class="headerlink" href="#level-12-13" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit12@bandit:~$ mkdir -p /tmp/abcdef <span class="o">&amp;&amp;</span> <span class="nb">cd</span> !$
-<span class="linenos" data-linenos=" 2 "></span>bandit12@bandit:/tmp/abcdef$ xxd -r ~/data.txt data.txt
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit12@bandit:~$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/abcdef<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>!$
+<span class="linenos" data-linenos=" 2 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>xxd<span class="w"> </span>-r<span class="w"> </span>~/data.txt<span class="w"> </span>data.txt
 <span class="linenos" data-linenos=" 3 "></span>
-<span class="linenos" data-linenos=" 4 "></span>bandit12@bandit:/tmp/abcdef$ file data.txt
-<span class="linenos" data-linenos=" 5 "></span>data.txt: gzip compressed data, was <span class="s2">&quot;data2.bin&quot;</span>, last modified: Thu May  <span class="m">7</span> <span class="m">18</span>:14:30 <span class="m">2020</span>, max compression, from Unix
-<span class="linenos" data-linenos=" 6 "></span>bandit12@bandit:/tmp/abcdef$ mv data.txt data.gz
-<span class="linenos" data-linenos=" 7 "></span>bandit12@bandit:/tmp/abcdef$ gzip -d data.gz
+<span class="linenos" data-linenos=" 4 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data.txt
+<span class="linenos" data-linenos=" 5 "></span>data.txt:<span class="w"> </span>gzip<span class="w"> </span>compressed<span class="w"> </span>data,<span class="w"> </span>was<span class="w"> </span><span class="s2">&quot;data2.bin&quot;</span>,<span class="w"> </span>last<span class="w"> </span>modified:<span class="w"> </span>Thu<span class="w"> </span>May<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">18</span>:14:30<span class="w"> </span><span class="m">2020</span>,<span class="w"> </span>max<span class="w"> </span>compression,<span class="w"> </span>from<span class="w"> </span>Unix
+<span class="linenos" data-linenos=" 6 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>mv<span class="w"> </span>data.txt<span class="w"> </span>data.gz
+<span class="linenos" data-linenos=" 7 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>gzip<span class="w"> </span>-d<span class="w"> </span>data.gz
 <span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>bandit12@bandit:/tmp/abcdef$ file data
-<span class="linenos" data-linenos="10 "></span>data: bzip2 compressed data, block <span class="nv">size</span> <span class="o">=</span> 900k
-<span class="linenos" data-linenos="11 "></span>bandit12@bandit:/tmp/abcdef$ mv data data.bz2
-<span class="linenos" data-linenos="12 "></span>bandit12@bandit:/tmp/abcdef$ bzip2 -d data.bz2
+<span class="linenos" data-linenos=" 9 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data
+<span class="linenos" data-linenos="10 "></span>data:<span class="w"> </span>bzip2<span class="w"> </span>compressed<span class="w"> </span>data,<span class="w"> </span>block<span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>900k
+<span class="linenos" data-linenos="11 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>mv<span class="w"> </span>data<span class="w"> </span>data.bz2
+<span class="linenos" data-linenos="12 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>bzip2<span class="w"> </span>-d<span class="w"> </span>data.bz2
 <span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span>bandit12@bandit:/tmp/abcdef$ file data
-<span class="linenos" data-linenos="15 "></span>data: gzip compressed data, was <span class="s2">&quot;data4.bin&quot;</span>, last modified: Thu May  <span class="m">7</span> <span class="m">18</span>:14:30 <span class="m">2020</span>, max compression, from Unix
-<span class="linenos" data-linenos="16 "></span>bandit12@bandit:/tmp/abcdef$ mv data data.gz
+<span class="linenos" data-linenos="14 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data
+<span class="linenos" data-linenos="15 "></span>data:<span class="w"> </span>gzip<span class="w"> </span>compressed<span class="w"> </span>data,<span class="w"> </span>was<span class="w"> </span><span class="s2">&quot;data4.bin&quot;</span>,<span class="w"> </span>last<span class="w"> </span>modified:<span class="w"> </span>Thu<span class="w"> </span>May<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">18</span>:14:30<span class="w"> </span><span class="m">2020</span>,<span class="w"> </span>max<span class="w"> </span>compression,<span class="w"> </span>from<span class="w"> </span>Unix
+<span class="linenos" data-linenos="16 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>mv<span class="w"> </span>data<span class="w"> </span>data.gz
 <span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span>bandit12@bandit:/tmp/abcdef$ gzip -d data.gz
-<span class="linenos" data-linenos="19 "></span>bandit12@bandit:/tmp/abcdef$ file data
-<span class="linenos" data-linenos="20 "></span>data: POSIX tar archive <span class="o">(</span>GNU<span class="o">)</span>
+<span class="linenos" data-linenos="18 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>gzip<span class="w"> </span>-d<span class="w"> </span>data.gz
+<span class="linenos" data-linenos="19 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data
+<span class="linenos" data-linenos="20 "></span>data:<span class="w"> </span>POSIX<span class="w"> </span>tar<span class="w"> </span>archive<span class="w"> </span><span class="o">(</span>GNU<span class="o">)</span>
 <span class="linenos" data-linenos="21 "></span>
-<span class="linenos" data-linenos="22 "></span>bandit12@bandit:/tmp/abcdef$ mv data data.tar
-<span class="linenos" data-linenos="23 "></span>bandit12@bandit:/tmp/abcdef$ tar xvf data.tar
+<span class="linenos" data-linenos="22 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>mv<span class="w"> </span>data<span class="w"> </span>data.tar
+<span class="linenos" data-linenos="23 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>tar<span class="w"> </span>xvf<span class="w"> </span>data.tar
 <span class="linenos" data-linenos="24 "></span>data5.bin
 <span class="linenos" data-linenos="25 "></span>
-<span class="linenos" data-linenos="26 "></span>bandit12@bandit:/tmp/abcdef$ file data5.bin
-<span class="linenos" data-linenos="27 "></span>data5.bin: POSIX tar archive <span class="o">(</span>GNU<span class="o">)</span>
-<span class="linenos" data-linenos="28 "></span>bandit12@bandit:/tmp/abcdef$ tar xvf data6.bin
+<span class="linenos" data-linenos="26 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data5.bin
+<span class="linenos" data-linenos="27 "></span>data5.bin:<span class="w"> </span>POSIX<span class="w"> </span>tar<span class="w"> </span>archive<span class="w"> </span><span class="o">(</span>GNU<span class="o">)</span>
+<span class="linenos" data-linenos="28 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>tar<span class="w"> </span>xvf<span class="w"> </span>data6.bin
 <span class="linenos" data-linenos="29 "></span>data8.bin
 <span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>bandit12@bandit:/tmp/abcdef$ file data8.bin
-<span class="linenos" data-linenos="32 "></span>data8.bin: gzip compressed data, was <span class="s2">&quot;data9.bin&quot;</span>, last modified: Thu May  <span class="m">7</span> <span class="m">18</span>:14:30 <span class="m">2020</span>, max compression, from Unix
-<span class="linenos" data-linenos="33 "></span>bandit12@bandit:/tmp/abcdef$ mv data8.bin data8.gz
-<span class="linenos" data-linenos="34 "></span>bandit12@bandit:/tmp/abcdef$ gzip -d data8.gz
+<span class="linenos" data-linenos="31 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data8.bin
+<span class="linenos" data-linenos="32 "></span>data8.bin:<span class="w"> </span>gzip<span class="w"> </span>compressed<span class="w"> </span>data,<span class="w"> </span>was<span class="w"> </span><span class="s2">&quot;data9.bin&quot;</span>,<span class="w"> </span>last<span class="w"> </span>modified:<span class="w"> </span>Thu<span class="w"> </span>May<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">18</span>:14:30<span class="w"> </span><span class="m">2020</span>,<span class="w"> </span>max<span class="w"> </span>compression,<span class="w"> </span>from<span class="w"> </span>Unix
+<span class="linenos" data-linenos="33 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>mv<span class="w"> </span>data8.bin<span class="w"> </span>data8.gz
+<span class="linenos" data-linenos="34 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>gzip<span class="w"> </span>-d<span class="w"> </span>data8.gz
 <span class="linenos" data-linenos="35 "></span>
-<span class="linenos" data-linenos="36 "></span>bandit12@bandit:/tmp/abcdef$ file data8
-<span class="linenos" data-linenos="37 "></span>data8: ASCII text
-<span class="linenos" data-linenos="38 "></span>bandit12@bandit:/tmp/abcdef$ cat data8
-<span class="linenos" data-linenos="39 "></span>The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+<span class="linenos" data-linenos="36 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>file<span class="w"> </span>data8
+<span class="linenos" data-linenos="37 "></span>data8:<span class="w"> </span>ASCII<span class="w"> </span>text
+<span class="linenos" data-linenos="38 "></span>bandit12@bandit:/tmp/abcdef$<span class="w"> </span>cat<span class="w"> </span>data8
+<span class="linenos" data-linenos="39 "></span>The<span class="w"> </span>password<span class="w"> </span>is<span class="w"> </span>8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 </code></pre></div>
 <h2 id="level-13-14">Level 13 -&gt; 14<a class="headerlink" href="#level-13-14" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit13@bandit:~$ <span class="nb">eval</span> <span class="k">$(</span>ssh-agent<span class="k">)</span>
-<span class="linenos" data-linenos="2 "></span>Agent pid <span class="m">20358</span>
-<span class="linenos" data-linenos="3 "></span>bandit13@bandit:~$ ssh-add sshkey.private
-<span class="linenos" data-linenos="4 "></span>Identity added: sshkey.private <span class="o">(</span>sshkey.private<span class="o">)</span>
-<span class="linenos" data-linenos="5 "></span>bandit13@bandit:~$ ssh bandit14@localhost
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit13@bandit:~$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="k">)</span>
+<span class="linenos" data-linenos="2 "></span>Agent<span class="w"> </span>pid<span class="w"> </span><span class="m">20358</span>
+<span class="linenos" data-linenos="3 "></span>bandit13@bandit:~$<span class="w"> </span>ssh-add<span class="w"> </span>sshkey.private
+<span class="linenos" data-linenos="4 "></span>Identity<span class="w"> </span>added:<span class="w"> </span>sshkey.private<span class="w"> </span><span class="o">(</span>sshkey.private<span class="o">)</span>
+<span class="linenos" data-linenos="5 "></span>bandit13@bandit:~$<span class="w"> </span>ssh<span class="w"> </span>bandit14@localhost
 </code></pre></div>
 <h2 id="level-14-15">Level 14 -&gt; 15<a class="headerlink" href="#level-14-15" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit14@bandit:~$ cat /etc/bandit_pass/bandit14 <span class="p">|</span> netcat localhost <span class="m">30000</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit14@bandit:~$<span class="w"> </span>cat<span class="w"> </span>/etc/bandit_pass/bandit14<span class="w"> </span><span class="p">|</span><span class="w"> </span>netcat<span class="w"> </span>localhost<span class="w"> </span><span class="m">30000</span>
 <span class="linenos" data-linenos="2 "></span>Correct!
 <span class="linenos" data-linenos="3 "></span>BfMYroe26WYalil77FoDi9qh59eK5xNr
 </code></pre></div>
 <h2 id="level-15-16">Level 15 -&gt; 16<a class="headerlink" href="#level-15-16" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit15@bandit:~$ man openssl s_client
-<span class="linenos" data-linenos="2 "></span>bandit15@bandit:~$ openssl s_client -connect localhost:30001
-<span class="linenos" data-linenos="3 "></span>bandit15@bandit:~$ <span class="nb">echo</span> <span class="s2">&quot;BfMYroe26WYalil77FoDi9qh59eK5xNr&quot;</span> <span class="p">|</span> openssl s_client -connect localhost:30001 -ign_eof
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bandit15@bandit:~$<span class="w"> </span>man<span class="w"> </span>openssl<span class="w"> </span>s_client
+<span class="linenos" data-linenos="2 "></span>bandit15@bandit:~$<span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>localhost:30001
+<span class="linenos" data-linenos="3 "></span>bandit15@bandit:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;BfMYroe26WYalil77FoDi9qh59eK5xNr&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>localhost:30001<span class="w"> </span>-ign_eof
 <span class="linenos" data-linenos="4 "></span>---
 <span class="linenos" data-linenos="5 "></span>Correct!
 <span class="linenos" data-linenos="6 "></span>cluFn7wTiGryunymYOu4RcffSxQluehd
 </code></pre></div>
 <h2 id="level-16-17">Level 16 -&gt; 17<a class="headerlink" href="#level-16-17" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit16@bandit:~$ nmap -sV -p <span class="m">31000</span>-32000 localhost
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>bandit16@bandit:~$<span class="w"> </span>nmap<span class="w"> </span>-sV<span class="w"> </span>-p<span class="w"> </span><span class="m">31000</span>-32000<span class="w"> </span>localhost
 <span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span>Starting Nmap <span class="m">7</span>.40 <span class="o">(</span> https://nmap.org <span class="o">)</span> at <span class="m">2022</span>-04-11 <span class="m">21</span>:16 CEST
-<span class="linenos" data-linenos=" 4 "></span>Nmap scan report <span class="k">for</span> localhost <span class="o">(</span><span class="m">127</span>.0.0.1<span class="o">)</span>
-<span class="linenos" data-linenos=" 5 "></span>Host is up <span class="o">(</span><span class="m">0</span>.00024s latency<span class="o">)</span>.
-<span class="linenos" data-linenos=" 6 "></span>Not shown: <span class="m">996</span> closed ports
-<span class="linenos" data-linenos=" 7 "></span>PORT      STATE SERVICE     VERSION
-<span class="linenos" data-linenos=" 8 "></span><span class="m">31046</span>/tcp open  <span class="nb">echo</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="m">31518</span>/tcp open  ssl/echo
-<span class="linenos" data-linenos="10 "></span><span class="m">31691</span>/tcp open  <span class="nb">echo</span>
-<span class="linenos" data-linenos="11 "></span><span class="m">31790</span>/tcp open  ssl/unknown
-<span class="linenos" data-linenos="12 "></span><span class="m">31960</span>/tcp open  <span class="nb">echo</span>
+<span class="linenos" data-linenos=" 3 "></span>Starting<span class="w"> </span>Nmap<span class="w"> </span><span class="m">7</span>.40<span class="w"> </span><span class="o">(</span><span class="w"> </span>https://nmap.org<span class="w"> </span><span class="o">)</span><span class="w"> </span>at<span class="w"> </span><span class="m">2022</span>-04-11<span class="w"> </span><span class="m">21</span>:16<span class="w"> </span>CEST
+<span class="linenos" data-linenos=" 4 "></span>Nmap<span class="w"> </span>scan<span class="w"> </span>report<span class="w"> </span><span class="k">for</span><span class="w"> </span>localhost<span class="w"> </span><span class="o">(</span><span class="m">127</span>.0.0.1<span class="o">)</span>
+<span class="linenos" data-linenos=" 5 "></span>Host<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span><span class="o">(</span><span class="m">0</span>.00024s<span class="w"> </span>latency<span class="o">)</span>.
+<span class="linenos" data-linenos=" 6 "></span>Not<span class="w"> </span>shown:<span class="w"> </span><span class="m">996</span><span class="w"> </span>closed<span class="w"> </span>ports
+<span class="linenos" data-linenos=" 7 "></span>PORT<span class="w">      </span>STATE<span class="w"> </span>SERVICE<span class="w">     </span>VERSION
+<span class="linenos" data-linenos=" 8 "></span><span class="m">31046</span>/tcp<span class="w"> </span>open<span class="w">  </span><span class="nb">echo</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="m">31518</span>/tcp<span class="w"> </span>open<span class="w">  </span>ssl/echo
+<span class="linenos" data-linenos="10 "></span><span class="m">31691</span>/tcp<span class="w"> </span>open<span class="w">  </span><span class="nb">echo</span>
+<span class="linenos" data-linenos="11 "></span><span class="m">31790</span>/tcp<span class="w"> </span>open<span class="w">  </span>ssl/unknown
+<span class="linenos" data-linenos="12 "></span><span class="m">31960</span>/tcp<span class="w"> </span>open<span class="w">  </span><span class="nb">echo</span>
 <span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span>bandit16@bandit:~$ <span class="nb">echo</span> <span class="s2">&quot;cluFn7wTiGryunymYOu4RcffSxQluehd&quot;</span> <span class="p">|</span> openssl s_client --connect localhost:31790 -ign_eof
+<span class="linenos" data-linenos="14 "></span>bandit16@bandit:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;cluFn7wTiGryunymYOu4RcffSxQluehd&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>--connect<span class="w"> </span>localhost:31790<span class="w"> </span>-ign_eof
 </code></pre></div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../../Books/reading-list/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reading list" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Reading list
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../../DevOps/Continuous-Integration/Ansible/ansible-runner/" class="md-footer__link md-footer__link--next" aria-label="Next: ansible-runner" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ansible-runner
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4484,7 +4459,7 @@
       
     
     <a href="https://github.com/rwxd" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -4497,10 +4472,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
