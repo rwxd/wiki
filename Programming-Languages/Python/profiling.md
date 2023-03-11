@@ -10,7 +10,7 @@ python3 -m cProfile -o profile.pstats -m my_module <args>
 
 ### Yappi
 
-Yappi supports asynchronous and multithreaded profiling, which is not supported by the built-in profiler.
+[Yappi](https://github.com/sumerc/yappi) supports asynchronous and multithreaded profiling, which is not supported by the built-in profiler.
 
 ```bash
 pip3 install -U yappi
@@ -45,7 +45,7 @@ gprof2dot -f pstats profile.pstats | dot -Tsvg -o profile.svg
 
 ### Snakeviz (Interactive)
 
-Snakeviz is a web-based profiling tool which allows users to analyse their code by filtering data by module,
+[Snakeviz](https://github.com/jiffyclub/snakeviz) is a web-based profiling tool which allows users to analyse their code by filtering data by module,
 function and file, and sorting it according to different criteria such as the number of calls or cumulative time spent in a function.
 
 ```bash
