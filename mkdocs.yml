@@ -29,7 +29,7 @@ theme:
   icon:
     # logo: material/code-braces-box
     logo: material/pine-tree
-  favicon: assets/page/favicon-32x32.png
+  favicon: assets/page/favicon-96x96.png
   language: en
   include_sidebar: true
   features:
