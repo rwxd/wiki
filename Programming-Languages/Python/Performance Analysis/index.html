@@ -25,7 +25,7 @@
     
     
       
-        <title>Profiler - Wiki</title>
+        <title>Profiling in Python - Wiki</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#profiler" class="md-skip">
+        <a href="#profiling-in-python" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Profiler
+              Profiling in Python
             
           </span>
         </div>
@@ -3210,12 +3210,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Profiler
+          Profiling in Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Profiler
+        Profiling in Python
       </a>
       
         
@@ -3234,6 +3234,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#generate-data" class="md-nav__link">
+    Generate data
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pythons-integrated-cprofile" class="md-nav__link">
+    Pythons integrated cProfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yappi" class="md-nav__link">
+    Yappi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visualisation" class="md-nav__link">
     Visualisation
   </a>
@@ -3242,8 +3269,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gprof2dot-dot-diagram" class="md-nav__link">
-    gprof2dot (Dot Diagram)
+  <a href="#gprof2dot-dot-diagram-svg" class="md-nav__link">
+    gprof2dot (Dot Diagram, SVG)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snakeviz-interactive" class="md-nav__link">
+    Snakeviz (Interactive)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flamegraph-svg" class="md-nav__link">
+    flamegraph (SVG)
   </a>
   
 </li>
@@ -4053,6 +4094,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#generate-data" class="md-nav__link">
+    Generate data
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pythons-integrated-cprofile" class="md-nav__link">
+    Pythons integrated cProfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yappi" class="md-nav__link">
+    Yappi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visualisation" class="md-nav__link">
     Visualisation
   </a>
@@ -4061,8 +4129,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gprof2dot-dot-diagram" class="md-nav__link">
-    gprof2dot (Dot Diagram)
+  <a href="#gprof2dot-dot-diagram-svg" class="md-nav__link">
+    gprof2dot (Dot Diagram, SVG)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snakeviz-interactive" class="md-nav__link">
+    Snakeviz (Interactive)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flamegraph-svg" class="md-nav__link">
+    flamegraph (SVG)
   </a>
   
 </li>
@@ -4091,15 +4173,48 @@
 
 
 
-<h1 id="profiler">Profiler<a class="headerlink" href="#profiler" title="Permanent link">⚑</a></h1>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>cProfile<span class="w"> </span>-o<span class="w"> </span>log.pstats<span class="w"> </span>-m<span class="w"> </span>my_module
+<h1 id="profiling-in-python">Profiling in Python<a class="headerlink" href="#profiling-in-python" title="Permanent link">⚑</a></h1>
+<h2 id="generate-data">Generate data<a class="headerlink" href="#generate-data" title="Permanent link">⚑</a></h2>
+<h3 id="pythons-integrated-cprofile">Pythons integrated <code class="highlight">cProfile</code><a class="headerlink" href="#pythons-integrated-cprofile" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python3<span class="w"> </span>-m<span class="w"> </span>cProfile<span class="w"> </span>-o<span class="w"> </span>profile.pstats<span class="w"> </span>-m<span class="w"> </span>my_module<span class="w"> </span>&lt;args&gt;
+</code></pre></div>
+<h3 id="yappi">Yappi<a class="headerlink" href="#yappi" title="Permanent link">⚑</a></h3>
+<p>Yappi supports asynchronous and multithreaded profiling, which is not supported by the built-in profiler.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>yappi
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span> <span class="nn">yappi</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">my_function</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="n">yappi</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="n">my_function</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="n">yappi</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="n">yappi</span><span class="o">.</span><span class="n">get_func_stats</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;profile.pstats&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pstats&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="visualisation">Visualisation<a class="headerlink" href="#visualisation" title="Permanent link">⚑</a></h2>
-<h3 id="gprof2dot-dot-diagram">gprof2dot (Dot Diagram)<a class="headerlink" href="#gprof2dot-dot-diagram" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>graphviz
-<span class="linenos" data-linenos="2 "></span>pip3<span class="w"> </span>install<span class="w"> </span>gprof2dot
+<h3 id="gprof2dot-dot-diagram-svg">gprof2dot (Dot Diagram, SVG)<a class="headerlink" href="#gprof2dot-dot-diagram-svg" title="Permanent link">⚑</a></h3>
+<p>Transform a <code class="highlight"><span class="na">.pstats</span></code> file with <a href="https://github.com/jrfonseca/gprof2dot">gprof2dot</a> into a dot graph as a svg file.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>gprof2dot
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>gprof2dot<span class="w"> </span>-f<span class="w"> </span>pstats<span class="w"> </span>log.pstats<span class="w"> </span><span class="p">|</span><span class="w"> </span>dot<span class="w"> </span>-Tsvg<span class="w"> </span>-o<span class="w"> </span>log.svg
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>gprof2dot<span class="w"> </span>-f<span class="w"> </span>pstats<span class="w"> </span>profile.pstats<span class="w"> </span><span class="p">|</span><span class="w"> </span>dot<span class="w"> </span>-Tsvg<span class="w"> </span>-o<span class="w"> </span>profile.svg
+</code></pre></div>
+<h3 id="snakeviz-interactive">Snakeviz (Interactive)<a class="headerlink" href="#snakeviz-interactive" title="Permanent link">⚑</a></h3>
+<p>Snakeviz is a web-based profiling tool which allows users to analyse their code by filtering data by module,
+function and file, and sorting it according to different criteria such as the number of calls or cumulative time spent in a function.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>snakeviz
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>snakeviz<span class="w"> </span>profile.pstats
+</code></pre></div>
+<h3 id="flamegraph-svg">flamegraph (SVG)<a class="headerlink" href="#flamegraph-svg" title="Permanent link">⚑</a></h3>
+<p>Flame graphs are visual tools that show how much time is spent in each function call.
+The width of each bar in the graph represents the amount of time spent in that function,
+with wider bars indicating more time spent and narrower bars indicating less time.
+The main function is at the bottom, and the subfunctions are stacked vertically on top.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>flameprof
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>flameprof<span class="w"> </span>profile.pstats<span class="w"> </span>&gt;<span class="w"> </span>profile.svg
 </code></pre></div>
 
 
