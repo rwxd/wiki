@@ -16,4 +16,4 @@
 
 ## CKAD Exam Labs
 
-- [killer.sh](https://killer.sh/ckad) - 2 free labs, when the exam is purchased
+- [killer.sh](https://killer.sh/ckad) - 2 free labs, with the purchase of the exam
