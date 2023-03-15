@@ -6,13 +6,13 @@
 
 ## Free Labs
 
-- https://killercoda.com/killer-shell-ckad
-- https://killercoda.com/killer-shell-cka
-- https://killercoda.com/kubernetes
+- <https://killercoda.com/killer-shell-ckad>
+- <https://killercoda.com/killer-shell-cka>
+- <https://killercoda.com/kubernetes>
 
 ## Free Playground
 
-- https://killercoda.com/playgrounds/scenario/ckad
+- <https://killercoda.com/playgrounds/scenario/ckad>
 
 ## CKAD Exam Labs
 
