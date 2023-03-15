@@ -2,7 +2,7 @@
 
 # Books
 
-- [Kubernetes in Action](www.manning.com/books/kubernetes-in-action) by Marko Luksa
+- [Kubernetes in Action](https://www.manning.com/books/kubernetes-in-action) by Marko Luksa
 
 ## Free Labs
 
