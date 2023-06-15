@@ -1,6 +1,6 @@
 # Use systemd files with rootless podman-compose
 
-Currently (as of 6/15/2023), podman-compose must be manually installed to use version 1.0.7 (check with podman-compose -v), [because pods are not used by default] (https://github.com/containers/podman-compose/issues/307#issuecomment-1517822926).
+Currently (as of 6/15/2023), podman-compose must be manually installed to use version 1.0.7 (check with podman-compose -v), [because pods are not used by default](https://github.com/containers/podman-compose/issues/307#issuecomment-1517822926).
 
 ```bash
 pip3 install git+https://github.com/containers/podman-compose.git
