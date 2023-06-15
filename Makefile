@@ -11,5 +11,5 @@ serve: ## Serve blog with a container on port 8000
 
 build: ## Build blog pages
 	mkdir -p $(SITE_DIR)
-	docker run --rm -v $(CURRENT_DIR):/src $(CONTAINER) sh -c "mkdocs build"
+	docker run --rm -v $(CURRENT_DIR):/src $(CONTAINER) bash -c "mkdocs build"
 	ls -la
