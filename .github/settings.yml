@@ -6,5 +6,5 @@ _extends: gh-templates:.github/common-settings.yml
 repository:
   name: "wiki"
   description: "Notes on many things"
-  homepage: "https://wiki.rwxd.eu/"
+  homepage: "https://wiki.rwxd.de/"
   topics: "wiki, mkdocs, digital garden"
