@@ -38,6 +38,13 @@ Enable and start the systemd service
 systemctl --user enable --now 'podman-compose@project-name'
 ```
 
+Stop & Start
+
+```bash
+systemctl --user stop 'podman-compose@project-name'
+systemctl --user start 'podman-compose@project-name'
+```
+
 ## Troubleshooting
 
 When the  systemd unit is create you can use
