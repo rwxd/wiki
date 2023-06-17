@@ -89,7 +89,7 @@ extra:
   analytics:
     provider: plausible
     domain: wiki.rwxd.de
-    src: "https://plausible.chaops.de/js/plausible.js"
+    src: "https://plausible.chaops.de/js/script.js"
 
 extra_javascript:
   - javascripts/mathjax.js
