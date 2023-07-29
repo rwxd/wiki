@@ -397,6 +397,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#migrate-database" class="md-nav__link">
+    Migrate database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-users" class="md-nav__link">
     List users
   </a>
@@ -4256,6 +4263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#migrate-database" class="md-nav__link">
+    Migrate database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-users" class="md-nav__link">
     List users
   </a>
@@ -4314,6 +4328,9 @@
 </code></pre></div>
 <h2 id="initialize-the-database">Initialize the database<a class="headerlink" href="#initialize-the-database" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>wallabag<span class="w"> </span>/var/www/wallabag/bin/console<span class="w"> </span>wallabag:install<span class="w"> </span>--env<span class="o">=</span>prod<span class="w"> </span>--no-interaction
+</code></pre></div>
+<h2 id="migrate-database">Migrate database<a class="headerlink" href="#migrate-database" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>wallabag<span class="w"> </span>/var/www/wallabag/bin/console<span class="w"> </span>doctrine:migrations:migrate<span class="w"> </span>--env<span class="o">=</span>prod<span class="w"> </span>--no-interaction
 </code></pre></div>
 <h2 id="list-users">List users<a class="headerlink" href="#list-users" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>wallabag<span class="w"> </span>/var/www/wallabag/bin/console<span class="w"> </span>wallabag:user:list<span class="w"> </span>--env<span class="o">=</span>prod
