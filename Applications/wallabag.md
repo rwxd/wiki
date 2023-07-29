@@ -24,6 +24,12 @@ docker exec -it wallabag /var/www/wallabag/bin/console help <command> --env=prod
 docker exec -it wallabag /var/www/wallabag/bin/console wallabag:install --env=prod --no-interaction
 ```
 
+## Migrate database
+
+```bash
+docker exec -it wallabag /var/www/wallabag/bin/console doctrine:migrations:migrate --env=prod --no-interaction
+```
+
 ## List users
 
 ```bash
