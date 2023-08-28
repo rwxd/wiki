@@ -12,20 +12,20 @@
         <meta name="author" content="rwxd">
       
       
-        <link rel="canonical" href="https://wiki.rwxd.eu/Tools/Git/gitleak/">
+        <link rel="canonical" href="https://wiki.rwxd.eu/Programming-Languages/Go/profiling/">
       
       
-        <link rel="prev" href="../git/">
+        <link rel="prev" href="../Formatting/">
       
       
-        <link rel="next" href="../GitLab/access-tokens/">
+        <link rel="next" href="../../Python/Performance%20Analysis/">
       
       <link rel="icon" href="../../../assets/page/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
-        <title>Gitleak - Wiki</title>
+        <title>Profiling in Go - Wiki</title>
       
     
     
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gitleak" class="md-skip">
+        <a href="#profiling-in-go" class="md-skip">
           Skip to content
         </a>
       
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gitleak
+              Profiling in Go
             
           </span>
         </div>
@@ -3166,12 +3166,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
       
       
       
@@ -3194,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Bash/" class="md-nav__link">
+      <a href="../../Bash/" class="md-nav__link">
         Bash
       </a>
     </li>
@@ -3208,7 +3210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/JSON/" class="md-nav__link">
+      <a href="../../JSON/" class="md-nav__link">
         JSON
       </a>
     </li>
@@ -3222,7 +3224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/YAML/" class="md-nav__link">
+      <a href="../../YAML/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -3234,12 +3236,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_4" type="checkbox" id="__nav_12_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_4" type="checkbox" id="__nav_12_4" checked>
       
       
       
@@ -3262,7 +3266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Go/Build/" class="md-nav__link">
+      <a href="../Build/" class="md-nav__link">
         Build go binaries
       </a>
     </li>
@@ -3276,7 +3280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Go/Concurrency/" class="md-nav__link">
+      <a href="../Concurrency/" class="md-nav__link">
         Concurrency in Go
       </a>
     </li>
@@ -3290,7 +3294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
+      <a href="../Formatting/" class="md-nav__link">
         Formatting in Go
       </a>
     </li>
@@ -3302,11 +3306,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Go/profiling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Profiling in Go
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Profiling in Go
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-profiling" class="md-nav__link">
+    CPU Profiling
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-data" class="md-nav__link">
+    Generate data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-data" class="md-nav__link">
+    View data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-profiling" class="md-nav__link">
+    Memory Profiling
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-data_1" class="md-nav__link">
+    Generate data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-heap-dump" class="md-nav__link">
+    Capture Heap Dump
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze-data" class="md-nav__link">
+    Analyze data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3351,7 +3450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
+      <a href="../../Python/Performance%20Analysis/" class="md-nav__link">
         Profiler
       </a>
     </li>
@@ -3365,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/profiling/" class="md-nav__link">
+      <a href="../../Python/profiling/" class="md-nav__link">
         Profiling in Python
       </a>
     </li>
@@ -3379,7 +3478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
+      <a href="../../Python/typing-in-python/" class="md-nav__link">
         Typing in Python
       </a>
     </li>
@@ -3393,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/venvs/" class="md-nav__link">
+      <a href="../../Python/venvs/" class="md-nav__link">
         Python Virtual Environments
       </a>
     </li>
@@ -3433,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
+      <a href="../../Python/Python-Libraries/FastAPI/" class="md-nav__link">
         FastAPI
       </a>
     </li>
@@ -3447,7 +3546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
+      <a href="../../Python/Python-Libraries/Pathlib/" class="md-nav__link">
         Pathlib
       </a>
     </li>
@@ -3461,7 +3560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
+      <a href="../../Python/Python-Libraries/PyTest/" class="md-nav__link">
         PyTest
       </a>
     </li>
@@ -3515,7 +3614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
+      <a href="../../Rust/Memory%20Management/" class="md-nav__link">
         Heat
       </a>
     </li>
@@ -3542,14 +3641,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
       
       
       
@@ -3572,7 +3669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Anki/" class="md-nav__link">
+      <a href="../../../Tools/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -3586,7 +3683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Audible-Cli/" class="md-nav__link">
+      <a href="../../../Tools/Audible-Cli/" class="md-nav__link">
         Audible CLI
       </a>
     </li>
@@ -3600,7 +3697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Bitwarden/" class="md-nav__link">
+      <a href="../../../Tools/Bitwarden/" class="md-nav__link">
         Bitwarden
       </a>
     </li>
@@ -3614,7 +3711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cookiecutter/" class="md-nav__link">
+      <a href="../../../Tools/Cookiecutter/" class="md-nav__link">
         Cookiecutter Templates for Projects
       </a>
     </li>
@@ -3628,7 +3725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../HashiCorp-Vault/" class="md-nav__link">
+      <a href="../../../Tools/HashiCorp-Vault/" class="md-nav__link">
         HashiCorp Vault
       </a>
     </li>
@@ -3642,7 +3739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../KeepassXC/" class="md-nav__link">
+      <a href="../../../Tools/KeepassXC/" class="md-nav__link">
         KeePassXC
       </a>
     </li>
@@ -3656,7 +3753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MkDocs/" class="md-nav__link">
+      <a href="../../../Tools/MkDocs/" class="md-nav__link">
         MkDocs
       </a>
     </li>
@@ -3670,7 +3767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Task/" class="md-nav__link">
+      <a href="../../../Tools/Task/" class="md-nav__link">
         Task
       </a>
     </li>
@@ -3684,7 +3781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../borg/" class="md-nav__link">
+      <a href="../../../Tools/borg/" class="md-nav__link">
         Borg
       </a>
     </li>
@@ -3698,7 +3795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cht.sh/" class="md-nav__link">
+      <a href="../../../Tools/cht.sh/" class="md-nav__link">
         cht.sh
       </a>
     </li>
@@ -3712,7 +3809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mermaid/" class="md-nav__link">
+      <a href="../../../Tools/mermaid/" class="md-nav__link">
         Mermaid
       </a>
     </li>
@@ -3726,7 +3823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openssl/" class="md-nav__link">
+      <a href="../../../Tools/openssl/" class="md-nav__link">
         Open SSL
       </a>
     </li>
@@ -3740,7 +3837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spicetify/" class="md-nav__link">
+      <a href="../../../Tools/spicetify/" class="md-nav__link">
         Change Spotify Theme with spicetify-cli
       </a>
     </li>
@@ -3752,14 +3849,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_14" type="checkbox" id="__nav_13_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_14" type="checkbox" id="__nav_13_14" >
       
       
       
@@ -3782,7 +3877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bfg-repo-cleaner/" class="md-nav__link">
+      <a href="../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
         Clean Git repositories with BFG
       </a>
     </li>
@@ -3796,7 +3891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git-crypt/" class="md-nav__link">
+      <a href="../../../Tools/Git/git-crypt/" class="md-nav__link">
         Git Crypt
       </a>
     </li>
@@ -3810,7 +3905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../../Tools/Git/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -3822,59 +3917,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Gitleak
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Tools/Git/gitleak/" class="md-nav__link">
         Gitleak
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scan-current-git-repository" class="md-nav__link">
-    Scan current git repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clear-secrets-from-repository" class="md-nav__link">
-    Clear secrets from repository
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3912,7 +3959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GitLab/access-tokens/" class="md-nav__link">
+      <a href="../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
         GitLab Access Tokens
       </a>
     </li>
@@ -3966,7 +4013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NeoVIM/Coc/" class="md-nav__link">
+      <a href="../../../Tools/NeoVIM/Coc/" class="md-nav__link">
         Coc in Neovim
       </a>
     </li>
@@ -4013,7 +4060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PlantUML/PlantUML%20Themes/" class="md-nav__link">
+      <a href="../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
         PlantUML Themes
       </a>
     </li>
@@ -4060,7 +4107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tmux/Window%20Management/" class="md-nav__link">
+      <a href="../../../Tools/Tmux/Window%20Management/" class="md-nav__link">
         Window Management
       </a>
     </li>
@@ -4107,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../VS-Code/Plugins/" class="md-nav__link">
+      <a href="../../../Tools/VS-Code/Plugins/" class="md-nav__link">
         VS Code Plugins
       </a>
     </li>
@@ -4154,7 +4201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vim/Comment%20out%20code/" class="md-nav__link">
+      <a href="../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
         Comment out code with VIM
       </a>
     </li>
@@ -4168,7 +4215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vim/copy%20all/" class="md-nav__link">
+      <a href="../../../Tools/Vim/copy%20all/" class="md-nav__link">
         Copy all
       </a>
     </li>
@@ -4216,16 +4263,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scan-current-git-repository" class="md-nav__link">
-    Scan current git repository
+  <a href="#cpu-profiling" class="md-nav__link">
+    CPU Profiling
   </a>
+  
+    <nav class="md-nav" aria-label="CPU Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-data" class="md-nav__link">
+    Generate data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-data" class="md-nav__link">
+    View data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clear-secrets-from-repository" class="md-nav__link">
-    Clear secrets from repository
+  <a href="#memory-profiling" class="md-nav__link">
+    Memory Profiling
   </a>
+  
+    <nav class="md-nav" aria-label="Memory Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-data_1" class="md-nav__link">
+    Generate data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-heap-dump" class="md-nav__link">
+    Capture Heap Dump
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze-data" class="md-nav__link">
+    Analyze data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4248,21 +4342,67 @@
 
 
 
-<h1 id="gitleak">Gitleak<a class="headerlink" href="#gitleak" title="Permanent link">⚑</a></h1>
-<h2 id="scan-current-git-repository">Scan current git repository<a class="headerlink" href="#scan-current-git-repository" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">&quot;</span>:/path<span class="w"> </span>ghcr.io/zricethezav/gitleaks:v8.8.12<span class="w"> </span>detect<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;/path/report-secrets.json&quot;</span><span class="w"> </span>--source<span class="o">=</span><span class="s2">&quot;/path&quot;</span>
+<h1 id="profiling-in-go">Profiling in Go<a class="headerlink" href="#profiling-in-go" title="Permanent link">⚑</a></h1>
+<h2 id="cpu-profiling">CPU Profiling<a class="headerlink" href="#cpu-profiling" title="Permanent link">⚑</a></h2>
+<h3 id="generate-data">Generate data<a class="headerlink" href="#generate-data" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="s">&quot;runtime/pprof&quot;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="p">)</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Create</span><span class="p">(</span><span class="s">&quot;my-tool.prof&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nx">pprof</span><span class="p">.</span><span class="nx">StartCPUProfile</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">pprof</span><span class="p">.</span><span class="nx">StopCPUProfile</span><span class="p">()</span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="c1">// CPU Intensive code</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
 </code></pre></div>
-<p>Extract unique secrets to <code class="highlight">extracted-secrets</code></p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cat<span class="w"> </span>report-secrets.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-n<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;inputs[].Secret&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u<span class="w"> </span>&gt;<span class="w"> </span>extracted-secrets
+<h3 id="view-data">View data<a class="headerlink" href="#view-data" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>go<span class="w"> </span>tool<span class="w"> </span>pprof<span class="w"> </span>my-tool.prof
 </code></pre></div>
-<h2 id="clear-secrets-from-repository">Clear secrets from repository<a class="headerlink" href="#clear-secrets-from-repository" title="Permanent link">⚑</a></h2>
-<p>Use (bfg)[../bfg-repo-cleaner.md]</p>
-<p>Prepare with:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>bfg<span class="w"> </span>--replace-text<span class="w"> </span>extracted-secrets
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># view top 10 functions</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="o">(</span>pprof<span class="o">)</span><span class="w"> </span>top
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1"># view top 20 functions</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="o">(</span>pprof<span class="o">)</span><span class="w"> </span>top20
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># view top 10 functions in a graph</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="o">(</span>pprof<span class="o">)</span><span class="w"> </span>top<span class="w"> </span>--cum
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="c1"># Visualize graph through web browser</span>
+<span class="linenos" data-linenos="11 "></span><span class="o">(</span>pprof<span class="o">)</span><span class="w"> </span>web
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="c1"># Output graph as a svg</span>
+<span class="linenos" data-linenos="14 "></span><span class="o">(</span>pprof<span class="o">)</span><span class="w"> </span>svg
 </code></pre></div>
-<p>Clean secrets with:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git<span class="w"> </span>reflog<span class="w"> </span>expire<span class="w"> </span>--expire<span class="o">=</span>now<span class="w"> </span>--all<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>now<span class="w"> </span>--aggressive
+<h2 id="memory-profiling">Memory Profiling<a class="headerlink" href="#memory-profiling" title="Permanent link">⚑</a></h2>
+<p>Go comes with a built-in profiling tool called pprof that can provide detailed information about your application's runtime memory usage.</p>
+<h3 id="generate-data_1">Generate data<a class="headerlink" href="#generate-data_1" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;net/http/pprof&quot;</span>
 </code></pre></div>
+<p>Then, add the following code to start a new HTTP server that will serve the pprof endpoints:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:6060&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">))</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}()</span>
+</code></pre></div>
+<p>With the above setup, you can access various profiling data by navigating to http://localhost:6060/debug/pprof/ while your application is running. For memory-related insights, http://localhost:6060/debug/pprof/heap is of particular interest.</p>
+<h3 id="capture-heap-dump">Capture Heap Dump<a class="headerlink" href="#capture-heap-dump" title="Permanent link">⚑</a></h3>
+<p>Once you have pprof set up and your application is running:</p>
+<p>Allow your application to run until you suspect a memory leak.<br />
+Capture a heap profile by executing:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl<span class="w"> </span>-s<span class="w"> </span>http://localhost:6060/debug/pprof/heap<span class="w"> </span>-o<span class="w"> </span>mem.pprof
+</code></pre></div>
+<h3 id="analyze-data">Analyze data<a class="headerlink" href="#analyze-data" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>go<span class="w"> </span>tool<span class="w"> </span>pprof<span class="w"> </span>mem.pprof
+</code></pre></div>
+<ul>
+<li>Use the top command to get an overview of the functions consuming the most memory.</li>
+<li>To see detailed memory allocations for a specific function, use the list command followed by the function name.</li>
+<li>For a visual representation, web or svg commands can be used to generate graphs showcasing memory allocations.</li>
+</ul>
 
 
   
