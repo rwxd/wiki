@@ -4380,7 +4380,7 @@
 </code></pre></div>
 <h2 id="change-the-ceph-repository-at-etcaptsourceslistdcephlist">Change the ceph repository at /etc/apt/sources.list.d/ceph.list<a class="headerlink" href="#change-the-ceph-repository-at-etcaptsourceslistdcephlist" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/^deb/#deb/&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/ceph.list
-<span class="linenos" data-linenos="2 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://download.proxmox.com/debian/ceph-pacific bookworm main&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
+<span class="linenos" data-linenos="2 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
 </code></pre></div>
 
 
