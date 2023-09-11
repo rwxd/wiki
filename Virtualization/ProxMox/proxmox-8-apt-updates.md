@@ -16,5 +16,5 @@ sed -i 's/^deb/#deb/' /etc/apt/sources.list.d/pve-enterprise.list
 
 ```bash
 sed -i 's/^deb/#deb/' /etc/apt/sources.list.d/ceph.list
-echo "deb http://download.proxmox.com/debian/ceph-pacific bookworm main" >> /etc/apt/sources.list.d/ceph.list
+echo "deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription" >> /etc/apt/sources.list.d/ceph.list
 ```
