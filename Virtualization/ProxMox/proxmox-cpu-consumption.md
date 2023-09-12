@@ -9,7 +9,16 @@
     ```bash
     cpufreq-info -g
     ```
-4. Set the governor to `powersave` via `cpufreq-set -g powersave`
+4. See current governor
+    ```bash
+    cpufreq-info -p
+    ``
+5. Set the governor to `powersave` via `cpufreq-set -g powersave`
     ```bash
     cpufreq-set -g powersave
     ```
+6. Make it persistent
+    ```bash
+    echo 'GOVERNOR="powersave"' |  tee /etc/default/cpufrequtils
+    ```
+
