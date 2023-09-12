@@ -18,6 +18,8 @@
         <link rel="prev" href="../proxmox-8-apt-updates/">
       
       
+        <link rel="next" href="../proxmox-energy-consumption/">
+      
       <link rel="icon" href="../../../assets/page/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
@@ -4245,6 +4247,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxmox-energy-consumption/" class="md-nav__link">
+        Reduce energy consumption of Proxmox
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4304,8 +4320,13 @@
 <li>See available governors via <code class="highlight">cpufreq-info -g</code>
     <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cpufreq-info<span class="w"> </span>-g
 </code></pre></div></li>
+<li>See current governor
+    <code class="highlight">`bashcpufreq-info -p</code></li>
 <li>Set the governor to <code class="highlight">powersave</code> via <code class="highlight">cpufreq-set -g powersave</code>
     <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cpufreq-set<span class="w"> </span>-g<span class="w"> </span>powersave
+</code></pre></div></li>
+<li>Make it persistent
+    <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;GOVERNOR=&quot;powersave&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w">  </span>tee<span class="w"> </span>/etc/default/cpufrequtils
 </code></pre></div></li>
 </ol>
 
