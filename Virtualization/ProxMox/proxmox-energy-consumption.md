@@ -48,4 +48,7 @@ ExecStart=/usr/sbin/powertop --auto-tune
 
 [Install]
 WantedBy=multi-user.target
+EOF
+
+systemctl enable --now powertop.service
 ```
