@@ -12,7 +12,7 @@
 4. See current governor
     ```bash
     cpufreq-info -p
-    ``
+    ```
 5. Set the governor to `powersave` via `cpufreq-set -g powersave`
     ```bash
     cpufreq-set -g powersave
