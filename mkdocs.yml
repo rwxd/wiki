@@ -44,7 +44,7 @@ theme:
     text: Inter
     code: Fira Code
 
-copyright: "Copyright &copy; 2022 rwxd"
+copyright: "Copyright &copy; 2023 rwxd"
 
 plugins:
   - search
