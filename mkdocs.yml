@@ -34,6 +34,7 @@ theme:
   include_sidebar: true
   features:
     - content.code.annotate
+    - content.code.copy
   feature:
     tabs: false
   i18n:
@@ -95,3 +96,5 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
