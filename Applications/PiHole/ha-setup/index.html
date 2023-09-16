@@ -12,27 +12,27 @@
         <meta name="author" content="rwxd">
       
       
-        <link rel="canonical" href="https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/">
+        <link rel="canonical" href="https://wiki.rwxd.eu/Applications/PiHole/ha-setup/">
       
       
-        <link rel="prev" href="../Excluding/">
+        <link rel="prev" href="../../wallabag/">
       
       
-        <link rel="next" href="../../../../../Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/">
+        <link rel="next" href="../../../Blog/Misc/blog-gh-pages-mkdocs/">
       
-      <link rel="icon" href="../../../../../../assets/page/favicon-96x96.png">
+      <link rel="icon" href="../../../assets/page/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.0.0">
     
     
       
-        <title>External Services - Wiki</title>
+        <title>PiHole HA Setup - Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f79797b0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f79797b0.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -128,6 +128,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#pihole-ha-setup" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -138,7 +143,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
+    <a href="../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4Z"/></svg>
@@ -157,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              External Services
+              PiHole HA Setup
             
           </span>
         </div>
@@ -256,7 +261,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
+    <a href="../../.." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4Z"/></svg>
@@ -287,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -300,12 +305,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -328,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Applications/wallabag/" class="md-nav__link">
+      <a href="../../wallabag/" class="md-nav__link">
         Wallabag
       </a>
     </li>
@@ -340,12 +347,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -366,11 +375,160 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../../../Applications/PiHole/ha-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PiHole HA Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         PiHole HA Setup
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-keepalive" class="md-nav__link">
+    Setup keepalive
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup keepalive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-required-packages" class="md-nav__link">
+    Install required packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived" class="md-nav__link">
+    Configure keepalived
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure keepalived">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived-on-the-primary-instance" class="md-nav__link">
+    Configure keepalived on the primary instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure keepalived on the primary instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived-on-the-secondary-instance" class="md-nav__link">
+    Configure keepalived on the secondary instance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-keepalived" class="md-nav__link">
+    Start keepalived
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-keepalived" class="md-nav__link">
+    Test keepalived
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-gravity-database" class="md-nav__link">
+    Sync gravity database
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync gravity database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-required-packages_1" class="md-nav__link">
+    Install required packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-gravity-sync-script" class="md-nav__link">
+    Install gravity sync script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-gravity-database-to-secondary-instance" class="md-nav__link">
+    Push gravity database to secondary instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automate-gravity-database-sync" class="md-nav__link">
+    Automate gravity database sync
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -449,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
+      <a href="../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
         How to create a blog with GitHub Pages and MkDocs
       </a>
     </li>
@@ -463,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
+      <a href="../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
         Pluralsight demo / trial
       </a>
     </li>
@@ -477,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Blog/Misc/sane-scanbd-canon-5600f/" class="md-nav__link">
+      <a href="../../../Blog/Misc/sane-scanbd-canon-5600f/" class="md-nav__link">
         Sane & scanbd with Canon CanonScan 5600f
       </a>
     </li>
@@ -532,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Books/done/" class="md-nav__link">
+      <a href="../../../Books/done/" class="md-nav__link">
         Read books
       </a>
     </li>
@@ -546,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Books/reading-list/" class="md-nav__link">
+      <a href="../../../Books/reading-list/" class="md-nav__link">
         Reading list
       </a>
     </li>
@@ -566,14 +724,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -648,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
         ansible-runner
       </a>
     </li>
@@ -662,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/molecule/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/molecule/" class="md-nav__link">
         Ansible Molecule
       </a>
     </li>
@@ -702,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
         Wait for a connection after e. g. a reboot
       </a>
     </li>
@@ -756,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Formatters/Black/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Formatters/Black/" class="md-nav__link">
         Black
       </a>
     </li>
@@ -803,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
         Script to clear GitLab CI/CD Artifacts
       </a>
     </li>
@@ -850,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
         MyPy
       </a>
     </li>
@@ -876,14 +1032,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       
       
@@ -904,14 +1058,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" >
       
       
       
@@ -960,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/docker-commands/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-commands/" class="md-nav__link">
         Docker commands
       </a>
     </li>
@@ -974,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/docker-ipv6/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-ipv6/" class="md-nav__link">
         Docker with IPv6
       </a>
     </li>
@@ -988,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/ssh-keys/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/ssh-keys/" class="md-nav__link">
         SSH-Keys in a Dockerfile Build
       </a>
     </li>
@@ -1035,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/ckad/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/ckad/" class="md-nav__link">
         CKAD - Certified Kubernetes Application Developer
       </a>
     </li>
@@ -1075,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
         Manager
       </a>
     </li>
@@ -1089,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/K3S/raspberry/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/" class="md-nav__link">
         K3s on Raspberry
       </a>
     </li>
@@ -1136,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/Networking/kube-vip/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/" class="md-nav__link">
         Kube-VIP
       </a>
     </li>
@@ -1150,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/Networking/metallb/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/" class="md-nav__link">
         MetalLB
       </a>
     </li>
@@ -1197,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
         Kubectl vSphere
       </a>
     </li>
@@ -1244,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/kubectl/CronJob/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/" class="md-nav__link">
         Test CronJob
       </a>
     </li>
@@ -1258,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/kubectl/busybox/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/" class="md-nav__link">
         Busybox
       </a>
     </li>
@@ -1272,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/kubectl/delete/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/" class="md-nav__link">
         delete all pods from a namespace that are in Error Status
       </a>
     </li>
@@ -1286,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/kubectl/label/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/" class="md-nav__link">
         nodes
       </a>
     </li>
@@ -1300,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Kubernetes/kubectl/serviceaccount/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/" class="md-nav__link">
         ServiceAccounts
       </a>
     </li>
@@ -1354,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Podman/podman-compose-systemd-files/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Podman/podman-compose-systemd-files/" class="md-nav__link">
         Use systemd files with rootless podman-compose
       </a>
     </li>
@@ -1368,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Podman/setup-rootless/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Podman/setup-rootless/" class="md-nav__link">
         Podman rootless setup
       </a>
     </li>
@@ -1387,14 +1539,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_4" type="checkbox" id="__nav_5_2_1_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_4" type="checkbox" id="__nav_5_2_1_4" >
       
       
       
@@ -1415,14 +1565,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_4_1" type="checkbox" id="__nav_5_2_1_4_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1_4_1" type="checkbox" id="__nav_5_2_1_4_1" >
       
       
       
@@ -1445,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Excluding/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/" class="md-nav__link">
         Excluding
       </a>
     </li>
@@ -1457,19 +1605,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/" class="md-nav__link">
         External Services
       </a>
-      
     </li>
   
 
@@ -1561,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
         Install Argo CD
       </a>
     </li>
@@ -1575,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Infrastructure-as-Code/ArgoCD/cli-cluster-login/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-as-Code/ArgoCD/cli-cluster-login/" class="md-nav__link">
         Login with the ArgoCD Cli in the current cluster
       </a>
     </li>
@@ -1663,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Math/Books/konkrete-mathematik-mit-python/" class="md-nav__link">
+      <a href="../../../Math/Books/konkrete-mathematik-mit-python/" class="md-nav__link">
         Bearbeitung der Aufgaben von Konkrete Mathematik mit Python
       </a>
     </li>
@@ -1710,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Math/Discrete%20Math/Sets/" class="md-nav__link">
+      <a href="../../../Math/Discrete%20Math/Sets/" class="md-nav__link">
         Set-builder notation
       </a>
     </li>
@@ -1791,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
+      <a href="../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
         About Cumulus Linux
       </a>
     </li>
@@ -1838,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Misc/nfcapd/" class="md-nav__link">
+      <a href="../../../Networking/Misc/nfcapd/" class="md-nav__link">
         NFCAPD (NetFlow Capture Daemon)
       </a>
     </li>
@@ -1852,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Misc/traffic-billing/" class="md-nav__link">
+      <a href="../../../Networking/Misc/traffic-billing/" class="md-nav__link">
         Traffic Billing
       </a>
     </li>
@@ -1899,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/NSX-T/NSX-T%20Links/" class="md-nav__link">
+      <a href="../../../Networking/NSX-T/NSX-T%20Links/" class="md-nav__link">
         NSX-T Links
       </a>
     </li>
@@ -1946,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
         Network Virtualization
       </a>
     </li>
@@ -1986,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
         VXLAN General
       </a>
     </li>
@@ -2066,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/cisco/ios/acl/" class="md-nav__link">
+      <a href="../../../Networking/cisco/ios/acl/" class="md-nav__link">
         Cisco IOS ACL
       </a>
     </li>
@@ -2120,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/containerlab/cumulus/" class="md-nav__link">
+      <a href="../../../Networking/containerlab/cumulus/" class="md-nav__link">
         Cumulus on Containerlab
       </a>
     </li>
@@ -2134,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/containerlab/ssh/" class="md-nav__link">
+      <a href="../../../Networking/containerlab/ssh/" class="md-nav__link">
         SSH into Containerlab devices
       </a>
     </li>
@@ -2181,7 +2321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Networking/vyos/install/" class="md-nav__link">
+      <a href="../../../Networking/vyos/install/" class="md-nav__link">
         Install vyos
       </a>
     </li>
@@ -2288,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Android/apps/shelter/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Android/apps/shelter/" class="md-nav__link">
         Shelter
       </a>
     </li>
@@ -2342,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/X-Forwarding/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/X-Forwarding/" class="md-nav__link">
         X-Forwarding with Windows through SSH
       </a>
     </li>
@@ -2382,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/htpasswd/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/htpasswd/" class="md-nav__link">
         htpasswd
       </a>
     </li>
@@ -2396,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/iotop/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/iotop/" class="md-nav__link">
         iotop
       </a>
     </li>
@@ -2410,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/nmap/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/nmap/" class="md-nav__link">
         NMAP
       </a>
     </li>
@@ -2424,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/ssh/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/ssh/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -2438,7 +2578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/tee/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/tee/" class="md-nav__link">
         Tee
       </a>
     </li>
@@ -2452,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/CLI/watch/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/watch/" class="md-nav__link">
         watch
       </a>
     </li>
@@ -2499,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Misc/NetworkManager/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/NetworkManager/" class="md-nav__link">
         NetworkManager
       </a>
     </li>
@@ -2513,7 +2653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Misc/Time/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/Time/" class="md-nav__link">
         Time
       </a>
     </li>
@@ -2527,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Misc/cron/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/cron/" class="md-nav__link">
         Cron
       </a>
     </li>
@@ -2541,7 +2681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Misc/cryptsetup/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/cryptsetup/" class="md-nav__link">
         Cryptsetup
       </a>
     </li>
@@ -2555,7 +2695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Misc/window-names/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/window-names/" class="md-nav__link">
         Show window names
       </a>
     </li>
@@ -2602,7 +2742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Networking/Bridge%20Interface/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Networking/Bridge%20Interface/" class="md-nav__link">
         Create a bridge interface
       </a>
     </li>
@@ -2616,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Networking/dns/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Networking/dns/" class="md-nav__link">
         DNS
       </a>
     </li>
@@ -2663,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/PulseAudio/Volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/PulseAudio/Volume/" class="md-nav__link">
         PulseAudio Volume Stuff
       </a>
     </li>
@@ -2736,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/bluetooth/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/bluetooth/" class="md-nav__link">
         Bluetooth with i3
       </a>
     </li>
@@ -2750,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/dpi/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/dpi/" class="md-nav__link">
         Change i3 DPI / scaling
       </a>
     </li>
@@ -2764,7 +2904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
         Wallpaper in i3
       </a>
     </li>
@@ -2778,7 +2918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/spotify/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/spotify/" class="md-nav__link">
         Control Spotify in i3
       </a>
     </li>
@@ -2792,7 +2932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/Window-Manager/i3/volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/volume/" class="md-nav__link">
         Volume Control in i3
       </a>
     </li>
@@ -2846,7 +2986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/nix/nix/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/nix/nix/" class="md-nav__link">
         Nix
       </a>
     </li>
@@ -2860,7 +3000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/nix/nixpkgs/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/nix/nixpkgs/" class="md-nav__link">
         nixpkgs
       </a>
     </li>
@@ -2907,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/security/selinux/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/selinux/" class="md-nav__link">
         SELinux
       </a>
     </li>
@@ -2947,7 +3087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/security/firewall/firewalld/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/firewall/firewalld/" class="md-nav__link">
         firewalld
       </a>
     </li>
@@ -2961,7 +3101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Operating-Systems/Linux/security/firewall/ufw/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/firewall/ufw/" class="md-nav__link">
         UFW
       </a>
     </li>
@@ -3030,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
+      <a href="../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
         20 rules of formulating knowledge
       </a>
     </li>
@@ -3044,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
+      <a href="../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
         DuckDNS update or set IP script
       </a>
     </li>
@@ -3058,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Other/digital-gardening/" class="md-nav__link">
+      <a href="../../../Other/digital-gardening/" class="md-nav__link">
         Digital Gardening
       </a>
     </li>
@@ -3132,7 +3272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming/general/stack/" class="md-nav__link">
+      <a href="../../../Programming/general/stack/" class="md-nav__link">
         What is a stack?
       </a>
     </li>
@@ -3187,7 +3327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Bash/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Bash/" class="md-nav__link">
         Bash
       </a>
     </li>
@@ -3201,7 +3341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/JSON/" class="md-nav__link">
+      <a href="../../../Programming-Languages/JSON/" class="md-nav__link">
         JSON
       </a>
     </li>
@@ -3215,7 +3355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/YAML/" class="md-nav__link">
+      <a href="../../../Programming-Languages/YAML/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -3255,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Build/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Build/" class="md-nav__link">
         Build go binaries
       </a>
     </li>
@@ -3269,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Concurrency/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Concurrency/" class="md-nav__link">
         Concurrency in Go
       </a>
     </li>
@@ -3283,7 +3423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
         Formatting in Go
       </a>
     </li>
@@ -3297,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Go/profiling/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/profiling/" class="md-nav__link">
         Profiling in Go
       </a>
     </li>
@@ -3344,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
         Profiler
       </a>
     </li>
@@ -3358,7 +3498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/profiling/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/profiling/" class="md-nav__link">
         Profiling in Python
       </a>
     </li>
@@ -3372,7 +3512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
         Typing in Python
       </a>
     </li>
@@ -3386,7 +3526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/venvs/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/venvs/" class="md-nav__link">
         Python Virtual Environments
       </a>
     </li>
@@ -3426,7 +3566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
         FastAPI
       </a>
     </li>
@@ -3440,7 +3580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
         Pathlib
       </a>
     </li>
@@ -3454,7 +3594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
         PyTest
       </a>
     </li>
@@ -3508,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
         Heat
       </a>
     </li>
@@ -3563,7 +3703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Anki/" class="md-nav__link">
+      <a href="../../../Tools/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -3577,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Audible-Cli/" class="md-nav__link">
+      <a href="../../../Tools/Audible-Cli/" class="md-nav__link">
         Audible CLI
       </a>
     </li>
@@ -3591,7 +3731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Bitwarden/" class="md-nav__link">
+      <a href="../../../Tools/Bitwarden/" class="md-nav__link">
         Bitwarden
       </a>
     </li>
@@ -3605,7 +3745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Cookiecutter/" class="md-nav__link">
+      <a href="../../../Tools/Cookiecutter/" class="md-nav__link">
         Cookiecutter Templates for Projects
       </a>
     </li>
@@ -3619,7 +3759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/HashiCorp-Vault/" class="md-nav__link">
+      <a href="../../../Tools/HashiCorp-Vault/" class="md-nav__link">
         HashiCorp Vault
       </a>
     </li>
@@ -3633,7 +3773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/KeepassXC/" class="md-nav__link">
+      <a href="../../../Tools/KeepassXC/" class="md-nav__link">
         KeePassXC
       </a>
     </li>
@@ -3647,7 +3787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/MkDocs/" class="md-nav__link">
+      <a href="../../../Tools/MkDocs/" class="md-nav__link">
         MkDocs
       </a>
     </li>
@@ -3661,7 +3801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Task/" class="md-nav__link">
+      <a href="../../../Tools/Task/" class="md-nav__link">
         Task
       </a>
     </li>
@@ -3675,7 +3815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/borg/" class="md-nav__link">
+      <a href="../../../Tools/borg/" class="md-nav__link">
         Borg
       </a>
     </li>
@@ -3689,7 +3829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/cht.sh/" class="md-nav__link">
+      <a href="../../../Tools/cht.sh/" class="md-nav__link">
         cht.sh
       </a>
     </li>
@@ -3703,7 +3843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/mermaid/" class="md-nav__link">
+      <a href="../../../Tools/mermaid/" class="md-nav__link">
         Mermaid
       </a>
     </li>
@@ -3717,7 +3857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/openssl/" class="md-nav__link">
+      <a href="../../../Tools/openssl/" class="md-nav__link">
         Open SSL
       </a>
     </li>
@@ -3731,7 +3871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/spicetify/" class="md-nav__link">
+      <a href="../../../Tools/spicetify/" class="md-nav__link">
         Change Spotify Theme with spicetify-cli
       </a>
     </li>
@@ -3771,7 +3911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
+      <a href="../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
         Clean Git repositories with BFG
       </a>
     </li>
@@ -3785,7 +3925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/git-crypt/" class="md-nav__link">
+      <a href="../../../Tools/Git/git-crypt/" class="md-nav__link">
         Git Crypt
       </a>
     </li>
@@ -3799,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/git/" class="md-nav__link">
+      <a href="../../../Tools/Git/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -3813,7 +3953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/gitleak/" class="md-nav__link">
+      <a href="../../../Tools/Git/gitleak/" class="md-nav__link">
         Gitleak
       </a>
     </li>
@@ -3853,7 +3993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
+      <a href="../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
         GitLab Access Tokens
       </a>
     </li>
@@ -3907,7 +4047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/NeoVIM/Coc/" class="md-nav__link">
+      <a href="../../../Tools/NeoVIM/Coc/" class="md-nav__link">
         Coc in Neovim
       </a>
     </li>
@@ -3954,7 +4094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
+      <a href="../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
         PlantUML Themes
       </a>
     </li>
@@ -4001,7 +4141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Tmux/Window%20Management/" class="md-nav__link">
+      <a href="../../../Tools/Tmux/Window%20Management/" class="md-nav__link">
         Window Management
       </a>
     </li>
@@ -4048,7 +4188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/VS-Code/Plugins/" class="md-nav__link">
+      <a href="../../../Tools/VS-Code/Plugins/" class="md-nav__link">
         VS Code Plugins
       </a>
     </li>
@@ -4095,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
+      <a href="../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
         Comment out code with VIM
       </a>
     </li>
@@ -4109,7 +4249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Tools/Vim/copy%20all/" class="md-nav__link">
+      <a href="../../../Tools/Vim/copy%20all/" class="md-nav__link">
         Copy all
       </a>
     </li>
@@ -4190,7 +4330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Virtualization/ProxMox/proxmox-8-apt-updates/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-8-apt-updates/" class="md-nav__link">
         Configure apt repository updates on Proxmox 8.x.x Community Edition
       </a>
     </li>
@@ -4204,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Virtualization/ProxMox/proxmox-cpu-consumption/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-cpu-consumption/" class="md-nav__link">
         Reduce CPU consumption on Proxmox
       </a>
     </li>
@@ -4218,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Virtualization/ProxMox/proxmox-energy-consumption/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-energy-consumption/" class="md-nav__link">
         Reduce energy consumption of Proxmox
       </a>
     </li>
@@ -4256,6 +4396,131 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-keepalive" class="md-nav__link">
+    Setup keepalive
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup keepalive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-required-packages" class="md-nav__link">
+    Install required packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived" class="md-nav__link">
+    Configure keepalived
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure keepalived">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived-on-the-primary-instance" class="md-nav__link">
+    Configure keepalived on the primary instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure keepalived on the primary instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-keepalived-on-the-secondary-instance" class="md-nav__link">
+    Configure keepalived on the secondary instance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-keepalived" class="md-nav__link">
+    Start keepalived
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-keepalived" class="md-nav__link">
+    Test keepalived
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-gravity-database" class="md-nav__link">
+    Sync gravity database
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync gravity database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-required-packages_1" class="md-nav__link">
+    Install required packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-gravity-sync-script" class="md-nav__link">
+    Install gravity sync script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-gravity-database-to-secondary-instance" class="md-nav__link">
+    Push gravity database to secondary instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automate-gravity-database-sync" class="md-nav__link">
+    Automate gravity database sync
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4274,32 +4539,156 @@
 
 
 
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">http</span><span class="p">:</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="w">  </span><span class="n">routers</span><span class="p">:</span>
-<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="n">intern</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="w">      </span><span class="n">entryPoints</span><span class="p">:</span>
-<span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;http&quot;</span>
-<span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="w">      </span><span class="n">rule</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Host(`HostRegexp(`fritz.box`, `{subdomain:[a-z]+}.fritz.box`, ...)`)&quot;</span>
-<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="n">pihole</span><span class="p">:</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">      </span><span class="n">entryPoints</span><span class="p">:</span>
-<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;http&quot;</span>
-<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
-<span class="linenos" data-linenos="12 "></span><span class="w">      </span><span class="n">rule</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Host(`pihole.fritz.box`)&quot;</span>
-<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="n">service</span><span class="p">:</span><span class="w"> </span><span class="n">pihole</span>
-<span class="linenos" data-linenos="14 "></span><span class="w">      </span><span class="n">middlewares</span><span class="p">:</span>
-<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="n">addprefix</span><span class="o">-</span><span class="n">pihole</span>
-<span class="linenos" data-linenos="16 "></span><span class="w">  </span><span class="n">services</span><span class="p">:</span>
-<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="n">pihole</span><span class="p">:</span>
-<span class="linenos" data-linenos="18 "></span><span class="w">      </span><span class="n">loadBalancer</span><span class="p">:</span>
-<span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="n">servers</span><span class="p">:</span>
-<span class="linenos" data-linenos="20 "></span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="n">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://192.168.2.19:80&quot;</span>
-<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="n">passHostHeader</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span>
-<span class="linenos" data-linenos="22 "></span><span class="w">  </span><span class="n">middlewares</span><span class="p">:</span>
-<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="n">addprefix</span><span class="o">-</span><span class="n">pihole</span><span class="p">:</span>
-<span class="linenos" data-linenos="24 "></span><span class="w">      </span><span class="n">addPrefix</span><span class="p">:</span>
-<span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="n">prefix</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/admin&quot;</span>
+<h1 id="pihole-ha-setup">PiHole HA Setup<a class="headerlink" href="#pihole-ha-setup" title="Permanent link">⚑</a></h1>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">⚑</a></h2>
+<ul>
+<li>two PiHole instances</li>
+<li>a ip address that is not used by any other device on your network</li>
+<li>both PiHole instances must be on the same network</li>
+<li>both PiHole instances must have the same version, check with <code class="highlight">pihole -v</code>, update with <code class="highlight">pihole -up</code></li>
+<li>they may need to be reconfigured with <code class="highlight">pihole -r</code> to get them to work properly</li>
+</ul>
+<h2 id="setup-keepalive">Setup keepalive<a class="headerlink" href="#setup-keepalive" title="Permanent link">⚑</a></h2>
+<h3 id="install-required-packages">Install required packages<a class="headerlink" href="#install-required-packages" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>keepalived
 </code></pre></div>
+<h3 id="configure-keepalived">Configure keepalived<a class="headerlink" href="#configure-keepalived" title="Permanent link">⚑</a></h3>
+<p>Script to check if local instance is running</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cat<span class="w"> </span><span class="s">&lt;&lt; EOF &gt; /usr/local/bin/check-local-pihole</span>
+<span class="linenos" data-linenos="2 "></span><span class="s">#!/bin/sh</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="s">RUNNING=$(ps -aux | grep pihole-FTL | grep -v grep)</span>
+<span class="linenos" data-linenos="5 "></span><span class="s">exit $?</span>
+<span class="linenos" data-linenos="6 "></span><span class="s">EOF</span>
+<span class="linenos" data-linenos="7 "></span>
+<span class="linenos" data-linenos="8 "></span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/check-local-pihole
+</code></pre></div>
+<h4 id="configure-keepalived-on-the-primary-instance">Configure keepalived on the primary instance<a class="headerlink" href="#configure-keepalived-on-the-primary-instance" title="Permanent link">⚑</a></h4>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">keepalived</span><span class="o">/</span><span class="n">keepalived</span><span class="o">.</span><span class="n">conf</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="n">vrrp_script</span> <span class="n">chk_local_pihole</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">script</span> <span class="s2">&quot;/usr/local/bin/check-local-pihole&quot;</span> <span class="c1"># (1)!</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">interval</span> <span class="mi">5</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="n">weight</span> <span class="o">-</span><span class="mi">100</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="n">global_defs</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="n">router_id</span> <span class="n">pihole</span><span class="o">-</span><span class="mi">01</span> <span class="c1"># (2)!</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="n">script_user</span> <span class="n">root</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="n">enable_script_security</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="n">vrrp_instance</span> <span class="n">PIHOLE</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="n">state</span> <span class="n">MASTER</span> <span class="c1"># (3)!</span>
+<span class="linenos" data-linenos="16 "></span>  <span class="n">interface</span> <span class="n">eth0</span> <span class="c1"># (4)!</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="n">virtual_router_id</span> <span class="mi">20</span> <span class="c1"># (5)!</span>
+<span class="linenos" data-linenos="18 "></span>  <span class="n">priority</span> <span class="mi">150</span>
+<span class="linenos" data-linenos="19 "></span>  <span class="n">advert_int</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="20 "></span>  <span class="n">unicast_src_ip</span> <span class="mf">192.168.3.21</span> <span class="c1"># (6)!</span>
+<span class="linenos" data-linenos="21 "></span>  <span class="n">unicast_peer</span> <span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="mf">192.168.3.22</span> <span class="c1"># (7)!</span>
+<span class="linenos" data-linenos="23 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span>  <span class="n">authentication</span> <span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="n">auth_type</span> <span class="n">PASS</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="n">auth_pass</span> <span class="n">piholedns</span> <span class="c1"># (8)!</span>
+<span class="linenos" data-linenos="28 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>  <span class="n">virtual_ipaddress</span> <span class="p">{</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="mf">192.168.3.20</span><span class="o">/</span><span class="mi">23</span> <span class="c1"># (9)!</span>
+<span class="linenos" data-linenos="32 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span>  <span class="n">track_script</span> <span class="p">{</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="n">chk_local_pihole</span>
+<span class="linenos" data-linenos="36 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="37 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="38 "></span><span class="n">EOF</span>
+</code></pre></div>
+<ol>
+<li>Path to the script that checks if the local instance is running</li>
+<li>Name of the router</li>
+<li>State of the instance, MASTER or BACKUP</li>
+<li>Interface to use</li>
+<li>virtual_router_id, must be the same on both instances</li>
+<li>unicast_src_ip, ip address of the local instance</li>
+<li>unicast_peer, ip address of the remote instance</li>
+<li>auth_pass, must be the same on both instances</li>
+<li>virtual_ipaddress, ip address that will be used by the clients and shared between the two instances</li>
+</ol>
+<h5 id="configure-keepalived-on-the-secondary-instance">Configure keepalived on the secondary instance<a class="headerlink" href="#configure-keepalived-on-the-secondary-instance" title="Permanent link">⚑</a></h5>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">keepalived</span><span class="o">/</span><span class="n">keepalived</span><span class="o">.</span><span class="n">conf</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="n">vrrp_script</span> <span class="n">chk_pihole</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="n">script</span> <span class="s2">&quot;/usr/local/bin/check-local-pihole&quot;</span>
+<span class="linenos" data-linenos=" 4 "></span>  <span class="n">interval</span> <span class="mi">1</span>
+<span class="linenos" data-linenos=" 5 "></span>  <span class="n">weight</span> <span class="o">-</span><span class="mi">100</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="n">global_defs</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="n">router_id</span> <span class="n">pihole</span><span class="o">-</span><span class="mi">02</span>
+<span class="linenos" data-linenos="10 "></span>  <span class="n">script_user</span> <span class="n">root</span>
+<span class="linenos" data-linenos="11 "></span>  <span class="n">enable_script_security</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="n">vrrp_instance</span> <span class="n">PIHOLE</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="n">state</span> <span class="n">BACKUP</span>
+<span class="linenos" data-linenos="16 "></span>  <span class="n">interface</span> <span class="n">eth0</span>
+<span class="linenos" data-linenos="17 "></span>  <span class="n">virtual_router_id</span> <span class="mi">20</span>
+<span class="linenos" data-linenos="18 "></span>  <span class="n">priority</span> <span class="mi">140</span>
+<span class="linenos" data-linenos="19 "></span>  <span class="n">advert_int</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="20 "></span>  <span class="n">unicast_src_ip</span> <span class="mf">192.168.3.22</span>
+<span class="linenos" data-linenos="21 "></span>  <span class="n">unicast_peer</span> <span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="mf">192.168.3.21</span>
+<span class="linenos" data-linenos="23 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span>  <span class="n">authentication</span> <span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="n">auth_type</span> <span class="n">PASS</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="n">auth_pass</span> <span class="n">piholedns</span>
+<span class="linenos" data-linenos="28 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>  <span class="n">virtual_ipaddress</span> <span class="p">{</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="mf">192.168.3.20</span><span class="o">/</span><span class="mi">23</span>
+<span class="linenos" data-linenos="32 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span>  <span class="n">track_script</span> <span class="p">{</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="n">chk_local_pihole</span>
+<span class="linenos" data-linenos="36 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos="37 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="38 "></span><span class="n">EOF</span>
+</code></pre></div>
+<h3 id="start-keepalived">Start keepalived<a class="headerlink" href="#start-keepalived" title="Permanent link">⚑</a></h3>
+<p>Run on both instances</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>keepalived.service
+</code></pre></div>
+<h3 id="test-keepalived">Test keepalived<a class="headerlink" href="#test-keepalived" title="Permanent link">⚑</a></h3>
+<ol>
+<li>Check if the pihole portal is reachable through the virtual ip address</li>
+<li>Check if the virtual ip address is assigned to the primary instance by watching the output of <code class="highlight">ip a</code> on both instances
+    or looking at the pihole dashboard in the top right corner</li>
+<li>Restart the pihole service on the primary instance and check if the virtual ip address is assigned to the secondary instance</li>
+<li>Check if the primary instance will take over the virtual ip address when it is restarted</li>
+</ol>
+<h2 id="sync-gravity-database">Sync gravity database<a class="headerlink" href="#sync-gravity-database" title="Permanent link">⚑</a></h2>
+<h3 id="install-required-packages_1">Install required packages<a class="headerlink" href="#install-required-packages_1" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sqlite3<span class="w"> </span>sudo<span class="w"> </span>git<span class="w"> </span>cron<span class="w"> </span>rsync<span class="w"> </span>ssh
+</code></pre></div>
+<h3 id="install-gravity-sync-script">Install gravity sync script<a class="headerlink" href="#install-gravity-sync-script" title="Permanent link">⚑</a></h3>
+<p>We will use <a href="https://github.com/vmstan/gravity-sync">gravity-sync</a> to sync the gravity database between the two instances.</p>
+<p>Install gravity-sync on both instances and follow the instructions.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/vmstan/gs-install/main/gs-install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<blockquote>
+<p>You can always reset the configuration with <code class="highlight">gravity-sync config</code></p>
+</blockquote>
+<h3 id="push-gravity-database-to-secondary-instance">Push gravity database to secondary instance<a class="headerlink" href="#push-gravity-database-to-secondary-instance" title="Permanent link">⚑</a></h3>
+<p>Run the following command on the primary instance to push the gravity database to the secondary instance.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>gravity-sync<span class="w"> </span>push
+</code></pre></div>
+<h3 id="automate-gravity-database-sync">Automate gravity database sync<a class="headerlink" href="#automate-gravity-database-sync" title="Permanent link">⚑</a></h3>
+<p>Run the following command on both instances to create a systemd timer that will sync the gravity database every 5 minutes.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>gravity-sync<span class="w"> </span>automate
+</code></pre></div>
+<p>You can check the status of the timer with <code class="highlight">systemctl status gravity-sync.timer</code>.<br />
+And you can check the logs with <code class="highlight">journalctl -u gravity-sync.service</code>.</p>
+<p>With <code class="highlight">gravity-sync automate hour</code> the timer will sync the gravity database every hour.</p>
 
 
   
@@ -4356,12 +4745,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-        <script src="../../../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

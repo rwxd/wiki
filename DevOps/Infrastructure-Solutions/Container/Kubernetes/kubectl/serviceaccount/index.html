@@ -21,7 +21,7 @@
         <link rel="next" href="../../../Podman/podman-compose-systemd-files/">
       
       <link rel="icon" href="../../../../../../assets/page/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.0.0">
     
     
       
@@ -336,6 +336,53 @@
       <a href="../../../../../../Applications/wallabag/" class="md-nav__link">
         Wallabag
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          PiHole
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PiHole" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          PiHole
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../Applications/PiHole/ha-setup/" class="md-nav__link">
+        PiHole HA Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1668,7 +1715,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../../../Math/Books/konkrete-mathematik-mit-python/" class="md-nav__link">
-        Bearbeitung der Aufgaben von `Konkrete Mathematik mit Python`
+        Bearbeitung der Aufgaben von Konkrete Mathematik mit Python
       </a>
     </li>
   
@@ -4346,14 +4393,14 @@
 <span class="linenos" data-linenos="12 "></span>  name: cicd-role
 <span class="linenos" data-linenos="13 "></span>  namespace: &lt;KUBE_NAMESPACE&gt;
 <span class="linenos" data-linenos="14 "></span>rules:
-<span class="linenos" data-linenos="15 "></span>- apiGroups:
-<span class="linenos" data-linenos="16 "></span>  - &quot;&quot;
-<span class="linenos" data-linenos="17 "></span>  - apps
-<span class="linenos" data-linenos="18 "></span>  - extensions
+<span class="linenos" data-linenos="15 "></span><span class="k">-</span> apiGroups:
+<span class="linenos" data-linenos="16 "></span>  <span class="k">-</span> &quot;&quot;
+<span class="linenos" data-linenos="17 "></span>  <span class="k">-</span> apps
+<span class="linenos" data-linenos="18 "></span>  <span class="k">-</span> extensions
 <span class="linenos" data-linenos="19 "></span>  resources:
-<span class="linenos" data-linenos="20 "></span>  - &#39;*&#39;
+<span class="linenos" data-linenos="20 "></span>  <span class="k">-</span> &#39;*&#39;
 <span class="linenos" data-linenos="21 "></span>  verbs:
-<span class="linenos" data-linenos="22 "></span>  - &#39;*&#39;
+<span class="linenos" data-linenos="22 "></span>  <span class="k">-</span> &#39;*&#39;
 <span class="linenos" data-linenos="23 "></span>
 <span class="linenos" data-linenos="24 "></span>---
 <span class="linenos" data-linenos="25 "></span>kind: RoleBinding
@@ -4362,7 +4409,7 @@
 <span class="linenos" data-linenos="28 "></span>  name: cicd-role
 <span class="linenos" data-linenos="29 "></span>  namespace: &lt;KUBE_NAMESPACE&gt;
 <span class="linenos" data-linenos="30 "></span>subjects:
-<span class="linenos" data-linenos="31 "></span>  - kind: ServiceAccount
+<span class="linenos" data-linenos="31 "></span>  <span class="k">-</span> kind: ServiceAccount
 <span class="linenos" data-linenos="32 "></span>    name: gitlab-service-account
 <span class="linenos" data-linenos="33 "></span>roleRef:
 <span class="linenos" data-linenos="34 "></span>  kind: Role
@@ -4438,7 +4485,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.annotate"], "search": "../../../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
