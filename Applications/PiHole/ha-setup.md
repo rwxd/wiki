@@ -1,12 +1,26 @@
 # PiHole HA Setup
 
+## What are we trying to achieve?
+
+We want to have two PiHole instances that share the same ip address.
+If one of the instances fails the other one will take over the ip address.
+
+They will also share the same gravity database so you only have to update the gravity database on one of the instances.
+
+## Why do we want this?
+
+If you have a PiHole instance running on a Raspberry Pi and it fails you will have to wait until you can fix it.
+This means manually changing the dns server on all your devices or trying to change the dhcp server to point to a different dns server.
+With this setup you will have a backup PiHole instance that will take over the ip address of the primary instance when it fails.
+
+
 ## Requirements
 
-- two PiHole instances
-- a ip address that is not used by any other device on your network
-- both PiHole instances must be on the same network
-- both PiHole instances must have the same version, check with `pihole -v`, update with `pihole -up`
-- they may need to be reconfigured with `pihole -r` to get them to work properly
+- Two PiHole instances
+- A ip address that is not used by any other device on your network
+- Both PiHole instances must be on the same network
+- Both PiHole instances must have the same version, check with `pihole -v`, update with `pihole -up`
+- They may need to be reconfigured with `pihole -r` to get them to work properly
 
 ## Setup keepalive
 
