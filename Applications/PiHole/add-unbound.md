@@ -1,5 +1,12 @@
 # Add Unbound as a recursive DNS Server to the PiHole setup
 
+## Why would you want this?
+
+- Using a recursive DNS server is more secure, because no third party DNS server will be used
+and you will not be tracked by your DNS provider
+- The request time will be faster because the DNS server is running locally
+- Unbound will use DNSSEC to verify DNS requests
+
 ## Install
 
 ```bash
