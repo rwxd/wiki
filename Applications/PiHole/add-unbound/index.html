@@ -411,6 +411,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-would-you-want-this" class="md-nav__link">
+    Why would you want this?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     Install
   </a>
@@ -4366,6 +4373,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-would-you-want-this" class="md-nav__link">
+    Why would you want this?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     Install
   </a>
@@ -4446,6 +4460,13 @@
 
 
 <h1 id="add-unbound-as-a-recursive-dns-server-to-the-pihole-setup">Add Unbound as a recursive DNS Server to the PiHole setup<a class="headerlink" href="#add-unbound-as-a-recursive-dns-server-to-the-pihole-setup" title="Permanent link">⚑</a></h1>
+<h2 id="why-would-you-want-this">Why would you want this?<a class="headerlink" href="#why-would-you-want-this" title="Permanent link">⚑</a></h2>
+<ul>
+<li>Using a recursive DNS server is more secure, because no third party DNS server will be used
+and you will not be tracked by your DNS provider</li>
+<li>The request time will be faster because the DNS server is running locally</li>
+<li>Unbound will use DNSSEC to verify DNS requests</li>
+</ul>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>unbound
 </code></pre></div>
