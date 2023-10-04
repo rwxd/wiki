@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Applications/PiHole/install-unbound-prometheus-exporter/</loc>
+         <lastmod>2023-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Blog/Misc/blog-gh-pages-mkdocs/</loc>
          <lastmod>2023-10-04</lastmod>
          <changefreq>daily</changefreq>

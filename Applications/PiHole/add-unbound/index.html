@@ -501,6 +501,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-unbound-prometheus-exporter/" class="md-nav__link">
+        Install the Unbound Prometheus Exporter
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4485,70 +4499,73 @@ and you will not be tracked by your DNS provider</li>
 <span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="c1"># logfile: &quot;/var/log/unbound/unbound.log&quot;</span>
 <span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nt">verbosity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nt">interface</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
-<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5335</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nt">do-ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
-<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nt">do-udp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
-<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="nt">do-tcp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="c1"># May be set to yes if you have IPv6 connectivity</span>
-<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nt">do-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="c1"># view more statistics</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nt">extended-statistics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nt">interface</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5335</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="nt">do-ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="nt">do-udp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nt">do-tcp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 <span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="c1"># You want to leave this to no unless you have *native* IPv6. With 6to4 and</span>
-<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="c1"># Terredo tunnels your web browser should favor IPv4 for the same reasons</span>
-<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nt">prefer-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
-<span class="linenos" data-linenos="19 "></span>
-<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="c1"># Use this only when you downloaded the list of primary root servers!</span>
-<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="c1"># If you use the default dns-root-data package, unbound will find it automatically</span>
-<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="c1">#root-hints: &quot;/var/lib/unbound/root.hints&quot;</span>
-<span class="linenos" data-linenos="23 "></span>
-<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="c1"># Trust glue only if it is within the server&#39;s authority</span>
-<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">harden-glue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="c1"># May be set to yes if you have IPv6 connectivity</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nt">do-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="c1"># You want to leave this to no unless you have *native* IPv6. With 6to4 and</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="c1"># Terredo tunnels your web browser should favor IPv4 for the same reasons</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="nt">prefer-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="c1"># Use this only when you downloaded the list of primary root servers!</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="c1"># If you use the default dns-root-data package, unbound will find it automatically</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="c1">#root-hints: &quot;/var/lib/unbound/root.hints&quot;</span>
 <span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="c1"># Require DNSSEC data for trust-anchored zones, if such data is absent, the zone becomes BOGUS</span>
-<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="nt">harden-dnssec-stripped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="c1"># Trust glue only if it is within the server&#39;s authority</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="nt">harden-glue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 <span class="linenos" data-linenos="29 "></span>
-<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="c1"># Don&#39;t use Capitalization randomization as it known to cause DNSSEC issues sometimes</span>
-<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="c1"># see https://discourse.pi-hole.net/t/unbound-stubby-or-dnscrypt-proxy/9378 for further details</span>
-<span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="nt">use-caps-for-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
-<span class="linenos" data-linenos="33 "></span>
-<span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="c1"># Reduce EDNS reassembly buffer size.</span>
-<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="c1"># IP fragmentation is unreliable on the Internet today, and can cause</span>
-<span class="linenos" data-linenos="36 "></span><span class="w">    </span><span class="c1"># transmission failures when large DNS messages are sent via UDP. Even</span>
-<span class="linenos" data-linenos="37 "></span><span class="w">    </span><span class="c1"># when fragmentation does work, it may not be secure; it is theoretically</span>
-<span class="linenos" data-linenos="38 "></span><span class="w">    </span><span class="c1"># possible to spoof parts of a fragmented DNS message, without easy</span>
-<span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="c1"># detection at the receiving end. Recently, there was an excellent study</span>
-<span class="linenos" data-linenos="40 "></span><span class="w">    </span><span class="c1"># &gt;&gt;&gt; Defragmenting DNS - Determining the optimal maximum UDP response size for DNS &lt;&lt;&lt;</span>
-<span class="linenos" data-linenos="41 "></span><span class="w">    </span><span class="c1"># by Axel Koolhaas, and Tjeerd Slokker (https://indico.dns-oarc.net/event/36/contributions/776/)</span>
-<span class="linenos" data-linenos="42 "></span><span class="w">    </span><span class="c1"># in collaboration with NLnet Labs explored DNS using real world data from the</span>
-<span class="linenos" data-linenos="43 "></span><span class="w">    </span><span class="c1"># the RIPE Atlas probes and the researchers suggested different values for</span>
-<span class="linenos" data-linenos="44 "></span><span class="w">    </span><span class="c1"># IPv4 and IPv6 and in different scenarios. They advise that servers should</span>
-<span class="linenos" data-linenos="45 "></span><span class="w">    </span><span class="c1"># be configured to limit DNS messages sent over UDP to a size that will not</span>
-<span class="linenos" data-linenos="46 "></span><span class="w">    </span><span class="c1"># trigger fragmentation on typical network links. DNS servers can switch</span>
-<span class="linenos" data-linenos="47 "></span><span class="w">    </span><span class="c1"># from UDP to TCP when a DNS response is too big to fit in this limited</span>
-<span class="linenos" data-linenos="48 "></span><span class="w">    </span><span class="c1"># buffer size. This value has also been suggested in DNS Flag Day 2020.</span>
-<span class="linenos" data-linenos="49 "></span><span class="w">    </span><span class="nt">edns-buffer-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1232</span>
-<span class="linenos" data-linenos="50 "></span>
-<span class="linenos" data-linenos="51 "></span><span class="w">    </span><span class="c1"># Perform prefetching of close to expired message cache entries</span>
-<span class="linenos" data-linenos="52 "></span><span class="w">    </span><span class="c1"># This only applies to domains that have been frequently queried</span>
-<span class="linenos" data-linenos="53 "></span><span class="w">    </span><span class="nt">prefetch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span><span class="w">    </span><span class="c1"># One thread should be sufficient, can be increased on beefy machines. In reality for most users running on small networks or on a single machine, it should be unnecessary to seek performance enhancement by increasing num-threads above 1.</span>
-<span class="linenos" data-linenos="56 "></span><span class="w">    </span><span class="nt">num-threads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="c1"># Require DNSSEC data for trust-anchored zones, if such data is absent, the zone becomes BOGUS</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="nt">harden-dnssec-stripped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span><span class="w">    </span><span class="c1"># Don&#39;t use Capitalization randomization as it known to cause DNSSEC issues sometimes</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="c1"># see https://discourse.pi-hole.net/t/unbound-stubby-or-dnscrypt-proxy/9378 for further details</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="nt">use-caps-for-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="linenos" data-linenos="36 "></span>
+<span class="linenos" data-linenos="37 "></span><span class="w">    </span><span class="c1"># Reduce EDNS reassembly buffer size.</span>
+<span class="linenos" data-linenos="38 "></span><span class="w">    </span><span class="c1"># IP fragmentation is unreliable on the Internet today, and can cause</span>
+<span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="c1"># transmission failures when large DNS messages are sent via UDP. Even</span>
+<span class="linenos" data-linenos="40 "></span><span class="w">    </span><span class="c1"># when fragmentation does work, it may not be secure; it is theoretically</span>
+<span class="linenos" data-linenos="41 "></span><span class="w">    </span><span class="c1"># possible to spoof parts of a fragmented DNS message, without easy</span>
+<span class="linenos" data-linenos="42 "></span><span class="w">    </span><span class="c1"># detection at the receiving end. Recently, there was an excellent study</span>
+<span class="linenos" data-linenos="43 "></span><span class="w">    </span><span class="c1"># &gt;&gt;&gt; Defragmenting DNS - Determining the optimal maximum UDP response size for DNS &lt;&lt;&lt;</span>
+<span class="linenos" data-linenos="44 "></span><span class="w">    </span><span class="c1"># by Axel Koolhaas, and Tjeerd Slokker (https://indico.dns-oarc.net/event/36/contributions/776/)</span>
+<span class="linenos" data-linenos="45 "></span><span class="w">    </span><span class="c1"># in collaboration with NLnet Labs explored DNS using real world data from the</span>
+<span class="linenos" data-linenos="46 "></span><span class="w">    </span><span class="c1"># the RIPE Atlas probes and the researchers suggested different values for</span>
+<span class="linenos" data-linenos="47 "></span><span class="w">    </span><span class="c1"># IPv4 and IPv6 and in different scenarios. They advise that servers should</span>
+<span class="linenos" data-linenos="48 "></span><span class="w">    </span><span class="c1"># be configured to limit DNS messages sent over UDP to a size that will not</span>
+<span class="linenos" data-linenos="49 "></span><span class="w">    </span><span class="c1"># trigger fragmentation on typical network links. DNS servers can switch</span>
+<span class="linenos" data-linenos="50 "></span><span class="w">    </span><span class="c1"># from UDP to TCP when a DNS response is too big to fit in this limited</span>
+<span class="linenos" data-linenos="51 "></span><span class="w">    </span><span class="c1"># buffer size. This value has also been suggested in DNS Flag Day 2020.</span>
+<span class="linenos" data-linenos="52 "></span><span class="w">    </span><span class="nt">edns-buffer-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1232</span>
+<span class="linenos" data-linenos="53 "></span>
+<span class="linenos" data-linenos="54 "></span><span class="w">    </span><span class="c1"># Perform prefetching of close to expired message cache entries</span>
+<span class="linenos" data-linenos="55 "></span><span class="w">    </span><span class="c1"># This only applies to domains that have been frequently queried</span>
+<span class="linenos" data-linenos="56 "></span><span class="w">    </span><span class="nt">prefetch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 <span class="linenos" data-linenos="57 "></span>
-<span class="linenos" data-linenos="58 "></span><span class="w">    </span><span class="c1"># Ensure kernel buffer is large enough to not lose messages in traffic spikes</span>
-<span class="linenos" data-linenos="59 "></span><span class="w">    </span><span class="nt">so-rcvbuf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1m</span>
+<span class="linenos" data-linenos="58 "></span><span class="w">    </span><span class="c1"># One thread should be sufficient, can be increased on beefy machines. In reality for most users running on small networks or on a single machine, it should be unnecessary to seek performance enhancement by increasing num-threads above 1.</span>
+<span class="linenos" data-linenos="59 "></span><span class="w">    </span><span class="nt">num-threads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="linenos" data-linenos="60 "></span>
-<span class="linenos" data-linenos="61 "></span><span class="w">    </span><span class="c1"># Ensure privacy of local IP ranges</span>
-<span class="linenos" data-linenos="62 "></span><span class="w">    </span><span class="c1"># Needs to be commented out if you have a public dns records (e.g. Cloudflare) resolving to</span>
-<span class="linenos" data-linenos="63 "></span><span class="w">    </span><span class="c1"># your local IP. Those records will otherwise be unresolvable.</span>
-<span class="linenos" data-linenos="64 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.0.0/16</span>
-<span class="linenos" data-linenos="65 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">169.254.0.0/16</span>
-<span class="linenos" data-linenos="66 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.16.0.0/12</span>
-<span class="linenos" data-linenos="67 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0.0.0/8</span>
-<span class="linenos" data-linenos="68 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fd00::/8</span>
-<span class="linenos" data-linenos="69 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fe80::/10</span>
-<span class="linenos" data-linenos="70 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span>
+<span class="linenos" data-linenos="61 "></span><span class="w">    </span><span class="c1"># Ensure kernel buffer is large enough to not lose messages in traffic spikes</span>
+<span class="linenos" data-linenos="62 "></span><span class="w">    </span><span class="nt">so-rcvbuf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1m</span>
+<span class="linenos" data-linenos="63 "></span>
+<span class="linenos" data-linenos="64 "></span><span class="w">    </span><span class="c1"># Ensure privacy of local IP ranges</span>
+<span class="linenos" data-linenos="65 "></span><span class="w">    </span><span class="c1"># Needs to be commented out if you have a public dns records (e.g. Cloudflare) resolving to</span>
+<span class="linenos" data-linenos="66 "></span><span class="w">    </span><span class="c1"># your local IP. Those records will otherwise be unresolvable.</span>
+<span class="linenos" data-linenos="67 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.0.0/16</span>
+<span class="linenos" data-linenos="68 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">169.254.0.0/16</span>
+<span class="linenos" data-linenos="69 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.16.0.0/12</span>
+<span class="linenos" data-linenos="70 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0.0.0/8</span>
+<span class="linenos" data-linenos="71 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fd00::/8</span>
+<span class="linenos" data-linenos="72 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fe80::/10</span>
+<span class="linenos" data-linenos="73 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span>
 </code></pre></div>
 <p>Signal PiHole to use this limit</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dnsmasq</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">99</span><span class="o">-</span><span class="n">edns</span><span class="o">.</span><span class="n">conf</span>
