@@ -12,27 +12,27 @@
         <meta name="author" content="rwxd">
       
       
-        <link rel="canonical" href="https://wiki.rwxd.eu/Operating-Systems/Linux/Misc/Time/">
+        <link rel="canonical" href="https://wiki.rwxd.eu/Applications/PiHole/add-unbound/">
       
       
-        <link rel="prev" href="../NetworkManager/">
+        <link rel="prev" href="../../wallabag/">
       
       
-        <link rel="next" href="../cron/">
+        <link rel="next" href="../ha-setup/">
       
-      <link rel="icon" href="../../../../assets/page/favicon-96x96.png">
+      <link rel="icon" href="../../../assets/page/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.0.0">
     
     
       
-        <title>Time - Wiki</title>
+        <title>Add Unbound as a recursive DNS Server to the PiHole setup - Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f79797b0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f79797b0.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#time" class="md-skip">
+        <a href="#add-unbound-as-a-recursive-dns-server-to-the-pihole-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -143,7 +143,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
+    <a href="../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4Z"/></svg>
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Time
+              Add Unbound as a recursive DNS Server to the PiHole setup
             
           </span>
         </div>
@@ -261,7 +261,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
+    <a href="../../.." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-3H3l5-5H5l5-5H7l5-5 5 5h-3l5 5h-3l5 5h-7v3h-4Z"/></svg>
@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -305,12 +305,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -333,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Applications/wallabag/" class="md-nav__link">
+      <a href="../../wallabag/" class="md-nav__link">
         Wallabag
       </a>
     </li>
@@ -345,12 +347,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -371,11 +375,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../Applications/PiHole/add-unbound/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Add Unbound as a recursive DNS Server to the PiHole setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Add Unbound as a recursive DNS Server to the PiHole setup
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restart-unbound" class="md-nav__link">
+    Restart unbound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-unbound" class="md-nav__link">
+    Test unbound
+  </a>
+  
+    <nav class="md-nav" aria-label="Test unbound">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnssec" class="md-nav__link">
+    DNSSec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-pihole" class="md-nav__link">
+    Configure PiHole
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -387,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Applications/PiHole/ha-setup/" class="md-nav__link">
+      <a href="../ha-setup/" class="md-nav__link">
         PiHole HA Setup
       </a>
     </li>
@@ -468,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
+      <a href="../../../Blog/Misc/blog-gh-pages-mkdocs/" class="md-nav__link">
         How to create a blog with GitHub Pages and MkDocs
       </a>
     </li>
@@ -482,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
+      <a href="../../../Blog/Misc/pluralsight_trial/" class="md-nav__link">
         Pluralsight demo / trial
       </a>
     </li>
@@ -496,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Blog/Misc/sane-scanbd-canon-5600f/" class="md-nav__link">
+      <a href="../../../Blog/Misc/sane-scanbd-canon-5600f/" class="md-nav__link">
         Sane & scanbd with Canon CanonScan 5600f
       </a>
     </li>
@@ -551,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Books/done/" class="md-nav__link">
+      <a href="../../../Books/done/" class="md-nav__link">
         Read books
       </a>
     </li>
@@ -565,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Books/reading-list/" class="md-nav__link">
+      <a href="../../../Books/reading-list/" class="md-nav__link">
         Reading list
       </a>
     </li>
@@ -665,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/ansible-runner/" class="md-nav__link">
         ansible-runner
       </a>
     </li>
@@ -679,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/Ansible/molecule/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/molecule/" class="md-nav__link">
         Ansible Molecule
       </a>
     </li>
@@ -719,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Ansible/Ansible%20Code%20Snippets/Wait%20for%20X/" class="md-nav__link">
         Wait for a connection after e. g. a reboot
       </a>
     </li>
@@ -773,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/Formatters/Black/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Formatters/Black/" class="md-nav__link">
         Black
       </a>
     </li>
@@ -820,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/GitLab-CICD/clear_artifacts/" class="md-nav__link">
         Script to clear GitLab CI/CD Artifacts
       </a>
     </li>
@@ -867,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
+      <a href="../../../DevOps/Continuous-Integration/Type-Checkers/MyPy/" class="md-nav__link">
         MyPy
       </a>
     </li>
@@ -973,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-commands/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-commands/" class="md-nav__link">
         Docker commands
       </a>
     </li>
@@ -987,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-ipv6/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/docker-ipv6/" class="md-nav__link">
         Docker with IPv6
       </a>
     </li>
@@ -1001,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Docker/ssh-keys/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Docker/ssh-keys/" class="md-nav__link">
         SSH-Keys in a Dockerfile Build
       </a>
     </li>
@@ -1048,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/ckad/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/ckad/" class="md-nav__link">
         CKAD - Certified Kubernetes Application Developer
       </a>
     </li>
@@ -1088,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/Install%20K3S%20on%20Raspberry%20PIs/" class="md-nav__link">
         Manager
       </a>
     </li>
@@ -1102,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/K3S/raspberry/" class="md-nav__link">
         K3s on Raspberry
       </a>
     </li>
@@ -1149,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/kube-vip/" class="md-nav__link">
         Kube-VIP
       </a>
     </li>
@@ -1163,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Networking/metallb/" class="md-nav__link">
         MetalLB
       </a>
     </li>
@@ -1210,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/Tanzu-Kubernetes-Cluster/kubectl-vsphere/" class="md-nav__link">
         Kubectl vSphere
       </a>
     </li>
@@ -1257,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/CronJob/" class="md-nav__link">
         Test CronJob
       </a>
     </li>
@@ -1271,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/busybox/" class="md-nav__link">
         Busybox
       </a>
     </li>
@@ -1285,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/delete/" class="md-nav__link">
         delete all pods from a namespace that are in Error Status
       </a>
     </li>
@@ -1299,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/label/" class="md-nav__link">
         nodes
       </a>
     </li>
@@ -1313,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Kubernetes/kubectl/serviceaccount/" class="md-nav__link">
         ServiceAccounts
       </a>
     </li>
@@ -1367,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Podman/podman-compose-systemd-files/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Podman/podman-compose-systemd-files/" class="md-nav__link">
         Use systemd files with rootless podman-compose
       </a>
     </li>
@@ -1381,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/Podman/setup-rootless/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/Podman/setup-rootless/" class="md-nav__link">
         Podman rootless setup
       </a>
     </li>
@@ -1454,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/Excluding/" class="md-nav__link">
         Excluding
       </a>
     </li>
@@ -1468,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-Solutions/Container/additional/Traefik/External%20Services/" class="md-nav__link">
         External Services
       </a>
     </li>
@@ -1562,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-as-Code/ArgoCD/Setup%20Argo%20CD%20with%20a%20Helm%20Charts%20Repository/" class="md-nav__link">
         Install Argo CD
       </a>
     </li>
@@ -1576,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DevOps/Infrastructure-as-Code/ArgoCD/cli-cluster-login/" class="md-nav__link">
+      <a href="../../../DevOps/Infrastructure-as-Code/ArgoCD/cli-cluster-login/" class="md-nav__link">
         Login with the ArgoCD Cli in the current cluster
       </a>
     </li>
@@ -1664,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Math/Books/konkrete-mathematik-mit-python/" class="md-nav__link">
+      <a href="../../../Math/Books/konkrete-mathematik-mit-python/" class="md-nav__link">
         Bearbeitung der Aufgaben von Konkrete Mathematik mit Python
       </a>
     </li>
@@ -1711,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Math/Discrete%20Math/Sets/" class="md-nav__link">
+      <a href="../../../Math/Discrete%20Math/Sets/" class="md-nav__link">
         Set-builder notation
       </a>
     </li>
@@ -1792,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
+      <a href="../../../Networking/Cumulus%20Linux/about-cumulus-linux/" class="md-nav__link">
         About Cumulus Linux
       </a>
     </li>
@@ -1839,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/Misc/nfcapd/" class="md-nav__link">
+      <a href="../../../Networking/Misc/nfcapd/" class="md-nav__link">
         NFCAPD (NetFlow Capture Daemon)
       </a>
     </li>
@@ -1853,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/Misc/traffic-billing/" class="md-nav__link">
+      <a href="../../../Networking/Misc/traffic-billing/" class="md-nav__link">
         Traffic Billing
       </a>
     </li>
@@ -1900,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/NSX-T/NSX-T%20Links/" class="md-nav__link">
+      <a href="../../../Networking/NSX-T/NSX-T%20Links/" class="md-nav__link">
         NSX-T Links
       </a>
     </li>
@@ -1947,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/network-virtualization/" class="md-nav__link">
         Network Virtualization
       </a>
     </li>
@@ -1987,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
+      <a href="../../../Networking/Virtualization/VXLAN/vxlan-general/" class="md-nav__link">
         VXLAN General
       </a>
     </li>
@@ -2067,7 +2166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/cisco/ios/acl/" class="md-nav__link">
+      <a href="../../../Networking/cisco/ios/acl/" class="md-nav__link">
         Cisco IOS ACL
       </a>
     </li>
@@ -2121,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/containerlab/cumulus/" class="md-nav__link">
+      <a href="../../../Networking/containerlab/cumulus/" class="md-nav__link">
         Cumulus on Containerlab
       </a>
     </li>
@@ -2135,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/containerlab/ssh/" class="md-nav__link">
+      <a href="../../../Networking/containerlab/ssh/" class="md-nav__link">
         SSH into Containerlab devices
       </a>
     </li>
@@ -2182,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Networking/vyos/install/" class="md-nav__link">
+      <a href="../../../Networking/vyos/install/" class="md-nav__link">
         Install vyos
       </a>
     </li>
@@ -2209,14 +2308,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
@@ -2291,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Android/apps/shelter/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Android/apps/shelter/" class="md-nav__link">
         Shelter
       </a>
     </li>
@@ -2317,14 +2414,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" type="checkbox" id="__nav_8_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" type="checkbox" id="__nav_8_2" >
       
       
       
@@ -2347,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../X-Forwarding/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/X-Forwarding/" class="md-nav__link">
         X-Forwarding with Windows through SSH
       </a>
     </li>
@@ -2387,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/htpasswd/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/htpasswd/" class="md-nav__link">
         htpasswd
       </a>
     </li>
@@ -2401,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/iotop/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/iotop/" class="md-nav__link">
         iotop
       </a>
     </li>
@@ -2415,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/nmap/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/nmap/" class="md-nav__link">
         NMAP
       </a>
     </li>
@@ -2429,7 +2524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/ssh/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/ssh/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -2443,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/tee/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/tee/" class="md-nav__link">
         Tee
       </a>
     </li>
@@ -2457,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CLI/watch/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/CLI/watch/" class="md-nav__link">
         watch
       </a>
     </li>
@@ -2476,14 +2571,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2_3" type="checkbox" id="__nav_8_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2_3" type="checkbox" id="__nav_8_2_3" >
       
       
       
@@ -2506,7 +2599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NetworkManager/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/NetworkManager/" class="md-nav__link">
         NetworkManager
       </a>
     </li>
@@ -2518,59 +2611,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Time
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Operating-Systems/Linux/Misc/Time/" class="md-nav__link">
         Time
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#list-timezone" class="md-nav__link">
-    List timezone
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#change-timezone" class="md-nav__link">
-    Change timezone
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2582,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cron/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/cron/" class="md-nav__link">
         Cron
       </a>
     </li>
@@ -2596,7 +2641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cryptsetup/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/cryptsetup/" class="md-nav__link">
         Cryptsetup
       </a>
     </li>
@@ -2610,7 +2655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../window-names/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Misc/window-names/" class="md-nav__link">
         Show window names
       </a>
     </li>
@@ -2657,7 +2702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Networking/Bridge%20Interface/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Networking/Bridge%20Interface/" class="md-nav__link">
         Create a bridge interface
       </a>
     </li>
@@ -2671,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Networking/dns/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Networking/dns/" class="md-nav__link">
         DNS
       </a>
     </li>
@@ -2718,7 +2763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PulseAudio/Volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/PulseAudio/Volume/" class="md-nav__link">
         PulseAudio Volume Stuff
       </a>
     </li>
@@ -2791,7 +2836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Window-Manager/i3/bluetooth/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/bluetooth/" class="md-nav__link">
         Bluetooth with i3
       </a>
     </li>
@@ -2805,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Window-Manager/i3/dpi/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/dpi/" class="md-nav__link">
         Change i3 DPI / scaling
       </a>
     </li>
@@ -2819,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/i3-wallpaper/" class="md-nav__link">
         Wallpaper in i3
       </a>
     </li>
@@ -2833,7 +2878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Window-Manager/i3/spotify/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/spotify/" class="md-nav__link">
         Control Spotify in i3
       </a>
     </li>
@@ -2847,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Window-Manager/i3/volume/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/Window-Manager/i3/volume/" class="md-nav__link">
         Volume Control in i3
       </a>
     </li>
@@ -2901,7 +2946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nix/nix/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/nix/nix/" class="md-nav__link">
         Nix
       </a>
     </li>
@@ -2915,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nix/nixpkgs/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/nix/nixpkgs/" class="md-nav__link">
         nixpkgs
       </a>
     </li>
@@ -2962,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/selinux/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/selinux/" class="md-nav__link">
         SELinux
       </a>
     </li>
@@ -3002,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/firewall/firewalld/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/firewall/firewalld/" class="md-nav__link">
         firewalld
       </a>
     </li>
@@ -3016,7 +3061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/firewall/ufw/" class="md-nav__link">
+      <a href="../../../Operating-Systems/Linux/security/firewall/ufw/" class="md-nav__link">
         UFW
       </a>
     </li>
@@ -3085,7 +3130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
+      <a href="../../../Other/20%20rules%20of%20formulating%20knowledge/" class="md-nav__link">
         20 rules of formulating knowledge
       </a>
     </li>
@@ -3099,7 +3144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
+      <a href="../../../Other/DuckDNS%20update%20or%20set%20IP%20script/" class="md-nav__link">
         DuckDNS update or set IP script
       </a>
     </li>
@@ -3113,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Other/digital-gardening/" class="md-nav__link">
+      <a href="../../../Other/digital-gardening/" class="md-nav__link">
         Digital Gardening
       </a>
     </li>
@@ -3187,7 +3232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming/general/stack/" class="md-nav__link">
+      <a href="../../../Programming/general/stack/" class="md-nav__link">
         What is a stack?
       </a>
     </li>
@@ -3242,7 +3287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Bash/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Bash/" class="md-nav__link">
         Bash
       </a>
     </li>
@@ -3256,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/JSON/" class="md-nav__link">
+      <a href="../../../Programming-Languages/JSON/" class="md-nav__link">
         JSON
       </a>
     </li>
@@ -3270,7 +3315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/YAML/" class="md-nav__link">
+      <a href="../../../Programming-Languages/YAML/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -3310,7 +3355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Go/Build/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Build/" class="md-nav__link">
         Build go binaries
       </a>
     </li>
@@ -3324,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Go/Concurrency/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Concurrency/" class="md-nav__link">
         Concurrency in Go
       </a>
     </li>
@@ -3338,7 +3383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/Formatting/" class="md-nav__link">
         Formatting in Go
       </a>
     </li>
@@ -3352,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Go/profiling/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Go/profiling/" class="md-nav__link">
         Profiling in Go
       </a>
     </li>
@@ -3399,7 +3444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Performance%20Analysis/" class="md-nav__link">
         Profiler
       </a>
     </li>
@@ -3413,7 +3458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/profiling/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/profiling/" class="md-nav__link">
         Profiling in Python
       </a>
     </li>
@@ -3427,7 +3472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/typing-in-python/" class="md-nav__link">
         Typing in Python
       </a>
     </li>
@@ -3441,7 +3486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/venvs/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/venvs/" class="md-nav__link">
         Python Virtual Environments
       </a>
     </li>
@@ -3481,7 +3526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/FastAPI/" class="md-nav__link">
         FastAPI
       </a>
     </li>
@@ -3495,7 +3540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/Pathlib/" class="md-nav__link">
         Pathlib
       </a>
     </li>
@@ -3509,7 +3554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Python/Python-Libraries/PyTest/" class="md-nav__link">
         PyTest
       </a>
     </li>
@@ -3563,7 +3608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
+      <a href="../../../Programming-Languages/Rust/Memory%20Management/" class="md-nav__link">
         Heat
       </a>
     </li>
@@ -3618,7 +3663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Anki/" class="md-nav__link">
+      <a href="../../../Tools/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -3632,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Audible-Cli/" class="md-nav__link">
+      <a href="../../../Tools/Audible-Cli/" class="md-nav__link">
         Audible CLI
       </a>
     </li>
@@ -3646,7 +3691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Bitwarden/" class="md-nav__link">
+      <a href="../../../Tools/Bitwarden/" class="md-nav__link">
         Bitwarden
       </a>
     </li>
@@ -3660,7 +3705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Cookiecutter/" class="md-nav__link">
+      <a href="../../../Tools/Cookiecutter/" class="md-nav__link">
         Cookiecutter Templates for Projects
       </a>
     </li>
@@ -3674,7 +3719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/HashiCorp-Vault/" class="md-nav__link">
+      <a href="../../../Tools/HashiCorp-Vault/" class="md-nav__link">
         HashiCorp Vault
       </a>
     </li>
@@ -3688,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/KeepassXC/" class="md-nav__link">
+      <a href="../../../Tools/KeepassXC/" class="md-nav__link">
         KeePassXC
       </a>
     </li>
@@ -3702,7 +3747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/MkDocs/" class="md-nav__link">
+      <a href="../../../Tools/MkDocs/" class="md-nav__link">
         MkDocs
       </a>
     </li>
@@ -3716,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Task/" class="md-nav__link">
+      <a href="../../../Tools/Task/" class="md-nav__link">
         Task
       </a>
     </li>
@@ -3730,7 +3775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/borg/" class="md-nav__link">
+      <a href="../../../Tools/borg/" class="md-nav__link">
         Borg
       </a>
     </li>
@@ -3744,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/cht.sh/" class="md-nav__link">
+      <a href="../../../Tools/cht.sh/" class="md-nav__link">
         cht.sh
       </a>
     </li>
@@ -3758,7 +3803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/mermaid/" class="md-nav__link">
+      <a href="../../../Tools/mermaid/" class="md-nav__link">
         Mermaid
       </a>
     </li>
@@ -3772,7 +3817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/openssl/" class="md-nav__link">
+      <a href="../../../Tools/openssl/" class="md-nav__link">
         Open SSL
       </a>
     </li>
@@ -3786,7 +3831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/spicetify/" class="md-nav__link">
+      <a href="../../../Tools/spicetify/" class="md-nav__link">
         Change Spotify Theme with spicetify-cli
       </a>
     </li>
@@ -3826,7 +3871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
+      <a href="../../../Tools/Git/bfg-repo-cleaner/" class="md-nav__link">
         Clean Git repositories with BFG
       </a>
     </li>
@@ -3840,7 +3885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Git/git-crypt/" class="md-nav__link">
+      <a href="../../../Tools/Git/git-crypt/" class="md-nav__link">
         Git Crypt
       </a>
     </li>
@@ -3854,7 +3899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Git/git/" class="md-nav__link">
+      <a href="../../../Tools/Git/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -3868,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Git/gitleak/" class="md-nav__link">
+      <a href="../../../Tools/Git/gitleak/" class="md-nav__link">
         Gitleak
       </a>
     </li>
@@ -3908,7 +3953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
+      <a href="../../../Tools/Git/GitLab/access-tokens/" class="md-nav__link">
         GitLab Access Tokens
       </a>
     </li>
@@ -3962,7 +4007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/NeoVIM/Coc/" class="md-nav__link">
+      <a href="../../../Tools/NeoVIM/Coc/" class="md-nav__link">
         Coc in Neovim
       </a>
     </li>
@@ -4009,7 +4054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
+      <a href="../../../Tools/PlantUML/PlantUML%20Themes/" class="md-nav__link">
         PlantUML Themes
       </a>
     </li>
@@ -4056,7 +4101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Tmux/Window%20Management/" class="md-nav__link">
+      <a href="../../../Tools/Tmux/Window%20Management/" class="md-nav__link">
         Window Management
       </a>
     </li>
@@ -4103,7 +4148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/VS-Code/Plugins/" class="md-nav__link">
+      <a href="../../../Tools/VS-Code/Plugins/" class="md-nav__link">
         VS Code Plugins
       </a>
     </li>
@@ -4150,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
+      <a href="../../../Tools/Vim/Comment%20out%20code/" class="md-nav__link">
         Comment out code with VIM
       </a>
     </li>
@@ -4164,7 +4209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/Vim/copy%20all/" class="md-nav__link">
+      <a href="../../../Tools/Vim/copy%20all/" class="md-nav__link">
         Copy all
       </a>
     </li>
@@ -4245,7 +4290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Virtualization/ProxMox/proxmox-8-apt-updates/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-8-apt-updates/" class="md-nav__link">
         Configure apt repository updates on Proxmox 8.x.x Community Edition
       </a>
     </li>
@@ -4259,7 +4304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Virtualization/ProxMox/proxmox-cpu-consumption/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-cpu-consumption/" class="md-nav__link">
         Reduce CPU consumption on Proxmox
       </a>
     </li>
@@ -4273,7 +4318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Virtualization/ProxMox/proxmox-energy-consumption/" class="md-nav__link">
+      <a href="../../../Virtualization/ProxMox/proxmox-energy-consumption/" class="md-nav__link">
         Reduce energy consumption of Proxmox
       </a>
     </li>
@@ -4321,16 +4366,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#list-timezone" class="md-nav__link">
-    List timezone
+  <a href="#install" class="md-nav__link">
+    Install
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#change-timezone" class="md-nav__link">
-    Change timezone
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restart-unbound" class="md-nav__link">
+    Restart unbound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-unbound" class="md-nav__link">
+    Test unbound
+  </a>
+  
+    <nav class="md-nav" aria-label="Test unbound">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnssec" class="md-nav__link">
+    DNSSec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-pihole" class="md-nav__link">
+    Configure PiHole
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4353,11 +4445,119 @@
 
 
 
-<h1 id="time">Time<a class="headerlink" href="#time" title="Permanent link">⚑</a></h1>
-<h2 id="list-timezone">List timezone<a class="headerlink" href="#list-timezone" title="Permanent link">⚑</a></h2>
-<p><code class="highlight">timedatectl list-timezones</code></p>
-<h2 id="change-timezone">Change timezone<a class="headerlink" href="#change-timezone" title="Permanent link">⚑</a></h2>
-<p><code class="highlight">sudo timedatectl set-timezone Europe/Berlin</code></p>
+<h1 id="add-unbound-as-a-recursive-dns-server-to-the-pihole-setup">Add Unbound as a recursive DNS Server to the PiHole setup<a class="headerlink" href="#add-unbound-as-a-recursive-dns-server-to-the-pihole-setup" title="Permanent link">⚑</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>unbound
+</code></pre></div>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">⚑</a></h2>
+<p>Configure unbound with:</p>
+<ul>
+<li>Listen on port 5335</li>
+<li>TCP &amp; UDP</li>
+<li>DNSSEC</li>
+<li>Enable IPv4 &amp; IPv6</li>
+<li>Ensure privacy of local IP ranges</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="l l-Scalar l-Scalar-Plain">cat &lt;&lt; EOF &gt; /etc/unbound/unbound.conf.d/pi-hole.conf</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="l l-Scalar l-Scalar-Plain">server</span><span class="p p-Indicator">:</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="c1"># If no logfile is specified, syslog is used</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="c1"># logfile: &quot;/var/log/unbound/unbound.log&quot;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nt">verbosity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nt">interface</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5335</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nt">do-ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nt">do-udp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="nt">do-tcp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="c1"># May be set to yes if you have IPv6 connectivity</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nt">do-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="c1"># You want to leave this to no unless you have *native* IPv6. With 6to4 and</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="c1"># Terredo tunnels your web browser should favor IPv4 for the same reasons</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nt">prefer-ip6</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="c1"># Use this only when you downloaded the list of primary root servers!</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="c1"># If you use the default dns-root-data package, unbound will find it automatically</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="c1">#root-hints: &quot;/var/lib/unbound/root.hints&quot;</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="c1"># Trust glue only if it is within the server&#39;s authority</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">harden-glue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="c1"># Require DNSSEC data for trust-anchored zones, if such data is absent, the zone becomes BOGUS</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="nt">harden-dnssec-stripped</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="c1"># Don&#39;t use Capitalization randomization as it known to cause DNSSEC issues sometimes</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="c1"># see https://discourse.pi-hole.net/t/unbound-stubby-or-dnscrypt-proxy/9378 for further details</span>
+<span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="nt">use-caps-for-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="c1"># Reduce EDNS reassembly buffer size.</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="c1"># IP fragmentation is unreliable on the Internet today, and can cause</span>
+<span class="linenos" data-linenos="36 "></span><span class="w">    </span><span class="c1"># transmission failures when large DNS messages are sent via UDP. Even</span>
+<span class="linenos" data-linenos="37 "></span><span class="w">    </span><span class="c1"># when fragmentation does work, it may not be secure; it is theoretically</span>
+<span class="linenos" data-linenos="38 "></span><span class="w">    </span><span class="c1"># possible to spoof parts of a fragmented DNS message, without easy</span>
+<span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="c1"># detection at the receiving end. Recently, there was an excellent study</span>
+<span class="linenos" data-linenos="40 "></span><span class="w">    </span><span class="c1"># &gt;&gt;&gt; Defragmenting DNS - Determining the optimal maximum UDP response size for DNS &lt;&lt;&lt;</span>
+<span class="linenos" data-linenos="41 "></span><span class="w">    </span><span class="c1"># by Axel Koolhaas, and Tjeerd Slokker (https://indico.dns-oarc.net/event/36/contributions/776/)</span>
+<span class="linenos" data-linenos="42 "></span><span class="w">    </span><span class="c1"># in collaboration with NLnet Labs explored DNS using real world data from the</span>
+<span class="linenos" data-linenos="43 "></span><span class="w">    </span><span class="c1"># the RIPE Atlas probes and the researchers suggested different values for</span>
+<span class="linenos" data-linenos="44 "></span><span class="w">    </span><span class="c1"># IPv4 and IPv6 and in different scenarios. They advise that servers should</span>
+<span class="linenos" data-linenos="45 "></span><span class="w">    </span><span class="c1"># be configured to limit DNS messages sent over UDP to a size that will not</span>
+<span class="linenos" data-linenos="46 "></span><span class="w">    </span><span class="c1"># trigger fragmentation on typical network links. DNS servers can switch</span>
+<span class="linenos" data-linenos="47 "></span><span class="w">    </span><span class="c1"># from UDP to TCP when a DNS response is too big to fit in this limited</span>
+<span class="linenos" data-linenos="48 "></span><span class="w">    </span><span class="c1"># buffer size. This value has also been suggested in DNS Flag Day 2020.</span>
+<span class="linenos" data-linenos="49 "></span><span class="w">    </span><span class="nt">edns-buffer-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1232</span>
+<span class="linenos" data-linenos="50 "></span>
+<span class="linenos" data-linenos="51 "></span><span class="w">    </span><span class="c1"># Perform prefetching of close to expired message cache entries</span>
+<span class="linenos" data-linenos="52 "></span><span class="w">    </span><span class="c1"># This only applies to domains that have been frequently queried</span>
+<span class="linenos" data-linenos="53 "></span><span class="w">    </span><span class="nt">prefetch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="linenos" data-linenos="54 "></span>
+<span class="linenos" data-linenos="55 "></span><span class="w">    </span><span class="c1"># One thread should be sufficient, can be increased on beefy machines. In reality for most users running on small networks or on a single machine, it should be unnecessary to seek performance enhancement by increasing num-threads above 1.</span>
+<span class="linenos" data-linenos="56 "></span><span class="w">    </span><span class="nt">num-threads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="linenos" data-linenos="57 "></span>
+<span class="linenos" data-linenos="58 "></span><span class="w">    </span><span class="c1"># Ensure kernel buffer is large enough to not lose messages in traffic spikes</span>
+<span class="linenos" data-linenos="59 "></span><span class="w">    </span><span class="nt">so-rcvbuf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1m</span>
+<span class="linenos" data-linenos="60 "></span>
+<span class="linenos" data-linenos="61 "></span><span class="w">    </span><span class="c1"># Ensure privacy of local IP ranges</span>
+<span class="linenos" data-linenos="62 "></span><span class="w">    </span><span class="c1"># Needs to be commented out if you have a public dns records (e.g. Cloudflare) resolving to</span>
+<span class="linenos" data-linenos="63 "></span><span class="w">    </span><span class="c1"># your local IP. Those records will otherwise be unresolvable.</span>
+<span class="linenos" data-linenos="64 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.0.0/16</span>
+<span class="linenos" data-linenos="65 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">169.254.0.0/16</span>
+<span class="linenos" data-linenos="66 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.16.0.0/12</span>
+<span class="linenos" data-linenos="67 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0.0.0/8</span>
+<span class="linenos" data-linenos="68 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fd00::/8</span>
+<span class="linenos" data-linenos="69 "></span><span class="w">    </span><span class="nt">private-address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fe80::/10</span>
+<span class="linenos" data-linenos="70 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span>
+</code></pre></div>
+<p>Signal PiHole to use this limit</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">cat</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dnsmasq</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">99</span><span class="o">-</span><span class="n">edns</span><span class="o">.</span><span class="n">conf</span>
+<span class="linenos" data-linenos="2 "></span><span class="n">edns</span><span class="o">-</span><span class="n">packet</span><span class="o">-</span><span class="nb">max</span><span class="o">=</span><span class="mi">1232</span>
+<span class="linenos" data-linenos="3 "></span><span class="n">EOF</span>
+</code></pre></div>
+<h3 id="restart-unbound">Restart unbound<a class="headerlink" href="#restart-unbound" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>unbound
+</code></pre></div>
+<h3 id="test-unbound">Test unbound<a class="headerlink" href="#test-unbound" title="Permanent link">⚑</a></h3>
+<h4 id="query">Query<a class="headerlink" href="#query" title="Permanent link">⚑</a></h4>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>dig<span class="w"> </span>google.com<span class="w"> </span>@127.0.0.1<span class="w"> </span>-p<span class="w"> </span><span class="m">5335</span>
+</code></pre></div>
+<h4 id="dnssec">DNSSec<a class="headerlink" href="#dnssec" title="Permanent link">⚑</a></h4>
+<p>Get <code class="highlight">Servfail</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>dig<span class="w"> </span>sigfail.verteiltesysteme.net<span class="w"> </span>@127.0.0.1<span class="w"> </span>-p<span class="w"> </span><span class="m">5335</span>
+</code></pre></div>
+<p>Get <code class="highlight">NOERROR</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>dig<span class="w"> </span>sigok.verteiltesysteme.net<span class="w"> </span>@127.0.0.1<span class="w"> </span>-p<span class="w"> </span><span class="m">5335</span>
+</code></pre></div>
+<h3 id="configure-pihole">Configure PiHole<a class="headerlink" href="#configure-pihole" title="Permanent link">⚑</a></h3>
+<p>Now we need to tell PiHole to use unbound as an upstream DNS server.</p>
+<p>This is done by editing <code class="highlight">/etc/pihole/setupVars.conf</code> and adding/replacing the following line:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nv">PIHOLE_DNS_1</span><span class="o">=</span><span class="m">127</span>.0.0.1#5335
+<span class="linenos" data-linenos="2 "></span><span class="nv">PIHOLE_DNS_2</span><span class="o">=</span><span class="m">127</span>.0.0.1#5335
+</code></pre></div>
+<p>Restart PiHole</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl<span class="w"> </span>restart<span class="w"> </span>pihole-FTL.service
+</code></pre></div>
+<p>The PiHole web interface should now show under <code class="highlight"><span class="c1">//admin/settings.php?tab=dns</span></code> that the upstream DNS server is <code class="highlight"><span class="mf">127.0.0.1</span><span class="err">#</span><span class="mf">5335</span></code>.</p>
 
 
   
@@ -4414,12 +4614,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
