@@ -30,6 +30,9 @@ server:
     # logfile: "/var/log/unbound/unbound.log"
     verbosity: 0
 
+    # view more statistics
+    extended-statistics: yes
+
     interface: 127.0.0.1
     port: 5335
     do-ip4: yes
