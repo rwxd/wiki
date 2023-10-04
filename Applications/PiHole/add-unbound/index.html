@@ -4557,7 +4557,9 @@
 <p>Restart PiHole</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl<span class="w"> </span>restart<span class="w"> </span>pihole-FTL.service
 </code></pre></div>
-<p>The PiHole web interface should now show under <code class="highlight"><span class="c1">//admin/settings.php?tab=dns</span></code> that the upstream DNS server is <code class="highlight"><span class="mf">127.0.0.1</span><span class="err">#</span><span class="mf">5335</span></code>.</p>
+<p>The PiHole web interface should now show under <code class="highlight">/admin/settings.php?tab=dns</code> that the upstream DNS server is <code class="highlight"><span class="mf">127.0.0.1</span><span class="err">#</span><span class="mf">5335</span></code>.</p>
+<p>Under <code class="highlight">/admin/queries.php</code> you should see that the queries are now forwarded to <code class="highlight"><span class="mf">127.0.0.1</span><span class="err">#</span><span class="mf">5335</span></code>.</p>
+<p>If that is not the case, maybe you need to manually save the settings in the web interface under <code class="highlight">/admin7settings.php?tab=dns</code>.</p>
 
 
   
