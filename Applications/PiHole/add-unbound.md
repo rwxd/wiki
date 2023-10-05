@@ -156,4 +156,4 @@ The PiHole web interface should now show under `/admin/settings.php?tab=dns` tha
 
 Under `/admin/queries.php` you should see that the queries are now forwarded to `127.0.0.1#5335`.
 
-If that is not the case, maybe you need to manually save the settings in the web interface under `/admin7settings.php?tab=dns`.
+If that is not the case, maybe you need to manually save the settings in the web interface under `/admin/settings.php?tab=dns`.
