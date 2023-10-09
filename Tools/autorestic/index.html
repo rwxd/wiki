@@ -4498,6 +4498,7 @@
 <h1 id="autorestic-high-backup-level-cli-utility-for-restic">autorestic - High backup level CLI utility for restic.<a class="headerlink" href="#autorestic-high-backup-level-cli-utility-for-restic" title="Permanent link">⚑</a></h1>
 <p><a href="https://autorestic.vercel.app/">Documentation</a></p>
 <p>The commands will work with the configuration saved to <code class="highlight">~/.autorestic.yaml</code> you can also specify a different config file with the <code class="highlight">-c</code> flag.</p>
+<p>The <code class="highlight">--ci</code> flag is used for the <code class="highlight"><span class="k">exec</span></code> command to prevent colors from being printed.</p>
 <h2 id="init-backend">Init backend<a class="headerlink" href="#init-backend" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span>check
 </code></pre></div>
@@ -4509,17 +4510,17 @@
 <span class="linenos" data-linenos="5 "></span>autorestic<span class="w"> </span>backup<span class="w"> </span>--locations<span class="w"> </span><span class="s2">&quot;&lt;location1&gt;,&lt;location2&gt;&quot;</span>
 </code></pre></div>
 <h2 id="show-stats-for-a-backend">Show stats for a backend<a class="headerlink" href="#show-stats-for-a-backend" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>stats
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span>--ci<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>stats
 </code></pre></div>
 <h2 id="show-snapshots-for-a-backend">Show snapshots for a backend<a class="headerlink" href="#show-snapshots-for-a-backend" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>snapshots
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span>--ci<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>snapshots
 </code></pre></div>
 <h2 id="check-a-backend-for-errors">Check a backend for errors<a class="headerlink" href="#check-a-backend-for-errors" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>check
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>autorestic<span class="w"> </span>--ci<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>check
 </code></pre></div>
 <h2 id="mount-repository-on-backend">Mount repository on backend<a class="headerlink" href="#mount-repository-on-backend" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/restic
-<span class="linenos" data-linenos="2 "></span>autorestic<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>mount<span class="w"> </span>--<span class="w"> </span>/mnt/restic
+<span class="linenos" data-linenos="2 "></span>autorestic<span class="w"> </span>--ci<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-vb<span class="w"> </span>&lt;backend&gt;<span class="w"> </span>mount<span class="w"> </span>--<span class="w"> </span>/mnt/restic
 </code></pre></div>
 
 
