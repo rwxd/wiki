@@ -4366,6 +4366,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#restart-the-vm" class="md-nav__link">
+    Restart the vm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#in-case-it-should-be-removed" class="md-nav__link">
     In case it should be removed
   </a>
@@ -4442,6 +4449,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#restart-the-vm" class="md-nav__link">
+    Restart the vm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#in-case-it-should-be-removed" class="md-nav__link">
     In case it should be removed
   </a>
@@ -4476,6 +4490,9 @@
 </code></pre></div>
 <h2 id="passtrough-the-hard-drive-as-scsi">Passtrough the hard drive as scsi<a class="headerlink" href="#passtrough-the-hard-drive-as-scsi" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>qm<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$vm_id</span><span class="w"> </span>-scsi2<span class="w"> </span>/dev/disk/by-uuid/<span class="nv">$disk_uuid</span>
+</code></pre></div>
+<h2 id="restart-the-vm">Restart the vm<a class="headerlink" href="#restart-the-vm" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>qm<span class="w"> </span>reboot<span class="w"> </span><span class="nv">$vm_id</span>
 </code></pre></div>
 <h2 id="in-case-it-should-be-removed">In case it should be removed<a class="headerlink" href="#in-case-it-should-be-removed" title="Permanent link">⚑</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>qm<span class="w"> </span>unlink<span class="w"> </span><span class="nv">$vm_id</span><span class="w"> </span>--idlist<span class="w"> </span>scsi2
