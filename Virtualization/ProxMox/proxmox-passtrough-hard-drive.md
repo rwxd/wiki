@@ -18,6 +18,12 @@ qm list
 qm set $vm_id -scsi2 /dev/disk/by-uuid/$disk_uuid
 ```
 
+## Restart the vm
+
+```bash
+qm reboot $vm_id
+```
+
 ## In case it should be removed
 
 ```bash
