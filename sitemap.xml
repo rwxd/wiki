@@ -191,6 +191,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/Misc/jwt-analyzing/</loc>
+         <lastmod>2023-10-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/Networking/Cumulus%20Linux/about-cumulus-linux/</loc>
          <lastmod>2023-10-09</lastmod>
          <changefreq>daily</changefreq>
