@@ -41,16 +41,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.rwxd.eu/Books/done/</loc>
-         <lastmod>2023-11-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.rwxd.eu/Books/reading-list/</loc>
-         <lastmod>2023-11-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.rwxd.eu/DevOps/Continuous-Integration/Ansible/ansible-runner/</loc>
          <lastmod>2023-11-11</lastmod>
          <changefreq>daily</changefreq>
