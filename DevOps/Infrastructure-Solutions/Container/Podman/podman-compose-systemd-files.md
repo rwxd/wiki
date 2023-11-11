@@ -47,7 +47,7 @@ systemctl --user start 'podman-compose@project-name'
 
 ## Troubleshooting
 
-When the  systemd unit is create you can use
+When the  systemd unit is created you can use
 
 ```bash
 podman pod ls
