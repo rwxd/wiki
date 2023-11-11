@@ -1,5 +1,7 @@
 # Introduction
 
+Notes I made on various topics.
+
 The wiki is built with MkDocs and GitHub Pages.
 It supports inline PlantUML diagrams.
 
