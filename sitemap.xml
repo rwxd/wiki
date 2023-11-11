@@ -151,6 +151,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Podman/podman-quadlets/</loc>
+         <lastmod>2023-11-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.rwxd.eu/DevOps/Infrastructure-Solutions/Container/Podman/setup-rootless/</loc>
          <lastmod>2023-11-11</lastmod>
          <changefreq>daily</changefreq>
