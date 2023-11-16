@@ -1390,6 +1390,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#file-permissions" class="md-nav__link">
+    File permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#persistent-volume-claim" class="md-nav__link">
     Persistent Volume Claim
   </a>
@@ -4477,6 +4484,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#file-permissions" class="md-nav__link">
+    File permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#persistent-volume-claim" class="md-nav__link">
     Persistent Volume Claim
   </a>
@@ -4517,6 +4531,16 @@ but can also be used with Kubernetes.</p>
 <h3 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">⚑</a></h3>
 <p>Get the pod name via <code class="highlight">podman pod ls</code> and generate the Kubefile with:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>podman<span class="w"> </span>kube<span class="w"> </span>generate<span class="w"> </span>&lt;pod_name&gt;<span class="w"> </span>-f<span class="w"> </span>pod.kube.yaml
+</code></pre></div>
+<h3 id="file-permissions">File permissions<a class="headerlink" href="#file-permissions" title="Permanent link">⚑</a></h3>
+<p>Get the current ids with <code class="highlight">stat &lt;file&gt;</code> or <code class="highlight">stat &lt;directory&gt;</code>.</p>
+<p>Give the permission to the podman user with <code class="highlight">chown &lt;podman_user&gt;:&lt;podman_group&gt; &lt;file&gt;</code> or <code class="highlight">chown -R &lt;podman_user&gt;:&lt;podman_group&gt; &lt;directory&gt;</code>.</p>
+<p>Use podman to change the permission to the uid and gid found with <code class="highlight">stat</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>podman<span class="w"> </span>unshare<span class="w"> </span>chown<span class="w"> </span>&lt;uid&gt;:&lt;gid&gt;<span class="w"> </span>&lt;file&gt;
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="c1"># or</span>
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>podman<span class="w"> </span>unshare<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>&lt;uid&gt;:&lt;gid&gt;<span class="w"> </span>&lt;directory&gt;
 </code></pre></div>
 <h3 id="persistent-volume-claim">Persistent Volume Claim<a class="headerlink" href="#persistent-volume-claim" title="Permanent link">⚑</a></h3>
 <p>Get the volume name via <code class="highlight">podman volume ls</code> and generate the Kubefile with:</p>
