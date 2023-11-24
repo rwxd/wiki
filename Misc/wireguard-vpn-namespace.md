@@ -136,6 +136,7 @@ ip -n vpn route show
 # ping cloudflare
 ip netns exec vpn ping 1.1.1.1
 ip netns exec vpn ping 2606:4700:4700::1111
+```
 
 ### Test the connection between the namespaces:
 
