@@ -6,66 +6,125 @@ But it can also be used for IPv4 only or IPv6 only.
 
 Additionally we want to access an service in the namespace from the host.
 
-
-## Create the namespace
-
-```bash
-ip netns add vpn
-```
-
-### Add a loopback interface
+## Bash Script
 
 ```bash
-ip -n vpn addr add 127.0.0.1/8 dev lo
-ip -n vpn addr add ::1/128 dev lo
-ip -n vpn link set lo up
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+NAMESPACE="vpn"
+WG_INTERFACE="wg0"
+WG_CONFIG="/etc/wireguard/wg0.conf"
+WG_IPV4="10.65.186.143/32"
+WG_IPV6="fc00:bbbb:bbbb:bb01::2:ba8e/128"
+VETH_TO_NS_IP="10.0.187.4/31"
+VETH_TO_NS_IPV6="fd00:0:187::4/127"
+VETH_FROM_NS_IP="10.0.187.5/31"
+VETH_FROM_NS_IPV6="fd00:0:187::5/127"
+NAMESERVER="10.64.0.1"
+PODMAN_CONTAINER_PORT="8112"
+IPTABLES_NAT_PORT="8112"
+HOME_SUBNET="192.168.2.0/23"
+
+log() {
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - $1"
+}
+
+# Process command-line options
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -v|--verbose)
+            VERBOSE=true
+            set -x
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+    shift
+done
+
+# Create network namespace
+if ! ip netns list | grep -q "$NAMESPACE"; then
+    log "Creating network namespace: $NAMESPACE"
+    ip netns add "$NAMESPACE"
+    ip -n "$NAMESPACE" addr add 127.0.0.1/8 dev lo
+    ip -n "$NAMESPACE" addr add ::1/128 dev lo
+    ip -n "$NAMESPACE" link set lo up
+else
+    log "Network namespace $NAMESPACE already exists."
+fi
+
+# Create WireGuard interface
+if ! ip -n "$NAMESPACE" link show "$WG_INTERFACE" &> /dev/null; then
+    log "Creating WireGuard interface: $WG_INTERFACE"
+    ip link add "$WG_INTERFACE" type wireguard
+    ip link set "$WG_INTERFACE" netns "$NAMESPACE"
+    ip netns exec "$NAMESPACE" wg setconf "$WG_INTERFACE" <(wg-quick strip "$WG_CONFIG")
+    ip -n "$NAMESPACE" address add "$WG_IPV4" dev "$WG_INTERFACE"
+    ip -n "$NAMESPACE" address add "$WG_IPV6" dev "$WG_INTERFACE"
+    ip -n "$NAMESPACE" link set "$WG_INTERFACE" up
+else
+    log "WireGuard interface $WG_INTERFACE already exists."
+fi
+
+# Add default route for WireGuard interface if it does not exist
+if ! ip -n "$NAMESPACE" route show | grep -q "default dev $WG_INTERFACE"; then
+    log "Adding default route for WireGuard interface"
+    ip -n "$NAMESPACE" route add default dev "$WG_INTERFACE"
+fi
+
+if ! ip -n "$NAMESPACE" -6 route show | grep -q "default dev $WG_INTERFACE"; then
+    log "Adding IPv6 default route for WireGuard interface"
+    ip -n "$NAMESPACE" -6 route add default dev "$WG_INTERFACE"
+fi
+
+
+# Configure nameserver
+log "Configuring nameserver: $NAMESERVER"
+echo "nameserver $NAMESERVER" > "/etc/netns/$NAMESPACE/resolv.conf"
+
+# Create veth pair
+if ! ip link show "to-ns-$NAMESPACE" &> /dev/null; then
+    log "Creating veth pair: to-ns-$NAMESPACE and from-ns-$NAMESPACE"
+    ip link add "to-ns-$NAMESPACE" type veth peer name "from-ns-$NAMESPACE" netns "$NAMESPACE"
+    ip address add "$VETH_TO_NS_IP" dev "to-ns-$NAMESPACE"
+    ip address add "$VETH_TO_NS_IPV6" dev "to-ns-$NAMESPACE"
+    ip link set "to-ns-$NAMESPACE" up
+    ip -n "$NAMESPACE" address add "$VETH_FROM_NS_IP" dev "from-ns-$NAMESPACE"
+    ip -n "$NAMESPACE" address add "$VETH_FROM_NS_IPV6" dev "from-ns-$NAMESPACE"
+    ip -n "$NAMESPACE" link set "from-ns-$NAMESPACE" up
+else
+    log "Veth pair to-ns-$NAMESPACE and from-ns-$NAMESPACE already exists."
+fi
+
+# Add route to home network
+if ! ip -n "$NAMESPACE" route show | grep -q "$HOME_SUBNET"; then
+   log "Adding route to home subnet"
+   IFS='/' read -r IP _ <<< "$VETH_TO_NS_IP"
+   ip -n "$NAMESPACE" route add "$HOME_SUBNET" via "$IP"
+fi
+
+# Enable IP forwarding in the host
+log "Enabling IP forwarding in the host"
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
+
+log "Setting up port forwarding from the host to the Podman container"
+
+# Extract only the IP address from the CIDR notation
+IFS='/' read -r IP _ <<< "$VETH_FROM_NS_IP"
+iptables-nft -t nat -I PREROUTING -p tcp --dport "$IPTABLES_NAT_PORT" -j DNAT --to-destination "$IP:$PODMAN_CONTAINER_PORT"
+iptables-nft -I FORWARD -d "$IP" -p tcp --dport "$PODMAN_CONTAINER_PORT" -j ACCEPT
+
+IFS='/' read -r IP6 _ <<< "$VETH_FROM_NS_IPV6"
+ip6tables-nft -t nat -I PREROUTING -p tcp --dport "$IPTABLES_NAT_PORT" -j DNAT --to-destination "$IP6:$PODMAN_CONTAINER_PORT"
+ip6tables-nft -I FORWARD -d "$IP6" -p tcp --dport "$PODMAN_CONTAINER_PORT" -j ACCEPT
 ```
 
-Verify the loopback interface:
-
-```bash
-ip -n vpn addr show lo
-```
-
-## Create a wireguard interface
-
-```bash
-ip link add wg0 type wireguard
-ip link set wg0 netns vpn
-```
-
-### Configure the wireguard interface
-
-With `ip netns exec vpn` we can execute commands in the namespace.
-
-We use a `wg-quick` configuration to configure the wireguard interface.
-
-```bash
-ip netns exec vpn wg setconf wg0 <(wg-quick strip /etc/wireguard/wg0.conf)
-```
-
-### Add addresses
-
-Addresses in the wg-quick format (Address = ...) will be stripped by `wg-quick strip`.
-So they have to be added manually.
-
-```bash
-ip -n vpn address add 10.65.186.143/32 dev wg0
-ip -n vpn address add fd00:dead:beef:cafe::1/128 dev wg0
-```
-
-### Bring up the wireguard interface
-
-```bash
-ip -n vpn link set wg0 up
-```
-
-### Add a default v4 and v6 route
-
-```bash
-ip -n vpn route add default dev wg0
-ip -n vpn -6 route add default dev wg0
-```
+## Tests
 
 ### Verify the wireguard interface
 
@@ -77,14 +136,17 @@ ip -n vpn route show
 # ping cloudflare
 ip netns exec vpn ping 1.1.1.1
 ip netns exec vpn ping 2606:4700:4700::1111
-```
 
-## Setup resolv.conf to prevent DNS leaks in the namespace
+### Test the connection between the namespaces:
 
 ```bash
-mkdir -p /etc/netns/vpn
-echo "nameserver <vpns dns server>" >> /etc/netns/vpn/resolv.conf
+ping -c 1 10.0.187.5
+ping -c 1 fd00:0:187::5
+
+ip netns exec vpn ping -c 1 10.0.187.4
+ip netns exec vpn ping -c 1 fd00:0:187::4
 ```
+
 
 ### Test DNS Server
 
@@ -99,9 +161,3 @@ random=$(openssl rand -hex 10)
 ip netns exec vpn curl -4 -s "https://$session-$random.ipleak.net/dnsdetection/"
 ip netns exec vpn curl -6 -s "https://$session-$random.ipleak.net/dnsdetection/"
 ```
-
-## Create a veth to connect the namespace to the host
-
-We will create veth interface pair to-ns-vpn in the root namespace and from-ns-vpn in the vpn namespace.
-
-```bash
