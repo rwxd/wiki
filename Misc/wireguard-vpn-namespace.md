@@ -200,7 +200,7 @@ Notice the `After` and `Network` directives.
 WantedBy=default.target
 
 [Unit]
-After=ns-vpn.service
+After=ns-vpn-setup.service
 
 [Kube]
 Yaml=/opt/container/deluge/deluge.kube.yaml
