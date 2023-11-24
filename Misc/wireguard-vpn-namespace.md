@@ -188,3 +188,27 @@ random=$(openssl rand -hex 10)
 ip netns exec vpn curl -4 -s "https://$session-$random.ipleak.net/dnsdetection/"
 ip netns exec vpn curl -6 -s "https://$session-$random.ipleak.net/dnsdetection/"
 ```
+
+### Example Podman Pod
+
+Quadlet file in `/etc/containers/systemd/deluge.kube`
+
+Notice the `After` and `Network` directives.
+
+```ini
+[Install]
+WantedBy=default.target
+
+[Unit]
+After=ns-vpn.service
+
+[Kube]
+Yaml=/opt/container/deluge/deluge.kube.yaml
+Network=ns:/var/run/netns/vpn
+
+[Service]
+# Restart service when sleep finishes
+Restart=always
+# Extend Timeout to allow time to pull the image
+TimeoutStartSec=900
+```
