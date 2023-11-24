@@ -1865,6 +1865,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example-podman-pod" class="md-nav__link">
+    Example Podman Pod
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4517,6 +4524,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example-podman-pod" class="md-nav__link">
+    Example Podman Pod
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4707,6 +4721,25 @@ But it can also be used for IPv4 only or IPv6 only.</p>
 <span class="linenos" data-linenos="7 "></span><span class="nv">random</span><span class="o">=</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-hex<span class="w"> </span><span class="m">10</span><span class="k">)</span>
 <span class="linenos" data-linenos="8 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>curl<span class="w"> </span>-4<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://</span><span class="nv">$session</span><span class="s2">-</span><span class="nv">$random</span><span class="s2">.ipleak.net/dnsdetection/&quot;</span>
 <span class="linenos" data-linenos="9 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>curl<span class="w"> </span>-6<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://</span><span class="nv">$session</span><span class="s2">-</span><span class="nv">$random</span><span class="s2">.ipleak.net/dnsdetection/&quot;</span>
+</code></pre></div>
+<h3 id="example-podman-pod">Example Podman Pod<a class="headerlink" href="#example-podman-pod" title="Permanent link">⚑</a></h3>
+<p>Quadlet file in <code class="highlight">/etc/containers/systemd/deluge.kube</code></p>
+<p>Notice the <code class="highlight">After</code> and <code class="highlight">Network</code> directives.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">[Install]</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="na">WantedBy</span><span class="o">=</span><span class="s">default.target</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">[Unit]</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="na">After</span><span class="o">=</span><span class="s">ns-vpn.service</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">[Kube]</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="na">Yaml</span><span class="o">=</span><span class="s">/opt/container/deluge/deluge.kube.yaml</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="na">Network</span><span class="o">=</span><span class="s">ns:/var/run/netns/vpn</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">[Service]</span>
+<span class="linenos" data-linenos="12 "></span><span class="c1"># Restart service when sleep finishes</span>
+<span class="linenos" data-linenos="13 "></span><span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="linenos" data-linenos="14 "></span><span class="c1"># Extend Timeout to allow time to pull the image</span>
+<span class="linenos" data-linenos="15 "></span><span class="na">TimeoutStartSec</span><span class="o">=</span><span class="s">900</span>
 </code></pre></div>
 
 
