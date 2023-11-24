@@ -4743,7 +4743,7 @@ But it can also be used for IPv4 only or IPv6 only.</p>
 <span class="linenos" data-linenos=" 2 "></span><span class="na">WantedBy</span><span class="o">=</span><span class="s">default.target</span>
 <span class="linenos" data-linenos=" 3 "></span>
 <span class="linenos" data-linenos=" 4 "></span><span class="k">[Unit]</span>
-<span class="linenos" data-linenos=" 5 "></span><span class="na">After</span><span class="o">=</span><span class="s">ns-vpn.service</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="na">After</span><span class="o">=</span><span class="s">ns-vpn-setup.service</span>
 <span class="linenos" data-linenos=" 6 "></span>
 <span class="linenos" data-linenos=" 7 "></span><span class="k">[Kube]</span>
 <span class="linenos" data-linenos=" 8 "></span><span class="na">Yaml</span><span class="o">=</span><span class="s">/opt/container/deluge/deluge.kube.yaml</span>
