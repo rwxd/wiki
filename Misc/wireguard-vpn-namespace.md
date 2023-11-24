@@ -124,6 +124,32 @@ ip6tables-nft -t nat -I PREROUTING -p tcp --dport "$IPTABLES_NAT_PORT" -j DNAT -
 ip6tables-nft -I FORWARD -d "$IP6" -p tcp --dport "$PODMAN_CONTAINER_PORT" -j ACCEPT
 ```
 
+## Systemd Unit
+
+Put into `/etc/systemd/system/ns-vpn-setup.service`
+
+```ini
+[Unit]
+Description=service to setup vpn namespace
+After=network-online.target nss-lookup.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ns-vpn-setup
+RemainAfterExit=true
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Run the service
+
+```bash
+systemctl daemon-reload
+systemctl start ns-vpn-setup
+```
+
 ## Tests
 
 ### Verify the wireguard interface
