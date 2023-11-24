@@ -1810,60 +1810,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-the-namespace" class="md-nav__link">
-    Create the namespace
+  <a href="#bash-script" class="md-nav__link">
+    Bash Script
   </a>
-  
-    <nav class="md-nav" aria-label="Create the namespace">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-a-loopback-interface" class="md-nav__link">
-    Add a loopback interface
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-wireguard-interface" class="md-nav__link">
-    Create a wireguard interface
+  <a href="#tests" class="md-nav__link">
+    Tests
   </a>
   
-    <nav class="md-nav" aria-label="Create a wireguard interface">
+    <nav class="md-nav" aria-label="Tests">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-wireguard-interface" class="md-nav__link">
-    Configure the wireguard interface
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-addresses" class="md-nav__link">
-    Add addresses
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bring-up-the-wireguard-interface" class="md-nav__link">
-    Bring up the wireguard interface
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-default-v4-and-v6-route" class="md-nav__link">
-    Add a default v4 and v6 route
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#verify-the-wireguard-interface" class="md-nav__link">
@@ -1871,19 +1830,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-resolvconf-to-prevent-dns-leaks-in-the-namespace" class="md-nav__link">
-    Setup resolv.conf to prevent DNS leaks in the namespace
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup resolv.conf to prevent DNS leaks in the namespace">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#test-dns-server" class="md-nav__link">
@@ -1894,13 +1840,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-veth-to-connect-the-namespace-to-the-host" class="md-nav__link">
-    Create a veth to connect the namespace to the host
-  </a>
   
 </li>
       
@@ -4496,60 +4435,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-the-namespace" class="md-nav__link">
-    Create the namespace
+  <a href="#bash-script" class="md-nav__link">
+    Bash Script
   </a>
-  
-    <nav class="md-nav" aria-label="Create the namespace">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-a-loopback-interface" class="md-nav__link">
-    Add a loopback interface
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-wireguard-interface" class="md-nav__link">
-    Create a wireguard interface
+  <a href="#tests" class="md-nav__link">
+    Tests
   </a>
   
-    <nav class="md-nav" aria-label="Create a wireguard interface">
+    <nav class="md-nav" aria-label="Tests">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-wireguard-interface" class="md-nav__link">
-    Configure the wireguard interface
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-addresses" class="md-nav__link">
-    Add addresses
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bring-up-the-wireguard-interface" class="md-nav__link">
-    Bring up the wireguard interface
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-a-default-v4-and-v6-route" class="md-nav__link">
-    Add a default v4 and v6 route
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#verify-the-wireguard-interface" class="md-nav__link">
@@ -4557,19 +4455,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-resolvconf-to-prevent-dns-leaks-in-the-namespace" class="md-nav__link">
-    Setup resolv.conf to prevent DNS leaks in the namespace
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup resolv.conf to prevent DNS leaks in the namespace">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#test-dns-server" class="md-nav__link">
@@ -4580,13 +4465,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-veth-to-connect-the-namespace-to-the-host" class="md-nav__link">
-    Create a veth to connect the namespace to the host
-  </a>
   
 </li>
       
@@ -4614,51 +4492,139 @@
 IPv4 and IPv6 will be routed through the vpn.
 But it can also be used for IPv4 only or IPv6 only.</p>
 <p>Additionally we want to access an service in the namespace from the host.</p>
-<h2 id="create-the-namespace">Create the namespace<a class="headerlink" href="#create-the-namespace" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>netns<span class="w"> </span>add<span class="w"> </span>vpn
+<h2 id="bash-script">Bash Script<a class="headerlink" href="#bash-script" title="Permanent link">⚑</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="  1 "></span><span class="ch">#!/usr/bin/env bash</span>
+<span class="linenos" data-linenos="  2 "></span>
+<span class="linenos" data-linenos="  3 "></span><span class="nb">set</span><span class="w"> </span>-euo<span class="w"> </span>pipefail
+<span class="linenos" data-linenos="  4 "></span>
+<span class="linenos" data-linenos="  5 "></span><span class="nv">NAMESPACE</span><span class="o">=</span><span class="s2">&quot;vpn&quot;</span>
+<span class="linenos" data-linenos="  6 "></span><span class="nv">WG_INTERFACE</span><span class="o">=</span><span class="s2">&quot;wg0&quot;</span>
+<span class="linenos" data-linenos="  7 "></span><span class="nv">WG_CONFIG</span><span class="o">=</span><span class="s2">&quot;/etc/wireguard/wg0.conf&quot;</span>
+<span class="linenos" data-linenos="  8 "></span><span class="nv">WG_IPV4</span><span class="o">=</span><span class="s2">&quot;10.65.186.143/32&quot;</span>
+<span class="linenos" data-linenos="  9 "></span><span class="nv">WG_IPV6</span><span class="o">=</span><span class="s2">&quot;fc00:bbbb:bbbb:bb01::2:ba8e/128&quot;</span>
+<span class="linenos" data-linenos=" 10 "></span><span class="nv">VETH_TO_NS_IP</span><span class="o">=</span><span class="s2">&quot;10.0.187.4/31&quot;</span>
+<span class="linenos" data-linenos=" 11 "></span><span class="nv">VETH_TO_NS_IPV6</span><span class="o">=</span><span class="s2">&quot;fd00:0:187::4/127&quot;</span>
+<span class="linenos" data-linenos=" 12 "></span><span class="nv">VETH_FROM_NS_IP</span><span class="o">=</span><span class="s2">&quot;10.0.187.5/31&quot;</span>
+<span class="linenos" data-linenos=" 13 "></span><span class="nv">VETH_FROM_NS_IPV6</span><span class="o">=</span><span class="s2">&quot;fd00:0:187::5/127&quot;</span>
+<span class="linenos" data-linenos=" 14 "></span><span class="nv">NAMESERVER</span><span class="o">=</span><span class="s2">&quot;10.64.0.1&quot;</span>
+<span class="linenos" data-linenos=" 15 "></span><span class="nv">PODMAN_CONTAINER_PORT</span><span class="o">=</span><span class="s2">&quot;8112&quot;</span>
+<span class="linenos" data-linenos=" 16 "></span><span class="nv">IPTABLES_NAT_PORT</span><span class="o">=</span><span class="s2">&quot;8112&quot;</span>
+<span class="linenos" data-linenos=" 17 "></span><span class="nv">HOME_SUBNET</span><span class="o">=</span><span class="s2">&quot;192.168.2.0/23&quot;</span>
+<span class="linenos" data-linenos=" 18 "></span>
+<span class="linenos" data-linenos=" 19 "></span>log<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="linenos" data-linenos=" 20 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">&quot;%Y-%m-%d %H:%M:%S&quot;</span><span class="k">)</span><span class="s2"> - </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 21 "></span><span class="o">}</span>
+<span class="linenos" data-linenos=" 22 "></span>
+<span class="linenos" data-linenos=" 23 "></span><span class="c1"># Process command-line options</span>
+<span class="linenos" data-linenos=" 24 "></span><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="linenos" data-linenos=" 25 "></span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="linenos" data-linenos=" 26 "></span><span class="w">        </span>-v<span class="p">|</span>--verbose<span class="o">)</span>
+<span class="linenos" data-linenos=" 27 "></span><span class="w">            </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="nb">true</span>
+<span class="linenos" data-linenos=" 28 "></span><span class="w">            </span><span class="nb">set</span><span class="w"> </span>-x
+<span class="linenos" data-linenos=" 29 "></span><span class="w">            </span><span class="p">;;</span>
+<span class="linenos" data-linenos=" 30 "></span><span class="w">        </span>*<span class="o">)</span>
+<span class="linenos" data-linenos=" 31 "></span><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown option: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 32 "></span><span class="w">            </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="linenos" data-linenos=" 33 "></span><span class="w">            </span><span class="p">;;</span>
+<span class="linenos" data-linenos=" 34 "></span><span class="w">    </span><span class="k">esac</span>
+<span class="linenos" data-linenos=" 35 "></span><span class="w">    </span><span class="nb">shift</span>
+<span class="linenos" data-linenos=" 36 "></span><span class="k">done</span>
+<span class="linenos" data-linenos=" 37 "></span>
+<span class="linenos" data-linenos=" 38 "></span><span class="c1"># Create network namespace</span>
+<span class="linenos" data-linenos=" 39 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 40 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Creating network namespace: </span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 41 "></span><span class="w">    </span>ip<span class="w"> </span>netns<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 42 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">127</span>.0.0.1/8<span class="w"> </span>dev<span class="w"> </span>lo
+<span class="linenos" data-linenos=" 43 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span>::1/128<span class="w"> </span>dev<span class="w"> </span>lo
+<span class="linenos" data-linenos=" 44 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>lo<span class="w"> </span>up
+<span class="linenos" data-linenos=" 45 "></span><span class="k">else</span>
+<span class="linenos" data-linenos=" 46 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Network namespace </span><span class="nv">$NAMESPACE</span><span class="s2"> already exists.&quot;</span>
+<span class="linenos" data-linenos=" 47 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 48 "></span>
+<span class="linenos" data-linenos=" 49 "></span><span class="c1"># Create WireGuard interface</span>
+<span class="linenos" data-linenos=" 50 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 51 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Creating WireGuard interface: </span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 52 "></span><span class="w">    </span>ip<span class="w"> </span>link<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>wireguard
+<span class="linenos" data-linenos=" 53 "></span><span class="w">    </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="w"> </span>netns<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 54 "></span><span class="w">    </span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>wg<span class="w"> </span>setconf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="w"> </span>&lt;<span class="o">(</span>wg-quick<span class="w"> </span>strip<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_CONFIG</span><span class="s2">&quot;</span><span class="o">)</span>
+<span class="linenos" data-linenos=" 55 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_IPV4</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 56 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_IPV6</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 57 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="w"> </span>up
+<span class="linenos" data-linenos=" 58 "></span><span class="k">else</span>
+<span class="linenos" data-linenos=" 59 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;WireGuard interface </span><span class="nv">$WG_INTERFACE</span><span class="s2"> already exists.&quot;</span>
+<span class="linenos" data-linenos=" 60 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 61 "></span>
+<span class="linenos" data-linenos=" 62 "></span><span class="c1"># Add default route for WireGuard interface if it does not exist</span>
+<span class="linenos" data-linenos=" 63 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;default dev </span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 64 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Adding default route for WireGuard interface&quot;</span>
+<span class="linenos" data-linenos=" 65 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 66 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 67 "></span>
+<span class="linenos" data-linenos=" 68 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>-6<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;default dev </span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 69 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Adding IPv6 default route for WireGuard interface&quot;</span>
+<span class="linenos" data-linenos=" 70 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>-6<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WG_INTERFACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 71 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 72 "></span>
+<span class="linenos" data-linenos=" 73 "></span>
+<span class="linenos" data-linenos=" 74 "></span><span class="c1"># Configure nameserver</span>
+<span class="linenos" data-linenos=" 75 "></span>log<span class="w"> </span><span class="s2">&quot;Configuring nameserver: </span><span class="nv">$NAMESERVER</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 76 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;nameserver </span><span class="nv">$NAMESERVER</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;/etc/netns/</span><span class="nv">$NAMESPACE</span><span class="s2">/resolv.conf&quot;</span>
+<span class="linenos" data-linenos=" 77 "></span>
+<span class="linenos" data-linenos=" 78 "></span><span class="c1"># Create veth pair</span>
+<span class="linenos" data-linenos=" 79 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span><span class="s2">&quot;to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 80 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Creating veth pair: to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2"> and from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 81 "></span><span class="w">    </span>ip<span class="w"> </span>link<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>veth<span class="w"> </span>peer<span class="w"> </span>name<span class="w"> </span><span class="s2">&quot;from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>netns<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 82 "></span><span class="w">    </span>ip<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_TO_NS_IP</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 83 "></span><span class="w">    </span>ip<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_TO_NS_IPV6</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 84 "></span><span class="w">    </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>up
+<span class="linenos" data-linenos=" 85 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_FROM_NS_IP</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 86 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_FROM_NS_IPV6</span><span class="s2">&quot;</span><span class="w"> </span>dev<span class="w"> </span><span class="s2">&quot;from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 87 "></span><span class="w">    </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>up
+<span class="linenos" data-linenos=" 88 "></span><span class="k">else</span>
+<span class="linenos" data-linenos=" 89 "></span><span class="w">    </span>log<span class="w"> </span><span class="s2">&quot;Veth pair to-ns-</span><span class="nv">$NAMESPACE</span><span class="s2"> and from-ns-</span><span class="nv">$NAMESPACE</span><span class="s2"> already exists.&quot;</span>
+<span class="linenos" data-linenos=" 90 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 91 "></span>
+<span class="linenos" data-linenos=" 92 "></span><span class="c1"># Add route to home network</span>
+<span class="linenos" data-linenos=" 93 "></span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME_SUBNET</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos=" 94 "></span><span class="w">   </span>log<span class="w"> </span><span class="s2">&quot;Adding route to home subnet&quot;</span>
+<span class="linenos" data-linenos=" 95 "></span><span class="w">   </span><span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>IP<span class="w"> </span>_<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_TO_NS_IP</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 96 "></span><span class="w">   </span>ip<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NAMESPACE</span><span class="s2">&quot;</span><span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME_SUBNET</span><span class="s2">&quot;</span><span class="w"> </span>via<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos=" 97 "></span><span class="k">fi</span>
+<span class="linenos" data-linenos=" 98 "></span>
+<span class="linenos" data-linenos=" 99 "></span><span class="c1"># Enable IP forwarding in the host</span>
+<span class="linenos" data-linenos="100 "></span>log<span class="w"> </span><span class="s2">&quot;Enabling IP forwarding in the host&quot;</span>
+<span class="linenos" data-linenos="101 "></span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv4/ip_forward
+<span class="linenos" data-linenos="102 "></span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv6/conf/all/forwarding
+<span class="linenos" data-linenos="103 "></span>
+<span class="linenos" data-linenos="104 "></span>log<span class="w"> </span><span class="s2">&quot;Setting up port forwarding from the host to the Podman container&quot;</span>
+<span class="linenos" data-linenos="105 "></span>
+<span class="linenos" data-linenos="106 "></span><span class="c1"># Extract only the IP address from the CIDR notation</span>
+<span class="linenos" data-linenos="107 "></span><span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>IP<span class="w"> </span>_<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_FROM_NS_IP</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="108 "></span>iptables-nft<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-I<span class="w"> </span>PREROUTING<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IPTABLES_NAT_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to-destination<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP</span><span class="s2">:</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="109 "></span>iptables-nft<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+<span class="linenos" data-linenos="110 "></span>
+<span class="linenos" data-linenos="111 "></span><span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>IP6<span class="w"> </span>_<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_FROM_NS_IPV6</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="112 "></span>ip6tables-nft<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-I<span class="w"> </span>PREROUTING<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IPTABLES_NAT_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to-destination<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP6</span><span class="s2">:</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="113 "></span>ip6tables-nft<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP6</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
-<h3 id="add-a-loopback-interface">Add a loopback interface<a class="headerlink" href="#add-a-loopback-interface" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">127</span>.0.0.1/8<span class="w"> </span>dev<span class="w"> </span>lo
-<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span>::1/128<span class="w"> </span>dev<span class="w"> </span>lo
-<span class="linenos" data-linenos="3 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>lo<span class="w"> </span>up
-</code></pre></div>
-<p>Verify the loopback interface:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>lo
-</code></pre></div>
-<h2 id="create-a-wireguard-interface">Create a wireguard interface<a class="headerlink" href="#create-a-wireguard-interface" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>link<span class="w"> </span>add<span class="w"> </span>wg0<span class="w"> </span><span class="nb">type</span><span class="w"> </span>wireguard
-<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>wg0<span class="w"> </span>netns<span class="w"> </span>vpn
-</code></pre></div>
-<h3 id="configure-the-wireguard-interface">Configure the wireguard interface<a class="headerlink" href="#configure-the-wireguard-interface" title="Permanent link">⚑</a></h3>
-<p>With <code class="highlight"><span class="nv">ip</span><span class="w"> </span><span class="nv">netns</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="nv">vpn</span></code> we can execute commands in the namespace.</p>
-<p>We use a <code class="highlight">wg-quick</code> configuration to configure the wireguard interface.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>wg<span class="w"> </span>setconf<span class="w"> </span>wg0<span class="w"> </span>&lt;<span class="o">(</span>wg-quick<span class="w"> </span>strip<span class="w"> </span>/etc/wireguard/wg0.conf<span class="o">)</span>
-</code></pre></div>
-<h3 id="add-addresses">Add addresses<a class="headerlink" href="#add-addresses" title="Permanent link">⚑</a></h3>
-<p>Addresses in the wg-quick format (Address = ...) will be stripped by <code class="highlight">wg-quick strip</code>.
-So they have to be added manually.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.65.186.143/32<span class="w"> </span>dev<span class="w"> </span>wg0
-<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span>fd00:dead:beef:cafe::1/128<span class="w"> </span>dev<span class="w"> </span>wg0
-</code></pre></div>
-<h3 id="bring-up-the-wireguard-interface">Bring up the wireguard interface<a class="headerlink" href="#bring-up-the-wireguard-interface" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>wg0<span class="w"> </span>up
-</code></pre></div>
-<h3 id="add-a-default-v4-and-v6-route">Add a default v4 and v6 route<a class="headerlink" href="#add-a-default-v4-and-v6-route" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>dev<span class="w"> </span>wg0
-<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>-6<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>dev<span class="w"> </span>wg0
-</code></pre></div>
+<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">⚑</a></h2>
 <h3 id="verify-the-wireguard-interface">Verify the wireguard interface<a class="headerlink" href="#verify-the-wireguard-interface" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># show the interface</span>
-<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>wg0
-<span class="linenos" data-linenos="3 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>route<span class="w"> </span>show
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="c1"># ping cloudflare</span>
-<span class="linenos" data-linenos="6 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">1</span>.1.1.1
-<span class="linenos" data-linenos="7 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">2606</span>:4700:4700::1111
-</code></pre></div>
-<h2 id="setup-resolvconf-to-prevent-dns-leaks-in-the-namespace">Setup resolv.conf to prevent DNS leaks in the namespace<a class="headerlink" href="#setup-resolvconf-to-prevent-dns-leaks-in-the-namespace" title="Permanent link">⚑</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/netns/vpn
-<span class="linenos" data-linenos="2 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;nameserver &lt;vpns dns server&gt;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/netns/vpn/resolv.conf
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># show the interface</span>
+<span class="linenos" data-linenos=" 2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>wg0
+<span class="linenos" data-linenos=" 3 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>route<span class="w"> </span>show
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="c1"># ping cloudflare</span>
+<span class="linenos" data-linenos=" 6 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">1</span>.1.1.1
+<span class="linenos" data-linenos=" 7 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">2606</span>:4700:4700::1111
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1">### Test the connection between the namespaces:</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="sb">```</span>bash
+<span class="linenos" data-linenos="12 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.5
+<span class="linenos" data-linenos="13 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::5
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.4
+<span class="linenos" data-linenos="16 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::4
 </code></pre></div>
 <h3 id="test-dns-server">Test DNS Server<a class="headerlink" href="#test-dns-server" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># verify resolving</span>
@@ -4671,9 +4637,6 @@ So they have to be added manually.</p>
 <span class="linenos" data-linenos="8 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>curl<span class="w"> </span>-4<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://</span><span class="nv">$session</span><span class="s2">-</span><span class="nv">$random</span><span class="s2">.ipleak.net/dnsdetection/&quot;</span>
 <span class="linenos" data-linenos="9 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>curl<span class="w"> </span>-6<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://</span><span class="nv">$session</span><span class="s2">-</span><span class="nv">$random</span><span class="s2">.ipleak.net/dnsdetection/&quot;</span>
 </code></pre></div>
-<h2 id="create-a-veth-to-connect-the-namespace-to-the-host">Create a veth to connect the namespace to the host<a class="headerlink" href="#create-a-veth-to-connect-the-namespace-to-the-host" title="Permanent link">⚑</a></h2>
-<p>We will create veth interface pair to-ns-vpn in the root namespace and from-ns-vpn in the vpn namespace.</p>
-<p>```bash</p>
 
 
   
