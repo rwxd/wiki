@@ -1817,6 +1817,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#systemd-unit" class="md-nav__link">
+    Systemd Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Systemd Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-the-service" class="md-nav__link">
+    Run the service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
@@ -4449,6 +4469,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#systemd-unit" class="md-nav__link">
+    Systemd Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Systemd Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-the-service" class="md-nav__link">
+    Run the service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
@@ -4620,6 +4660,25 @@ But it can also be used for IPv4 only or IPv6 only.</p>
 <span class="linenos" data-linenos="111 "></span><span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>IP6<span class="w"> </span>_<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VETH_FROM_NS_IPV6</span><span class="s2">&quot;</span>
 <span class="linenos" data-linenos="112 "></span>ip6tables-nft<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-I<span class="w"> </span>PREROUTING<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IPTABLES_NAT_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to-destination<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP6</span><span class="s2">:</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span>
 <span class="linenos" data-linenos="113 "></span>ip6tables-nft<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IP6</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PODMAN_CONTAINER_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div>
+<h2 id="systemd-unit">Systemd Unit<a class="headerlink" href="#systemd-unit" title="Permanent link">⚑</a></h2>
+<p>Put into <code class="highlight">/etc/systemd/system/ns-vpn-setup.service</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">[Unit]</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="na">Description</span><span class="o">=</span><span class="s">service to setup vpn namespace</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="na">After</span><span class="o">=</span><span class="s">network-online.target nss-lookup.target</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">[Service]</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/ns-vpn-setup</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="na">RemainAfterExit</span><span class="o">=</span><span class="s">true</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="na">StandardOutput</span><span class="o">=</span><span class="s">journal</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">[Install]</span>
+<span class="linenos" data-linenos="12 "></span><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<h3 id="run-the-service">Run the service<a class="headerlink" href="#run-the-service" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl<span class="w"> </span>daemon-reload
+<span class="linenos" data-linenos="2 "></span>systemctl<span class="w"> </span>start<span class="w"> </span>ns-vpn-setup
 </code></pre></div>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">⚑</a></h2>
 <h3 id="verify-the-wireguard-interface">Verify the wireguard interface<a class="headerlink" href="#verify-the-wireguard-interface" title="Permanent link">⚑</a></h3>
