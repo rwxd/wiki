@@ -1832,6 +1832,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#test-the-connection-between-the-namespaces" class="md-nav__link">
+    Test the connection between the namespaces:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-dns-server" class="md-nav__link">
     Test DNS Server
   </a>
@@ -4457,6 +4464,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#test-the-connection-between-the-namespaces" class="md-nav__link">
+    Test the connection between the namespaces:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-dns-server" class="md-nav__link">
     Test DNS Server
   </a>
@@ -4609,22 +4623,20 @@ But it can also be used for IPv4 only or IPv6 only.</p>
 </code></pre></div>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">⚑</a></h2>
 <h3 id="verify-the-wireguard-interface">Verify the wireguard interface<a class="headerlink" href="#verify-the-wireguard-interface" title="Permanent link">⚑</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># show the interface</span>
-<span class="linenos" data-linenos=" 2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>wg0
-<span class="linenos" data-linenos=" 3 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>route<span class="w"> </span>show
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="c1"># ping cloudflare</span>
-<span class="linenos" data-linenos=" 6 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">1</span>.1.1.1
-<span class="linenos" data-linenos=" 7 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">2606</span>:4700:4700::1111
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="c1">### Test the connection between the namespaces:</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="sb">```</span>bash
-<span class="linenos" data-linenos="12 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.5
-<span class="linenos" data-linenos="13 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::5
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.4
-<span class="linenos" data-linenos="16 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::4
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># show the interface</span>
+<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>wg0
+<span class="linenos" data-linenos="3 "></span>ip<span class="w"> </span>-n<span class="w"> </span>vpn<span class="w"> </span>route<span class="w"> </span>show
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span><span class="c1"># ping cloudflare</span>
+<span class="linenos" data-linenos="6 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">1</span>.1.1.1
+<span class="linenos" data-linenos="7 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span><span class="m">2606</span>:4700:4700::1111
+</code></pre></div>
+<h3 id="test-the-connection-between-the-namespaces">Test the connection between the namespaces:<a class="headerlink" href="#test-the-connection-between-the-namespaces" title="Permanent link">⚑</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.5
+<span class="linenos" data-linenos="2 "></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::5
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span>.0.187.4
+<span class="linenos" data-linenos="5 "></span>ip<span class="w"> </span>netns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>vpn<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>fd00:0:187::4
 </code></pre></div>
 <h3 id="test-dns-server">Test DNS Server<a class="headerlink" href="#test-dns-server" title="Permanent link">⚑</a></h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># verify resolving</span>
