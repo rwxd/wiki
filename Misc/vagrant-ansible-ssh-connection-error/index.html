@@ -5987,7 +5987,7 @@
 <span class="linenos" data-linenos="3 "></span><span class="s2">--- snip ---</span>
 </code></pre></div>
 <p>Error code 137 is issued when a process is terminated externally because of its memory consumption.</p>
-<p>When checking the kernel logs with <code class="highlight">journalctl -t oom_reaper</code> I found the following lines:</p>
+<p>When checking the kernel logs with <code class="highlight">dmesg</code> I found the following lines:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>vagrant<span class="w"> </span>ssh
 <span class="linenos" data-linenos="2 "></span>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>oom
 <span class="linenos" data-linenos="3 "></span><span class="o">[</span><span class="w"> </span><span class="m">1158</span>.525674<span class="o">]</span><span class="w"> </span>Out<span class="w"> </span>of<span class="w"> </span>memory:<span class="w"> </span>Killed<span class="w"> </span>process<span class="w"> </span><span class="m">2428</span><span class="w"> </span><span class="o">(</span>dnf<span class="o">)</span><span class="w"> </span>total-vm:479860kB,<span class="w"> </span>anon-rss:352668kB,<span class="w"> </span>file-rss:0kB,<span class="w"> </span>shmem-rss:0kB,<span class="w"> </span>UID:0<span class="w"> </span>pgtables:836kB<span class="w"> </span>oom_score_adj:0
