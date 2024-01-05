@@ -18,7 +18,7 @@ mux_client_read_packet: read header failed: Broken pipe\r\ndebug2: Received exit
 
 Error code 137 is issued when a process is terminated externally because of its memory consumption.
 
-When checking the kernel logs with `journalctl -t oom_reaper` I found the following lines:
+When checking the kernel logs with `dmesg` I found the following lines:
 
 ```bash
 vagrant ssh
