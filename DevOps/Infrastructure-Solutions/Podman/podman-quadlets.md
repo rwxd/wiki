@@ -49,5 +49,3 @@ podman logs systemd-deluge
 
 journactl -f | grep deluge
 ```
-
-## Pods

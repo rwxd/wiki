@@ -1,4 +1,4 @@
-# Script to clear GitLab CI/CD Artifacts
+# Script to clear GitLab CI/CD Artifacts via the REST API
 
 ```python
 import requests

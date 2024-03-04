@@ -3,5 +3,5 @@
 ## Watch processes accumulated
 
 ```bash
-iotop -aoP
+iotop -oPa
 ```

@@ -17,8 +17,8 @@ sysctl --system
 ## Create user
 
 ```bash
-useradd -m -s /bin/bash container
-sudo -iu container
+useradd -m -s /bin/bash podman
+sudo -iu podman
 ```
 
 ## Create podman socket
