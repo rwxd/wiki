@@ -35,6 +35,7 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
+    - navigation.tabs
   feature:
     tabs: false
   i18n:
@@ -51,6 +52,15 @@ plugins:
   - same-dir
   - roamlinks
   - material-plausible
+  - blog:
+      post_url_date_format: yyyy/MM/dd
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
   - exclude:
       glob:
         - "Readwise/*"
@@ -93,8 +103,4 @@ extra:
     src: "https://plausible.chaops.de/js/script.js"
 
 extra_javascript:
-  - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-
