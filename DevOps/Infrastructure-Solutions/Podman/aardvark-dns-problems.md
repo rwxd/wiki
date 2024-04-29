@@ -127,3 +127,67 @@ shutdown -r now
 ```
 
 After the reboot everything worked like it used to.
+
+And its there again after about 24 hours.
+
+So we open two panels one as root where we tcpdump and in a podman container
+
+```bash
+root@3c6773429be7:/# for i in {1..300}; do dig google.com @pihole.wrage.eu +short && sleep 1; done 
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> google.com @pihole.wrage.eu +short
+;; global options: +cmd
+;; no servers could be reached
+
+^C^C;; communications error to 192.168.3.20#53: timed out
+;; communications error to 192.168.3.20#53: timed out
+;; communications error to 192.168.3.20#53: timed out
+
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> google.com @pihole.wrage.eu +short
+;; global options: +cmd
+;; no servers could be reached
+
+^C;; communications error to 192.168.3.20#53: timed out
+;; communications error to 192.168.3.20#53: timed out
+;; communications error to 192.168.3.20#53: timed out
+```
+
+```bash
+23:14:39.375115 ens18 Out IP ap01.60520 > pi.hole.domain: 33823+ [1au] A? google.com. (51)
+23:14:39.375379 ens18 In  IP pi.hole.domain > ap01.60520: 33823 1/0/1 A 172.217.16.78 (55)
+23:14:44.377509 ens18 Out IP ap01.40087 > pi.hole.domain: 33823+ [1au] A? google.com. (51)
+23:14:44.377824 ens18 In  IP pi.hole.domain > ap01.40087: 33823 1/0/1 A 172.217.16.78 (55)
+23:14:49.382853 ens18 Out IP ap01.44508 > pi.hole.domain: 33823+ [1au] A? google.com. (51)
+23:14:49.383149 ens18 In  IP pi.hole.domain > ap01.44508: 33823 1/0/1 A 172.217.16.78 (55)
+```
+
+There are clearly answers coming in, but it seems like they are not forwarded to the container
+
+```bash
+[podman@ap01 ~]$ podman unshare --rootless-netns nslookup google.com
+Server:         169.254.0.1
+Address:        169.254.0.1#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 172.217.16.78
+Name:   google.com
+Address: 2a00:1450:4005:800::200e
+
+[podman@ap01 ~]$ podman unshare --rootless-netns nslookup google.com @192.168.3.20
+nslookup: couldn't get address for '@192.168.3.20': not found
+[podman@ap01 ~]$ podman unshare --rootless-netns nslookup @192.168.3.20 google.com
+^C
+[podman@ap01 ~]$ podman unshare --rootless-netns nslookup @192.168.3.20 google.com
+;; connection timed out; no servers could be reached
+```
+
+```bash
+[root@ap01 ~]# ps aux | grep slirp4netns
+root       15108  0.0  0.0   3880  2152 pts/0    S+   23:28   0:00 grep --color=auto slirp4netns
+
+[podman@ap01 ~]$ ps aux | grep -i pasta
+podman      2177  1.3  0.5  76264 37864 ?        Ss   23:30   0:01 /usr/bin/pasta --config-net --pid /tmp/containers-user-2000/containers/networks/rootless-netns/rootless-netns-conn.pid --dns-forward 169.254.0.1 -t none -u none -T none -U none --no-map-gw --quiet --netns /tmp/containers-user-2000/containers/networks/rootless-netns/rootless-netns
+```
+
+@tomorrow try to install podman 4.6.1 with slirp4netns
+<https://github.com/containers/podman/issues/18530>
